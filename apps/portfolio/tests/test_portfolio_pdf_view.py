@@ -8,15 +8,16 @@ from apps.common.tests.utils import (
     create_media_absolute_url,
 )
 from apps.portfolio.tests.factories import PortfolioFactory
+from apps.user.tests.factories import UserFactory
 
 
 class TestPortfolioPDFView(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        cls.portfolio = PortfolioFactory(is_published=True)
-
     def setUp(self):
         super().setUp()
+        self.portfolio = PortfolioFactory(
+            is_published=True,
+            user=UserFactory(),
+        )
         self.left_segments_patch = patch(
             target="apps.portfolio.service.get_left_column_segments",
             return_value=[],
@@ -53,6 +54,10 @@ class TestPortfolioPDFView(TestCase):
         self.assertEqual(response.context.get("left_column"), [])
         self.assertEqual(response.context.get("right_column"), [])
 
+        # Reset the mock calls:
+        self.mock_left_segments.reset_mock()
+        self.mock_right_segments.reset_mock()
+
         self.assertEqual(
             response.context.get("portfolio_pdf_url"),
             reverse(
@@ -64,6 +69,14 @@ class TestPortfolioPDFView(TestCase):
         url_path = reverse(
             viewname="portfolio:index", kwargs={"slug": self.portfolio.slug}
         )
+        response = self.client.get(url_path)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response["Content-Type"], "text/html")
+        self.assertResponseContext(response)
+
+        # When portfolio is not published, but it belongs to the user:
+        self.portfolio.update(is_published=False)
+        self.client.force_login(user=self.portfolio.user)
         response = self.client.get(url_path)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response["Content-Type"], "text/html")
@@ -84,6 +97,17 @@ class TestPortfolioPDFView(TestCase):
         )
         self.assertResponseContext(response, with_avatar=True)
 
+        # When portfolio is not published, but it belongs to the user:
+        self.portfolio.update(is_published=False)
+        self.client.force_login(user=self.portfolio.user)
+        response = self.client.get(url_path)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response["Content-Type"], "application/pdf")
+        self.assertEqual(
+            response["Content-Disposition"],
+            f'inline; filename="{self.portfolio.filename}"',
+        )
+
     def test_get_download_response(self):
         url_path = reverse(
             viewname="portfolio:download", kwargs={"slug": self.portfolio.slug}
@@ -97,10 +121,38 @@ class TestPortfolioPDFView(TestCase):
         )
         self.assertResponseContext(response)
 
+        # When portfolio is not published, but it belongs to the user:
+        self.portfolio.update(is_published=False)
+        self.client.force_login(user=self.portfolio.user)
+        response = self.client.get(url_path)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response["Content-Type"], "application/pdf")
+        self.assertEqual(
+            response["Content-Disposition"],
+            f'attachment; filename="{self.portfolio.filename}"',
+        )
+        self.assertResponseContext(response)
+
     def test_404_response(self):
+        # When the slug does not exist:
         url_path = reverse(
             viewname="portfolio:index", kwargs={"slug": "non-existing-slug"}
         )
+        response = self.client.get(url_path)
+        self.assertEqual(response.status_code, 404)
+
+        # When use is anonymous and portfolio is not published:
+        self.portfolio.update(is_published=False)
+        url_path = reverse(
+            viewname="portfolio:index", kwargs={"slug": self.portfolio.slug}
+        )
+        response = self.client.get(url_path)
+        self.assertEqual(response.status_code, 404)
+
+        # When user is authenticated and unpublished portfolio
+        # does not belong to user:
+        user = UserFactory()
+        self.client.force_login(user=user)
         response = self.client.get(url_path)
         self.assertEqual(response.status_code, 404)
 

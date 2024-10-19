@@ -38,13 +38,8 @@
                 </a>
             </div>
         {% else %}
-            <p class="paragraph paragraph--centered">
-                {% blocktranslate %}
-                    Why are you still here? Go to your portfolio and start customizing it!
-                {% endblocktranslate %}
-            </p>
-            <a class="go-to-button" href="{{ portfolio_url }}">
-                {% trans "My Portfolio" %}
+            <a class="go-to-button" href="{{ portfolio_button.url }}">
+                {{ portfolio_button.label }}
             </a>
         {% endif %}
     </main>

@@ -59,5 +59,5 @@ class User(AbstractUser, BaseModel):
         return self.portfolios.count()
 
     @property
-    def published_portfolio(self) -> Portfolio | None:
-        return self.portfolios.filter(is_published=True).first()
+    def portfolio(self) -> Portfolio | None:
+        return self.portfolios.first()
