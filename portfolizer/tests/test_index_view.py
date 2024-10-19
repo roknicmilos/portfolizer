@@ -2,7 +2,7 @@ from django.urls import reverse_lazy, reverse
 from django.utils.translation import gettext_lazy as _
 
 from apps.common.tests import FlashMessagesMixin
-from apps.common.utils import get_model_admin_change_list_url
+from apps.common.utils import get_model_admin_list_url
 from apps.common.views import ButtonLink
 from apps.portfolio.models import Portfolio
 from apps.portfolio.tests.factories import PortfolioFactory
@@ -34,7 +34,7 @@ class TestIndexView(FlashMessagesMixin):
 
         view_portfolio_button = ButtonLink(
             label=_("Create Portfolio"),
-            url=get_model_admin_change_list_url(model_class=Portfolio),
+            url=get_model_admin_list_url(model_class=Portfolio),
         )
         self.assertResponse(response, portfolio_button=view_portfolio_button)
 

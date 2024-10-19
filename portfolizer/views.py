@@ -2,7 +2,7 @@ from django.urls import reverse
 from django.views.generic import TemplateView
 from django.utils.translation import gettext_lazy as _
 
-from apps.common.utils import get_model_admin_change_list_url
+from apps.common.utils import get_model_admin_list_url
 from apps.common.views import ButtonLink
 from apps.portfolio.models import Portfolio
 
@@ -21,5 +21,5 @@ class IndexView(TemplateView):
             url = reverse("portfolio:index", kwargs={"slug": portfolio.slug})
             return ButtonLink(label=_("My Portfolio"), url=url)
 
-        url = get_model_admin_change_list_url(model_class=Portfolio)
+        url = get_model_admin_list_url(model_class=Portfolio)
         return ButtonLink(label=_("Create Portfolio"), url=url)
