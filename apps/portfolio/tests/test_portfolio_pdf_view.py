@@ -7,6 +7,7 @@ from apps.common.tests.utils import (
     create_sample_image,
     create_media_absolute_url,
 )
+from apps.common.utils import get_model_admin_details_url
 from apps.portfolio.tests.factories import PortfolioFactory
 from apps.user.tests.factories import UserFactory
 
@@ -31,7 +32,11 @@ class TestPortfolioPDFView(TestCase):
         self.mock_right_segments = self.right_segments_patch.start()
 
     def assertResponseContext(
-        self, response, with_avatar: bool = False
+        self,
+        response,
+        with_avatar: bool = False,
+        with_pdf_url: bool = False,
+        with_edit_url: bool = False,
     ) -> None:
         self.assertEqual(response.context.get("portfolio"), self.portfolio)
         if with_avatar:
@@ -43,6 +48,24 @@ class TestPortfolioPDFView(TestCase):
         self.assertEqual(
             response.context.get("avatar_url"), expected_avatar_url
         )
+
+        if with_pdf_url:
+            portfolio_pdf_url = reverse(
+                viewname="portfolio:pdf", kwargs={"slug": self.portfolio.slug}
+            )
+            self.assertEqual(
+                response.context.get("portfolio_pdf_url"), portfolio_pdf_url
+            )
+        else:
+            self.assertIsNone(response.context.get("portfolio_pdf_url"))
+
+        if with_edit_url:
+            expected_edit_url = get_model_admin_details_url(obj=self.portfolio)
+            self.assertEqual(
+                response.context.get("portfolio_edit_url"), expected_edit_url
+            )
+        else:
+            self.assertIsNone(response.context.get("portfolio_edit_url"))
 
         # Assert that the left and right column segments:
         self.mock_left_segments.assert_called_once_with(
@@ -58,13 +81,6 @@ class TestPortfolioPDFView(TestCase):
         self.mock_left_segments.reset_mock()
         self.mock_right_segments.reset_mock()
 
-        self.assertEqual(
-            response.context.get("portfolio_pdf_url"),
-            reverse(
-                viewname="portfolio:pdf", kwargs={"slug": self.portfolio.slug}
-            ),
-        )
-
     def test_get_html_response(self):
         url_path = reverse(
             viewname="portfolio:index", kwargs={"slug": self.portfolio.slug}
@@ -72,7 +88,7 @@ class TestPortfolioPDFView(TestCase):
         response = self.client.get(url_path)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response["Content-Type"], "text/html")
-        self.assertResponseContext(response)
+        self.assertResponseContext(response, with_pdf_url=True)
 
         # When portfolio is not published, but it belongs to the user:
         self.portfolio.update(is_published=False)
@@ -80,7 +96,9 @@ class TestPortfolioPDFView(TestCase):
         response = self.client.get(url_path)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response["Content-Type"], "text/html")
-        self.assertResponseContext(response)
+        self.assertResponseContext(
+            response, with_pdf_url=True, with_edit_url=True
+        )
 
     def test_get_pdf_response(self):
         url_path = reverse(

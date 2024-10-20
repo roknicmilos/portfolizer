@@ -1,10 +1,7 @@
 /* Expected to be <a> tag */
-.pdf-button {
+.expendable-button {
     position: fixed;
     right: 0;
-    bottom: 40px;
-    background-color: #9c0d0d;
-    color: white;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     text-decoration: none;
@@ -24,14 +21,26 @@
     }
 }
 
-.pdf-button svg {
+.expendable-button--pdf {
+    bottom: 10px;
+    background-color: #9c0d0d;
+    color: white;
+}
+
+.expendable-button--edit {
+    bottom: 75px;
+    background-color: #0d209c;
+    color: white;
+}
+
+.expendable-button svg {
     height: 25px;
     width: 25px;
     min-width: 25px;
 }
 
 /*!* Text is initially hidden *!*/
-.pdf-button .text {
+.expendable-button .text {
     white-space: nowrap;
     width: 0;
     overflow: hidden;
@@ -39,11 +48,15 @@
 }
 
 /*!* Expand button on hover *!*/
-.pdf-button.expanded {
+.expendable-button--pdf.expanded {
     width: 130px;
 }
 
+.expendable-button--edit.expanded {
+    width: 80px;
+}
+
 /*!* Show the text on hover *!*/
-.pdf-button.expanded .text {
+.expendable-button.expanded .text {
     width: auto;
 }
