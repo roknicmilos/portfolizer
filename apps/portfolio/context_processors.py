@@ -3,8 +3,8 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 from apps.common.utils import (
-    get_model_admin_list_url,
     get_model_admin_details_url,
+    get_model_admin_create_url,
 )
 from apps.common.views import ButtonLink
 from apps.portfolio.models import Portfolio
@@ -26,7 +26,7 @@ def portfolio_variables(request: WSGIRequest) -> dict:
 
 
 def _init_create_portfolio_button() -> ButtonLink:
-    url = get_model_admin_list_url(Portfolio)
+    url = get_model_admin_create_url(Portfolio)
     return ButtonLink(label=_("Create Portfolio"), url=url)
 
 

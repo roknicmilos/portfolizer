@@ -5,8 +5,8 @@ from django.utils.translation import gettext_lazy as _
 from apps.common.views import ButtonLink
 from apps.portfolio.models import Portfolio
 from apps.common.utils import (
-    get_model_admin_list_url,
     get_model_admin_details_url,
+    get_model_admin_create_url,
 )
 from apps.portfolio.context_processors import portfolio_variables
 from apps.portfolio.tests.factories import PortfolioFactory
@@ -33,7 +33,8 @@ class TestContextProcessors(TestCase):
         actual_context = portfolio_variables(self.request)
 
         create_portfolio_button = ButtonLink(
-            label=_("Create Portfolio"), url=get_model_admin_list_url(Portfolio)
+            label=_("Create Portfolio"),
+            url=get_model_admin_create_url(Portfolio),
         )
         expected_context = {
             "portfolio_menu": {

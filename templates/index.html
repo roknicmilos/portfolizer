@@ -18,11 +18,11 @@
     {% if request.user.is_anonymous %}
         <p class="paragraph">
             {% blocktranslate with register_url=user_menu.register.url login_url=user_menu.login.url %}
-                Oh, hi there! Welcome to Portfolizer—a place where you can easily showcase your professional experience
-                and skills. You can create, customize, and manage your portfolio, and even generate and download it as a
-                PDF CV, making it super convenient to show off your work. New here? Go ahead and
-                <a href="{{ register_url }}">register</a> to create your portfolio. Already a member?
-                <a href="{{ login_url }}">Log in</a> and... well, you know the drill!
+                Portfolizer allows you to easily showcase your professional experience and skills. You can create,
+                customize, and manage your portfolio, and even generate and download it as a PDF CV, making it super
+                convenient to show off your work. New here? Go ahead and <a href="{{ register_url }}">register</a> to
+                create your portfolio. Already a member? <a href="{{ login_url }}">Log in</a> and... well, you know the
+                drill!
             {% endblocktranslate %}
         </p>
     {% else %}
