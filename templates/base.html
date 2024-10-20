@@ -12,36 +12,7 @@
 </head>
 <body>
 
-{% block menu %}
-    <nav>
-        <div class="menu">
-            <div class="menu__left">
-                <a href="{% url 'index' %}" class="menu__link menu__link--narrow">
-                    {% svg "svg/rocket.svg" %}
-                </a>
-            </div>
-            <div class="menu__right">
-                {% if request.user.is_anonymous %}
-                    <a href="{{ menu.user.login.url }}" class="menu__link">{{ menu.user.login.label }}</a>
-                    <a href="{{ menu.user.register.url }}" class="menu__link">{{ menu.user.register.label }}</a>
-                {% else %}
-                    {% if menu.portfolio.view %}
-                        <a href="{{ menu.portfolio.view.url }}" class="menu__link">{{ menu.portfolio.view.label }}</a>
-                        <a href="{{ menu.portfolio.edit.url }}" class="menu__link">{{ menu.portfolio.edit.label }}</a>
-                    {% else %}
-                        <a href="{{ menu.portfolio.create.url }}"
-                           class="menu__link">{{ menu.portfolio.create.label }}</a>
-                    {% endif %}
-                    <a href="{{ menu.user.edit.url }}" class="menu__link">{{ menu.user.edit.label }}</a>
-                    <form class="menu__link" method="POST" action="{{ menu.user.logout.url }}">
-                        {% csrf_token %}
-                        <button type="submit">{{ menu.user.logout.label }}</button>
-                    </form>
-                {% endif %}
-            </div>
-        </div>
-    </nav>
-{% endblock menu %}
+{% include "includes/nav.html" %}
 
 <main>
     <div class="content">
