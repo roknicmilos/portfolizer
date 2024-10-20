@@ -1,4 +1,4 @@
-{% extends 'django_pdf_view/pdf.html' %}
+{% extends "django_pdf_view/pdf.html" %}
 
 {% load static %}
 
@@ -8,13 +8,13 @@
 {% endblock metatags %}
 
 {% block style %}
-    {% include 'includes/icons.html' %}
+    {% include "includes/icons.html" %}
     {{ block.super }}
 {% endblock style %}
 
 {% block content %}
     {{ block.super }}
     {% if response_type == "html" %}
-        <script src="{% static 'portfolio/js/pdf-button.js' %}"></script>
+        <script src="{% static 'portfolio/js/expandable-button.js' %}"></script>
     {% endif %}
 {% endblock content %}

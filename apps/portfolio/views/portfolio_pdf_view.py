@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from django_pdf_view.pdf import PDF
 from django_pdf_view.views import PDFView
 
+from apps.common.utils import get_model_admin_details_url
 from apps.portfolio.models import Portfolio
 from apps.portfolio import service
 
@@ -34,9 +35,23 @@ class PortfolioPDFView(PDFView):
         context["right_column"] = service.get_right_column_segments(
             portfolio=self.portfolio
         )
-        context["portfolio_pdf_url"] = reverse(
+
+        if self.response_type == "html":
+            context.update(self._get_html_context())
+
+        return context
+
+    def _get_html_context(self) -> dict:
+        portfolio_pdf_url = reverse(
             viewname="portfolio:pdf", kwargs={"slug": self.portfolio.slug}
         )
+        context = {
+            "portfolio_pdf_url": portfolio_pdf_url,
+        }
+        if self.portfolio.user == self.request.user:
+            context["portfolio_edit_url"] = get_model_admin_details_url(
+                obj=self.portfolio
+            )
         return context
 
     def _get_portfolio(self) -> Portfolio:

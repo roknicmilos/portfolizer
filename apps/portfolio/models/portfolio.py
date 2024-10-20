@@ -67,30 +67,44 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
     first_name = models.CharField(
         verbose_name=_("first name"),
         max_length=50,
+        null=True,
+        blank=True,
     )
     last_name = models.CharField(
         verbose_name=_("last name"),
         max_length=50,
+        null=True,
+        blank=True,
     )
     role = models.CharField(
         verbose_name=_("role"),
         max_length=100,
+        null=True,
+        blank=True,
     )
     email = models.EmailField(
         verbose_name=_("email"),
         max_length=100,
+        null=True,
+        blank=True,
     )
     phone = models.CharField(
         verbose_name=_("phone"),
         max_length=20,
+        null=True,
+        blank=True,
     )
     address_label = models.CharField(
         verbose_name=_("address label"),
         max_length=100,
+        null=True,
+        blank=True,
     )
     address_link = models.URLField(
         verbose_name=_("address link"),
         max_length=1000,
+        null=True,
+        blank=True,
     )
     about_me = models.TextField(
         verbose_name=_("about me"),

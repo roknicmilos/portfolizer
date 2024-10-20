@@ -1,16 +1,16 @@
 {% load i18n %}
 
 <div class="right-segment">
-    <h2 class="title">{% trans 'RELEVANT PROJECTS' %}</h2>
+    <h2 class="title">{% trans "RELEVANT PROJECTS" %}</h2>
     {% for project in projects %}
         <div class="position-item">
             <h3 class="position-item-title">{{ project.name }} | {{ project.role }}</h3>
             <p class="position-item-period">
-                {{ project.start|date:"M Y" }} - {{ project.end|date:"M Y"|default:_('Present') }}
+                {{ project.start|date:"M Y" }} - {{ project.end|date:"M Y"|default:_("Present") }}
             </p>
-            <p><span class="bold">{% trans 'Technologies' %}</span>: {{ project.technologies }}</p>
+            <p><span class="bold">{% trans "Technologies" %}</span>: {{ project.technologies }}</p>
             <p class="position-item-description">
-                <span class="bold">{% trans 'Description' %}</span>: {{ project.description }}
+                <span class="bold">{% trans "Description" %}</span>: {{ project.description }}
             </p>
         </div>
     {% endfor %}
