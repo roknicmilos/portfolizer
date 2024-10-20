@@ -14,33 +14,29 @@
 {% endblock head %}
 
 {% block content %}
-    <main>
-        <h1>{% trans "Portfolizer" %}</h1>
-        {% if request.user.is_anonymous %}
-            <p class="paragraph">
-                {% blocktranslate %}
-                    Oh, hi there! Welcome to Portfolizer! You must have been sent here by Roki. He's a bit weird, but
-                    you'll get used to him. Anyway... if you're looking for a way to showcase your professional
-                    experience and skills, you're in the right place! Portfolizer lets you create, customize, and manage
-                    your portfolio with ease. You can even generate and download your portfolio as a CV in PDF format,
-                    making it super convenient to show off your work. If you're new here, go ahead and register to
-                    create your portfolio. Already a member? Log in and... well, you know the drill. You've been here
-                    before.
-                {% endblocktranslate %}
-            </p>
-            <div class="button-row">
-                <a class="go-to-button" href="{% url 'register' %}">
-                    {% trans "Register" %}
-                </a>
-                <span class="buttons-separator">{% trans "or" %}</span>
-                <a class="go-to-button" href="{% url 'admin:login' %}">
-                    {% trans "Log in" %}
-                </a>
-            </div>
-        {% else %}
-            <a class="go-to-button" href="{{ portfolio_button.url }}">
-                {{ portfolio_button.label }}
+    <h1>{% trans "Portfolizer" %}</h1>
+    {% if request.user.is_anonymous %}
+        <p class="paragraph">
+            {% blocktranslate %}
+                Oh, hi there! Welcome to Portfolizer! You must have been sent here by Roki. He's a bit weird, but
+                you'll get used to him. Anyway... if you're looking for a way to showcase your professional
+                experience and skills, you're in the right place! Portfolizer lets you create, customize, and manage
+                your portfolio with ease. You can even generate and download your portfolio as a CV in PDF format,
+                making it super convenient to show off your work. If you're new here, go ahead and register to
+                create your portfolio. Already a member? Log in and... well, you know the drill. You've been here
+                before.
+            {% endblocktranslate %}
+        </p>
+        <div class="button-row">
+            <a class="go-to-button" href="{% url 'register' %}">
+                {% trans "Register" %}
             </a>
-        {% endif %}
-    </main>
+            <span class="buttons-separator">{% trans "or" %}</span>
+            <a class="go-to-button" href="{% url 'admin:login' %}">
+                {% trans "Log in" %}
+            </a>
+        </div>
+    {% else %}
+        <p class="paragraph paragraph--centered">TODO</p>
+    {% endif %}
 {% endblock content %}
