@@ -10,31 +10,31 @@
             </div>
             <div class="menu__right">
                 {% if request.user.is_anonymous %}
-                    <a href="{{ menu.user.login.url }}" class="menu__link">
-                        {{ menu.user.login.label }}
+                    <a href="{{ user_menu.login.url }}" class="menu__link">
+                        {{ user_menu.login.label }}
                     </a>
-                    <a href="{{ menu.user.register.url }}" class="menu__link">
-                        {{ menu.user.register.label }}
+                    <a href="{{ user_menu.register.url }}" class="menu__link">
+                        {{ user_menu.register.label }}
                     </a>
                 {% else %}
-                    {% if menu.portfolio.view %}
-                        <a href="{{ menu.portfolio.view.url }}" class="menu__link">
-                            {{ menu.portfolio.view.label }}
+                    {% if portfolio_menu.view %}
+                        <a href="{{ portfolio_menu.view.url }}" class="menu__link">
+                            {{ portfolio_menu.view.label }}
                         </a>
-                        <a href="{{ menu.portfolio.edit.url }}" class="menu__link">
-                            {{ menu.portfolio.edit.label }}
+                        <a href="{{ portfolio_menu.edit.url }}" class="menu__link">
+                            {{ portfolio_menu.edit.label }}
                         </a>
                     {% else %}
-                        <a href="{{ menu.portfolio.create.url }}" class="menu__link">
-                            {{ menu.portfolio.create.label }}
+                        <a href="{{ portfolio_menu.create.url }}" class="menu__link">
+                            {{ portfolio_menu.create.label }}
                         </a>
                     {% endif %}
-                    <a href="{{ menu.user.edit.url }}" class="menu__link">
-                        {{ menu.user.edit.label }}
+                    <a href="{{ user_menu.edit.url }}" class="menu__link">
+                        {{ user_menu.edit.label }}
                     </a>
-                    <form class="menu__link" method="POST" action="{{ menu.user.logout.url }}">
+                    <form class="menu__link" method="POST" action="{{ user_menu.logout.url }}">
                         {% csrf_token %}
-                        <button type="submit">{{ menu.user.logout.label }}</button>
+                        <button type="submit">{{ user_menu.logout.label }}</button>
                     </form>
                 {% endif %}
             </div>

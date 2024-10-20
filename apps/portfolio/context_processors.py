@@ -11,12 +11,12 @@ from apps.portfolio.models import Portfolio
 
 
 def portfolio_variables(request: WSGIRequest) -> dict:
-    context = {"menu": {"portfolio": {}}}
+    context = {"portfolio_menu": {}}
 
     if request.user.is_anonymous:
         return context
 
-    context["menu"]["portfolio"] = {
+    context["portfolio_menu"] = {
         "create": _init_create_portfolio_button(),
         "view": _init_view_portfolio_button(portfolio=request.user.portfolio),
         "edit": _init_edit_portfolio_button(portfolio=request.user.portfolio),

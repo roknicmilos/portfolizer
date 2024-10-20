@@ -20,7 +20,7 @@ class TestContextProcessors(TestCase):
 
     def test_portfolio_variables_with_anonymous_user(self):
         actual_context = portfolio_variables(self.request)
-        expected_context = {"menu": {"portfolio": {}}}
+        expected_context = {"portfolio_menu": {}}
         self.assertEqual(actual_context, expected_context)
 
     def test_portfolio_variables_with_authenticated(self):
@@ -35,12 +35,13 @@ class TestContextProcessors(TestCase):
         create_portfolio_button = ButtonLink(
             label=_("Create Portfolio"), url=get_model_admin_list_url(Portfolio)
         )
-        expected_profile_menu = {
-            "create": create_portfolio_button,
-            "view": None,
-            "edit": None,
+        expected_context = {
+            "portfolio_menu": {
+                "create": create_portfolio_button,
+                "view": None,
+                "edit": None,
+            }
         }
-        expected_context = {"menu": {"portfolio": expected_profile_menu}}
         self.assertEqual(actual_context, expected_context)
 
         # When user has a portfolio:
@@ -56,10 +57,11 @@ class TestContextProcessors(TestCase):
 
         actual_context = portfolio_variables(self.request)
 
-        expected_profile_menu = {
-            "create": create_portfolio_button,
-            "view": view_portfolio_button,
-            "edit": edit_portfolio_button,
+        expected_context = {
+            "portfolio_menu": {
+                "create": create_portfolio_button,
+                "view": view_portfolio_button,
+                "edit": edit_portfolio_button,
+            }
         }
-        expected_context = {"menu": {"portfolio": expected_profile_menu}}
         self.assertEqual(actual_context, expected_context)

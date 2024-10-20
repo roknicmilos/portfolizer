@@ -8,20 +8,18 @@ from apps.user.models import User
 
 
 def user_variables(request: WSGIRequest) -> dict:
-    context = {"menu": {"user": {}}}
-
     if request.user.is_anonymous:
-        context["menu"]["user"] = {
+        user_menu = {
             "login": _init_login_button(),
             "register": _init_register_button(),
         }
     else:
-        context["menu"]["user"] = {
+        user_menu = {
             "edit": _init_edit_user_button(request.user),
             "logout": _init_logout_button(),
         }
 
-    return context
+    return {"user_menu": user_menu}
 
 
 def _init_login_button() -> ButtonLink:

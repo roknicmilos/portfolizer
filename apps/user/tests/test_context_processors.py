@@ -20,11 +20,9 @@ class TestContextProcessors(TestCase):
             label=_("Register"), url=reverse("register")
         )
         expected_context = {
-            "menu": {
-                "user": {
-                    "login": login_button,
-                    "register": register_button,
-                }
+            "user_menu": {
+                "login": login_button,
+                "register": register_button,
             }
         }
         self.assertEqual(actual_context, expected_context)
@@ -43,8 +41,6 @@ class TestContextProcessors(TestCase):
             label=_("Logout"), url=reverse("admin:logout")
         )
         expected_context = {
-            "menu": {
-                "user": {"edit": edit_user_button, "logout": logout_button}
-            }
+            "user_menu": {"edit": edit_user_button, "logout": logout_button}
         }
         self.assertEqual(actual_context, expected_context)
