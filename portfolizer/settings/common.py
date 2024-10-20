@@ -107,7 +107,6 @@ AUTH_PASSWORD_VALIDATOR_CLASSES = [
     "django.contrib.auth.password_validation.CommonPasswordValidator",
     "django.contrib.auth.password_validation.NumericPasswordValidator",
 ]
-
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": cls} for cls in AUTH_PASSWORD_VALIDATOR_CLASSES
 ]
@@ -116,34 +115,27 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
-
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "/static/"
-
 STATIC_ROOT = BASE_DIR / "run" / "static"
-
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = "/media/"
-
 MEDIA_ROOT = BASE_DIR / "run" / "media"
 
 AUTH_USER_MODEL = "user.User"
+
+LOGOUT_REDIRECT_URL = "index"
 
 FIXTURES = {
     "labels": [

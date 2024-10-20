@@ -28,12 +28,12 @@
             {% endblocktranslate %}
         </p>
         <div class="button-row">
-            <a class="go-to-button" href="{% url 'register' %}">
-                {% trans "Register" %}
+            <a class="go-to-button" href="{{ menu.user.login.url }}">
+                {{ menu.user.login.label }}
             </a>
             <span class="buttons-separator">{% trans "or" %}</span>
-            <a class="go-to-button" href="{% url 'admin:login' %}">
-                {% trans "Log in" %}
+            <a class="go-to-button" href="{{ menu.user.register.url }}">
+                {{ menu.user.register.label }}
             </a>
         </div>
     {% else %}

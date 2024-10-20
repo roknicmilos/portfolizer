@@ -15,7 +15,7 @@ class TestContextProcessors(TestCase):
 
     def test_user_variables_with_anonymous_user(self):
         actual_context = user_variables(self.request)
-        login_button = ButtonLink(label=_("Login"), url=reverse("admin:login"))
+        login_button = ButtonLink(label=_("Login"), url=reverse("login"))
         register_button = ButtonLink(
             label=_("Register"), url=reverse("register")
         )

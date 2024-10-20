@@ -25,7 +25,7 @@ def user_variables(request: WSGIRequest) -> dict:
 
 
 def _init_login_button() -> ButtonLink:
-    return ButtonLink(label=_("Login"), url=reverse("admin:login"))
+    return ButtonLink(label=_("Login"), url=reverse("login"))
 
 
 def _init_register_button() -> ButtonLink:
