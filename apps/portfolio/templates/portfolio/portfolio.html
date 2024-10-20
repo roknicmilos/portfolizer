@@ -1,4 +1,4 @@
-{% extends 'django_pdf_view/pdf.html' %}
+{% extends "django_pdf_view/pdf.html" %}
 
 {% load static %}
 
@@ -8,7 +8,7 @@
 {% endblock metatags %}
 
 {% block style %}
-    {% include 'includes/icons.html' %}
+    {% include "includes/icons.html" %}
     {{ block.super }}
 {% endblock style %}
 

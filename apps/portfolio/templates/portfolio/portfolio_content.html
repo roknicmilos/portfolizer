@@ -1,10 +1,14 @@
 {% load svg static i18n %}
 
-<div class="page {% if response_type == 'html' %}page--html{% endif %}"
-     {% if response_type == 'pdf' %}style="height: calc(100% * {{ portfolio.page_count }})"{% endif %}>
+<div class="page {% if response_type == "html" %}page--html{% endif %}"
+     {% if response_type == "pdf" %}style="height: calc(100% * {{ portfolio.page_count }})"{% endif %}>
     <section class="left-column">
         <div class="avatar">
-            <img src="{{ avatar_url }}" alt="avatar"/>
+            {% if avatar_url %}
+                <img src="{{ avatar_url }}" alt="avatar"/>
+            {% else %}
+                {% svg "portfolio/svg/avatar.svg" %}
+            {% endif %}
         </div>
         {% for segment in left_column %}
             {{ segment }}
@@ -12,11 +16,18 @@
     </section>
     <section class="right-column">
         <div class="avatar-mobile">
-            <img src="{{ avatar_url }}" alt="avatar"/>
+            {% if avatar_url %}
+                <img src="{{ avatar_url }}" alt="avatar"/>
+            {% else %}
+                {% svg "portfolio/svg/avatar-dark.svg" %}
+            {% endif %}
         </div>
         <div class="right-segment header">
-            <h1 class="name">{{ portfolio.first_name|upper }} {{ portfolio.last_name|upper }}</h1>
-            <p class="role">{{ portfolio.role|upper }}</p>
+            <h1 class="name">
+                {{ portfolio.first_name|default:_("firstname")|upper }}
+                {{ portfolio.last_name|default:_("lastname")|upper }}
+            </h1>
+            <p class="role">{{ portfolio.role|default:_("role")|upper }}</p>
         </div>
         {% for segment in right_column %}
             {{ segment }}
@@ -24,9 +35,9 @@
     </section>
 </div>
 
-{% if response_type == 'html' %}
+{% if response_type == "html" %}
     <a class="pdf-button" href="{{ portfolio_pdf_url }}">
-        <span class="text">{% trans 'Download' %}</span>
+        <span class="text">{% trans "Download" %}</span>
         {% svg "portfolio/svg/pdf.svg" %}
     </a>
 {% endif %}

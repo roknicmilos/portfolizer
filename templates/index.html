@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% load i18n static %}
 
@@ -26,10 +26,10 @@
             {% endblocktranslate %}
         </p>
     {% else %}
-        <p class="paragraph paragraph--centered">
-            {% blocktranslate %}
-                TODO
-            {% endblocktranslate %}
-        </p>
+        {% if portfolio_menu.view %}
+            <a class="go-to-button" href="{{ portfolio_menu.view.url }}">{{ portfolio_menu.view.label }}</a>
+        {% else %}
+            <a class="go-to-button" href="{{ portfolio_menu.create.url }}">{{ portfolio_menu.create.label }}</a>
+        {% endif %}
     {% endif %}
 {% endblock content %}

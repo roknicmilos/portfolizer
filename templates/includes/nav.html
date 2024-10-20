@@ -10,28 +10,18 @@
             </div>
             <div class="menu__right">
                 {% if request.user.is_anonymous %}
-                    <a href="{{ user_menu.login.url }}" class="menu__link">
-                        {{ user_menu.login.label }}
-                    </a>
-                    <a href="{{ user_menu.register.url }}" class="menu__link">
-                        {{ user_menu.register.label }}
-                    </a>
+                    <a href="{{ user_menu.login.url }}" class="menu__link">{{ user_menu.login.label }}</a>
+                    <a href="{{ user_menu.register.url }}" class="menu__link">{{ user_menu.register.label }}</a>
                 {% else %}
                     {% if portfolio_menu.view %}
-                        <a href="{{ portfolio_menu.view.url }}" class="menu__link">
-                            {{ portfolio_menu.view.label }}
-                        </a>
-                        <a href="{{ portfolio_menu.edit.url }}" class="menu__link">
-                            {{ portfolio_menu.edit.label }}
-                        </a>
+                        <a href="{{ portfolio_menu.view.url }}" class="menu__link">{{ portfolio_menu.view.label }}</a>
+                        <a href="{{ portfolio_menu.edit.url }}" class="menu__link">{{ portfolio_menu.edit.label }}</a>
                     {% else %}
-                        <a href="{{ portfolio_menu.create.url }}" class="menu__link">
-                            {{ portfolio_menu.create.label }}
+                        <a href="{{ portfolio_menu.create.url }}"
+                           class="menu__link">{{ portfolio_menu.create.label }}
                         </a>
                     {% endif %}
-                    <a href="{{ user_menu.edit.url }}" class="menu__link">
-                        {{ user_menu.edit.label }}
-                    </a>
+                    <a href="{{ user_menu.edit.url }}" class="menu__link">{{ user_menu.edit.label }}</a>
                     <form class="menu__link" method="POST" action="{{ user_menu.logout.url }}">
                         {% csrf_token %}
                         <button type="submit">{{ user_menu.logout.label }}</button>
