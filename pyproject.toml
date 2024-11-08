@@ -22,7 +22,7 @@ psycopg2 = "^2.9.10"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
 pytest-django = "^4.9.0"
-pytest-cov = "^5.0.0"
+pytest-cov = "^6.0.0"
 factory-boy = "^3.3.1"
 
 [tool.poetry.group.local.dependencies]
