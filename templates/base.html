@@ -5,15 +5,22 @@
 <!DOCTYPE html>
 <html lang="{{ CURRENT_LANGUAGE_CODE }}">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
     {% block head %}
         {% include 'includes/icons.html' %}
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="stylesheet" href="{% static 'css/common.css' %}">
+        <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     {% endblock head %}
 </head>
 <body>
 
-{% block content %}{% endblock content %}
+{% include "includes/nav.html" %}
+
+<main>
+    <div class="content">
+        {% block content %}{% endblock content %}
+    </div>
+</main>
 
 {% for message in messages %}
     <div class="flash-message {% if message.tags %}flash-message--{{ message.tags }}{% endif %} js-flash-message">
@@ -21,7 +28,7 @@
             {{ message }}
         </p>
         <div class="flash-message__close-button js-flash-message-close-button">
-            {% svg 'svg/x.svg' %}
+            {% svg "svg/x.svg" %}
         </div>
     </div>
 {% endfor %}

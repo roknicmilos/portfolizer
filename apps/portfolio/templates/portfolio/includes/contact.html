@@ -1,16 +1,22 @@
 {% load svg %}
 
 <div class="left-segment contact">
-    <a class="contact-item" href="{{ address_link }}">
-        {% svg "portfolio/svg/location.svg" %}
-        <div class="contact-item-value">{{ address_label }}</div>
-    </a>
-    <a class="contact-item" href="tel:{{ phone }}">
-        {% svg "portfolio/svg/phone.svg" %}
-        <div class="contact-item-value">{{ phone }}</div>
-    </a>
-    <a class="contact-item" href="mailto:{{ email }}">
-        {% svg "portfolio/svg/email.svg" %}
-        <div class="contact-item-value">{{ email }}</div>
-    </a>
+    {% if address_label %}
+        <a class="contact-item" href="{{ address_link }}">
+            {% svg "portfolio/svg/location.svg" %}
+            <div class="contact-item-value">{{ address_label }}</div>
+        </a>
+    {% endif %}
+    {% if phone %}
+        <a class="contact-item" href="tel:{{ phone }}">
+            {% svg "portfolio/svg/phone.svg" %}
+            <div class="contact-item-value">{{ phone }}</div>
+        </a>
+    {% endif %}
+    {% if email %}
+        <a class="contact-item" href="mailto:{{ email }}">
+            {% svg "portfolio/svg/email.svg" %}
+            <div class="contact-item-value">{{ email }}</div>
+        </a>
+    {% endif %}
 </div>

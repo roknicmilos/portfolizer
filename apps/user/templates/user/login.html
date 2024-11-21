@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load i18n static %}
+
+{% block head %}
+    <title>{% trans "Login" %}</title>
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/user.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Login" %}</h1>
+    <form class="auth-form" method="POST">
+        {% csrf_token %}
+        {% include "includes/input_field.html" with field=form.username %}
+        {% include "includes/input_field.html" with field=form.password %}
+        <div class="button-row">
+            <input class="go-to-button" type="submit" value="{% trans "Login" %}"/>
+        </div>
+    </form>
+{% endblock %}

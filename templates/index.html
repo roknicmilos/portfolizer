@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% load i18n static %}
 
@@ -14,33 +14,22 @@
 {% endblock head %}
 
 {% block content %}
-    <main>
-        <h1>{% trans "Portfolizer" %}</h1>
-        {% if request.user.is_anonymous %}
-            <p class="paragraph">
-                {% blocktranslate %}
-                    Oh, hi there! Welcome to Portfolizer! You must have been sent here by Roki. He's a bit weird, but
-                    you'll get used to him. Anyway... if you're looking for a way to showcase your professional
-                    experience and skills, you're in the right place! Portfolizer lets you create, customize, and manage
-                    your portfolio with ease. You can even generate and download your portfolio as a CV in PDF format,
-                    making it super convenient to show off your work. If you're new here, go ahead and register to
-                    create your portfolio. Already a member? Log in and... well, you know the drill. You've been here
-                    before.
-                {% endblocktranslate %}
-            </p>
-            <div class="button-row">
-                <a class="go-to-button" href="{% url 'register' %}">
-                    {% trans "Register" %}
-                </a>
-                <span class="buttons-separator">{% trans "or" %}</span>
-                <a class="go-to-button" href="{% url 'admin:login' %}">
-                    {% trans "Log in" %}
-                </a>
-            </div>
+    <h1>{% trans "Portfolizer" %}</h1>
+    {% if request.user.is_anonymous %}
+        <p class="paragraph">
+            {% blocktranslate with register_url=user_menu.register.url login_url=user_menu.login.url %}
+                Portfolizer allows you to easily showcase your professional experience and skills. You can create,
+                customize, and manage your portfolio, and even generate and download it as a PDF CV, making it super
+                convenient to show off your work. New here? Go ahead and <a href="{{ register_url }}">register</a> to
+                create your portfolio. Already a member? <a href="{{ login_url }}">Log in</a> and... well, you know the
+                drill!
+            {% endblocktranslate %}
+        </p>
+    {% else %}
+        {% if portfolio_menu.view %}
+            <a class="go-to-button" href="{{ portfolio_menu.view.url }}">{{ portfolio_menu.view.label }}</a>
         {% else %}
-            <a class="go-to-button" href="{{ portfolio_button.url }}">
-                {{ portfolio_button.label }}
-            </a>
+            <a class="go-to-button" href="{{ portfolio_menu.create.url }}">{{ portfolio_menu.create.label }}</a>
         {% endif %}
-    </main>
+    {% endif %}
 {% endblock content %}

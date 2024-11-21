@@ -1,19 +1,32 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
     background-color: #0d1117;
     color: white;
-    padding: 0 0 60px 0;
+    min-height: calc(100vh - 75px);
+    padding: 0 20%;
+
+    @media only screen and (max-width: 1200px) {
+        padding: 0 10%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 0;
+    }
 }
 
 h1 {
     text-align: center;
-    margin: 120px auto 60px auto;
-    width: 80%;
+    margin: 100px auto 60px auto;
 
     @media only screen and (max-width: 768px) {
-        margin-top: 70px;
-        width: 280px;
+        margin: 60px auto 40px auto;
     }
 }
 
@@ -75,4 +88,78 @@ h1 {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.paragraph {
+    text-align: justify;
+    margin: 20px auto;
+    line-height: 1.6;
+    font-size: 20px;
+
+    @media only screen and (max-width: 768px) {
+        width: 85%;
+    }
+}
+
+.paragraph--centered {
+    text-align: center;
+}
+
+.paragraph a {
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+.go-to-button {
+    cursor: pointer;
+    margin: 40px auto;
+    padding: 30px 50px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: rgba(240, 46, 46, 0.4) 5px 5px,
+    rgba(240, 46, 46, 0.3) 10px 10px,
+    rgba(240, 46, 46, 0.2) 15px 15px,
+    rgba(240, 46, 46, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.button-row {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.button-row .go-to-button {
+    margin: 20px;
+
+    @media only screen and (max-width: 768px) {
+        width: 88%;
+        margin: 0 auto;
+    }
+}
+
+.buttons-separator {
+    margin: 20px;
 }
