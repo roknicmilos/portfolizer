@@ -12,6 +12,10 @@ main {
     min-height: calc(100vh - 75px);
     padding: 0 20%;
 
+    @media only screen and (max-width: 1200px) {
+        padding: 0 10%;
+    }
+
     @media only screen and (max-width: 768px) {
         padding: 0;
     }
@@ -20,6 +24,10 @@ main {
 h1 {
     text-align: center;
     margin: 100px auto 60px auto;
+
+    @media only screen and (max-width: 768px) {
+        margin: 60px auto 40px auto;
+    }
 }
 
 @keyframes slideInFromTop {
@@ -139,12 +147,17 @@ h1 {
     align-items: center;
 
     @media only screen and (max-width: 768px) {
-        flex-direction: column;
+        width: 100%;
     }
 }
 
 .button-row .go-to-button {
     margin: 20px;
+
+    @media only screen and (max-width: 768px) {
+        width: 88%;
+        margin: 0 auto;
+    }
 }
 
 .buttons-separator {

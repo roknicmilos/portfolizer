@@ -1,9 +1,48 @@
 .auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     color: black;
     width: 80%;
-    max-width: 650px;
+    max-width: 750px;
     margin: 0 auto 100px;
-    padding: 60px;
+    padding: 60px 0;
     border-radius: 5px;
+
+    @media only screen and (max-width: 1200px) {
+        width: 90%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+.auth-form .input-field {
+    width: 80%;
+
+    @media only screen and (max-width: 768px) {
+        width: 88%;
+    }
+}
+
+.auth-form .input-field .label-text {
+    @media only screen and (max-width: 768px) {
+        color: #e4e4e4;
+    }
+}
+
+.auth-form .input-field input {
+    @media only screen and (max-width: 768px) {
+        border: 2px solid #e4e4e4;
+    }
+}
+
+.auth-form .input-field .help-text {
+    @media only screen and (max-width: 768px) {
+        color: #e4e4e4;
+    }
 }
