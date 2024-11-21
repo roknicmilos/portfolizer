@@ -5,6 +5,8 @@
 <!DOCTYPE html>
 <html lang="{{ CURRENT_LANGUAGE_CODE }}">
 <head>
+    <title>{% block title %}{% trans "Portfolizer" %}{% endblock title %}</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
     {% block head %}
         {% include 'includes/icons.html' %}
