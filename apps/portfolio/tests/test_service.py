@@ -25,6 +25,7 @@ class TestService(TestCase):
                 "address_label": cls.portfolio.address_label,
                 "phone": cls.portfolio.phone,
                 "email": cls.portfolio.email,
+                "birthday": cls.portfolio.birthday,
             },
         )
 
