@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% load i18n static %}
+
+{% block title %}{% trans "404" %}{% endblock title %}
+
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/404.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="content-404">
+        <p class="paragraph paragraph--centered">{% trans "This is you now 👇" %}</p>
+        <img class="john-travolta-lost-gif"
+             alt="john travolta lost gif"
+             src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3BjazYwOW5jeTc1aWJ2aTJsNzZhd3lkbGc2Zm1pOHkyeXFtZHI5MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7aTskHEUdgCQAXde/giphy.gif">
+        <p class="paragraph paragraph--centered">
+            {% blocktrans %}
+                You are lost. You don't know where you are. Just hit that rocker it the top left corner, and I'll take
+                you back home. 😮‍💨
+            {% endblocktrans %}
+        </p>
+    </div>
+{% endblock content %}

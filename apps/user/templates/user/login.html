@@ -2,8 +2,9 @@
 
 {% load i18n static %}
 
+{% block title %}{% trans "Login" %}{% endblock title %}
+
 {% block head %}
-    <title>{% trans "Login" %}</title>
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'css/form.css' %}">
     <link rel="stylesheet" href="{% static 'user/css/user.css' %}">

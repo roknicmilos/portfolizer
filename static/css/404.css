@@ -1,0 +1,18 @@
+.content-404 {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+.john-travolta-lost-gif {
+    width: 800px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 900px) {
+        width: 95%;
+    }
+}
+
+.content-404 .paragraph {
+    max-width: 800px;
+}

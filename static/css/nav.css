@@ -47,7 +47,7 @@ nav {
     justify-content: center;
     height: 100%;
     cursor: pointer;
-    padding: 0 20px;
+    padding: 0 30px;
     margin: 0;
     z-index: 11; /* Above the dropdown! */
 }
@@ -105,7 +105,7 @@ nav {
 }
 
 .menu__link--narrow {
-    width: 100px;
+    width: 80px;
 }
 
 .menu__link svg {
