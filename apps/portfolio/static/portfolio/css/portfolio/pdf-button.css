@@ -14,6 +14,12 @@
     transition: width 0.3s ease-in-out;
     width: 30px; /* Initial width with only the SVG visible */
     height: 40px;
+}
+
+.expendable-button--pdf {
+    bottom: 10px;
+    background-color: #9c0d0d;
+    color: white;
 
     @media only screen and (max-width: 1200px) {
         top: 40px;
@@ -21,16 +27,15 @@
     }
 }
 
-.expendable-button--pdf {
-    bottom: 10px;
-    background-color: #9c0d0d;
-    color: white;
-}
-
 .expendable-button--edit {
     bottom: 75px;
     background-color: #0d209c;
     color: white;
+
+    @media only screen and (max-width: 1200px) {
+        top: 105px;
+        bottom: unset;
+    }
 }
 
 .expendable-button svg {
