@@ -25,6 +25,7 @@ def get_left_column_segments(portfolio: Portfolio) -> list[str]:
                     "address_label": portfolio.address_label,
                     "phone": portfolio.phone,
                     "email": portfolio.email,
+                    "birthday": portfolio.birthday,
                 },
             ),
         },

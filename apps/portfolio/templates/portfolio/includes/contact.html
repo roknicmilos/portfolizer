@@ -19,4 +19,10 @@
             <div class="contact-item-value">{{ email }}</div>
         </a>
     {% endif %}
+    {% if birthday %}
+        <div class="contact-item">
+            {% svg "portfolio/svg/birthday.svg" %}
+            <div class="contact-item-value">{{ birthday|date:"d.m.Y." }}</div>
+        </div>
+    {% endif %}
 </div>

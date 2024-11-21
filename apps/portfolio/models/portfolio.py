@@ -106,6 +106,11 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         null=True,
         blank=True,
     )
+    birthday = models.DateField(
+        verbose_name=_("birthday"),
+        null=True,
+        blank=True,
+    )
     about_me = models.TextField(
         verbose_name=_("about me"),
         null=True,

@@ -86,6 +86,7 @@ class PortfolioAdmin(admin.ModelAdmin):
                     "phone",
                     "address_label",
                     "address_link",
+                    "birthday",
                 ),
                 "classes": ("collapse",),
             },
