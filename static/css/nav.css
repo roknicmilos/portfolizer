@@ -41,6 +41,25 @@ nav {
     position: relative;
 }
 
+.menu__home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    color: black;
+    border: 5px solid white;
+}
+
+.menu__home-button svg {
+    height: 60%;
+}
+
+.menu__home-button:hover {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    background-color: #ececec;
+}
+
 .menu__burger {
     display: flex;
     flex-direction: column;
@@ -93,7 +112,7 @@ nav {
     }
 }
 
-.menu__link {
+.menu__dropdown-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,31 +123,13 @@ nav {
     cursor: pointer;
 }
 
-.menu__link--narrow {
-    width: 80px;
-}
-
-.menu__link svg {
-    height: 60%;
-}
-
-.menu__left .menu__link {
-    border: 5px solid white;
-}
-
-.menu__left .menu__link:hover {
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
-    background-color: #ececec;
-}
-
-.menu__right .menu__link {
+.menu__dropdown-item {
     padding: 20px 30px;
     border: none;
     border-bottom: 1px solid black;
 }
 
-.menu__right .menu__link:hover {
+.menu__dropdown-item:hover {
     background-color: #ececec;
 }
 
@@ -136,13 +137,13 @@ nav {
 * Logout menu item is actually a form with a submit button
 * which is why we need to style the button as a link
  */
-.menu__right form.menu__link {
+form.menu__dropdown-item {
     padding: 0;
     height: calc(100% - 10px); /* 10px is the border width */
     width: 100%;
 }
 
-.menu__right .menu__link button[type="submit"] {
+.menu__dropdown-item button[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,6 +159,6 @@ nav {
     font-family: inherit;
 }
 
-.menu__right .menu__link button[type="submit"]:hover {
+.menu__dropdown-item button[type="submit"]:hover {
     background-color: #ececec;
 }
