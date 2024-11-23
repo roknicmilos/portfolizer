@@ -1,7 +1,7 @@
 {% load svg i18n %}
 
 <div class="left-segment contact">
-    <h2 class="title">{% trans "CONTACT" %}</h2>
+    <h2 class="title">{{ title }}</h2>
     {% if contact.phone %}
         <a class="contact-item" href="tel:{{ contact.phone }}">
             {% svg "portfolio/svg/phone.svg" %}

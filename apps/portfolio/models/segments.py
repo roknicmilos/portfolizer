@@ -1,6 +1,5 @@
 from abc import ABC
 
-from django.utils.translation import gettext_lazy as _
 from django.template.loader import render_to_string
 
 from apps.portfolio.models import Portfolio
@@ -18,7 +17,10 @@ class ContactSegment(Segment):
         )
         self.content = render_to_string(
             template_name="portfolio/includes/contact.html",
-            context={"contact": portfolio.contact},
+            context={
+                "contact": portfolio.contact,
+                "title": portfolio.contact_segment_title,
+            },
         )
 
 
@@ -29,7 +31,10 @@ class PersonalDetailsSegment(Segment):
         )
         self.content = render_to_string(
             template_name="portfolio/includes/personal_details.html",
-            context={"personal_details": portfolio.personal_details},
+            context={
+                "personal_details": portfolio.personal_details,
+                "title": portfolio.personal_details_segment_title,
+            },
         )
 
 
@@ -40,7 +45,10 @@ class LinksSegment(Segment):
         )
         self.content = render_to_string(
             template_name="portfolio/includes/links.html",
-            context={"links": portfolio.links.all()},
+            context={
+                "links": portfolio.links.all(),
+                "title": portfolio.links_segment_title,
+            },
         )
 
 
@@ -53,7 +61,7 @@ class SkillsSegment(Segment):
             template_name="portfolio/includes/skills.html",
             context={
                 "skills": portfolio.ordered_skills,
-                "title": _("SKILLS"),
+                "title": portfolio.skills_segment_title,
             },
         )
 
@@ -67,7 +75,7 @@ class LanguagesSegment(Segment):
             template_name="portfolio/includes/skills.html",
             context={
                 "skills": portfolio.languages.all(),
-                "title": _("LANGUAGES"),
+                "title": portfolio.languages_segment_title,
             },
         )
 
@@ -79,7 +87,10 @@ class InternshipSegment(Segment):
         )
         self.content = render_to_string(
             template_name="portfolio/includes/internship.html",
-            context={"internships": portfolio.ordered_internships},
+            context={
+                "internships": portfolio.ordered_internships,
+                "title": portfolio.internship_segment_title,
+            },
         )
 
 
@@ -90,7 +101,10 @@ class EducationSegment(Segment):
         )
         self.content = render_to_string(
             template_name="portfolio/includes/education.html",
-            context={"educations": portfolio.ordered_educations},
+            context={
+                "educations": portfolio.ordered_educations,
+                "title": portfolio.education_segment_title,
+            },
         )
 
 
@@ -101,7 +115,10 @@ class AboutMeSegment(Segment):
         )
         self.content = render_to_string(
             template_name="portfolio/includes/about_me.html",
-            context={"about_me": portfolio.about_me},
+            context={
+                "about_me": portfolio.about_me,
+                "title": portfolio.about_me_segment_title,
+            },
         )
 
 
@@ -112,7 +129,10 @@ class EmploymentSegment(Segment):
         )
         self.content = render_to_string(
             template_name="portfolio/includes/employment.html",
-            context={"employments": portfolio.ordered_employments},
+            context={
+                "employments": portfolio.ordered_employments,
+                "title": portfolio.employment_segment_title,
+            },
         )
 
 
@@ -123,5 +143,8 @@ class ProjectsSegment(Segment):
         )
         self.content = render_to_string(
             template_name="portfolio/includes/projects.html",
-            context={"projects": portfolio.ordered_projects},
+            context={
+                "projects": portfolio.ordered_projects,
+                "title": portfolio.projects_segment_title,
+            },
         )

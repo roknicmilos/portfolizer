@@ -1,7 +1,7 @@
 {% load svg i18n %}
 
 <div class="left-segment contact">
-    <h2 class="title">{% trans "PERSONAL DETAILS" %}</h2>
+    <h2 class="title">{{ title }}</h2>
     {% if personal_details.address %}
         {% if personal_details.address.link %}
             <a class="contact-item" href="{{ personal_details.address.link }}">
