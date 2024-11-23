@@ -7,6 +7,7 @@ from apps.common.models import BaseModel
 class LeftPortfolioColumnMixin(BaseModel):
     class LeftSegment(models.TextChoices):
         CONTACT = "contact", _("Contact")
+        PERSONAL_DETAILS = "personal_details", _("Personal Details")
         LINKS = "links", _("Links")
         SKILLS = "skills", _("Skills")
         LANGUAGES = "languages", _("Languages")
@@ -23,28 +24,34 @@ class LeftPortfolioColumnMixin(BaseModel):
         verbose_name=_("second segment in left column"),
         max_length=20,
         choices=LeftSegment.choices,
-        default=LeftSegment.LINKS,
+        default=LeftSegment.PERSONAL_DETAILS,
     )
     third_left_segment = models.CharField(
         verbose_name=_("third segment in left column"),
         max_length=20,
         choices=LeftSegment.choices,
-        default=LeftSegment.SKILLS,
+        default=LeftSegment.LINKS,
     )
     fourth_left_segment = models.CharField(
         verbose_name=_("fourth segment in left column"),
         max_length=20,
         choices=LeftSegment.choices,
-        default=LeftSegment.LANGUAGES,
+        default=LeftSegment.SKILLS,
     )
     fifth_left_segment = models.CharField(
         verbose_name=_("fifth segment in left column"),
         max_length=20,
         choices=LeftSegment.choices,
-        default=LeftSegment.INTERNSHIP,
+        default=LeftSegment.LANGUAGES,
     )
     sixth_left_segment = models.CharField(
         verbose_name=_("sixth segment in left column"),
+        max_length=20,
+        choices=LeftSegment.choices,
+        default=LeftSegment.INTERNSHIP,
+    )
+    seventh_left_segment = models.CharField(
+        verbose_name=_("seventh segment in left column"),
         max_length=20,
         choices=LeftSegment.choices,
         default=LeftSegment.EDUCATION,
@@ -61,6 +68,7 @@ class LeftPortfolioColumnMixin(BaseModel):
             "fourth_left_segment": self.fourth_left_segment,
             "fifth_left_segment": self.fifth_left_segment,
             "sixth_left_segment": self.sixth_left_segment,
+            "seventh_left_segment": self.seventh_left_segment,
         }
 
         duplicates = {
@@ -84,5 +92,6 @@ class LeftPortfolioColumnMixin(BaseModel):
             self.fourth_left_segment,
             self.fifth_left_segment,
             self.sixth_left_segment,
+            self.seventh_left_segment,
         ]
         return segments.index(segment)

@@ -2,139 +2,69 @@ from django.contrib.auth.models import Permission
 from django.contrib.contenttypes.models import ContentType
 
 from apps.portfolio.models import Portfolio
-from django.template.loader import render_to_string
-from django.utils.translation import gettext_lazy as _
+
+from apps.portfolio.models.segments import (
+    ContactSegment,
+    Segment,
+    InternshipSegment,
+    EducationSegment,
+    LanguagesSegment,
+    SkillsSegment,
+    LinksSegment,
+    PersonalDetailsSegment,
+    AboutMeSegment,
+    EmploymentSegment,
+    ProjectsSegment,
+)
 
 
-def get_left_column_segments(portfolio: Portfolio) -> list[str]:
+def render_left_column_segments(portfolio: Portfolio) -> list[str]:
     """
     Returns a list of rendered HTML segments for the
     left column of the Portfolio in the order they should be
     displayed which is configured in the Portfolio model.
     """
 
-    segments: list[dict] = [
-        {
-            "order": portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.CONTACT
-            ),
-            "content": render_to_string(
-                template_name="portfolio/includes/contact.html",
-                context={
-                    "address_link": portfolio.address_link,
-                    "address_label": portfolio.address_label,
-                    "phone": portfolio.phone,
-                    "email": portfolio.email,
-                    "birthday": portfolio.birthday,
-                },
-            ),
-        },
-    ]
+    segments: list[Segment] = []
+    if portfolio.contact:
+        segments.append(ContactSegment(portfolio))
+    if portfolio.personal_details:
+        segments.append(PersonalDetailsSegment(portfolio))
     if portfolio.links.exists():
-        segments.append({
-            "order": portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.LINKS
-            ),
-            "content": render_to_string(
-                template_name="portfolio/includes/links.html",
-                context={"links": portfolio.links.all()},
-            ),
-        })
+        segments.append(LinksSegment(portfolio))
     if portfolio.skills.exists():
-        segments.append({
-            "order": portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.SKILLS
-            ),
-            "content": render_to_string(
-                template_name="portfolio/includes/skills.html",
-                context={
-                    "skills": portfolio.ordered_skills,
-                    "title": _("SKILLS"),
-                },
-            ),
-        })
+        segments.append(SkillsSegment(portfolio))
     if portfolio.languages.exists():
-        segments.append({
-            "order": portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.LANGUAGES
-            ),
-            "content": render_to_string(
-                template_name="portfolio/includes/skills.html",
-                context={
-                    "skills": portfolio.languages.all(),
-                    "title": _("LANGUAGES"),
-                },
-            ),
-        })
+        segments.append(LanguagesSegment(portfolio))
     if portfolio.internships.exists():
-        segments.append({
-            "order": portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.INTERNSHIP
-            ),
-            "content": render_to_string(
-                template_name="portfolio/includes/internship.html",
-                context={"internships": portfolio.ordered_internships},
-            ),
-        })
+        segments.append(InternshipSegment(portfolio))
     if portfolio.educations.exists():
-        segments.append({
-            "order": portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.EDUCATION
-            ),
-            "content": render_to_string(
-                template_name="portfolio/includes/education.html",
-                context={"educations": portfolio.ordered_educations},
-            ),
-        })
+        segments.append(EducationSegment(portfolio))
 
     return [
-        segment["content"]
-        for segment in sorted(segments, key=lambda x: x["order"])
+        segment.content
+        for segment in sorted(segments, key=lambda segment: segment.order)
     ]
 
 
-def get_right_column_segments(portfolio: Portfolio) -> list[str]:
+def render_right_column_segments(portfolio: Portfolio) -> list[str]:
     """
     Returns a list of rendered HTML segments for the
     right column of the Portfolio in the order they should be
     displayed which is configured in the Portfolio model.
     """
 
-    segments: list[dict] = []
+    segments: list[Segment] = []
     if portfolio.about_me:
-        segments.append({
-            "order": portfolio.get_right_segment_order(
-                Portfolio.RightSegment.ABOUT_ME
-            ),
-            "content": render_to_string(
-                template_name="portfolio/includes/about_me.html",
-                context={"about_me": portfolio.about_me},
-            ),
-        })
+        segments.append(AboutMeSegment(portfolio))
     if portfolio.employments.exists():
-        segments.append({
-            "order": portfolio.get_right_segment_order(
-                Portfolio.RightSegment.EMPLOYMENT
-            ),
-            "content": render_to_string(
-                template_name="portfolio/includes/employment.html",
-                context={"employments": portfolio.ordered_employments},
-            ),
-        })
+        segments.append(EmploymentSegment(portfolio))
     if portfolio.projects.exists():
-        segments.append({
-            "order": portfolio.get_right_segment_order(
-                Portfolio.RightSegment.PROJECTS
-            ),
-            "content": render_to_string(
-                template_name="portfolio/includes/projects.html",
-                context={"projects": portfolio.ordered_projects},
-            ),
-        })
+        segments.append(ProjectsSegment(portfolio))
 
     return [
-        segment["content"]
-        for segment in sorted(segments, key=lambda x: x["order"])
+        segment.content
+        for segment in sorted(segments, key=lambda segment: segment.order)
     ]
 
 

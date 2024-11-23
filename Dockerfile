@@ -43,6 +43,8 @@ CMD ["/app/scripts/entrypoint", "prod"]
 
 FROM base AS ci
 
+COPY pytest.ini /app/
+
 # Install all dependencies
 RUN poetry install --no-root
 

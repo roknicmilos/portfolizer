@@ -1,7 +1,7 @@
 {% load svg i18n %}
 
 <div class="left-segment">
-    <h2 class="title">{% trans "INTERNSHIP HISTORY" %}</h2>
+    <h2 class="title">{{ title }}</h2>
     {% for internship in internships %}
         <div class="education-item">
             <h3 class="education-item-title">{{ internship.title }}, {{ internship.company }}</h3>

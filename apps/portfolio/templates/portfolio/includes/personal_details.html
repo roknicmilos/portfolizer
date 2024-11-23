@@ -1,0 +1,24 @@
+{% load svg i18n %}
+
+<div class="left-segment contact">
+    <h2 class="title">{{ title }}</h2>
+    {% if personal_details.address %}
+        {% if personal_details.address.link %}
+            <a class="contact-item" href="{{ personal_details.address.link }}">
+                {% svg "portfolio/svg/location.svg" %}
+                <div class="contact-item-value">{{ personal_details.address.label }}</div>
+            </a>
+        {% else %}
+            <div class="contact-item">
+                {% svg "portfolio/svg/location.svg" %}
+                <div class="contact-item-value">{{ personal_details.address.label }}</div>
+            </div>
+        {% endif %}
+    {% endif %}
+    {% if personal_details.birthday %}
+        <div class="contact-item">
+            {% svg "portfolio/svg/birthday.svg" %}
+            <div class="contact-item-value">{{ personal_details.birthday|date:"d.m.Y." }}</div>
+        </div>
+    {% endif %}
+</div>

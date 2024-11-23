@@ -72,6 +72,24 @@ class PortfolioAdmin(admin.ModelAdmin):
             },
         ),
         (
+            _("Segment Titles"),
+            {
+                "fields": (
+                    "contact_segment_title",
+                    "personal_details_segment_title",
+                    "links_segment_title",
+                    "skills_segment_title",
+                    "languages_segment_title",
+                    "education_segment_title",
+                    "internship_segment_title",
+                    "about_me_segment_title",
+                    "employment_segment_title",
+                    "projects_segment_title",
+                ),
+                "classes": ("collapse",),
+            },
+        ),
+        (
             _("*IMAGE (L)"),
             {
                 "fields": ("avatar",),
@@ -84,6 +102,14 @@ class PortfolioAdmin(admin.ModelAdmin):
                 "fields": (
                     "email",
                     "phone",
+                ),
+                "classes": ("collapse",),
+            },
+        ),
+        (
+            _("*PERSONAL DETAILS (L)"),
+            {
+                "fields": (
                     "address_label",
                     "address_link",
                     "birthday",

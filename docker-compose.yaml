@@ -1,5 +1,5 @@
 # This file is used to run the application in LOCAL/DEVELOPMENT mode.
-# It is not ment to be used in conjunction with another docker-compose
+# It is not meant to be used in conjunction with another docker-compose
 # file, but rather to be used as a standalone file.
 
 services:

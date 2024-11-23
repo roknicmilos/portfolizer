@@ -7,15 +7,12 @@ from django.utils.translation import gettext_lazy as _
 from apps.portfolio.models import (
     LeftPortfolioColumnMixin,
     RightPortfolioColumnMixin,
+    Contact,
+    PersonalDetails,
 )
 
 
 class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
-    class RightSegment(models.TextChoices):
-        ABOUT_ME = "about_me", _("About Me")
-        EMPLOYMENT = "employment", _("Employment")
-        PROJECTS = "projects", _("Projects")
-
     user = models.ForeignKey(
         to="user.User",
         verbose_name=_("user"),
@@ -116,23 +113,55 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         null=True,
         blank=True,
     )
-    first_right_segment = models.CharField(
-        verbose_name=_("first segment in right column"),
-        max_length=20,
-        choices=RightSegment.choices,
-        default=RightSegment.ABOUT_ME,
+    contact_segment_title = models.CharField(
+        verbose_name=_("contact segment title"),
+        max_length=100,
+        default=_("CONTACT"),
     )
-    second_right_segment = models.CharField(
-        verbose_name=_("second segment in right column"),
-        max_length=20,
-        choices=RightSegment.choices,
-        default=RightSegment.EMPLOYMENT,
+    personal_details_segment_title = models.CharField(
+        verbose_name=_("personal details segment title"),
+        max_length=100,
+        default=_("PERSONAL DETAILS"),
     )
-    third_right_segment = models.CharField(
-        verbose_name=_("third segment in right column"),
-        max_length=20,
-        choices=RightSegment.choices,
-        default=RightSegment.PROJECTS,
+    links_segment_title = models.CharField(
+        verbose_name=_("links segment title"),
+        max_length=100,
+        default=_("LINKS"),
+    )
+    skills_segment_title = models.CharField(
+        verbose_name=_("skills segment title"),
+        max_length=100,
+        default=_("SKILLS"),
+    )
+    languages_segment_title = models.CharField(
+        verbose_name=_("languages segment title"),
+        max_length=100,
+        default=_("LANGUAGES"),
+    )
+    internship_segment_title = models.CharField(
+        verbose_name=_("internship segment title"),
+        max_length=100,
+        default=_("INTERNSHIP HISTORY"),
+    )
+    education_segment_title = models.CharField(
+        verbose_name=_("education segment title"),
+        max_length=100,
+        default=_("EDUCATION"),
+    )
+    about_me_segment_title = models.CharField(
+        verbose_name=_("about me segment title"),
+        max_length=100,
+        default=_("ABOUT ME"),
+    )
+    employment_segment_title = models.CharField(
+        verbose_name=_("employment segment title"),
+        max_length=100,
+        default=_("EMPLOYMENT HISTORY"),
+    )
+    projects_segment_title = models.CharField(
+        verbose_name=_("projects segment title"),
+        max_length=100,
+        default=_("RELEVANT PROJECTS"),
     )
 
     class Meta:
@@ -163,6 +192,21 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         return self.projects.order_by(
             models.F("end").asc(nulls_first=True), "-start"
         )
+
+    @property
+    def contact(self) -> Contact | None:
+        if self.email or self.phone:
+            return Contact(email=self.email, phone=self.phone)
+        return None
+
+    @property
+    def personal_details(self) -> PersonalDetails:
+        if self.address_label or self.birthday:
+            return PersonalDetails(
+                address_link=self.address_link,
+                address_label=self.address_label,
+                birthday=self.birthday,
+            )
 
     def clean(self):
         if self.user:

@@ -29,10 +29,10 @@ class PortfolioPDFView(PDFView):
         context = super().get_context()
         context["portfolio"] = self.portfolio
         context["avatar_url"] = self._get_absolut_avatar_url()
-        context["left_column"] = service.get_left_column_segments(
+        context["left_column"] = service.render_left_column_segments(
             portfolio=self.portfolio
         )
-        context["right_column"] = service.get_right_column_segments(
+        context["right_column"] = service.render_right_column_segments(
             portfolio=self.portfolio
         )
 

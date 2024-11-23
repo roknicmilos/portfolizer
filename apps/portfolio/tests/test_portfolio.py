@@ -119,44 +119,42 @@ class TestPortfolio(TestCase):
         Assuming defaults are used, this should be the order
         of the left column segments:
             1. CONTACT
-            2. LINKS
-            3. SKILLS
-            4. LANGUAGES
-            5. INTERNSHIP
-            6. EDUCATION
+            2. PERSONAL_DETAILS
+            3. LINKS
+            4. SKILLS
+            5. LANGUAGES
+            6. INTERNSHIP
+            7. EDUCATION
         """
-        self.assertEqual(
-            self.portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.CONTACT
-            ),
-            0,
+        contact_segment_index = self.portfolio.get_left_segment_order(
+            Portfolio.LeftSegment.CONTACT
         )
-        self.assertEqual(
-            self.portfolio.get_left_segment_order(Portfolio.LeftSegment.LINKS),
-            1,
+        personal_details_segment_index = self.portfolio.get_left_segment_order(
+            Portfolio.LeftSegment.PERSONAL_DETAILS
         )
-        self.assertEqual(
-            self.portfolio.get_left_segment_order(Portfolio.LeftSegment.SKILLS),
-            2,
+        links_segment_index = self.portfolio.get_left_segment_order(
+            Portfolio.LeftSegment.LINKS
         )
-        self.assertEqual(
-            self.portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.LANGUAGES
-            ),
-            3,
+        skills_segment_index = self.portfolio.get_left_segment_order(
+            Portfolio.LeftSegment.SKILLS
         )
-        self.assertEqual(
-            self.portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.INTERNSHIP
-            ),
-            4,
+        language_segment_index = self.portfolio.get_left_segment_order(
+            Portfolio.LeftSegment.LANGUAGES
         )
-        self.assertEqual(
-            self.portfolio.get_left_segment_order(
-                Portfolio.LeftSegment.EDUCATION
-            ),
-            5,
+        internship_segment_index = self.portfolio.get_left_segment_order(
+            Portfolio.LeftSegment.INTERNSHIP
         )
+        education_segment_index = self.portfolio.get_left_segment_order(
+            Portfolio.LeftSegment.EDUCATION
+        )
+
+        self.assertEqual(contact_segment_index, 0)
+        self.assertEqual(personal_details_segment_index, 1)
+        self.assertEqual(links_segment_index, 2)
+        self.assertEqual(skills_segment_index, 3)
+        self.assertEqual(language_segment_index, 4)
+        self.assertEqual(internship_segment_index, 5)
+        self.assertEqual(education_segment_index, 6)
 
     def test_right_column_segment_validation(self):
         # When right column segments are unique,
@@ -256,3 +254,73 @@ class TestPortfolio(TestCase):
         user.update(is_superuser=True)
         self.portfolio.clean()
         self.assertEqual(self.portfolio.validation_errors, {})
+
+    def test_personal_details_object(self):
+        """
+        When minimum requirements for PersonalDetails object are met,
+        PersonalDetails object should be created.
+        """
+
+        # When address_link, address_label and birthday are set,
+        # PersonalDetails object should be created:
+        portfolio = PortfolioFactory()
+        self.assertIsNotNone(portfolio.address_link)
+        self.assertIsNotNone(portfolio.address_label)
+        self.assertIsNotNone(portfolio.birthday)
+        self.assertIsNotNone(portfolio.personal_details)
+
+        # When address_label and birthday are set and address_link is not set,
+        # PersonalDetails object should still be created because both birthday
+        # and address are available:
+        portfolio.update(address_link=None)
+        self.assertIsNotNone(portfolio.personal_details)
+        self.assertIsNotNone(portfolio.personal_details.address)
+
+        # When address_link and birthday are set and address_label is not set,
+        # PersonalDetails object should still be created because birthday is
+        # available:
+        portfolio.update(address_label=None, address_link="https://example.com")
+        self.assertIsNotNone(portfolio.personal_details)
+        self.assertIsNone(portfolio.personal_details.address)
+
+        # When address_link and address_label are set and birthday is not set,
+        # PersonalDetails object should still be created because address is
+        # available:
+        portfolio.update(address_label="Address", birthday=None)
+        self.assertIsNotNone(portfolio.personal_details)
+        self.assertIsNotNone(portfolio.personal_details.address)
+
+        # When address_link, address_label and birthday are not set,
+        # PersonalDetails object should not be created:
+        portfolio.update(address_link=None, address_label=None)
+        self.assertIsNone(portfolio.personal_details)
+
+        # When address_link is set and address_label and birthday are not set,
+        # PersonalDetails object should not be created because address and
+        # birthday are not available:
+        portfolio.update(address_link="https://example.com")
+        self.assertIsNone(portfolio.personal_details)
+
+    def test_contact_object(self):
+        """
+        When minimum requirements for Contact object are met,
+        Contact object should be created.
+        """
+
+        # When email and phone are not set, Contact object should not be
+        # created:
+        portfolio = PortfolioFactory(email=None, phone=None)
+        self.assertIsNone(portfolio.contact)
+
+        # When email is set and phone is not set, Contact object should be
+        # created because email is available:
+        portfolio.update(email="example@example.com")
+        self.assertIsNotNone(portfolio.contact)
+
+        # When phone is set and email is not set, Contact object should be
+        # created because phone is available:
+        portfolio.update(email=None, phone="+1 (555) 555-5555")
+        self.assertIsNotNone(portfolio.contact)
+
+        # When email and phone are set, Contact object should be created:
+        portfolio.update(email="example@example.com")

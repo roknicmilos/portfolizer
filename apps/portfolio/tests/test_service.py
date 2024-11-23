@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.template.loader import render_to_string
 from apps.portfolio import service
+from apps.portfolio.models import Portfolio
 from apps.portfolio.tests.factories import (
     PortfolioFactory,
     LinkFactory,
@@ -14,87 +15,103 @@ from apps.portfolio.tests.factories import (
 
 
 class TestService(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        super().setUpTestData()
-        cls.portfolio = PortfolioFactory()
-        cls.expected_contact_html = render_to_string(
-            template_name="portfolio/includes/contact.html",
-            context={
-                "address_link": cls.portfolio.address_link,
-                "address_label": cls.portfolio.address_label,
-                "phone": cls.portfolio.phone,
-                "email": cls.portfolio.email,
-                "birthday": cls.portfolio.birthday,
-            },
+    def test_render_left_column_segments_with_required_data_only(self):
+        """
+        There shouldn't be any required data for the left column
+        which means the returned segment list should be empty.
+        """
+        portfolio = PortfolioFactory(
+            phone=None,
+            email=None,
+            address_link=None,
+            address_label=None,
+            birthday=None,
         )
 
-    def test_get_left_column_segments_with_required_data_only(self):
-        segments = service.get_left_column_segments(self.portfolio)
+        segments = service.render_left_column_segments(portfolio)
 
-        self.assertEqual(len(segments), 1)
-        self.assertEqual(segments, [self.expected_contact_html])
+        self.assertEqual(len(segments), 0)
 
-    def test_get_left_column_segments_with_all_data(self):
+    def test_render_left_column_segments_with_all_data(self):
         """
         Assuming defaults are used, this should be the order
         of the left column segments:
             1. CONTACT
-            2. LINKS
-            3. SKILLS
-            4. LANGUAGES
-            5. INTERNSHIP
-            6. EDUCATION
+            2. PERSONAL_DETAILS
+            3. LINKS
+            4. SKILLS
+            5. LANGUAGES
+            6. INTERNSHIP
+            7. EDUCATION
         """
-        LinkFactory(portfolio=self.portfolio)
-        SkillFactory(portfolio=self.portfolio)
-        LanguageFactory(portfolio=self.portfolio)
-        InternshipFactory(portfolio=self.portfolio)
-        EducationFactory(portfolio=self.portfolio)
+        portfolio = PortfolioFactory()
+        LinkFactory(portfolio=portfolio)
+        SkillFactory(portfolio=portfolio)
+        LanguageFactory(portfolio=portfolio)
+        InternshipFactory(portfolio=portfolio)
+        EducationFactory(portfolio=portfolio)
 
-        segments = service.get_left_column_segments(self.portfolio)
+        actual_segments = service.render_left_column_segments(portfolio)
 
         # All six segments should be rendered
-        self.assertEqual(len(segments), 6)
+        self.assertEqual(len(actual_segments), 7)
 
         # Check if each expected template is rendered
         expected_segments = [
-            self.expected_contact_html,
+            self.get_expected_contact_html(portfolio),
+            self.get_expected_personal_details_html(portfolio),
             render_to_string(
                 template_name="portfolio/includes/links.html",
-                context={"links": self.portfolio.links.all()},
-            ),
-            render_to_string(
-                template_name="portfolio/includes/skills.html",
                 context={
-                    "skills": self.portfolio.ordered_skills,
-                    "title": "SKILLS",
+                    "links": portfolio.links.all(),
+                    "title": portfolio.links_segment_title,
                 },
             ),
             render_to_string(
                 template_name="portfolio/includes/skills.html",
                 context={
-                    "skills": self.portfolio.languages.all(),
-                    "title": "LANGUAGES",
+                    "skills": portfolio.ordered_skills,
+                    "title": portfolio.skills_segment_title,
+                },
+            ),
+            render_to_string(
+                template_name="portfolio/includes/skills.html",
+                context={
+                    "skills": portfolio.languages.all(),
+                    "title": portfolio.languages_segment_title,
                 },
             ),
             render_to_string(
                 template_name="portfolio/includes/internship.html",
-                context={"internships": self.portfolio.ordered_internships},
+                context={
+                    "internships": portfolio.ordered_internships,
+                    "title": portfolio.internship_segment_title,
+                },
             ),
             render_to_string(
                 template_name="portfolio/includes/education.html",
-                context={"educations": self.portfolio.ordered_educations},
+                context={
+                    "educations": portfolio.ordered_educations,
+                    "title": portfolio.education_segment_title,
+                },
             ),
         ]
-        self.assertEqual(segments, expected_segments)
+        self.assertEqual(len(actual_segments), len(expected_segments))
+        for index, (actual, expected) in enumerate(
+            zip(actual_segments, expected_segments)
+        ):
+            self.assertEqual(
+                first=actual,
+                second=expected,
+                msg=f"Segment at index {index} does not match",
+            )
 
-    def test_get_right_column_segments_with_required_data_only(self):
-        self.portfolio.update(about_me=None)
-        segments = service.get_right_column_segments(self.portfolio)
+    def test_render_right_column_segments_with_required_data_only(self):
+        portfolio = PortfolioFactory(about_me=None)
+        segments = service.render_right_column_segments(portfolio)
         self.assertEqual(len(segments), 0)
 
-    def test_get_right_column_segments_with_all_data(self):
+    def test_render_right_column_segments_with_all_data(self):
         """
         Assuming defaults are used, this should be the order
         of the right column segments:
@@ -102,26 +119,55 @@ class TestService(TestCase):
             2. EMPLOYMENT
             3. PROJECTS
         """
-        self.portfolio.update(about_me="About me")
-        EmploymentFactory(portfolio=self.portfolio)
-        ProjectFactory(portfolio=self.portfolio)
+        portfolio = PortfolioFactory(about_me="About me")
+        EmploymentFactory(portfolio=portfolio)
+        ProjectFactory(portfolio=portfolio)
 
-        segments = service.get_right_column_segments(self.portfolio)
+        segments = service.render_right_column_segments(portfolio)
 
         self.assertEqual(len(segments), 3)
 
         expected_segments = [
             render_to_string(
                 template_name="portfolio/includes/about_me.html",
-                context={"about_me": self.portfolio.about_me},
+                context={
+                    "about_me": portfolio.about_me,
+                    "title": portfolio.about_me_segment_title,
+                },
             ),
             render_to_string(
                 template_name="portfolio/includes/employment.html",
-                context={"employments": self.portfolio.ordered_employments},
+                context={
+                    "employments": portfolio.ordered_employments,
+                    "title": portfolio.employment_segment_title,
+                },
             ),
             render_to_string(
                 template_name="portfolio/includes/projects.html",
-                context={"projects": self.portfolio.ordered_projects},
+                context={
+                    "projects": portfolio.ordered_projects,
+                    "title": portfolio.projects_segment_title,
+                },
             ),
         ]
         self.assertEqual(segments, expected_segments)
+
+    @staticmethod
+    def get_expected_contact_html(portfolio: Portfolio) -> str:
+        return render_to_string(
+            template_name="portfolio/includes/contact.html",
+            context={
+                "contact": portfolio.contact,
+                "title": portfolio.contact_segment_title,
+            },
+        )
+
+    @staticmethod
+    def get_expected_personal_details_html(portfolio: Portfolio) -> str:
+        return render_to_string(
+            template_name="portfolio/includes/personal_details.html",
+            context={
+                "personal_details": portfolio.personal_details,
+                "title": portfolio.personal_details_segment_title,
+            },
+        )

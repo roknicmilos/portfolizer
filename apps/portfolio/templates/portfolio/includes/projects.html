@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <div class="right-segment">
-    <h2 class="title">{% trans "RELEVANT PROJECTS" %}</h2>
+    <h2 class="title">{{ title }}</h2>
     {% for project in projects %}
         <div class="position-item">
             <h3 class="position-item-title">{{ project.name }} | {{ project.role }}</h3>

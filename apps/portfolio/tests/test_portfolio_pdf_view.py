@@ -20,13 +20,13 @@ class TestPortfolioPDFView(TestCase):
             user=UserFactory(),
         )
         self.left_segments_patch = patch(
-            target="apps.portfolio.service.get_left_column_segments",
+            target="apps.portfolio.service.render_left_column_segments",
             return_value=[],
         )
         self.mock_left_segments = self.left_segments_patch.start()
 
         self.right_segments_patch = patch(
-            target="apps.portfolio.service.get_right_column_segments",
+            target="apps.portfolio.service.render_right_column_segments",
             return_value=[],
         )
         self.mock_right_segments = self.right_segments_patch.start()
