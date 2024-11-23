@@ -15,7 +15,7 @@ from apps.portfolio.tests.factories import (
 
 
 class TestService(TestCase):
-    def test_get_left_column_segments_with_required_data_only(self):
+    def test_render_left_column_segments_with_required_data_only(self):
         """
         There shouldn't be any required data for the left column
         which means the returned segment list should be empty.
@@ -28,11 +28,11 @@ class TestService(TestCase):
             birthday=None,
         )
 
-        segments = service.get_left_column_segments(portfolio)
+        segments = service.render_left_column_segments(portfolio)
 
         self.assertEqual(len(segments), 0)
 
-    def test_get_left_column_segments_with_all_data(self):
+    def test_render_left_column_segments_with_all_data(self):
         """
         Assuming defaults are used, this should be the order
         of the left column segments:
@@ -51,7 +51,7 @@ class TestService(TestCase):
         InternshipFactory(portfolio=portfolio)
         EducationFactory(portfolio=portfolio)
 
-        actual_segments = service.get_left_column_segments(portfolio)
+        actual_segments = service.render_left_column_segments(portfolio)
 
         # All six segments should be rendered
         self.assertEqual(len(actual_segments), 7)
@@ -97,12 +97,12 @@ class TestService(TestCase):
                 msg=f"Segment at index {index} does not match",
             )
 
-    def test_get_right_column_segments_with_required_data_only(self):
+    def test_render_right_column_segments_with_required_data_only(self):
         portfolio = PortfolioFactory(about_me=None)
-        segments = service.get_right_column_segments(portfolio)
+        segments = service.render_right_column_segments(portfolio)
         self.assertEqual(len(segments), 0)
 
-    def test_get_right_column_segments_with_all_data(self):
+    def test_render_right_column_segments_with_all_data(self):
         """
         Assuming defaults are used, this should be the order
         of the right column segments:
@@ -114,7 +114,7 @@ class TestService(TestCase):
         EmploymentFactory(portfolio=portfolio)
         ProjectFactory(portfolio=portfolio)
 
-        segments = service.get_right_column_segments(portfolio)
+        segments = service.render_right_column_segments(portfolio)
 
         self.assertEqual(len(segments), 3)
 
