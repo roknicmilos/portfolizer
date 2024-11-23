@@ -62,29 +62,38 @@ class TestService(TestCase):
             self.get_expected_personal_details_html(portfolio),
             render_to_string(
                 template_name="portfolio/includes/links.html",
-                context={"links": portfolio.links.all()},
+                context={
+                    "links": portfolio.links.all(),
+                    "title": portfolio.links_segment_title,
+                },
             ),
             render_to_string(
                 template_name="portfolio/includes/skills.html",
                 context={
                     "skills": portfolio.ordered_skills,
-                    "title": "SKILLS",
+                    "title": portfolio.skills_segment_title,
                 },
             ),
             render_to_string(
                 template_name="portfolio/includes/skills.html",
                 context={
                     "skills": portfolio.languages.all(),
-                    "title": "LANGUAGES",
+                    "title": portfolio.languages_segment_title,
                 },
             ),
             render_to_string(
                 template_name="portfolio/includes/internship.html",
-                context={"internships": portfolio.ordered_internships},
+                context={
+                    "internships": portfolio.ordered_internships,
+                    "title": portfolio.internship_segment_title,
+                },
             ),
             render_to_string(
                 template_name="portfolio/includes/education.html",
-                context={"educations": portfolio.ordered_educations},
+                context={
+                    "educations": portfolio.ordered_educations,
+                    "title": portfolio.education_segment_title,
+                },
             ),
         ]
         self.assertEqual(len(actual_segments), len(expected_segments))
@@ -121,15 +130,24 @@ class TestService(TestCase):
         expected_segments = [
             render_to_string(
                 template_name="portfolio/includes/about_me.html",
-                context={"about_me": portfolio.about_me},
+                context={
+                    "about_me": portfolio.about_me,
+                    "title": portfolio.about_me_segment_title,
+                },
             ),
             render_to_string(
                 template_name="portfolio/includes/employment.html",
-                context={"employments": portfolio.ordered_employments},
+                context={
+                    "employments": portfolio.ordered_employments,
+                    "title": portfolio.employment_segment_title,
+                },
             ),
             render_to_string(
                 template_name="portfolio/includes/projects.html",
-                context={"projects": portfolio.ordered_projects},
+                context={
+                    "projects": portfolio.ordered_projects,
+                    "title": portfolio.projects_segment_title,
+                },
             ),
         ]
         self.assertEqual(segments, expected_segments)
@@ -138,12 +156,18 @@ class TestService(TestCase):
     def get_expected_contact_html(portfolio: Portfolio) -> str:
         return render_to_string(
             template_name="portfolio/includes/contact.html",
-            context={"contact": portfolio.contact},
+            context={
+                "contact": portfolio.contact,
+                "title": portfolio.contact_segment_title,
+            },
         )
 
     @staticmethod
     def get_expected_personal_details_html(portfolio: Portfolio) -> str:
         return render_to_string(
             template_name="portfolio/includes/personal_details.html",
-            context={"personal_details": portfolio.personal_details},
+            context={
+                "personal_details": portfolio.personal_details,
+                "title": portfolio.personal_details_segment_title,
+            },
         )
