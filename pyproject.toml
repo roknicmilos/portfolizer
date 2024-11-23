@@ -45,11 +45,6 @@ exclude = [
     "**/migrations/*",
 ]
 
-[tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "portfolizer.settings.test"
-addopts = "--cov=."
-python_files = ["tests.py", "test_*.py"]
-
 [tool.coverage.run]
 omit = [
     "*/migrations/*",

@@ -84,6 +84,14 @@ class PortfolioAdmin(admin.ModelAdmin):
                 "fields": (
                     "email",
                     "phone",
+                ),
+                "classes": ("collapse",),
+            },
+        ),
+        (
+            _("*PERSONAL DETAILS (L)"),
+            {
+                "fields": (
                     "address_label",
                     "address_link",
                     "birthday",

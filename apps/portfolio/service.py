@@ -13,23 +13,27 @@ def get_left_column_segments(portfolio: Portfolio) -> list[str]:
     displayed which is configured in the Portfolio model.
     """
 
-    segments: list[dict] = [
-        {
+    segments: list[dict] = []
+    if portfolio.contact:
+        segments.append({
             "order": portfolio.get_left_segment_order(
                 Portfolio.LeftSegment.CONTACT
             ),
             "content": render_to_string(
                 template_name="portfolio/includes/contact.html",
-                context={
-                    "address_link": portfolio.address_link,
-                    "address_label": portfolio.address_label,
-                    "phone": portfolio.phone,
-                    "email": portfolio.email,
-                    "birthday": portfolio.birthday,
-                },
+                context={"contact": portfolio.contact},
             ),
-        },
-    ]
+        })
+    if portfolio.personal_details:
+        segments.append({
+            "order": portfolio.get_left_segment_order(
+                Portfolio.LeftSegment.PERSONAL_DETAILS
+            ),
+            "content": render_to_string(
+                template_name="portfolio/includes/personal_details.html",
+                context={"personal_details": portfolio.personal_details},
+            ),
+        })
     if portfolio.links.exists():
         segments.append({
             "order": portfolio.get_left_segment_order(

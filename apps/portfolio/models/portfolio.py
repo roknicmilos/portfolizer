@@ -7,15 +7,12 @@ from django.utils.translation import gettext_lazy as _
 from apps.portfolio.models import (
     LeftPortfolioColumnMixin,
     RightPortfolioColumnMixin,
+    Contact,
+    PersonalDetails,
 )
 
 
 class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
-    class RightSegment(models.TextChoices):
-        ABOUT_ME = "about_me", _("About Me")
-        EMPLOYMENT = "employment", _("Employment")
-        PROJECTS = "projects", _("Projects")
-
     user = models.ForeignKey(
         to="user.User",
         verbose_name=_("user"),
@@ -116,24 +113,6 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         null=True,
         blank=True,
     )
-    first_right_segment = models.CharField(
-        verbose_name=_("first segment in right column"),
-        max_length=20,
-        choices=RightSegment.choices,
-        default=RightSegment.ABOUT_ME,
-    )
-    second_right_segment = models.CharField(
-        verbose_name=_("second segment in right column"),
-        max_length=20,
-        choices=RightSegment.choices,
-        default=RightSegment.EMPLOYMENT,
-    )
-    third_right_segment = models.CharField(
-        verbose_name=_("third segment in right column"),
-        max_length=20,
-        choices=RightSegment.choices,
-        default=RightSegment.PROJECTS,
-    )
 
     class Meta:
         verbose_name = _("Portfolio")
@@ -163,6 +142,21 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         return self.projects.order_by(
             models.F("end").asc(nulls_first=True), "-start"
         )
+
+    @property
+    def contact(self) -> Contact | None:
+        if self.email or self.phone:
+            return Contact(email=self.email, phone=self.phone)
+        return None
+
+    @property
+    def personal_details(self) -> PersonalDetails:
+        if self.address_label or self.birthday:
+            return PersonalDetails(
+                address_link=self.address_link,
+                address_label=self.address_label,
+                birthday=self.birthday,
+            )
 
     def clean(self):
         if self.user:

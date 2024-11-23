@@ -31,6 +31,7 @@ class PortfolioFactory(DjangoModelFactory):
     phone = "+1 (555) 555-5555"
     address_label = Faker("address")
     address_link = Faker("url")
+    birthday = Faker("date_of_birth", minimum_age=18, maximum_age=65)
     about_me = Faker("paragraph")
 
 
