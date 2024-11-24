@@ -3,7 +3,7 @@ from django.test import SimpleTestCase
 from apps.common.templatetags.color import color
 
 
-class TestColorFilterTests(SimpleTestCase):
+class TestColorTemplateFilter(SimpleTestCase):
     def test_color_filter_lighten(self):
         """
         Test that the filter lightens a color correctly when
