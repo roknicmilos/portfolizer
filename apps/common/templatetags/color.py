@@ -4,7 +4,7 @@ register = template.Library()
 
 
 @register.filter(name="color")
-def color(hex_color: str, brightness_factor: int = 1) -> str:
+def color(hex_color: str, brightness_factor: float = 1) -> str:
     """
     Adjust the brightness of a HEX color.
 
