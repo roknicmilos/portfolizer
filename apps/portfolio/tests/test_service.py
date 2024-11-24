@@ -117,7 +117,13 @@ class TestService(TestCase):
             )
 
     def test_render_right_column_segments_with_required_data_only(self):
-        portfolio = PortfolioFactory(about_me=None)
+        """
+        There shouldn't be any required data for the right column
+        which means the returned segment list should be empty.
+        """
+        portfolio = PortfolioFactory(
+            about_me=None, first_name=None, last_name=None, role=None
+        )
         segments = service.render_right_column_segments(portfolio)
         self.assertEqual(len(segments), 0)
 
@@ -125,6 +131,7 @@ class TestService(TestCase):
         """
         Assuming defaults are used, this should be the order
         of the right column segments:
+            0. HEADER
             1. ABOUT_ME
             2. EMPLOYMENT
             3. PROJECTS
@@ -135,9 +142,19 @@ class TestService(TestCase):
 
         segments = service.render_right_column_segments(portfolio)
 
-        self.assertEqual(len(segments), 3)
+        self.assertEqual(len(segments), 4)
 
         expected_segments = [
+            render_to_string(
+                template_name="portfolio/includes/header.html",
+                context={
+                    "first_name": portfolio.first_name,
+                    "last_name": portfolio.last_name,
+                    "role": portfolio.role,
+                    "bg_color": portfolio.right_column_bg_color,
+                    "text_color": portfolio.right_column_text_color,
+                },
+            ),
             render_to_string(
                 template_name="portfolio/includes/about_me.html",
                 context={

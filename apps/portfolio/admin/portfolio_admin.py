@@ -106,14 +106,14 @@ class PortfolioAdmin(admin.ModelAdmin):
             },
         ),
         (
-            _("*IMAGE (L)"),
+            _("IMAGE (L)"),
             {
                 "fields": ("avatar",),
                 "classes": ("collapse",),
             },
         ),
         (
-            _("*CONTACT (L)"),
+            _("CONTACT (L)"),
             {
                 "fields": (
                     "email",
@@ -123,7 +123,7 @@ class PortfolioAdmin(admin.ModelAdmin):
             },
         ),
         (
-            _("*PERSONAL DETAILS (L)"),
+            _("PERSONAL DETAILS (L)"),
             {
                 "fields": (
                     "address_label",
@@ -134,7 +134,7 @@ class PortfolioAdmin(admin.ModelAdmin):
             },
         ),
         (
-            _("*HEADER (R)"),
+            _("HEADER (R)"),
             {
                 "fields": (
                     "first_name",

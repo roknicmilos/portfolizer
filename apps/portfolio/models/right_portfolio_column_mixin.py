@@ -33,16 +33,22 @@ class RightPortfolioColumnMixin(BaseModel):
         verbose_name=_("about me segment title"),
         max_length=100,
         default=_("ABOUT ME"),
+        null=True,
+        blank=True,
     )
     employment_segment_title = models.CharField(
         verbose_name=_("employment segment title"),
         max_length=100,
         default=_("EMPLOYMENT HISTORY"),
+        null=True,
+        blank=True,
     )
     projects_segment_title = models.CharField(
         verbose_name=_("projects segment title"),
         max_length=100,
         default=_("RELEVANT PROJECTS"),
+        null=True,
+        blank=True,
     )
     right_column_bg_color = ColorField(
         verbose_name=_("right column background color"),
