@@ -10,6 +10,9 @@ register = template.Library()
 def svg(filepath: str, color: str = None) -> str:
     """
     Returns the content of an SVG file with an optional fill color.
+    In order to change the color of an SVG, the SVG file must have
+    the `data-dynamic-color="true"` attribute in the element that
+    should change color.
     """
 
     original_svg = base_svg(filepath)

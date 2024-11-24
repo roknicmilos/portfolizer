@@ -65,6 +65,8 @@ class TestService(TestCase):
                 context={
                     "links": portfolio.links.all(),
                     "title": portfolio.links_segment_title,
+                    "bg_color": portfolio.left_column_bg_color,
+                    "text_color": portfolio.left_column_text_color,
                 },
             ),
             render_to_string(
@@ -72,6 +74,8 @@ class TestService(TestCase):
                 context={
                     "skills": portfolio.ordered_skills,
                     "title": portfolio.skills_segment_title,
+                    "bg_color": portfolio.left_column_bg_color,
+                    "text_color": portfolio.left_column_text_color,
                 },
             ),
             render_to_string(
@@ -79,6 +83,8 @@ class TestService(TestCase):
                 context={
                     "skills": portfolio.languages.all(),
                     "title": portfolio.languages_segment_title,
+                    "bg_color": portfolio.left_column_bg_color,
+                    "text_color": portfolio.left_column_text_color,
                 },
             ),
             render_to_string(
@@ -86,6 +92,8 @@ class TestService(TestCase):
                 context={
                     "internships": portfolio.ordered_internships,
                     "title": portfolio.internship_segment_title,
+                    "bg_color": portfolio.left_column_bg_color,
+                    "text_color": portfolio.left_column_text_color,
                 },
             ),
             render_to_string(
@@ -93,6 +101,8 @@ class TestService(TestCase):
                 context={
                     "educations": portfolio.ordered_educations,
                     "title": portfolio.education_segment_title,
+                    "bg_color": portfolio.left_column_bg_color,
+                    "text_color": portfolio.left_column_text_color,
                 },
             ),
         ]
@@ -133,6 +143,8 @@ class TestService(TestCase):
                 context={
                     "about_me": portfolio.about_me,
                     "title": portfolio.about_me_segment_title,
+                    "bg_color": portfolio.right_column_bg_color,
+                    "text_color": portfolio.right_column_text_color,
                 },
             ),
             render_to_string(
@@ -140,6 +152,8 @@ class TestService(TestCase):
                 context={
                     "employments": portfolio.ordered_employments,
                     "title": portfolio.employment_segment_title,
+                    "bg_color": portfolio.right_column_bg_color,
+                    "text_color": portfolio.right_column_text_color,
                 },
             ),
             render_to_string(
@@ -147,6 +161,8 @@ class TestService(TestCase):
                 context={
                     "projects": portfolio.ordered_projects,
                     "title": portfolio.projects_segment_title,
+                    "bg_color": portfolio.right_column_bg_color,
+                    "text_color": portfolio.right_column_text_color,
                 },
             ),
         ]
@@ -159,6 +175,8 @@ class TestService(TestCase):
             context={
                 "contact": portfolio.contact,
                 "title": portfolio.contact_segment_title,
+                "bg_color": portfolio.left_column_bg_color,
+                "text_color": portfolio.left_column_text_color,
             },
         )
 
@@ -169,5 +187,7 @@ class TestService(TestCase):
             context={
                 "personal_details": portfolio.personal_details,
                 "title": portfolio.personal_details_segment_title,
+                "bg_color": portfolio.left_column_bg_color,
+                "text_color": portfolio.left_column_text_color,
             },
         )
