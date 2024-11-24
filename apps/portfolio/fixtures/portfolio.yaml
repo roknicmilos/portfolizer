@@ -14,6 +14,7 @@
     phone: 00385638455742
     address_label: Kornelija Stankovića 39, Novi Sad, 21000, Serbia
     address_link: https://www.google.rs/maps/place/Kornelija+Stankovi%C4%87a+39,+Novi+Sad/@45.2600114,19.8085096,15.91z/data=!4m6!3m5!1s0x475b11b16298fc2d:0xa5444cbbc3bf8f26!8m2!3d45.2605492!4d19.8103612!16s%2Fg%2F11fx0qw3pz?hl=hr&entry=ttu
+    birthday: 1994-02-13
     about_me:
       After completing programming courses and internships at two companies,
       I secured a permanent Software Engineer role in the second one, working
@@ -41,10 +42,15 @@
     phone: 666666666
     address_label: 28201 E Street, South Park, CO 80440
     address_link: https://www.google.rs/maps/place/South+Park/@39.2245089,-106.0037528,14z/data=!4m10!1m2!2m1!1ssouth+park!3m6!1s0x876ae92fe25d669d:0xef48b8d4914aa47b!8m2!3d39.224671!4d-106.004149!15sCgpzb3V0aCBwYXJrkgESdG91cmlzdF9hdHRyYWN0aW9u4AEA!16s%2Fg%2F11qr464ff_?hl=hr&entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D
+    birthday: 1997-08-13
     about_me:
       Highly motivated and strategically devious individual with extensive
       experience in manipulation, chaos generation, and leading various schemes.
       Known for a unique ability to rally others (usually for personal gain)
       and for unparalleled expertise in causing trouble.
+    left_column_bg_color: "#014600"
+    left_column_text_color: "#B9D6BF"
+    right_column_bg_color: "#B9D6BF"
+    right_column_text_color: "#014600"
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
