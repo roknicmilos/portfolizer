@@ -113,56 +113,6 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         null=True,
         blank=True,
     )
-    contact_segment_title = models.CharField(
-        verbose_name=_("contact segment title"),
-        max_length=100,
-        default=_("CONTACT"),
-    )
-    personal_details_segment_title = models.CharField(
-        verbose_name=_("personal details segment title"),
-        max_length=100,
-        default=_("PERSONAL DETAILS"),
-    )
-    links_segment_title = models.CharField(
-        verbose_name=_("links segment title"),
-        max_length=100,
-        default=_("LINKS"),
-    )
-    skills_segment_title = models.CharField(
-        verbose_name=_("skills segment title"),
-        max_length=100,
-        default=_("SKILLS"),
-    )
-    languages_segment_title = models.CharField(
-        verbose_name=_("languages segment title"),
-        max_length=100,
-        default=_("LANGUAGES"),
-    )
-    internship_segment_title = models.CharField(
-        verbose_name=_("internship segment title"),
-        max_length=100,
-        default=_("INTERNSHIP HISTORY"),
-    )
-    education_segment_title = models.CharField(
-        verbose_name=_("education segment title"),
-        max_length=100,
-        default=_("EDUCATION"),
-    )
-    about_me_segment_title = models.CharField(
-        verbose_name=_("about me segment title"),
-        max_length=100,
-        default=_("ABOUT ME"),
-    )
-    employment_segment_title = models.CharField(
-        verbose_name=_("employment segment title"),
-        max_length=100,
-        default=_("EMPLOYMENT HISTORY"),
-    )
-    projects_segment_title = models.CharField(
-        verbose_name=_("projects segment title"),
-        max_length=100,
-        default=_("RELEVANT PROJECTS"),
-    )
 
     class Meta:
         verbose_name = _("Portfolio")

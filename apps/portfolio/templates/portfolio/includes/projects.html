@@ -1,7 +1,7 @@
 {% load i18n %}
 
-<div class="right-segment">
-    <h2 class="title">{{ title }}</h2>
+<div class="right-segment" style="color: {{ text_color }}">
+    {% include "portfolio/includes/segment_title.html" %}
     {% for project in projects %}
         <div class="position-item">
             <h3 class="position-item-title">{{ project.name }} | {{ project.role }}</h3>
@@ -9,7 +9,7 @@
                 {{ project.start|date:"M Y" }} - {{ project.end|date:"M Y"|default:_("Present") }}
             </p>
             <p><span class="bold">{% trans "Technologies" %}</span>: {{ project.technologies }}</p>
-            <p class="position-item-description">
+            <p class="position-item-description" style="color: {{ text_color }}">
                 <span class="bold">{% trans "Description" %}</span>: {{ project.description }}
             </p>
         </div>

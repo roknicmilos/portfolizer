@@ -10,6 +10,16 @@
 {% block style %}
     {% include "includes/icons.html" %}
     {{ block.super }}
+    <style>
+        .left-column,
+        .left-column .link svg {
+            background-color: {{ portfolio.left_column_bg_color }};
+        }
+
+        .right-column {
+            background-color: {{ portfolio.right_column_bg_color }};
+        }
+    </style>
 {% endblock style %}
 
 {% block content %}

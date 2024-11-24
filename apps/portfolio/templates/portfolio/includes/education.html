@@ -1,16 +1,16 @@
 {% load svg i18n %}
 
 <div class="left-segment">
-    <h2 class="title">{{ title }}</h2>
+    {% include "portfolio/includes/segment_title.html" %}
     {% for item in educations %}
-        <div class="education-item">
+        <div class="education-item" style="color: {{ text_color }}">
             <h3 class="education-item-title">{{ item.title }}</h3>
             <div class="education-item-subtitle">
                 <p class="education-item-period">
                     {{ item.start|date:"M Y" }} - {{ item.end|date:"M Y"|default:_("Present") }}
                 </p>
                 <div class="education-item-location">
-                    {% svg "portfolio/svg/location.svg" %}
+                    {% svg "portfolio/svg/location.svg" text_color %}
                     <p class="education-item-location-value">{{ item.location }}</p>
                 </div>
             </div>

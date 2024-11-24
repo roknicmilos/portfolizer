@@ -1,17 +1,17 @@
-{% load svg i18n %}
+{% load svg i18n color %}
 
 <div class="left-segment contact">
-    <h2 class="title">{{ title }}</h2>
+    {% include "portfolio/includes/segment_title.html" %}
     {% if contact.phone %}
-        <a class="contact-item" href="tel:{{ contact.phone }}">
-            {% svg "portfolio/svg/phone.svg" %}
-            <div class="contact-item-value">{{ contact.phone }}</div>
+        <a class="link" href="tel:{{ contact.phone }}">
+            {% svg "portfolio/svg/phone.svg" text_color %}
+            <div class="link-label" style="color: {{ text_color }}">{{ contact.phone }}</div>
         </a>
     {% endif %}
     {% if contact.email %}
-        <a class="contact-item" href="mailto:{{ contact.email }}">
-            {% svg "portfolio/svg/email.svg" %}
-            <div class="contact-item-value">{{ contact.email }}</div>
+        <a class="link" href="mailto:{{ contact.email }}">
+            {% svg "portfolio/svg/email.svg" text_color %}
+            <div class="link-label" style="color: {{ text_color }}">{{ contact.email }}</div>
         </a>
     {% endif %}
 </div>

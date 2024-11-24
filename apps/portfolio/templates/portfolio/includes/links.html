@@ -1,12 +1,12 @@
 {% load svg i18n %}
 
 <div class="left-segment links">
-    <h2 class="title">{{ title }}</h2>
+    {% include "portfolio/includes/segment_title.html" %}
     <div class="link-items">
         {% for link in links %}
             <a class="link" href="{{ link.url }}">
-                {% svg "portfolio/svg/"|add:link.type|add:".svg" %}
-                <p class="link-label">{{ link.label }}</p>
+                {% svg "portfolio/svg/"|add:link.type|add:".svg" text_color %}
+                <p class="link-label" style="color: {{ text_color }}">{{ link.label }}</p>
             </a>
         {% endfor %}
     </div>

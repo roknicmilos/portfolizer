@@ -1,7 +1,7 @@
 {% load svg i18n %}
 
-<div class="right-segment">
-    <h2 class="title">{{ title }}</h2>
+<div class="right-segment" style="color: {{ text_color }}">
+    {% include "portfolio/includes/segment_title.html" %}
     {% for employment in employments %}
         <div class="position-item">
             <h3 class="position-item-title">{{ employment.title }}, {{ employment.company }}</h3>
@@ -10,11 +10,13 @@
                     {{ employment.start|date:"M Y" }} - {{ employment.end|date:"M Y"|default:_("Present") }}
                 </p>
                 <div class="position-item-location">
-                    {% svg "portfolio/svg/location-dark.svg" %}
-                    <p class="position-item-location-value">{{ employment.location }}</p>
+                    {% svg "portfolio/svg/location-dark.svg" text_color %}
+                    <p class="position-item-location-value" style="color: {{ text_color }}">
+                        {{ employment.location }}
+                    </p>
                 </div>
             </div>
-            <p class="position-item-description">
+            <p class="position-item-description" style="color: {{ text_color }}">
                 {{ employment.description }}
             </p>
         </div>

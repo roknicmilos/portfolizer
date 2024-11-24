@@ -8,10 +8,25 @@ from apps.portfolio.models import Portfolio
 class Segment(ABC):
     order: int
     content: str
+    bg_color: str
+    text_color: str
 
 
-class ContactSegment(Segment):
+class LeftColumnSegment(Segment):
     def __init__(self, portfolio: Portfolio):
+        self.bg_color = portfolio.left_column_bg_color
+        self.text_color = portfolio.left_column_text_color
+
+
+class RightColumnSegment(Segment):
+    def __init__(self, portfolio: Portfolio):
+        self.bg_color = portfolio.right_column_bg_color
+        self.text_color = portfolio.right_column_text_color
+
+
+class ContactSegment(LeftColumnSegment):
+    def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.CONTACT
         )
@@ -20,12 +35,15 @@ class ContactSegment(Segment):
             context={
                 "contact": portfolio.contact,
                 "title": portfolio.contact_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )
 
 
-class PersonalDetailsSegment(Segment):
+class PersonalDetailsSegment(LeftColumnSegment):
     def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.PERSONAL_DETAILS
         )
@@ -34,12 +52,15 @@ class PersonalDetailsSegment(Segment):
             context={
                 "personal_details": portfolio.personal_details,
                 "title": portfolio.personal_details_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )
 
 
-class LinksSegment(Segment):
+class LinksSegment(LeftColumnSegment):
     def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.LINKS
         )
@@ -48,12 +69,15 @@ class LinksSegment(Segment):
             context={
                 "links": portfolio.links.all(),
                 "title": portfolio.links_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )
 
 
-class SkillsSegment(Segment):
+class SkillsSegment(LeftColumnSegment):
     def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.SKILLS
         )
@@ -62,12 +86,15 @@ class SkillsSegment(Segment):
             context={
                 "skills": portfolio.ordered_skills,
                 "title": portfolio.skills_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )
 
 
-class LanguagesSegment(Segment):
+class LanguagesSegment(LeftColumnSegment):
     def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.LANGUAGES
         )
@@ -76,12 +103,15 @@ class LanguagesSegment(Segment):
             context={
                 "skills": portfolio.languages.all(),
                 "title": portfolio.languages_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )
 
 
-class InternshipSegment(Segment):
+class InternshipSegment(LeftColumnSegment):
     def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.INTERNSHIP
         )
@@ -90,12 +120,15 @@ class InternshipSegment(Segment):
             context={
                 "internships": portfolio.ordered_internships,
                 "title": portfolio.internship_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )
 
 
-class EducationSegment(Segment):
+class EducationSegment(LeftColumnSegment):
     def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.EDUCATION
         )
@@ -104,12 +137,15 @@ class EducationSegment(Segment):
             context={
                 "educations": portfolio.ordered_educations,
                 "title": portfolio.education_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )
 
 
-class AboutMeSegment(Segment):
+class AboutMeSegment(RightColumnSegment):
     def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_right_segment_order(
             Portfolio.RightSegment.ABOUT_ME
         )
@@ -118,12 +154,15 @@ class AboutMeSegment(Segment):
             context={
                 "about_me": portfolio.about_me,
                 "title": portfolio.about_me_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )
 
 
-class EmploymentSegment(Segment):
+class EmploymentSegment(RightColumnSegment):
     def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_right_segment_order(
             Portfolio.RightSegment.EMPLOYMENT
         )
@@ -132,12 +171,15 @@ class EmploymentSegment(Segment):
             context={
                 "employments": portfolio.ordered_employments,
                 "title": portfolio.employment_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )
 
 
-class ProjectsSegment(Segment):
+class ProjectsSegment(RightColumnSegment):
     def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
         self.order = portfolio.get_right_segment_order(
             Portfolio.RightSegment.PROJECTS
         )
@@ -146,5 +188,7 @@ class ProjectsSegment(Segment):
             context={
                 "projects": portfolio.ordered_projects,
                 "title": portfolio.projects_segment_title,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
             },
         )

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "health_check.cache",
     "health_check.storage",
     "analytical",
+    "colorfield",
     # First party apps:
     "apps.common",
     "apps.user",

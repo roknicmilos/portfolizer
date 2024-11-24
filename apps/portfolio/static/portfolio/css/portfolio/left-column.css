@@ -9,10 +9,6 @@
     }
 }
 
-.left-column .title {
-    color: white;
-}
-
 .avatar-mobile,
 .avatar {
     margin: 50px auto;
@@ -77,7 +73,6 @@
     }
 }
 
-.contact-item,
 .link {
     display: flex;
     align-items: center;
@@ -86,7 +81,6 @@
     text-decoration: none;
 }
 
-.contact-item svg,
 .link svg {
     width: 25px;
     height: 25px;
@@ -96,7 +90,7 @@
     background-color: #303030;
 }
 
-.contact-item-value {
+.link-label {
     font-size: 16px;
     font-weight: 400;
 }
