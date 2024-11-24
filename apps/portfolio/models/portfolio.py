@@ -3,6 +3,7 @@ from apps.common.validators import MaxFileSizeValidator
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.translation import gettext_lazy as _
+from colorfield.fields import ColorField
 
 from apps.portfolio.models import (
     LeftPortfolioColumnMixin,
@@ -112,6 +113,22 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         verbose_name=_("about me"),
         null=True,
         blank=True,
+    )
+    pdf_btn_bg_color = ColorField(
+        verbose_name=_("PDF button background color"),
+        default="#9c0d0d",  # dark red
+    )
+    pdf_btn_svg_color = ColorField(
+        verbose_name=_("PDF button SVG color"),
+        default="#ffffff",  # white
+    )
+    edit_btn_bg_color = ColorField(
+        verbose_name=_("Edit button background color"),
+        default="#0d209c",  # dark blue
+    )
+    edit_btn_svg_color = ColorField(
+        verbose_name=_("Edit button SVG color"),
+        default="#ffffff",  # white
     )
 
     class Meta:

@@ -1,6 +1,7 @@
 - model: portfolio.Portfolio
   pk: 1
   fields:
+    user: 1
     is_published: true
     slug: roknic-milos
     title: Miloš Roknić
@@ -29,6 +30,7 @@
 - model: portfolio.Portfolio
   pk: 2
   fields:
+    user: 2
     is_published: true
     slug: eric-cartman
     title: Eric Cartman
@@ -52,5 +54,9 @@
     left_column_text_color: "#B9D6BF"
     right_column_bg_color: "#B9D6BF"
     right_column_text_color: "#014600"
+    pdf_btn_bg_color: "#ffffff"
+    pdf_btn_svg_color: "#9c0d0d"
+    edit_btn_bg_color: "#ffffff"
+    edit_btn_svg_color: "#0d209c"
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z

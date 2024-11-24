@@ -140,6 +140,7 @@ LOGOUT_REDIRECT_URL = "index"
 
 FIXTURES = {
     "labels": [
+        "user",
         "portfolio",
         "link",
         "skill",
