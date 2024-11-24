@@ -29,6 +29,8 @@ if HTTPS:
 # Application definition
 
 INSTALLED_APPS = [
+    "admin_interface",  # (third-party) must come before "django.contrib.admin"
+    "colorfield",  # (third-party) must come before "django.contrib.admin"
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -43,7 +45,6 @@ INSTALLED_APPS = [
     "health_check.cache",
     "health_check.storage",
     "analytical",
-    "colorfield",
     # First party apps:
     "apps.common",
     "apps.user",
