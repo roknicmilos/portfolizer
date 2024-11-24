@@ -11,34 +11,32 @@
     <div class="extra-info">
         <p>
             {% blocktrans %}
-                Here’s some information to help you understand how the Portfolio
-                is structured and displayed, and which parts can be customized
-                to fit your preferences:
+                Here’s some information to help you understand how the Portfolio is structured and displayed, and which
+                parts can be customized to fit your preferences:
             {% endblocktrans %}
         </p>
         <ul>
             <li>{% trans 'Portfolio is divided into left and right column.' %}</li>
             <li>{% trans 'Each column has its own segments.' %}</li>
-            <li>{% trans 'Required segments are marked with wildcard symbol.' %}</li>
-            <li>{% trans 'Optional segments will not be displayed if you leave them empty.' %}</li>
+            <li>{% trans 'Segments will not be displayed if you leave them empty.' %}</li>
             <li>
                 {% blocktrans %}
                     You can change the order of the segments under the "LEFT COLUMN
                     | SEGMENT ORDER" and "RIGHT COLUMN | SEGMENT ORDER" sections.
                 {% endblocktrans %}
             </li>
+            <li>{% trans 'You can change the title of each segment under the "Segment Titles" section.' %}</li>
+            <li>{% trans 'You can change the style of the Portfolio under the "Style" section.' %}</li>
             <li>
                 {% blocktrans %}
-                    Below, you can see the name of each segment and to which
-                    column they belong to - the first letter of the column is
-                    displayed in brackets next to the segment name.
+                    Below, you can see the name of each segment and to which column they belong to - the first letter of
+                    the column is displayed in brackets next to the segment name.
                 {% endblocktrans %}
             </li>
             <li>
                 {% blocktrans %}
-                    Each segment must be on a single page. If the segment stretches
-                    acros 2 pages (upper part is on one page, and lower part is on
-                    the next page), the segment will be moved to the next page.
+                    Each segment must be on a single page. If the segment stretches acros 2 pages (upper part is on one
+                    page, and lower part is on the next page), the segment will be moved to the next page.
                 {% endblocktrans %}
             </li>
         </ul>

@@ -1,5 +1,6 @@
 {% load svg i18n color %}
 
-<h2 class="segment-title" style="color: {{ text_color }}; border-bottom-color: {{ text_color|color:1.5 }}">
-    {{ title }}
+<h2 class="segment-title"
+    style="color: {{ text_color }}; border-bottom-color: {{ text_color|color:1.5 }}; {% if not title %}height: 30px;{% endif %}">
+    {{ title|default:"" }}
 </h2>
