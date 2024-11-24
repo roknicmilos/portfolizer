@@ -22,13 +22,6 @@
                 {% svg "portfolio/svg/avatar-dark.svg" %}
             {% endif %}
         </div>
-        <div class="right-segment header" style="color: {{ portfolio.right_column_text_color }}">
-            <h1 class="name">
-                {{ portfolio.first_name|default:_("firstname")|upper }}
-                {{ portfolio.last_name|default:_("lastname")|upper }}
-            </h1>
-            <p class="role">{{ portfolio.role|default:_("role")|upper }}</p>
-        </div>
         {% for segment in right_column %}
             {{ segment }}
         {% endfor %}

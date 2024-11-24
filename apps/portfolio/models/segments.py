@@ -143,6 +143,22 @@ class EducationSegment(LeftColumnSegment):
         )
 
 
+class HeaderSegment(RightColumnSegment):
+    def __init__(self, portfolio: Portfolio):
+        super().__init__(portfolio)
+        self.order = -1  # always first
+        self.content = render_to_string(
+            template_name="portfolio/includes/header.html",
+            context={
+                "first_name": portfolio.first_name,
+                "last_name": portfolio.last_name,
+                "role": portfolio.role,
+                "bg_color": self.bg_color,
+                "text_color": self.text_color,
+            },
+        )
+
+
 class AboutMeSegment(RightColumnSegment):
     def __init__(self, portfolio: Portfolio):
         super().__init__(portfolio)

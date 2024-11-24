@@ -12,6 +12,7 @@ from apps.portfolio.models.segments import (
     SkillsSegment,
     LinksSegment,
     PersonalDetailsSegment,
+    HeaderSegment,
     AboutMeSegment,
     EmploymentSegment,
     ProjectsSegment,
@@ -55,6 +56,8 @@ def render_right_column_segments(portfolio: Portfolio) -> list[str]:
     """
 
     segments: list[Segment] = []
+    if portfolio.first_name or portfolio.last_name or portfolio.role:
+        segments.append(HeaderSegment(portfolio))
     if portfolio.about_me:
         segments.append(AboutMeSegment(portfolio))
     if portfolio.employments.exists():
