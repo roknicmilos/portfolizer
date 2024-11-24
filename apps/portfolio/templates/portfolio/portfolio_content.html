@@ -1,4 +1,4 @@
-{% load svg static i18n %}
+{% load svg static i18n color %}
 
 <div class="page {% if response_type == "html" %}page--html{% endif %}"
      {% if response_type == "pdf" %}style="height: calc(100% * {{ portfolio.page_count }})"{% endif %}>
@@ -13,6 +13,13 @@
         {% for segment in left_column %}
             {{ segment }}
         {% endfor %}
+        {% if response_type == "html" %}
+            <div class="powered-by-section">
+                <a href="https://roknicmilos.com" style="color: {{ portfolio.left_column_text_color|color:1.5 }}">
+                    powered by roknicmilos.com
+                </a>
+            </div>
+        {% endif %}
     </section>
     <section class="right-column">
         <div class="avatar-mobile">
@@ -25,6 +32,11 @@
         {% for segment in right_column %}
             {{ segment }}
         {% endfor %}
+        <div class="powered-by-section">
+            <a href="https://roknicmilos.com" style="color: {{ portfolio.right_column_text_color|color:1.5 }}">
+                powered by roknicmilos.com
+            </a>
+        </div>
     </section>
 </div>
 

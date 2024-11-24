@@ -5,7 +5,7 @@
 
     @media only screen and (max-width: 1200px) {
         width: 100%;
-        padding: 50px 0 100px;
+        padding: 50px 0;
     }
 }
 
@@ -104,4 +104,19 @@
         width: fit-content;
         margin-right: 60px;
     }
+}
+
+.left-column .powered-by-section {
+    display: none;
+
+    @media only screen and (max-width: 1200px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+}
+
+.left-column .powered-by-section a {
+    text-decoration: none;
 }
