@@ -1,0 +1,25 @@
+- model: user.User
+  pk: 1
+  fields:
+    email: roknic.milos.994@gmail.com
+    password: pbkdf2_sha256$870000$eRAlWI0Vs8BXeeqqtqKqcz$5lEe1djzgzHFaOPRppDhy8CpJUBIoI9NAq/BlGH+msM= # pass4user
+    first_name: Miloš
+    last_name: Roknić
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    created: 2024-11-24T00:00:00Z
+    modified: 2024-11-24T00:00:00Z
+
+- model: user.User
+  pk: 2
+  fields:
+    email: eric.cartman@example.com
+    password: pbkdf2_sha256$870000$eRAlWI0Vs8BXeeqqtqKqcz$5lEe1djzgzHFaOPRppDhy8CpJUBIoI9NAq/BlGH+msM= # pass4user
+    first_name: Eric
+    last_name: Cartman
+    is_active: true
+    is_staff: true
+    is_superuser: false
+    created: 2024-11-24T00:00:00Z
+    modified: 2024-11-24T00:00:00Z

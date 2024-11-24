@@ -1,13 +1,14 @@
 {% load svg static %}
 
 <div class="left-segment skills">
-    <h2 class="title">{{ title }}</h2>
+    {% include "portfolio/includes/segment_title.html" %}
     <div class="skill-items">
         {% for skill in skills %}
             <div class="skill">
-                <p class="skill-label">{{ skill.label }}</p>
-                <div class="skill-bar">
-                    <div class="skill-bar-filler skill-bar-filler-{{ skill.level }}"></div>
+                <p class="skill-label" style="color: {{ text_color }}">{{ skill.label }}</p>
+                <div class="skill-bar" style="border-bottom-color: {{ text_color }}">
+                    <div class="skill-bar-filler skill-bar-filler-{{ skill.level }}"
+                         style="background-color: {{ text_color }}"></div>
                 </div>
             </div>
         {% endfor %}

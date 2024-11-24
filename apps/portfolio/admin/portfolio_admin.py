@@ -90,6 +90,22 @@ class PortfolioAdmin(admin.ModelAdmin):
             },
         ),
         (
+            _("Style"),
+            {
+                "fields": (
+                    "left_column_bg_color",
+                    "left_column_text_color",
+                    "right_column_bg_color",
+                    "right_column_text_color",
+                    "pdf_btn_bg_color",
+                    "pdf_btn_svg_color",
+                    "edit_btn_bg_color",
+                    "edit_btn_svg_color",
+                ),
+                "classes": ("collapse",),
+            },
+        ),
+        (
             _("*IMAGE (L)"),
             {
                 "fields": ("avatar",),

@@ -3,6 +3,7 @@ from apps.common.validators import MaxFileSizeValidator
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.translation import gettext_lazy as _
+from colorfield.fields import ColorField
 
 from apps.portfolio.models import (
     LeftPortfolioColumnMixin,
@@ -113,55 +114,21 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         null=True,
         blank=True,
     )
-    contact_segment_title = models.CharField(
-        verbose_name=_("contact segment title"),
-        max_length=100,
-        default=_("CONTACT"),
+    pdf_btn_bg_color = ColorField(
+        verbose_name=_("PDF button background color"),
+        default="#9c0d0d",  # dark red
     )
-    personal_details_segment_title = models.CharField(
-        verbose_name=_("personal details segment title"),
-        max_length=100,
-        default=_("PERSONAL DETAILS"),
+    pdf_btn_svg_color = ColorField(
+        verbose_name=_("PDF button SVG color"),
+        default="#ffffff",  # white
     )
-    links_segment_title = models.CharField(
-        verbose_name=_("links segment title"),
-        max_length=100,
-        default=_("LINKS"),
+    edit_btn_bg_color = ColorField(
+        verbose_name=_("Edit button background color"),
+        default="#0d209c",  # dark blue
     )
-    skills_segment_title = models.CharField(
-        verbose_name=_("skills segment title"),
-        max_length=100,
-        default=_("SKILLS"),
-    )
-    languages_segment_title = models.CharField(
-        verbose_name=_("languages segment title"),
-        max_length=100,
-        default=_("LANGUAGES"),
-    )
-    internship_segment_title = models.CharField(
-        verbose_name=_("internship segment title"),
-        max_length=100,
-        default=_("INTERNSHIP HISTORY"),
-    )
-    education_segment_title = models.CharField(
-        verbose_name=_("education segment title"),
-        max_length=100,
-        default=_("EDUCATION"),
-    )
-    about_me_segment_title = models.CharField(
-        verbose_name=_("about me segment title"),
-        max_length=100,
-        default=_("ABOUT ME"),
-    )
-    employment_segment_title = models.CharField(
-        verbose_name=_("employment segment title"),
-        max_length=100,
-        default=_("EMPLOYMENT HISTORY"),
-    )
-    projects_segment_title = models.CharField(
-        verbose_name=_("projects segment title"),
-        max_length=100,
-        default=_("RELEVANT PROJECTS"),
+    edit_btn_svg_color = ColorField(
+        verbose_name=_("Edit button SVG color"),
+        default="#ffffff",  # white
     )
 
     class Meta:

@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from colorfield.fields import ColorField
 
 from apps.common.models import BaseModel
 
@@ -55,6 +56,49 @@ class LeftPortfolioColumnMixin(BaseModel):
         max_length=20,
         choices=LeftSegment.choices,
         default=LeftSegment.EDUCATION,
+    )
+    contact_segment_title = models.CharField(
+        verbose_name=_("contact segment title"),
+        max_length=100,
+        default=_("CONTACT"),
+    )
+    personal_details_segment_title = models.CharField(
+        verbose_name=_("personal details segment title"),
+        max_length=100,
+        default=_("PERSONAL DETAILS"),
+    )
+    links_segment_title = models.CharField(
+        verbose_name=_("links segment title"),
+        max_length=100,
+        default=_("LINKS"),
+    )
+    skills_segment_title = models.CharField(
+        verbose_name=_("skills segment title"),
+        max_length=100,
+        default=_("SKILLS"),
+    )
+    languages_segment_title = models.CharField(
+        verbose_name=_("languages segment title"),
+        max_length=100,
+        default=_("LANGUAGES"),
+    )
+    internship_segment_title = models.CharField(
+        verbose_name=_("internship segment title"),
+        max_length=100,
+        default=_("INTERNSHIP HISTORY"),
+    )
+    education_segment_title = models.CharField(
+        verbose_name=_("education segment title"),
+        max_length=100,
+        default=_("EDUCATION"),
+    )
+    left_column_bg_color = ColorField(
+        verbose_name=_("left column background color"),
+        default="#303030",  # (extra) dark grey
+    )
+    left_column_text_color = ColorField(
+        verbose_name=_("left column text color"),
+        default="#ffffff",  # white
     )
 
     class Meta:

@@ -1,3 +1,4 @@
+from colorfield.fields import ColorField
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -27,6 +28,29 @@ class RightPortfolioColumnMixin(BaseModel):
         max_length=20,
         choices=RightSegment.choices,
         default=RightSegment.PROJECTS,
+    )
+    about_me_segment_title = models.CharField(
+        verbose_name=_("about me segment title"),
+        max_length=100,
+        default=_("ABOUT ME"),
+    )
+    employment_segment_title = models.CharField(
+        verbose_name=_("employment segment title"),
+        max_length=100,
+        default=_("EMPLOYMENT HISTORY"),
+    )
+    projects_segment_title = models.CharField(
+        verbose_name=_("projects segment title"),
+        max_length=100,
+        default=_("RELEVANT PROJECTS"),
+    )
+    right_column_bg_color = ColorField(
+        verbose_name=_("right column background color"),
+        default="#ffffff",  # white
+    )
+    right_column_text_color = ColorField(
+        verbose_name=_("right column text color"),
+        default="#000000",  # black
     )
 
     class Meta:

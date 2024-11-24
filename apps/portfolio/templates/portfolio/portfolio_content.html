@@ -22,7 +22,7 @@
                 {% svg "portfolio/svg/avatar-dark.svg" %}
             {% endif %}
         </div>
-        <div class="right-segment header">
+        <div class="right-segment header" style="color: {{ portfolio.right_column_text_color }}">
             <h1 class="name">
                 {{ portfolio.first_name|default:_("firstname")|upper }}
                 {{ portfolio.last_name|default:_("lastname")|upper }}
@@ -36,14 +36,18 @@
 </div>
 
 {% if response_type == "html" %}
-    <a class="js-expendable-button expendable-button expendable-button--pdf" href="{{ portfolio_pdf_url }}">
-        <span class="text">{% trans "Download" %}</span>
-        {% svg "portfolio/svg/pdf.svg" %}
+    <a class="js-expendable-button expendable-button expendable-button--pdf"
+       href="{{ portfolio_pdf_url }}"
+       style="background-color: {{ portfolio.pdf_btn_bg_color }}">
+        <span class="text" style="color: {{ portfolio.pdf_btn_svg_color }}">{% trans "Download" %}</span>
+        {% svg "portfolio/svg/pdf.svg" portfolio.pdf_btn_svg_color %}
     </a>
     {% if portfolio_edit_url %}
-        <a class="js-expendable-button expendable-button expendable-button--edit" href="{{ portfolio_edit_url }}">
-            <span class="text">{% trans "Edit" %}</span>
-            {% svg "portfolio/svg/edit.svg" %}
+        <a class="js-expendable-button expendable-button expendable-button--edit"
+           href="{{ portfolio_edit_url }}"
+           style="background-color: {{ portfolio.edit_btn_bg_color }}">
+            <span class=" text" style="color: {{ portfolio.edit_btn_svg_color }}">{% trans "Edit" %}</span>
+            {% svg "portfolio/svg/edit.svg" portfolio.edit_btn_svg_color %}
         </a>
     {% endif %}
 {% endif %}
