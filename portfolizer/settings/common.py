@@ -55,6 +55,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -124,12 +125,12 @@ USE_TZ = True
 TIME_ZONE = "UTC"
 
 # Set the default language
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "en"
 
 # Define the available languages
 LANGUAGES = [
     ("en", "English"),
-    ("sr", "Serbian"),
+    ("sr-Latn", "Serbian"),
 ]
 
 # Set the path for translation files
