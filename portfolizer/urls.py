@@ -10,6 +10,7 @@ from apps.user.views import RegistrationView, LoginView
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("health/", include("health_check.urls")),
+    path("i18n/", include("django.conf.urls.i18n")),
 ]
 
 urlpatterns += i18n_patterns(

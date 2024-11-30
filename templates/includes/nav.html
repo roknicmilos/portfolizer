@@ -1,4 +1,6 @@
-{% load svg %}
+{% load svg i18n %}
+
+{% get_current_language as CURRENT_LANGUAGE_CODE %}
 
 {% block nav %}
     <nav>
@@ -8,42 +10,55 @@
                     {% svg "svg/rocket.svg" %}
                 </a>
             </div>
-            <div class="menu__right">
+            <div class="menu__right js-main-menu">
                 <!-- Burger Button -->
-                <div class="menu__burger" id="menuBurger" aria-label="Toggle Menu">
+                <div class="menu__burger js-main-menu-burger" id="menuBurger" aria-label="Toggle Menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
 
-                <!-- Dropdown Menu -->
-                <div class="menu__dropdown">
+                <!-- Menu Modal-->
+                <div class="menu__modal js-main-menu-modal">
+                    <h3 class="menu__title">{% trans "main menu" %}</h3>
+                    <a href="{% url 'index' %}" class="menu__item">
+                        {% trans "HOME" %}
+                    </a>
                     {% if request.user.is_anonymous %}
-                        <a href="{{ user_menu.login.url }}" class="menu__dropdown-item">
+                        <a href="{{ user_menu.login.url }}" class="menu__item">
                             {{ user_menu.login.label }}
                         </a>
-                        <a href="{{ user_menu.register.url }}" class="menu__dropdown-item">
+                        <a href="{{ user_menu.register.url }}" class="menu__item">
                             {{ user_menu.register.label }}
                         </a>
                     {% else %}
                         {% if portfolio_menu.view %}
-                            <a href="{{ portfolio_menu.view.url }}" class="menu__dropdown-item">
+                            <a href="{{ portfolio_menu.view.url }}" class="menu__item">
                                 {{ portfolio_menu.view.label }}
                             </a>
-                            <a href="{{ portfolio_menu.edit.url }}" class="menu__dropdown-item">
+                            <a href="{{ portfolio_menu.edit.url }}" class="menu__item">
                                 {{ portfolio_menu.edit.label }}
                             </a>
                         {% else %}
-                            <a href="{{ portfolio_menu.create.url }}" class="menu__dropdown-item">
+                            <a href="{{ portfolio_menu.create.url }}" class="menu__item">
                                 {{ portfolio_menu.create.label }}
                             </a>
                         {% endif %}
-                        <a href="{{ user_menu.edit.url }}" class="menu__dropdown-item">{{ user_menu.edit.label }}</a>
-                        <form class="menu__dropdown-item" method="POST" action="{{ user_menu.logout.url }}">
+                        <a href="{{ user_menu.edit.url }}" class="menu__item">{{ user_menu.edit.label }}</a>
+                        <form class="menu__item" method="POST" action="{{ user_menu.logout.url }}">
                             {% csrf_token %}
                             <button type="submit">{{ user_menu.logout.label }}</button>
                         </form>
                     {% endif %}
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% for lang_code, lang_name in LANGUAGES %}
+                        {% if lang_code == LANGUAGE_CODE %}
+                            <div class="menu__item">
+                                {{ lang_name|upper }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>

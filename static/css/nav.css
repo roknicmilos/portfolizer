@@ -81,84 +81,83 @@ nav {
     transition: all 0.3s;
 }
 
-.menu__dropdown {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 75px;
+.menu__modal {
+    display: none;
+}
+
+/* Opened menu */
+.menu__right--active {
+    position: fixed;
+    top: 0;
     right: 0;
-    overflow: hidden;
-    z-index: 10;
-    flex-direction: column;
-    background-color: #fff;
-    border: 1px solid black;
-    border-bottom: none;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2); /* White background with 50% transparency */
+    backdrop-filter: blur(6px); /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(6px); /* Safari support */
 }
 
-/* Show Dropdown on Hover */
-.menu__right:hover .menu__dropdown {
-    display: flex; /* Reveal dropdown */
-    animation: slideDown 0.3s ease-out;
-}
-
-/* Slide Down Animation */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.menu__dropdown-item {
+.menu__right--active .menu__modal {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100% - 10px); /* 10px is the border width */
-    width: 150px;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.menu__dropdown-item {
-    padding: 20px 30px;
-    border: none;
-    border-bottom: 1px solid black;
-}
-
-.menu__dropdown-item:hover {
-    background-color: #ececec;
-}
-
-/**
-* Logout menu item is actually a form with a submit button
-* which is why we need to style the button as a link
- */
-form.menu__dropdown-item {
-    padding: 0;
-    height: calc(100% - 10px); /* 10px is the border width */
-    width: 100%;
-}
-
-.menu__dropdown-item button[type="submit"] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 20px 30px;
-    border: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 33%;
     background-color: white;
-    font-size: inherit;
-    font-family: inherit;
+    flex-direction: column;
+
+    @media only screen and (max-width: 1200px) {
+        width: 50%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
 }
 
-.menu__dropdown-item button[type="submit"]:hover {
+.menu__right--active .menu__burger {
+    display: none;
+}
+
+.menu__title {
+    margin: 0;
+    padding: 30px 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+.menu__item {
+    height: 60px;
+    line-height: 60px;
+    width: calc(100% - 50px * 2);
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid lightgrey;
+    padding: 0 50px;
+    text-align: right;
+    font-size: 16px;
+}
+
+form.menu__item {
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+.menu__item button[type="submit"] {
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    text-align: right;
+    padding: 0 50px;
+    cursor: pointer;
+}
+
+.menu__item:hover,
+.menu__item button[type="submit"]:hover {
     background-color: #ececec;
 }

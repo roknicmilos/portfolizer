@@ -27,7 +27,7 @@ def portfolio_variables(request: WSGIRequest) -> dict:
 
 def _init_create_portfolio_button() -> ButtonLink:
     url = get_model_admin_create_url(Portfolio)
-    return ButtonLink(label=_("Create Portfolio"), url=url)
+    return ButtonLink(label=_("CREATE PORTFOLIO"), url=url)
 
 
 def _init_view_portfolio_button(portfolio: Portfolio) -> ButtonLink | None:
@@ -35,7 +35,7 @@ def _init_view_portfolio_button(portfolio: Portfolio) -> ButtonLink | None:
         return None
 
     url = reverse(viewname="portfolio:index", kwargs={"slug": portfolio.slug})
-    return ButtonLink(label=_("View Portfolio"), url=url)
+    return ButtonLink(label=_("VIEW PORTFOLIO"), url=url)
 
 
 def _init_edit_portfolio_button(portfolio: Portfolio) -> ButtonLink | None:
@@ -43,4 +43,4 @@ def _init_edit_portfolio_button(portfolio: Portfolio) -> ButtonLink | None:
         return None
 
     url = get_model_admin_details_url(obj=portfolio)
-    return ButtonLink(label=_("Edit Portfolio"), url=url)
+    return ButtonLink(label=_("EDIT PORTFOLIO"), url=url)
