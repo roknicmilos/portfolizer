@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 20:08+0000\n"
+"POT-Creation-Date: 2024-11-30 22:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian <LL@li.org>\n"
@@ -99,19 +99,16 @@ msgid "SKILLS (R)"
 msgstr "VEŠTINE (R)"
 
 #: apps/portfolio/context_processors.py:30
-#: apps/portfolio/tests/test_context_processors.py:36
-msgid "Create Portfolio"
-msgstr "Kreiraj Portfolio"
+msgid "CREATE PORTFOLIO"
+msgstr "KREIRAJ PORTFOLIO"
 
 #: apps/portfolio/context_processors.py:38
-#: apps/portfolio/tests/test_context_processors.py:51
-msgid "View Portfolio"
-msgstr "Pogledaj Portfolio"
+msgid "VIEW PORTFOLIO"
+msgstr "POGLEDAJ PORTFOLIO"
 
 #: apps/portfolio/context_processors.py:46
-#: apps/portfolio/tests/test_context_processors.py:55
-msgid "Edit Portfolio"
-msgstr "Uredi Portfolio"
+msgid "EDIT PORTFOLIO"
+msgstr "UREDI PORTFOLIO"
 
 #: apps/portfolio/models/education.py:10 apps/portfolio/models/language.py:11
 #: apps/portfolio/models/link.py:15 apps/portfolio/models/portfolio.py:135
@@ -255,57 +252,29 @@ msgstr "sedmi segment u levoj koloni"
 msgid "contact segment title"
 msgstr "naslov segmenta kontakt"
 
-#: apps/portfolio/models/left_portfolio_column_mixin.py:63
-msgid "CONTACT"
-msgstr "KONTAKT"
-
 #: apps/portfolio/models/left_portfolio_column_mixin.py:68
 msgid "personal details segment title"
 msgstr "naslov segmenta lični detalji"
-
-#: apps/portfolio/models/left_portfolio_column_mixin.py:70
-msgid "PERSONAL DETAILS"
-msgstr "LIČNI DETALJI"
 
 #: apps/portfolio/models/left_portfolio_column_mixin.py:75
 msgid "links segment title"
 msgstr "naslov segmenta linkovi"
 
-#: apps/portfolio/models/left_portfolio_column_mixin.py:77
-msgid "LINKS"
-msgstr "LINKOVI"
-
 #: apps/portfolio/models/left_portfolio_column_mixin.py:82
 msgid "skills segment title"
 msgstr "naslov segmenta veštine"
-
-#: apps/portfolio/models/left_portfolio_column_mixin.py:84
-msgid "SKILLS"
-msgstr "VEŠTINE"
 
 #: apps/portfolio/models/left_portfolio_column_mixin.py:89
 msgid "languages segment title"
 msgstr "naslov segmenta jezici"
 
-#: apps/portfolio/models/left_portfolio_column_mixin.py:91
-msgid "LANGUAGES"
-msgstr "JEZICI"
-
 #: apps/portfolio/models/left_portfolio_column_mixin.py:96
 msgid "internship segment title"
 msgstr "naslov segmenta praksa"
 
-#: apps/portfolio/models/left_portfolio_column_mixin.py:98
-msgid "INTERNSHIP HISTORY"
-msgstr "ISTORIJA PRAKSE"
-
 #: apps/portfolio/models/left_portfolio_column_mixin.py:103
 msgid "education segment title"
 msgstr "naslov segmenta obrazovanje"
-
-#: apps/portfolio/models/left_portfolio_column_mixin.py:105
-msgid "EDUCATION"
-msgstr "OBRAZOVANJE"
 
 #: apps/portfolio/models/left_portfolio_column_mixin.py:110
 msgid "left column background color"
@@ -510,25 +479,13 @@ msgstr "treći segment u desnoj koloni"
 msgid "about me segment title"
 msgstr "naslov segmenta o meni"
 
-#: apps/portfolio/models/right_portfolio_column_mixin.py:35
-msgid "ABOUT ME"
-msgstr "O MENI"
-
 #: apps/portfolio/models/right_portfolio_column_mixin.py:40
 msgid "employment segment title"
 msgstr "naslov segmenta zaposlenje"
 
-#: apps/portfolio/models/right_portfolio_column_mixin.py:42
-msgid "EMPLOYMENT HISTORY"
-msgstr "ISTORIJA ZAPOSLENJA"
-
 #: apps/portfolio/models/right_portfolio_column_mixin.py:47
 msgid "projects segment title"
 msgstr "naslov segmenta projekti"
-
-#: apps/portfolio/models/right_portfolio_column_mixin.py:49
-msgid "RELEVANT PROJECTS"
-msgstr "RELEVANTNI PROJEKTI"
 
 #: apps/portfolio/models/right_portfolio_column_mixin.py:54
 msgid "right column background color"
@@ -653,6 +610,18 @@ msgstr "Sačuvaj"
 msgid "Edit"
 msgstr "Uredi"
 
+#: apps/portfolio/tests/test_context_processors.py:36
+msgid "Create Portfolio"
+msgstr "Kreiraj Portfolio"
+
+#: apps/portfolio/tests/test_context_processors.py:51
+msgid "View Portfolio"
+msgstr "Pogledaj Portfolio"
+
+#: apps/portfolio/tests/test_context_processors.py:55
+msgid "Edit Portfolio"
+msgstr "Uredi Portfolio"
+
 #: apps/user/admin/user_admin.py:35
 msgid "Personal info"
 msgstr "Lični podaci"
@@ -665,37 +634,49 @@ msgstr "Dozvole"
 msgid "Important dates"
 msgstr "Važni datumi"
 
-#: apps/user/context_processors.py:26 apps/user/templates/user/login.html:5
-#: apps/user/templates/user/login.html:14
-#: apps/user/templates/user/login.html:20
-#: apps/user/tests/test_context_processors.py:18
-msgid "Login"
-msgstr "Prijava"
+#: apps/user/context_processors.py:26
+msgid "LOGIN"
+msgstr "PRIJAVA"
 
 #: apps/user/context_processors.py:30
-#: apps/user/templates/user/registration.html:23
-#: apps/user/tests/test_context_processors.py:20
-msgid "Register"
-msgstr "Registracija"
+msgid "REGISTER"
+msgstr "REGISTRACIJA"
 
 #: apps/user/context_processors.py:35
-#: apps/user/tests/test_context_processors.py:37
-msgid "Account Settings"
-msgstr "Podešavanja naloga"
+msgid "ACCOUNT SETTINGS"
+msgstr "PODEŠAVANJA NALOGA"
 
 #: apps/user/context_processors.py:39
-#: apps/user/tests/test_context_processors.py:41
-msgid "Logout"
-msgstr "Odjava"
+msgid "LOGOUT"
+msgstr "ODJAVA"
 
 #: apps/user/models/user.py:44
 msgid "email address"
 msgstr "email adresa"
 
+#: apps/user/templates/user/login.html:5 apps/user/templates/user/login.html:14
+#: apps/user/templates/user/login.html:20
+#: apps/user/tests/test_context_processors.py:18
+msgid "Login"
+msgstr "Prijava"
+
 #: apps/user/templates/user/registration.html:5
 #: apps/user/templates/user/registration.html:14
 msgid "Registration"
 msgstr "Registracija"
+
+#: apps/user/templates/user/registration.html:23
+#: apps/user/tests/test_context_processors.py:20
+msgid "Register"
+msgstr "Registracija"
+
+#: apps/user/tests/test_context_processors.py:37
+msgid "Account Settings"
+msgstr "Podešavanja naloga"
+
+#: apps/user/tests/test_context_processors.py:41
+msgid "Logout"
+msgstr "Odjava"
 
 #: templates/404.html:5
 msgid "404"
@@ -722,6 +703,14 @@ msgstr ""
 #: templates/base.html:8 templates/index.html:5 templates/index.html:16
 msgid "Portfolizer"
 msgstr "Portfolizer"
+
+#: templates/includes/nav.html:24
+msgid "main menu"
+msgstr "glavni meni"
+
+#: templates/includes/nav.html:27
+msgid "HOME"
+msgstr "POČETNA"
 
 #: templates/index.html:19
 #, python-format
