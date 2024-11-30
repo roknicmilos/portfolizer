@@ -60,49 +60,49 @@ class LeftPortfolioColumnMixin(BaseModel):
     contact_segment_title = models.CharField(
         verbose_name=_("contact segment title"),
         max_length=100,
-        default=_("CONTACT"),
+        default="CONTACT",
         null=True,
         blank=True,
     )
     personal_details_segment_title = models.CharField(
         verbose_name=_("personal details segment title"),
         max_length=100,
-        default=_("PERSONAL DETAILS"),
+        default="PERSONAL DETAILS",
         null=True,
         blank=True,
     )
     links_segment_title = models.CharField(
         verbose_name=_("links segment title"),
         max_length=100,
-        default=_("LINKS"),
+        default="LINKS",
         null=True,
         blank=True,
     )
     skills_segment_title = models.CharField(
         verbose_name=_("skills segment title"),
         max_length=100,
-        default=_("SKILLS"),
+        default="SKILLS",
         null=True,
         blank=True,
     )
     languages_segment_title = models.CharField(
         verbose_name=_("languages segment title"),
         max_length=100,
-        default=_("LANGUAGES"),
+        default="LANGUAGES",
         null=True,
         blank=True,
     )
     internship_segment_title = models.CharField(
         verbose_name=_("internship segment title"),
         max_length=100,
-        default=_("INTERNSHIP HISTORY"),
+        default="INTERNSHIP HISTORY",
         null=True,
         blank=True,
     )
     education_segment_title = models.CharField(
         verbose_name=_("education segment title"),
         max_length=100,
-        default=_("EDUCATION"),
+        default="EDUCATION",
         null=True,
         blank=True,
     )

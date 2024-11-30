@@ -3,8 +3,10 @@
   fields:
     portfolio: 1
     title: Software Engineer
+    title_sr: Softverski inženjer
     company: Vega IT
     location: Novi Sad, Serbia
+    location_sr: Novi Sad, Srbija
     start: 2019-01-01
     end: 2023-08-01
     description:
@@ -19,6 +21,17 @@
       experience with Docker and various CI tools. For the last three
       years of this period, I exclusively worked on Ubuntu, solidifying
       my proficiency with this operating system.
+    description_sr:
+      Tokom ovog perioda, započeo sam svoje putovanje kao softverski
+      inženjer, gde sam prvobitno radio intenzivno sa PHP tehnologijama,
+      uključujući Drupal, WordPress i Symfony. Nakon godinu i po dana,
+      prešao sam na rad na Python/Django i Next.js projektima, fokus
+      koji je trajao četiri godine. Pored svog razvojnog rada, preuzeo
+      sam vođstvo u dva interna hakatona i mentorisao kolege i studente
+      u Python/Django i React. Takođe sam stekao vredno iskustvo sa
+      Dockerom i raznim CI alatima. Poslednje tri godine ovog perioda,
+      isključivo sam radio na Ubuntu, čime sam učvrstio svoje poznavanje
+      ovog operativnog sistema.
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -27,8 +40,10 @@
   fields:
     portfolio: 1
     title: Software Engineer & Development Lead
+    title_sr: Softverski inženjer & Development Lead
     company: Vega IT
     location: Novi Sad, Serbia
+    location_sr: Novi Sad, Srbija
     start: 2023-08-01
     description:
       In Aug 2023, I assumed the role of Development Lead, taking on
@@ -39,6 +54,15 @@
       latest projects. I also continued mentoring colleagues and
       students in Python/Django and React, while my experience with
       Docker and various CI tools has further grown during this period.
+    description_sr:
+      U avgustu 2023. godine, preuzeo sam ulogu Development Lead-a,
+      preuzimajući odgovornost za upravljanje karijernim napretkom i
+      zadovoljstvom rada šest kolega. Pored navedenih dužnosti, nastavio
+      sam da radim na Python/Django i Next.js projektima, dok sam takođe
+      stekao značajno iskustvo sa Cypress-om u jednom od mojih poslednjih
+      projekata. Takođe sam nastavio mentorisanje kolega i studenata u
+      Python/Django i React, dok je moje iskustvo sa Dockerom i raznim
+      CI alatima dodatno poraslo tokom ovog perioda.
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -47,8 +71,9 @@
   fields:
     portfolio: 2
     title: Chief Mischief Officer
+    title_sr: Glavni oficir za nestašluke
     company: South Park Chaos Inc.
-    location: Novi Sad, Serbia
+    location: South Park, CO
     start: 2000-01-01
     description:
       Spearheaded multiple high-impact pranks and schemes, resulting in
@@ -61,5 +86,16 @@
       success by 300%. Coordinated with a team of like-minded individuals
       (Butters, Clyde, Kenny) to execute complex plans requiring secrecy,
       persuasion, and tactical improvisation.
+    description_sr:
+      Predvodio višestruke visoko-efektne šale i zavere, rezultirajući
+      haosom i konfuzijom širom grada. Uspešno manipulisao vršnjacima i
+      autoritetima kako bi postigao lične ciljeve, često sa malo poštovanja
+      etičkih razmatranja. Pokazao izuzetno vođstvo u organizovanju i
+      izvođenju nestašnih aktivnosti, uključujući prekide u školi i
+      nemire u komšiluku. Razvio i implementirao strategiju "Šta god,
+      radim šta hoću", povećavajući uspeh individualnih projekata za 300%.
+      Koordinisao sa timom slično mislećih pojedinaca (Butters, Clyde, Kenny)
+      za izvođenje složenih planova koji zahtevaju tajnost, ubedljivost i
+      taktičku improvizaciju.
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z

@@ -3,6 +3,7 @@
   fields:
     portfolio: 1
     label: Serbian
+    label_sr: Srpski
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -12,6 +13,7 @@
   fields:
     portfolio: 1
     label: English
+    label_sr: Engleski
     level: 4
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -21,6 +23,7 @@
   fields:
     portfolio: 2
     label: English
+    label_sr: Engleski
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z

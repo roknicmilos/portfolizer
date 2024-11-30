@@ -165,6 +165,7 @@
   fields:
     portfolio: 2
     label: Advanced Manipulation Techniques
+    label_sr: Napredne tehnike manipulacije
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -174,6 +175,7 @@
   fields:
     portfolio: 2
     label: Prank Planning and Execution
+    label_sr: Planiranje i izvođenje šale
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -183,6 +185,7 @@
   fields:
     portfolio: 2
     label: Strategic Persuasion
+    label_sr: Strateško ubedjivanje
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -192,6 +195,7 @@
   fields:
     portfolio: 2
     label: Chaos Theory Application
+    label_sr: Primena teorije haosa
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -201,6 +205,7 @@
   fields:
     portfolio: 2
     label: Ethical Ambiguity
+    label_sr: Etička nejasnoća
     level: 4
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -210,6 +215,7 @@
   fields:
     portfolio: 2
     label: Good Friend
+    label_sr: Dobar prijatelj
     level: 1
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z

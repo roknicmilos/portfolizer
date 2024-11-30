@@ -4,12 +4,17 @@
     portfolio: 1
     school: Java Web Development, FTN Informatika
     degree: Certificate
+    degree_sr: Sertifikat
     start: 2018-01-01
     end: 2018-05-01
     location: Novi Sad, Serbia
+    location_sr: Novi Sad, Srbija
     description:
       Java, Relational Databases, Web Development, Spring Framework,
       Hibernate, JPA, RESTful Web Services, AngularJS, JavaScript, HTML, CSS
+    description_sr:
+      Java, Relacione baze podataka, Web razvoj, Spring Framework,
+      Hibernate, JPA, RESTful Web servisi, AngularJS, JavaScript, HTML, CSS
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -18,11 +23,15 @@
   fields:
     portfolio: 1
     school: Object Oriented Programming, FTN Informatika
+    school_sr: Objektno orijentisano programiranje, FTN Informatika
     degree: Certificate
+    degree_sr: Sertifikat
     start: 2017-12-01
     end: 2018-01-01
     location: Novi Sad, Serbia
+    location_sr: Novi Sad, Srbija
     description: OOP, Java, Console Applications
+    description_sr: OOP, Java, Konzolne aplikacije
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -31,11 +40,15 @@
   fields:
     portfolio: 1
     school: Faculty of Law and Business Studies, dr Lazar Vrkatić
+    school_sr: Pravno-poslovna škola dr Lazar Vrkatić
     degree: Bachelor's degree
+    degree_sr: Diploma osnovnih studija
     start: 2011-10-01
     end: 2017-12-01
     location: Novi Sad, Serbia
+    location_sr: Novi Sad, Srbija
     description: Business Psychology major
+    description_sr: Poslovna psihologija
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -44,10 +57,13 @@
   fields:
     portfolio: 2
     school: School of Life and Mischief, South Park Elementary, CO
+    school_sr: Škola za život i nestašluk, Osnovna škola South Park, CO
     degree: Honorary Degree in Chaos Engineering
+    degree_sr: Počasna diploma iz inženjeringa haosa
     start: 1997-01-01
     end: 2000-01-01
     location: South Park, CO
     description: Never again!
+    description_sr: Nikad više!
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z

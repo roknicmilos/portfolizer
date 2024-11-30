@@ -3,6 +3,8 @@ from django.utils.safestring import mark_safe
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
+from modeltranslation.admin import TranslationAdmin
+
 from apps.portfolio.admin import (
     LinkInline,
     SkillInline,
@@ -16,7 +18,7 @@ from apps.portfolio.models import Portfolio
 
 
 @admin.register(Portfolio)
-class PortfolioAdmin(admin.ModelAdmin):
+class PortfolioAdmin(TranslationAdmin):
     list_display = (
         "title",
         "user",
@@ -212,7 +214,7 @@ class PortfolioAdmin(admin.ModelAdmin):
     def get_fieldsets(self, request, obj=None):
         fieldsets = list(super().get_fieldsets(request, obj))
 
-        main_fields = list(self.main_fields)
+        main_fields = fieldsets[0][1]["fields"]
         if not request.user.is_superuser:
             main_fields.remove("user")
         fieldsets[0][1]["fields"] = tuple(main_fields)

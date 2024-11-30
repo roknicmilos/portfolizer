@@ -11,9 +11,11 @@
     first_name: Miloš
     last_name: Roknić
     role: Software Engineer & Development Lead
+    role_sr: Softverski Inženjer & Development Lead
     email: roknic.milos.994@gmail.com
     phone: 00385638455742
     address_label: Kornelija Stankovića 39, Novi Sad, 21000, Serbia
+    address_label_sr: Kornelija Stankovića 39, Novi Sad, 21000, Srbija
     address_link: https://www.google.rs/maps/place/Kornelija+Stankovi%C4%87a+39,+Novi+Sad/@45.2600114,19.8085096,15.91z/data=!4m6!3m5!1s0x475b11b16298fc2d:0xa5444cbbc3bf8f26!8m2!3d45.2605492!4d19.8103612!16s%2Fg%2F11fx0qw3pz?hl=hr&entry=ttu
     birthday: 1994-02-13
     about_me:
@@ -24,6 +26,25 @@
       gained experience with Docker, CI tools, testing frameworks and mentored
       colleagues and students in Python/Django and React. I also took on a
       Development Lead role, managing six colleagues' career progression.
+    about_me_sr:
+      Nakon završetka kurseva programiranja i praksi u dve kompanije, dobio
+      sam stalnu poziciju Softverskog inženjera u drugoj kompaniji, gde sam
+      prvenstveno radio sa PHP tehnologijama. Kasnije sam prešao na Python/Django
+      i vodio dva interna hackathon projekta u poslednje dve godine. Takođe sam
+      stekao iskustvo sa Docker-om, CI alatima, okvirima za testiranje i
+      mentorisanjem kolega i studenata u Python/Django i React tehnologijama.
+      Preuzeo sam i ulogu Development Lead-a, upravljajući razvojem karijere šest
+      kolega.
+    about_me_segment_title_sr: O MENI
+    contact_segment_title_sr: KONTAKT
+    education_segment_title_sr: OBRAZOVANJE
+    employment_segment_title_sr: RADNO ISKUSTVO
+    internship_segment_title_sr: PRAKSE
+    languages_segment_title_sr: JEZICI
+    links_segment_title_sr: LINKOVI
+    personal_details_segment_title_sr: LIČNI PODACI
+    projects_segment_title_sr: PROJEKTI
+    skills_segment_title_sr: VEŠTINE
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -50,6 +71,21 @@
       experience in manipulation, chaos generation, and leading various schemes.
       Known for a unique ability to rally others (usually for personal gain)
       and for unparalleled expertise in causing trouble.
+    about_me_sr:
+      Visoko motivisana i strateški lukava osoba sa obimnim iskustvom u manipulaciji,
+      generisanju haosa i vođenju raznih šema. Poznata po jedinstvenoj sposobnosti
+      okupljanja drugih (obično radi lične koristi) i neuporedivoj ekspertizi u
+      pravljenju problema.
+    about_me_segment_title_sr: O MENI
+    contact_segment_title_sr: KONTAKT
+    education_segment_title_sr: OBRAZOVANJE
+    employment_segment_title_sr: RADNO ISKUSTVO
+    internship_segment_title_sr: PRAKSE
+    languages_segment_title_sr: JEZICI
+    links_segment_title_sr: LINKOVI
+    personal_details_segment_title_sr: LIČNI PODACI
+    projects_segment_title_sr: PROJEKTI
+    skills_segment_title_sr: VEŠTINE
     left_column_bg_color: "#014600"
     left_column_text_color: "#B9D6BF"
     right_column_bg_color: "#B9D6BF"
