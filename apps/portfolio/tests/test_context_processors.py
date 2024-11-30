@@ -33,7 +33,7 @@ class TestContextProcessors(TestCase):
         actual_context = portfolio_variables(self.request)
 
         create_portfolio_button = ButtonLink(
-            label=_("Create Portfolio"),
+            label=_("CREATE PORTFOLIO"),
             url=get_model_admin_create_url(Portfolio),
         )
         expected_context = {
@@ -48,11 +48,11 @@ class TestContextProcessors(TestCase):
         # When user has a portfolio:
         portfolio = PortfolioFactory(user=user)
         view_portfolio_button = ButtonLink(
-            label=_("View Portfolio"),
+            label=_("VIEW PORTFOLIO"),
             url=reverse("portfolio:index", kwargs={"slug": portfolio.slug}),
         )
         edit_portfolio_button = ButtonLink(
-            label=_("Edit Portfolio"),
+            label=_("EDIT PORTFOLIO"),
             url=get_model_admin_details_url(obj=portfolio),
         )
 
