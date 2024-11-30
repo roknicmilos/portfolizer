@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 18:25+0000\n"
+"POT-Creation-Date: 2024-11-30 20:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian <LL@li.org>\n"
@@ -39,52 +39,52 @@ msgstr "JEZICI (L)"
 msgid "LINKS (L)"
 msgstr "LINKOVI (L)"
 
-#: apps/portfolio/admin/portfolio_admin.py:50
+#: apps/portfolio/admin/portfolio_admin.py:52
 msgid "Left Column | Segment Order"
 msgstr "Leva Kolona | Redosled Segmenata"
 
-#: apps/portfolio/admin/portfolio_admin.py:64
+#: apps/portfolio/admin/portfolio_admin.py:66
 msgid "Right Column | Segment Order"
 msgstr "Desna Kolona | Redosled Segmenata"
 
-#: apps/portfolio/admin/portfolio_admin.py:75
+#: apps/portfolio/admin/portfolio_admin.py:77
 msgid "Segment Titles"
 msgstr "Naslovi Segmenata"
 
-#: apps/portfolio/admin/portfolio_admin.py:93
+#: apps/portfolio/admin/portfolio_admin.py:95
 msgid "Style"
 msgstr "Stil"
 
-#: apps/portfolio/admin/portfolio_admin.py:109
+#: apps/portfolio/admin/portfolio_admin.py:111
 msgid "IMAGE (L)"
 msgstr "SLIKA (L)"
 
-#: apps/portfolio/admin/portfolio_admin.py:116
+#: apps/portfolio/admin/portfolio_admin.py:118
 msgid "CONTACT (L)"
 msgstr "KONTAKT (L)"
 
-#: apps/portfolio/admin/portfolio_admin.py:126
+#: apps/portfolio/admin/portfolio_admin.py:128
 msgid "PERSONAL DETAILS (L)"
 msgstr "LIČNI DETALJI (L)"
 
-#: apps/portfolio/admin/portfolio_admin.py:137
+#: apps/portfolio/admin/portfolio_admin.py:139
 msgid "HEADER (R)"
 msgstr "NASLOV (R)"
 
-#: apps/portfolio/admin/portfolio_admin.py:148
+#: apps/portfolio/admin/portfolio_admin.py:150
 msgid "ABOUT ME (R)"
 msgstr "O MENI (R)"
 
-#: apps/portfolio/admin/portfolio_admin.py:171
+#: apps/portfolio/admin/portfolio_admin.py:173
 msgid "Portfolio Link"
 msgstr "Link Portfolija"
 
-#: apps/portfolio/admin/portfolio_admin.py:174
+#: apps/portfolio/admin/portfolio_admin.py:176
 #: apps/portfolio/tests/test_portfolio_admin.py:25
 msgid "Save the Portfolio first to generate the link."
 msgstr "Sačuvajte Portfolio da biste generisali link."
 
-#: apps/portfolio/admin/portfolio_admin.py:177
+#: apps/portfolio/admin/portfolio_admin.py:179
 #: apps/portfolio/tests/test_portfolio_admin.py:34
 #, python-brace-format
 msgid "Display {portfolio}"
@@ -749,6 +749,3 @@ msgstr ""
 "href=\"%(login_url)s\">Prijavite se</a> i... pa, znate već\n"
 "                proceduru!\n"
 "            "
-
-#~ msgid "Portfolio Count"
-#~ msgstr "Broj Portfolija"

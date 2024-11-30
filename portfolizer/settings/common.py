@@ -31,6 +31,8 @@ if HTTPS:
 INSTALLED_APPS = [
     "admin_interface",  # (third-party) must come before "django.contrib.admin"
     "colorfield",  # (third-party) must come before "django.contrib.admin"
+    "smart_fixtures",  # (third-party) must come before "modeltranslation"
+    "modeltranslation",  # (third-party) must come before "django.contrib.admin"
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -39,7 +41,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Third party apps:
     "django_pdf_view",
-    "smart_fixtures",
     "health_check",
     "health_check.db",
     "health_check.cache",
@@ -130,7 +131,7 @@ LANGUAGE_CODE = "en"
 # Define the available languages
 LANGUAGES = [
     ("en", "English"),
-    ("sr-Latn", "Serbian"),
+    ("sr", "Serbian"),
 ]
 
 # Set the path for translation files
