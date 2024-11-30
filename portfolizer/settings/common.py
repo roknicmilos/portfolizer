@@ -113,13 +113,29 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": cls} for cls in AUTH_PASSWORD_VALIDATOR_CLASSES
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.1/topics/i18n/
-
-LANGUAGE_CODE = "en-us"
-TIME_ZONE = "UTC"
+# Enable internationalization
 USE_I18N = True
+
+# Enable localization
+USE_L10N = True
+
+# Enable timezone handling
 USE_TZ = True
+TIME_ZONE = "UTC"
+
+# Set the default language
+LANGUAGE_CODE = "en-us"
+
+# Define the available languages
+LANGUAGES = [
+    ("en", "English"),
+    ("sr", "Serbian"),
+]
+
+# Set the path for translation files
+LOCALE_PATHS = [
+    BASE_DIR / "run" / "locale/",
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/

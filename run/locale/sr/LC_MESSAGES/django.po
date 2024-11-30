@@ -1,0 +1,700 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-30 17:34+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+#: apps/portfolio/admin/education_inline.py:11
+msgid "EDUCATION (L)"
+msgstr ""
+
+#: apps/portfolio/admin/employment_inline.py:11
+msgid "EMPLOYMENT (R)"
+msgstr ""
+
+#: apps/portfolio/admin/internship_inline.py:11
+msgid "INTERNSHIP (L)"
+msgstr ""
+
+#: apps/portfolio/admin/language_inline.py:11
+msgid "LANGUAGES (L)"
+msgstr ""
+
+#: apps/portfolio/admin/link_inline.py:11
+msgid "LINKS (L)"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:50
+msgid "Left Column | Segment Order"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:64
+msgid "Right Column | Segment Order"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:75
+msgid "Segment Titles"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:93
+msgid "Style"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:109
+msgid "IMAGE (L)"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:116
+msgid "CONTACT (L)"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:126
+msgid "PERSONAL DETAILS (L)"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:137
+msgid "HEADER (R)"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:148
+msgid "ABOUT ME (R)"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:171
+msgid "Portfolio Link"
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:174
+#: apps/portfolio/tests/test_portfolio_admin.py:25
+msgid "Save the Portfolio first to generate the link."
+msgstr ""
+
+#: apps/portfolio/admin/portfolio_admin.py:177
+#: apps/portfolio/tests/test_portfolio_admin.py:34
+#, python-brace-format
+msgid "Display {portfolio}"
+msgstr ""
+
+#: apps/portfolio/admin/project_inline.py:13
+msgid "PROJECTS (R)"
+msgstr ""
+
+#: apps/portfolio/admin/skill_inline.py:11
+msgid "SKILLS (R)"
+msgstr ""
+
+#: apps/portfolio/context_processors.py:30
+#: apps/portfolio/tests/test_context_processors.py:36
+msgid "Create Portfolio"
+msgstr ""
+
+#: apps/portfolio/context_processors.py:38
+#: apps/portfolio/tests/test_context_processors.py:51
+msgid "View Portfolio"
+msgstr ""
+
+#: apps/portfolio/context_processors.py:46
+#: apps/portfolio/tests/test_context_processors.py:55
+msgid "Edit Portfolio"
+msgstr ""
+
+#: apps/portfolio/models/education.py:10 apps/portfolio/models/language.py:11
+#: apps/portfolio/models/link.py:15 apps/portfolio/models/portfolio.py:135
+#: apps/portfolio/models/position.py:10 apps/portfolio/models/project.py:10
+#: apps/portfolio/models/skill.py:11
+msgid "Portfolio"
+msgstr ""
+
+#: apps/portfolio/models/education.py:15
+msgid "school"
+msgstr ""
+
+#: apps/portfolio/models/education.py:19
+msgid "degree"
+msgstr ""
+
+#: apps/portfolio/models/education.py:23 apps/portfolio/models/position.py:22
+#: apps/portfolio/models/project.py:23
+msgid "start"
+msgstr ""
+
+#: apps/portfolio/models/education.py:25 apps/portfolio/models/position.py:24
+#: apps/portfolio/models/project.py:25
+msgid "Day is not important. Select 1st if you don't know the exact start day."
+msgstr ""
+
+#: apps/portfolio/models/education.py:30 apps/portfolio/models/position.py:29
+#: apps/portfolio/models/project.py:30
+msgid "end"
+msgstr ""
+
+#: apps/portfolio/models/education.py:34
+msgid ""
+"Leave empty if you are currently studying here. Day is not important. Select "
+"1st if you don't know the exact end day."
+msgstr ""
+
+#: apps/portfolio/models/education.py:40 apps/portfolio/models/position.py:39
+msgid "location"
+msgstr ""
+
+#: apps/portfolio/models/education.py:44 apps/portfolio/models/position.py:43
+#: apps/portfolio/models/project.py:44
+msgid "description"
+msgstr ""
+
+#: apps/portfolio/models/education.py:48
+#: apps/portfolio/models/left_portfolio_column_mixin.py:16
+msgid "Education"
+msgstr ""
+
+#: apps/portfolio/models/education.py:49
+msgid "Educations"
+msgstr ""
+
+#: apps/portfolio/models/employment.py:8
+#: apps/portfolio/models/right_portfolio_column_mixin.py:11
+msgid "Employment"
+msgstr ""
+
+#: apps/portfolio/models/employment.py:9
+msgid "Employments"
+msgstr ""
+
+#: apps/portfolio/models/internship.py:8
+#: apps/portfolio/models/left_portfolio_column_mixin.py:15
+msgid "Internship"
+msgstr ""
+
+#: apps/portfolio/models/internship.py:9
+msgid "Internships"
+msgstr ""
+
+#: apps/portfolio/models/language.py:16 apps/portfolio/models/link.py:25
+#: apps/portfolio/models/skill.py:16
+msgid "label"
+msgstr ""
+
+#: apps/portfolio/models/language.py:20 apps/portfolio/models/skill.py:20
+msgid "level"
+msgstr ""
+
+#: apps/portfolio/models/language.py:28
+msgid "Language"
+msgstr ""
+
+#: apps/portfolio/models/language.py:29
+#: apps/portfolio/models/left_portfolio_column_mixin.py:14
+msgid "Languages"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:10
+msgid "Contact"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:11
+msgid "Personal Details"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:12
+#: apps/portfolio/models/link.py:34
+msgid "Links"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:13
+#: apps/portfolio/models/skill.py:29
+msgid "Skills"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:19
+msgid "first segment in left column"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:25
+msgid "second segment in left column"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:31
+msgid "third segment in left column"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:37
+msgid "fourth segment in left column"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:43
+msgid "fifth segment in left column"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:49
+msgid "sixth segment in left column"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:55
+msgid "seventh segment in left column"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:61
+msgid "contact segment title"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:63
+msgid "CONTACT"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:68
+msgid "personal details segment title"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:70
+msgid "PERSONAL DETAILS"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:75
+msgid "links segment title"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:77
+msgid "LINKS"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:82
+msgid "skills segment title"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:84
+msgid "SKILLS"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:89
+msgid "languages segment title"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:91
+msgid "LANGUAGES"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:96
+msgid "internship segment title"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:98
+msgid "INTERNSHIP HISTORY"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:103
+msgid "education segment title"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:105
+msgid "EDUCATION"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:110
+msgid "left column background color"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:114
+msgid "left column text color"
+msgstr ""
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:139
+#: apps/portfolio/models/right_portfolio_column_mixin.py:80
+#: apps/portfolio/tests/test_portfolio.py:110
+#: apps/portfolio/tests/test_portfolio.py:111
+#: apps/portfolio/tests/test_portfolio.py:171
+#: apps/portfolio/tests/test_portfolio.py:172
+msgid "The segment value must be unique."
+msgstr ""
+
+#: apps/portfolio/models/link.py:9
+msgid "LinkedIn"
+msgstr ""
+
+#: apps/portfolio/models/link.py:10
+msgid "GitHub"
+msgstr ""
+
+#: apps/portfolio/models/link.py:11
+msgid "Website"
+msgstr ""
+
+#: apps/portfolio/models/link.py:20
+msgid "type"
+msgstr ""
+
+#: apps/portfolio/models/link.py:29
+msgid "URL"
+msgstr ""
+
+#: apps/portfolio/models/link.py:33
+msgid "Link"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:19
+msgid "user"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:26
+msgid "is published"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:30
+msgid "slug"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:35 apps/portfolio/models/position.py:14
+msgid "title"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:39
+msgid "filename"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:43
+msgid "page count"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:46
+msgid ""
+"If the content of your Portfolio does not fit on one page, the content will "
+"be automatically split into multiple pages. Set the expected number of pages "
+"here to apply the first page styling across all pages."
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:57
+msgid "avatar"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:66
+msgid "first name"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:72
+msgid "last name"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:78 apps/portfolio/models/project.py:19
+msgid "role"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:84
+msgid "email"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:90
+msgid "phone"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:96
+msgid "address label"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:102
+msgid "address link"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:108
+msgid "birthday"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:113
+msgid "about me"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:118
+msgid "PDF button background color"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:122
+msgid "PDF button SVG color"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:126
+msgid "Edit button background color"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:130
+msgid "Edit button SVG color"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:136
+msgid "Portfolios"
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:186
+#: apps/portfolio/tests/test_portfolio.py:216
+#: apps/portfolio/tests/test_portfolio.py:228
+msgid "Portfolio can't be created for this user."
+msgstr ""
+
+#: apps/portfolio/models/portfolio.py:188
+#: apps/portfolio/tests/test_portfolio.py:246
+msgid "Only one Portfolio can be created for this user."
+msgstr ""
+
+#: apps/portfolio/models/position.py:18
+msgid "company"
+msgstr ""
+
+#: apps/portfolio/models/position.py:33
+msgid ""
+"Leave empty if you are currently working here. Day is not important. Select "
+"1st if you don't know the exact end day."
+msgstr ""
+
+#: apps/portfolio/models/project.py:15
+msgid "name"
+msgstr ""
+
+#: apps/portfolio/models/project.py:34
+msgid ""
+"Leave empty if you are currently working on this project. Day is not "
+"important. Select 1st if you don't know the exact end day."
+msgstr ""
+
+#: apps/portfolio/models/project.py:40
+msgid "technologies"
+msgstr ""
+
+#: apps/portfolio/models/project.py:49
+msgid "Project"
+msgstr ""
+
+#: apps/portfolio/models/project.py:50
+#: apps/portfolio/models/right_portfolio_column_mixin.py:12
+msgid "Projects"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:10
+msgid "About Me"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:15
+msgid "first segment in right column"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:21
+msgid "second segment in right column"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:27
+msgid "third segment in right column"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:33
+msgid "about me segment title"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:35
+msgid "ABOUT ME"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:40
+msgid "employment segment title"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:42
+msgid "EMPLOYMENT HISTORY"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:47
+msgid "projects segment title"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:49
+msgid "RELEVANT PROJECTS"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:54
+msgid "right column background color"
+msgstr ""
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:58
+msgid "right column text color"
+msgstr ""
+
+#: apps/portfolio/models/skill.py:28
+msgid "Skill"
+msgstr ""
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:14
+msgid ""
+"\n"
+"                    Click here to find out how the Portfolio is structured "
+"and displayed, and which parts can be\n"
+"                    customized to fit your preferences.\n"
+"                "
+msgstr ""
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:20
+msgid "Portfolio is divided into left and right column."
+msgstr ""
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:21
+msgid "Each column has its own segments."
+msgstr ""
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:22
+msgid "Segments will not be displayed if you leave them empty."
+msgstr ""
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:24
+msgid ""
+"\n"
+"                        You can change the order of the segments under the "
+"\"LEFT COLUMN\n"
+"                        | SEGMENT ORDER\" and \"RIGHT COLUMN | SEGMENT "
+"ORDER\" sections.\n"
+"                    "
+msgstr ""
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:29
+msgid ""
+"You can change the title of each segment under the \"Segment Titles\" "
+"section."
+msgstr ""
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:30
+msgid "You can change the style of the Portfolio under the \"Style\" section."
+msgstr ""
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:32
+msgid ""
+"\n"
+"                        Below, you can see the name of each segment and to "
+"which column they belong to - the first\n"
+"                        letter of\n"
+"                        the column is displayed in brackets next to the "
+"segment name.\n"
+"                    "
+msgstr ""
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:39
+msgid ""
+"\n"
+"                        Each segment must be on a single page. If the "
+"segment stretches acros 2 pages (upper part is on\n"
+"                        one\n"
+"                        page, and lower part is on the next page), the "
+"segment will be moved to the next page.\n"
+"                    "
+msgstr ""
+
+#: apps/portfolio/templates/portfolio/includes/education.html:10
+#: apps/portfolio/templates/portfolio/includes/employment.html:10
+#: apps/portfolio/templates/portfolio/includes/internship.html:10
+#: apps/portfolio/templates/portfolio/includes/projects.html:9
+msgid "Present"
+msgstr ""
+
+#: apps/portfolio/templates/portfolio/includes/projects.html:11
+msgid "Technologies"
+msgstr ""
+
+#: apps/portfolio/templates/portfolio/includes/projects.html:13
+msgid "Description"
+msgstr ""
+
+#: apps/portfolio/templates/portfolio/portfolio_content.html:47
+msgid "Download"
+msgstr ""
+
+#: apps/portfolio/templates/portfolio/portfolio_content.html:54
+msgid "Edit"
+msgstr ""
+
+#: apps/user/admin/user_admin.py:35
+msgid "Personal info"
+msgstr ""
+
+#: apps/user/admin/user_admin.py:44
+msgid "Permissions"
+msgstr ""
+
+#: apps/user/admin/user_admin.py:56
+msgid "Important dates"
+msgstr ""
+
+#: apps/user/context_processors.py:26 apps/user/templates/user/login.html:5
+#: apps/user/templates/user/login.html:14
+#: apps/user/templates/user/login.html:20
+#: apps/user/tests/test_context_processors.py:18
+msgid "Login"
+msgstr ""
+
+#: apps/user/context_processors.py:30
+#: apps/user/templates/user/registration.html:23
+#: apps/user/tests/test_context_processors.py:20
+msgid "Register"
+msgstr ""
+
+#: apps/user/context_processors.py:35
+#: apps/user/tests/test_context_processors.py:37
+msgid "Account Settings"
+msgstr ""
+
+#: apps/user/context_processors.py:39
+#: apps/user/tests/test_context_processors.py:41
+msgid "Logout"
+msgstr ""
+
+#: apps/user/models/user.py:44
+msgid "email address"
+msgstr ""
+
+#: apps/user/templates/user/registration.html:5
+#: apps/user/templates/user/registration.html:14
+msgid "Registration"
+msgstr ""
+
+#: templates/404.html:5
+msgid "404"
+msgstr ""
+
+#: templates/404.html:15
+msgid "This is you now 👇"
+msgstr ""
+
+#: templates/404.html:20
+msgid ""
+"\n"
+"                You are lost. You don't know where you are. Just hit that "
+"rocker it the top left corner, and I'll take\n"
+"                you back home. 😮‍💨\n"
+"            "
+msgstr ""
+
+#: templates/base.html:8 templates/index.html:5 templates/index.html:16
+msgid "Portfolizer"
+msgstr ""
+
+#: templates/index.html:19
+#, python-format
+msgid ""
+"\n"
+"                Portfolizer allows you to easily showcase your professional "
+"experience and skills. You can create,\n"
+"                customize, and manage your portfolio, and even generate and "
+"download it as a PDF CV, making it super\n"
+"                convenient to show off your work. New here? Go ahead and <a "
+"href=\"%(register_url)s\">register</a> to\n"
+"                create your portfolio. Already a member? <a "
+"href=\"%(login_url)s\">Log in</a> and... well, you know the\n"
+"                drill!\n"
+"            "
+msgstr ""

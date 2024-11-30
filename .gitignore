@@ -6,7 +6,8 @@ __pycache__/
 db.sqlite3
 
 # Directory run contains media and collected static files
-run/
+run/*
+!run/locale/
 
 # Backup files
 *.bak

@@ -16,6 +16,8 @@ RUN apt-get update \
         libpq-dev gcc libc6-dev \
         # dependencies for pdfkit python package:
         wkhtmltopdf \
+        # dependencies for translations:
+        gettext \
         --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
