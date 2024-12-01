@@ -8,7 +8,7 @@
                     {% svg "svg/rocket.svg" %}
                 </a>
             </div>
-            <div class="menu__right js-main-menu">
+            <div class="menu__right">
                 <!-- Burger Button -->
                 <div class="menu__burger js-main-menu-burger" id="menuBurger" aria-label="Toggle Menu">
                     <span></span>
@@ -16,41 +16,43 @@
                     <span></span>
                 </div>
 
-                <!-- Menu Modal-->
-                <div class="menu__modal js-main-menu-modal">
-                    {# TODO: add close icon and functionality for it #}
-                    <h3 class="menu__title">{% trans "main menu" %}</h3>
-                    {# TODO: add icons for each menu item #}
-                    <a href="{% url 'index' %}" class="menu__item">
-                        {% trans "HOME" %}
-                    </a>
-                    {% if request.user.is_anonymous %}
-                        <a href="{{ user_menu.login.url }}" class="menu__item">
-                            {{ user_menu.login.label }}
+                <div class="menu__main js-main-menu">
+                    <!-- Menu Modal-->
+                    <div class="menu__main-modal js-main-menu-modal">
+                        {# TODO: add close icon and functionality for it #}
+                        <h3 class="menu__title">{% trans "main menu" %}</h3>
+                        {# TODO: add icons for each menu item #}
+                        <a href="{% url 'index' %}" class="menu__item">
+                            {% trans "HOME" %}
                         </a>
-                        <a href="{{ user_menu.register.url }}" class="menu__item">
-                            {{ user_menu.register.label }}
-                        </a>
-                    {% else %}
-                        {% if portfolio_menu.view %}
-                            <a href="{{ portfolio_menu.view.url }}" class="menu__item">
-                                {{ portfolio_menu.view.label }}
+                        {% if request.user.is_anonymous %}
+                            <a href="{{ user_menu.login.url }}" class="menu__item">
+                                {{ user_menu.login.label }}
                             </a>
-                            <a href="{{ portfolio_menu.edit.url }}" class="menu__item">
-                                {{ portfolio_menu.edit.label }}
+                            <a href="{{ user_menu.register.url }}" class="menu__item">
+                                {{ user_menu.register.label }}
                             </a>
                         {% else %}
-                            <a href="{{ portfolio_menu.create.url }}" class="menu__item">
-                                {{ portfolio_menu.create.label }}
-                            </a>
+                            {% if portfolio_menu.view %}
+                                <a href="{{ portfolio_menu.view.url }}" class="menu__item">
+                                    {{ portfolio_menu.view.label }}
+                                </a>
+                                <a href="{{ portfolio_menu.edit.url }}" class="menu__item">
+                                    {{ portfolio_menu.edit.label }}
+                                </a>
+                            {% else %}
+                                <a href="{{ portfolio_menu.create.url }}" class="menu__item">
+                                    {{ portfolio_menu.create.label }}
+                                </a>
+                            {% endif %}
+                            <a href="{{ user_menu.edit.url }}" class="menu__item">{{ user_menu.edit.label }}</a>
+                            <form class="menu__item" method="POST" action="{{ user_menu.logout.url }}">
+                                {% csrf_token %}
+                                <button type="submit">{{ user_menu.logout.label }}</button>
+                            </form>
                         {% endif %}
-                        <a href="{{ user_menu.edit.url }}" class="menu__item">{{ user_menu.edit.label }}</a>
-                        <form class="menu__item" method="POST" action="{{ user_menu.logout.url }}">
-                            {% csrf_token %}
-                            <button type="submit">{{ user_menu.logout.label }}</button>
-                        </form>
-                    {% endif %}
-                    {% include "includes/language_dropdown.html" %}
+                        {% include "includes/language_dropdown.html" %}
+                    </div>
                 </div>
             </div>
         </div>

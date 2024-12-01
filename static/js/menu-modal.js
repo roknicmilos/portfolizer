@@ -8,13 +8,13 @@ function prepareLanguageModal() {
 
     // Activate the menu when the burger is clicked:
     mainMenuBurger.addEventListener("click", () => {
-        mainMenu.classList.add("menu__right--active");
+        mainMenu.classList.add("menu__main--active");
     });
 
     // Deactivate the menu when the menu background is clicked:
     mainMenu.addEventListener("click", (event) => {
         // Prevent closing the menu if a child element inside the menu is clicked
         if (event.target !== mainMenu) return;
-        mainMenu.classList.remove("menu__right--active");
+        mainMenu.classList.remove("menu__main--active");
     });
 }
