@@ -5,8 +5,13 @@
 
     <!-- Current Language -->
     <div class="menu__item menu__language-current">
-        {% svg "svg/dropdown.svg" %}
-        {% trans "LANGUAGE" %}
+        <div class="menu__language-current-dropdown-icon">
+            {% svg "svg/dropdown.svg" %}
+        </div>
+        <div class="menu__language-current-label">
+            <span>{% trans "LANGUAGE" %}</span>
+            {% svg "svg/globe.svg" %}
+        </div>
     </div>
 
     <!-- Dropdown Languages -->
@@ -19,7 +24,12 @@
                 <input type="hidden" name="language" value="{{ lang_code }}">
                 <button class="menu__language-dropdown-item" type="submit">
                     {{ lang_name|upper }}
-                    {# TODO: add national flag #}
+                    {% if lang_code == "sr" %}
+                        <div class="menu__item-icon">{% svg "svg/serbia-flag.svg" %}</div>
+                    {% elif lang_code == "en" %}
+                        <div class="menu__item-icon">{% svg "svg/usa-flag.svg" %}</div>
+                    {% endif %}
+                    <span class="menu__language-dropdown-item-bullet"><</span>
                 </button>
             </form>
         {% endfor %}

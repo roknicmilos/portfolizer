@@ -23,32 +23,42 @@
                         <h3 class="menu__title">{% trans "main menu" %}</h3>
                         {# TODO: add icons for each menu item #}
                         <a href="{% url 'index' %}" class="menu__item">
-                            {% trans "HOME" %}
+                            <span>{% trans "HOME" %}</span>
+                            <div class="menu__item-icon">{% svg "svg/home.svg" %}</div>
                         </a>
                         {% if request.user.is_anonymous %}
                             <a href="{{ user_menu.login.url }}" class="menu__item">
-                                {{ user_menu.login.label }}
+                                <span>{{ user_menu.login.label }}</span>
+                                <div class="menu__item-icon">{% svg "svg/login.svg" %}</div>
                             </a>
                             <a href="{{ user_menu.register.url }}" class="menu__item">
-                                {{ user_menu.register.label }}
+                                <span>{{ user_menu.register.label }}</span>
+                                <div class="menu__item-icon">{% svg "svg/avatar.svg" %}</div>
                             </a>
                         {% else %}
                             {% if portfolio_menu.view %}
                                 <a href="{{ portfolio_menu.view.url }}" class="menu__item">
-                                    {{ portfolio_menu.view.label }}
+                                    <span>{{ portfolio_menu.view.label }}</span>
+                                    <div class="menu__item-icon">{% svg "svg/document.svg" %}</div>
                                 </a>
                                 <a href="{{ portfolio_menu.edit.url }}" class="menu__item">
-                                    {{ portfolio_menu.edit.label }}
+                                    <span>{{ portfolio_menu.edit.label }}</span>
+                                    <div class="menu__item-icon">{% svg "svg/edit.svg" %}</div>
                                 </a>
                             {% else %}
                                 <a href="{{ portfolio_menu.create.url }}" class="menu__item">
-                                    {{ portfolio_menu.create.label }}
+                                    <span>{{ portfolio_menu.create.label }}</span>
+                                    {# TODO: ADD SVG #}
                                 </a>
                             {% endif %}
-                            <a href="{{ user_menu.edit.url }}" class="menu__item">{{ user_menu.edit.label }}</a>
+                            <a href="{{ user_menu.edit.url }}" class="menu__item">
+                                <span>{{ user_menu.edit.label }}</span>
+                                <div class="menu__item-icon">{% svg "svg/avatar.svg" %}</div>
+                            </a>
                             <form class="menu__item" method="POST" action="{{ user_menu.logout.url }}">
                                 {% csrf_token %}
                                 <button type="submit">{{ user_menu.logout.label }}</button>
+                                <div class="menu__item-icon">{% svg "svg/logout.svg" %}</div>
                             </form>
                         {% endif %}
                         {% include "includes/language_dropdown.html" %}
