@@ -145,10 +145,32 @@ nav {
     display: none;
 }
 
-.menu__title {
+.menu__main-title {
     margin: 0;
-    padding: 30px 0;
+    /*padding: 30px 0;*/
+    padding-left: 20px;
+    height: 80px;
     border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__item-title-icon {
+    height: 100%;
+    width: 25px;
+    padding: 0 32px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.menu__item-title-icon svg {
+    height: 100%;
+    width: 100%;
+}
+
+.menu__item-title-icon:hover {
+    background-color: #ff5e5e;
 }
 
 .menu__item,

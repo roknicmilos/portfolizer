@@ -16,12 +16,15 @@
                     <span></span>
                 </div>
 
-                <div class="menu__main js-main-menu">
+                <div class="menu__main menu__main--opened js-main-menu">
                     <!-- Menu Modal-->
                     <div class="menu__main-modal js-main-menu-modal">
-                        {# TODO: add close icon and functionality for it #}
-                        <h3 class="menu__title">{% trans "main menu" %}</h3>
-                        {# TODO: add icons for each menu item #}
+                        <h3 class="menu__main-title">
+                            <span>{% trans "main menu" %}</span>
+                            <span class="menu__item-title-icon js-close-main-menu-button">
+                                {% svg "svg/x.svg" %}
+                            </span>
+                        </h3>
                         <a href="{% url 'index' %}" class="menu__item">
                             <span>{% trans "HOME" %}</span>
                             <div class="menu__item-icon">{% svg "svg/home.svg" %}</div>
