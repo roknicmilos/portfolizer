@@ -6,7 +6,11 @@ __pycache__/
 db.sqlite3
 
 # Directory run contains media and collected static files
-run/
+run/*
+# Don't ignore locale files with generated translations:
+!run/locale/
+# Ignore all .mo files (copalied translations) in the locale directory:
+run/locale/**/*.mo
 
 # Backup files
 *.bak

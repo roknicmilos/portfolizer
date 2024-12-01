@@ -41,12 +41,6 @@
 </div>
 
 {% if response_type == "html" %}
-    <a class="js-expendable-button expendable-button expendable-button--pdf"
-       href="{{ portfolio_pdf_url }}"
-       style="background-color: {{ portfolio.pdf_btn_bg_color }}">
-        <span class="text" style="color: {{ portfolio.pdf_btn_svg_color }}">{% trans "Download" %}</span>
-        {% svg "portfolio/svg/pdf.svg" portfolio.pdf_btn_svg_color %}
-    </a>
     {% if portfolio_edit_url %}
         <a class="js-expendable-button expendable-button expendable-button--edit"
            href="{{ portfolio_edit_url }}"
@@ -55,4 +49,32 @@
             {% svg "portfolio/svg/edit.svg" portfolio.edit_btn_svg_color %}
         </a>
     {% endif %}
+    <a class="js-expendable-button expendable-button expendable-button--pdf"
+       href="{{ portfolio_pdf_url }}"
+       style="background-color: {{ portfolio.pdf_btn_bg_color }}">
+        <span class="text" style="color: {{ portfolio.pdf_btn_svg_color }}">{% trans "Download" %}</span>
+        {% svg "portfolio/svg/pdf.svg" portfolio.pdf_btn_svg_color %}
+    </a>
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% for lang_code, lang_name in LANGUAGES %}
+        {% if lang_code != LANGUAGE_CODE %}
+            <form method="POST" action="{% url 'set_language' %}">
+                {% csrf_token %}
+                <input type="hidden" name="language" value="{{ lang_code }}">
+                <button class="js-expendable-button expendable-button expendable-button--language"
+                        type="submit"
+                        style="background-color: {{ portfolio.language_btn_bg_color }}">
+                    <span class="text" style="color: {{ portfolio.language_btn_svg_color }}">
+                        {{ lang_name }}
+                    </span>
+                    {% if lang_code == "sr" %}
+                        {% svg "svg/serbia-flag.svg" portfolio.language_btn_svg_color %}
+                    {% elif lang_code == "en" %}
+                        {% svg "svg/usa-flag.svg" portfolio.language_btn_svg_color %}
+                    {% endif %}
+                </button>
+            </form>
+        {% endif %}
+    {% endfor %}
 {% endif %}

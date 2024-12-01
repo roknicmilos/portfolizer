@@ -23,17 +23,17 @@ def user_variables(request: WSGIRequest) -> dict:
 
 
 def _init_login_button() -> ButtonLink:
-    return ButtonLink(label=_("Login"), url=reverse("login"))
+    return ButtonLink(label=_("LOGIN"), url=reverse("login"))
 
 
 def _init_register_button() -> ButtonLink:
-    return ButtonLink(label=_("Register"), url=reverse("register"))
+    return ButtonLink(label=_("REGISTER"), url=reverse("register"))
 
 
 def _init_edit_user_button(user: User) -> ButtonLink:
     url = get_model_admin_details_url(user)
-    return ButtonLink(label=_("Account Settings"), url=url)
+    return ButtonLink(label=_("ACCOUNT SETTINGS"), url=url)
 
 
 def _init_logout_button() -> ButtonLink:
-    return ButtonLink(label=_("Logout"), url=reverse("admin:logout"))
+    return ButtonLink(label=_("LOGOUT"), url=reverse("admin:logout"))

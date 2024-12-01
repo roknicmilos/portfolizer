@@ -1,0 +1,825 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-01 12:51+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Serbian <LL@li.org>\n"
+"Language: sr-Latn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: apps/portfolio/admin/education_inline.py:11
+msgid "EDUCATION (L)"
+msgstr "OBRAZOVANJE (L)"
+
+#: apps/portfolio/admin/employment_inline.py:11
+msgid "EMPLOYMENT (R)"
+msgstr "ZAPOSLENJE (R)"
+
+#: apps/portfolio/admin/internship_inline.py:11
+msgid "INTERNSHIP (L)"
+msgstr "PRAKSA (L)"
+
+#: apps/portfolio/admin/language_inline.py:11
+msgid "LANGUAGES (L)"
+msgstr "JEZICI (L)"
+
+#: apps/portfolio/admin/link_inline.py:11
+msgid "LINKS (L)"
+msgstr "LINKOVI (L)"
+
+#: apps/portfolio/admin/portfolio_admin.py:52
+msgid "Left Column | Segment Order"
+msgstr "Leva Kolona | Redosled Segmenata"
+
+#: apps/portfolio/admin/portfolio_admin.py:66
+msgid "Right Column | Segment Order"
+msgstr "Desna Kolona | Redosled Segmenata"
+
+#: apps/portfolio/admin/portfolio_admin.py:77
+msgid "Segment Titles"
+msgstr "Naslovi Segmenata"
+
+#: apps/portfolio/admin/portfolio_admin.py:95
+msgid "Style"
+msgstr "Stil"
+
+#: apps/portfolio/admin/portfolio_admin.py:111
+msgid "IMAGE (L)"
+msgstr "SLIKA (L)"
+
+#: apps/portfolio/admin/portfolio_admin.py:118
+msgid "CONTACT (L)"
+msgstr "KONTAKT (L)"
+
+#: apps/portfolio/admin/portfolio_admin.py:128
+msgid "PERSONAL DETAILS (L)"
+msgstr "LIČNI DETALJI (L)"
+
+#: apps/portfolio/admin/portfolio_admin.py:139
+msgid "HEADER (R)"
+msgstr "NASLOV (R)"
+
+#: apps/portfolio/admin/portfolio_admin.py:150
+msgid "ABOUT ME (R)"
+msgstr "O MENI (R)"
+
+#: apps/portfolio/admin/portfolio_admin.py:173
+msgid "Portfolio Link"
+msgstr "Link Portfolija"
+
+#: apps/portfolio/admin/portfolio_admin.py:176
+#: apps/portfolio/tests/test_portfolio_admin.py:25
+msgid "Save the Portfolio first to generate the link."
+msgstr "Sačuvajte Portfolio da biste generisali link."
+
+#: apps/portfolio/admin/portfolio_admin.py:179
+#: apps/portfolio/tests/test_portfolio_admin.py:34
+#, python-brace-format
+msgid "Display {portfolio}"
+msgstr "Prikaži {portfolio}"
+
+#: apps/portfolio/admin/project_inline.py:13
+msgid "PROJECTS (R)"
+msgstr "PROJEKTI (R)"
+
+#: apps/portfolio/admin/skill_inline.py:11
+msgid "SKILLS (R)"
+msgstr "VEŠTINE (R)"
+
+#: apps/portfolio/context_processors.py:30
+#: apps/portfolio/tests/test_context_processors.py:36
+msgid "CREATE PORTFOLIO"
+msgstr "KREIRAJ PORTFOLIO"
+
+#: apps/portfolio/context_processors.py:38
+#: apps/portfolio/tests/test_context_processors.py:51
+msgid "VIEW PORTFOLIO"
+msgstr "POGLEDAJ PORTFOLIO"
+
+#: apps/portfolio/context_processors.py:46
+#: apps/portfolio/tests/test_context_processors.py:55
+msgid "EDIT PORTFOLIO"
+msgstr "UREDI PORTFOLIO"
+
+#: apps/portfolio/models/education.py:10 apps/portfolio/models/language.py:11
+#: apps/portfolio/models/link.py:15 apps/portfolio/models/portfolio.py:135
+#: apps/portfolio/models/position.py:10 apps/portfolio/models/project.py:10
+#: apps/portfolio/models/skill.py:11
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: apps/portfolio/models/education.py:15
+msgid "school"
+msgstr "škola"
+
+#: apps/portfolio/models/education.py:19
+msgid "degree"
+msgstr "diploma"
+
+#: apps/portfolio/models/education.py:23 apps/portfolio/models/position.py:22
+#: apps/portfolio/models/project.py:23
+msgid "start"
+msgstr "početak"
+
+#: apps/portfolio/models/education.py:25 apps/portfolio/models/position.py:24
+#: apps/portfolio/models/project.py:25
+msgid "Day is not important. Select 1st if you don't know the exact start day."
+msgstr "Dan nije bitan. Izaberite 1. ako ne znate tačan datum početka."
+
+#: apps/portfolio/models/education.py:30 apps/portfolio/models/position.py:29
+#: apps/portfolio/models/project.py:30
+msgid "end"
+msgstr "kraj"
+
+#: apps/portfolio/models/education.py:34
+msgid ""
+"Leave empty if you are currently studying here. Day is not important. Select "
+"1st if you don't know the exact end day."
+msgstr ""
+"Ostavite prazno ako trenutno studirate ovde. Dan nije bitan. Izaberite 1. "
+"ako ne znate tačan datum završetka."
+
+#: apps/portfolio/models/education.py:40 apps/portfolio/models/position.py:39
+msgid "location"
+msgstr "lokacija"
+
+#: apps/portfolio/models/education.py:44 apps/portfolio/models/position.py:43
+#: apps/portfolio/models/project.py:44
+msgid "description"
+msgstr "opis"
+
+#: apps/portfolio/models/education.py:48
+#: apps/portfolio/models/left_portfolio_column_mixin.py:16
+msgid "Education"
+msgstr "Obrazovanje"
+
+#: apps/portfolio/models/education.py:49
+msgid "Educations"
+msgstr "Obrazovanja"
+
+#: apps/portfolio/models/employment.py:8
+#: apps/portfolio/models/right_portfolio_column_mixin.py:11
+msgid "Employment"
+msgstr "Zaposlenje"
+
+#: apps/portfolio/models/employment.py:9
+msgid "Employments"
+msgstr "Zaposlenja"
+
+#: apps/portfolio/models/internship.py:8
+#: apps/portfolio/models/left_portfolio_column_mixin.py:15
+msgid "Internship"
+msgstr "Praksa"
+
+#: apps/portfolio/models/internship.py:9
+msgid "Internships"
+msgstr "Prakse"
+
+#: apps/portfolio/models/language.py:16 apps/portfolio/models/link.py:25
+#: apps/portfolio/models/skill.py:16
+msgid "label"
+msgstr "oznaka"
+
+#: apps/portfolio/models/language.py:20 apps/portfolio/models/skill.py:20
+msgid "level"
+msgstr "nivo"
+
+#: apps/portfolio/models/language.py:28
+msgid "Language"
+msgstr "Jezik"
+
+#: apps/portfolio/models/language.py:29
+#: apps/portfolio/models/left_portfolio_column_mixin.py:14
+msgid "Languages"
+msgstr "Jezici"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:10
+msgid "Contact"
+msgstr "Kontakt"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:11
+msgid "Personal Details"
+msgstr "Lični Detalji"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:12
+#: apps/portfolio/models/link.py:34
+msgid "Links"
+msgstr "Linkovi"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:13
+#: apps/portfolio/models/skill.py:29
+msgid "Skills"
+msgstr "Veštine"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:19
+msgid "first segment in left column"
+msgstr "prvi segment u levoj koloni"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:25
+msgid "second segment in left column"
+msgstr "drugi segment u levoj koloni"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:31
+msgid "third segment in left column"
+msgstr "treći segment u levoj koloni"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:37
+msgid "fourth segment in left column"
+msgstr "četvrti segment u levoj koloni"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:43
+msgid "fifth segment in left column"
+msgstr "peti segment u levoj koloni"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:49
+msgid "sixth segment in left column"
+msgstr "šesti segment u levoj koloni"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:55
+msgid "seventh segment in left column"
+msgstr "sedmi segment u levoj koloni"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:61
+msgid "contact segment title"
+msgstr "naslov segmenta kontakt"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:68
+msgid "personal details segment title"
+msgstr "naslov segmenta lični detalji"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:75
+msgid "links segment title"
+msgstr "naslov segmenta linkovi"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:82
+msgid "skills segment title"
+msgstr "naslov segmenta veštine"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:89
+msgid "languages segment title"
+msgstr "naslov segmenta jezici"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:96
+msgid "internship segment title"
+msgstr "naslov segmenta praksa"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:103
+msgid "education segment title"
+msgstr "naslov segmenta obrazovanje"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:110
+msgid "left column background color"
+msgstr "boja pozadine leve kolone"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:114
+msgid "left column text color"
+msgstr "boja teksta leve kolone"
+
+#: apps/portfolio/models/left_portfolio_column_mixin.py:139
+#: apps/portfolio/models/right_portfolio_column_mixin.py:80
+#: apps/portfolio/tests/test_portfolio.py:110
+#: apps/portfolio/tests/test_portfolio.py:111
+#: apps/portfolio/tests/test_portfolio.py:171
+#: apps/portfolio/tests/test_portfolio.py:172
+msgid "The segment value must be unique."
+msgstr "Vrednost segmenta mora biti jedinstvena."
+
+#: apps/portfolio/models/link.py:9
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: apps/portfolio/models/link.py:10
+msgid "GitHub"
+msgstr "GitHub"
+
+#: apps/portfolio/models/link.py:11
+msgid "Website"
+msgstr "Veb stranica"
+
+#: apps/portfolio/models/link.py:20
+msgid "type"
+msgstr "tip"
+
+#: apps/portfolio/models/link.py:29
+msgid "URL"
+msgstr "URL"
+
+#: apps/portfolio/models/link.py:33
+msgid "Link"
+msgstr "Link"
+
+#: apps/portfolio/models/portfolio.py:19
+msgid "user"
+msgstr "korisnik"
+
+#: apps/portfolio/models/portfolio.py:26
+msgid "is published"
+msgstr "je objavljeno"
+
+#: apps/portfolio/models/portfolio.py:30
+msgid "slug"
+msgstr "slug"
+
+#: apps/portfolio/models/portfolio.py:35 apps/portfolio/models/position.py:14
+msgid "title"
+msgstr "naslov"
+
+#: apps/portfolio/models/portfolio.py:39
+msgid "filename"
+msgstr "naziv fajla"
+
+#: apps/portfolio/models/portfolio.py:43
+msgid "page count"
+msgstr "broj stranica"
+
+#: apps/portfolio/models/portfolio.py:46
+msgid ""
+"If the content of your Portfolio does not fit on one page, the content will "
+"be automatically split into multiple pages. Set the expected number of pages "
+"here to apply the first page styling across all pages."
+msgstr ""
+"Ako sadržaj vašeg Portfolija ne stane na jednu stranicu, sadržaj će se "
+"automatski podeliti na više stranica. Postavite očekivani broj stranica ovde "
+"da biste primenili stil prve stranice na sve stranice."
+
+#: apps/portfolio/models/portfolio.py:57
+msgid "avatar"
+msgstr "avatar"
+
+#: apps/portfolio/models/portfolio.py:66
+msgid "first name"
+msgstr "ime"
+
+#: apps/portfolio/models/portfolio.py:72
+msgid "last name"
+msgstr "prezime"
+
+#: apps/portfolio/models/portfolio.py:78 apps/portfolio/models/project.py:19
+msgid "role"
+msgstr "uloga"
+
+#: apps/portfolio/models/portfolio.py:84
+msgid "email"
+msgstr "email"
+
+#: apps/portfolio/models/portfolio.py:90
+msgid "phone"
+msgstr "telefon"
+
+#: apps/portfolio/models/portfolio.py:96
+msgid "address label"
+msgstr "labela adrese"
+
+#: apps/portfolio/models/portfolio.py:102
+msgid "address link"
+msgstr "link adrese"
+
+#: apps/portfolio/models/portfolio.py:108
+msgid "birthday"
+msgstr "datum rođenja"
+
+#: apps/portfolio/models/portfolio.py:113
+msgid "about me"
+msgstr "o meni"
+
+#: apps/portfolio/models/portfolio.py:118
+msgid "PDF button background color"
+msgstr "Boja pozadine PDF dugmeta"
+
+#: apps/portfolio/models/portfolio.py:122
+msgid "PDF button SVG color"
+msgstr "Boja SVG PDF dugmeta"
+
+#: apps/portfolio/models/portfolio.py:126
+msgid "Edit button background color"
+msgstr "Boja pozadine dugmeta za uređivanje"
+
+#: apps/portfolio/models/portfolio.py:130
+msgid "Edit button SVG color"
+msgstr "Boja SVG dugmeta za uređivanje"
+
+#: apps/portfolio/models/portfolio.py:136
+msgid "Portfolios"
+msgstr "Portfoliji"
+
+#: apps/portfolio/models/portfolio.py:186
+#: apps/portfolio/tests/test_portfolio.py:216
+#: apps/portfolio/tests/test_portfolio.py:228
+msgid "Portfolio can't be created for this user."
+msgstr "Portfolijo ne može biti kreiran za ovog korisnika."
+
+#: apps/portfolio/models/portfolio.py:188
+#: apps/portfolio/tests/test_portfolio.py:246
+msgid "Only one Portfolio can be created for this user."
+msgstr "Samo jedan Portfolijo može biti kreiran za ovog korisnika."
+
+#: apps/portfolio/models/position.py:18
+msgid "company"
+msgstr "kompanija"
+
+#: apps/portfolio/models/position.py:33
+msgid ""
+"Leave empty if you are currently working here. Day is not important. Select "
+"1st if you don't know the exact end day."
+msgstr ""
+"Ostavite prazno ako trenutno radite ovde. Dan nije bitan. Izaberite 1. ako "
+"ne znate tačan datum završetka."
+
+#: apps/portfolio/models/project.py:15
+msgid "name"
+msgstr "ime"
+
+#: apps/portfolio/models/project.py:34
+msgid ""
+"Leave empty if you are currently working on this project. Day is not "
+"important. Select 1st if you don't know the exact end day."
+msgstr ""
+"Ostavite prazno ako trenutno radite na ovom projektu. Dan nije bitan. "
+"Izaberite 1. ako ne znate tačan datum završetka."
+
+#: apps/portfolio/models/project.py:40
+msgid "technologies"
+msgstr "tehnologije"
+
+#: apps/portfolio/models/project.py:49
+msgid "Project"
+msgstr "Projekat"
+
+#: apps/portfolio/models/project.py:50
+#: apps/portfolio/models/right_portfolio_column_mixin.py:12
+msgid "Projects"
+msgstr "Projekti"
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:10
+msgid "About Me"
+msgstr "O meni"
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:15
+msgid "first segment in right column"
+msgstr "prvi segment u desnoj koloni"
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:21
+msgid "second segment in right column"
+msgstr "drugi segment u desnoj koloni"
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:27
+msgid "third segment in right column"
+msgstr "treći segment u desnoj koloni"
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:33
+msgid "about me segment title"
+msgstr "naslov segmenta o meni"
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:40
+msgid "employment segment title"
+msgstr "naslov segmenta zaposlenje"
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:47
+msgid "projects segment title"
+msgstr "naslov segmenta projekti"
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:54
+msgid "right column background color"
+msgstr "boja pozadine desne kolone"
+
+#: apps/portfolio/models/right_portfolio_column_mixin.py:58
+msgid "right column text color"
+msgstr "boja teksta desne kolone"
+
+#: apps/portfolio/models/skill.py:28
+msgid "Skill"
+msgstr "Veština"
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:14
+msgid ""
+"\n"
+"                    Click here to find out how the Portfolio is structured "
+"and displayed, and which parts can be\n"
+"                    customized to fit your preferences.\n"
+"                "
+msgstr ""
+"\n"
+"                    Kliknite ovde da biste saznali kako je Portfolio "
+"struktuiran i prikazan, i koje delove možete\n"
+"                    prilagoditi da odgovaraju vašim preferencijama.\n"
+"                "
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:20
+msgid "Portfolio is divided into left and right column."
+msgstr "Portfolio je podeljen na levu i desnu kolonu."
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:21
+msgid "Each column has its own segments."
+msgstr "Svaka kolona ima svoje segmente."
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:22
+msgid "Segments will not be displayed if you leave them empty."
+msgstr "Segmenti neće biti prikazani ako ih ostavite prazne."
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:24
+msgid ""
+"\n"
+"                        You can change the order of the segments under the "
+"\"LEFT COLUMN\n"
+"                        | SEGMENT ORDER\" and \"RIGHT COLUMN | SEGMENT "
+"ORDER\" sections.\n"
+"                    "
+msgstr ""
+"\n"
+"                        Možete promeniti redosled segmenata pod sekcijama "
+"\"LEVA KOLONA\n"
+"                        | REDOSLED SEGMENTA\" i \"DESNA KOLONA | REDOSLED "
+"SEGMENTA\".\n"
+"                    "
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:29
+msgid ""
+"You can change the title of each segment under the \"Segment Titles\" "
+"section."
+msgstr ""
+"Možete promeniti naslov svakog segmenta pod sekcijom \"Naslovi Segmenata\"."
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:30
+msgid "You can change the style of the Portfolio under the \"Style\" section."
+msgstr "Možete promeniti stil Portfolija pod sekcijom \"Stil\"."
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:32
+msgid ""
+"\n"
+"                        Below, you can see the name of each segment and to "
+"which column they belong to - the first\n"
+"                        letter of\n"
+"                        the column is displayed in brackets next to the "
+"segment name.\n"
+"                    "
+msgstr ""
+"\n"
+"                        Ispod, možete videti ime svakog segmenta i kojoj "
+"koloni pripadaju - prvo slovo\n"
+"                        kolone je prikazano u zagradama pored imena "
+"segmenta.\n"
+"                    "
+
+#: apps/portfolio/templates/admin/portfolio/portfolio/change_form.html:39
+msgid ""
+"\n"
+"                        Each segment must be on a single page. If the "
+"segment stretches acros 2 pages (upper part is on\n"
+"                        one\n"
+"                        page, and lower part is on the next page), the "
+"segment will be moved to the next page.\n"
+"                    "
+msgstr ""
+"\n"
+"                        Svaki segment mora biti na jednoj stranici. Ako se "
+"segment proteže preko 2 stranice (gornji deo je na\n"
+"                        jednoj\n"
+"                        stranici, a donji deo je na sledećoj stranici), "
+"segment će biti premešten na sledeću stranicu.\n"
+"                    "
+
+#: apps/portfolio/templates/portfolio/includes/education.html:10
+#: apps/portfolio/templates/portfolio/includes/employment.html:10
+#: apps/portfolio/templates/portfolio/includes/internship.html:10
+#: apps/portfolio/templates/portfolio/includes/projects.html:9
+msgid "Present"
+msgstr "Trenutno"
+
+#: apps/portfolio/templates/portfolio/includes/projects.html:11
+msgid "Technologies"
+msgstr "Tehnologije"
+
+#: apps/portfolio/templates/portfolio/includes/projects.html:13
+msgid "Description"
+msgstr "Opis"
+
+#: apps/portfolio/templates/portfolio/portfolio_content.html:47
+msgid "Download"
+msgstr "Sačuvaj"
+
+#: apps/portfolio/templates/portfolio/portfolio_content.html:54
+msgid "Edit"
+msgstr "Uredi"
+
+#: apps/user/admin/user_admin.py:35
+msgid "Personal info"
+msgstr "Lični podaci"
+
+#: apps/user/admin/user_admin.py:44
+msgid "Permissions"
+msgstr "Dozvole"
+
+#: apps/user/admin/user_admin.py:56
+msgid "Important dates"
+msgstr "Važni datumi"
+
+#: apps/user/context_processors.py:26
+#: apps/user/tests/test_context_processors.py:18
+msgid "LOGIN"
+msgstr "PRIJAVA"
+
+#: apps/user/context_processors.py:30
+#: apps/user/tests/test_context_processors.py:20
+msgid "REGISTER"
+msgstr "REGISTRACIJA"
+
+#: apps/user/context_processors.py:35
+#: apps/user/tests/test_context_processors.py:37
+msgid "ACCOUNT SETTINGS"
+msgstr "PODEŠAVANJA NALOGA"
+
+#: apps/user/context_processors.py:39
+#: apps/user/tests/test_context_processors.py:41
+msgid "LOGOUT"
+msgstr "ODJAVA"
+
+#: apps/user/models/user.py:44
+msgid "email address"
+msgstr "email adresa"
+
+#: apps/user/templates/user/login.html:5 apps/user/templates/user/login.html:14
+#: apps/user/templates/user/login.html:20
+msgid "Login"
+msgstr "Prijava"
+
+#: apps/user/templates/user/registration.html:5
+#: apps/user/templates/user/registration.html:14
+msgid "Registration"
+msgstr "Registracija"
+
+#: apps/user/templates/user/registration.html:23
+msgid "Register"
+msgstr "Registracija"
+
+#: templates/404.html:5
+msgid "404"
+msgstr "404"
+
+#: templates/404.html:15
+msgid "This is you now 👇"
+msgstr "Ovo ste vi sada 👇"
+
+#: templates/404.html:20
+msgid ""
+"\n"
+"                You are lost. You don't know where you are. Just hit that "
+"rocker it the top left corner, and I'll take\n"
+"                you back home. 😮‍💨\n"
+"            "
+msgstr ""
+"\n"
+"                Izgubljeni ste. Ne znate gde se nalazite. Samo pritisnite "
+"onaj kvačilo u gornjem levom uglu, i ja ću vas\n"
+"                odvesti kući. 😮‍💨\n"
+"            "
+
+#: templates/base.html:8 templates/index.html:5 templates/index.html:16
+msgid "Portfolizer"
+msgstr "Portfolizer"
+
+#: templates/includes/language_dropdown.html:12
+msgid "LANGUAGE"
+msgstr "JEZIK"
+
+#: templates/includes/nav.html:23
+msgid "main menu"
+msgstr "glavni meni"
+
+#: templates/includes/nav.html:29
+msgid "HOME"
+msgstr "POČETNA"
+
+#: templates/index.html:19
+#, python-format
+msgid ""
+"\n"
+"                Portfolizer allows you to easily showcase your professional "
+"experience and skills. You can create,\n"
+"                customize, and manage your portfolio, and even generate and "
+"download it as a PDF CV, making it super\n"
+"                convenient to show off your work. New here? Go ahead and <a "
+"href=\"%(register_url)s\">register</a> to\n"
+"                create your portfolio. Already a member? <a "
+"href=\"%(login_url)s\">Log in</a> and... well, you know the\n"
+"                drill!\n"
+"            "
+msgstr ""
+"\n"
+"                Portfolizer vam omogućava da lako prikažete vaše "
+"profesionalno iskustvo i veštine. Možete kreirati,\n"
+"                prilagoditi i upravljati vašim portfolijem, pa čak i "
+"generisati i preuzeti ga kao PDF CV, čineći ga super\n"
+"                praktičnim za prikazivanje vašeg rada. Novi ovde? Idite i <a "
+"href=\"%(register_url)s\">registrujte se</a> da\n"
+"                kreirate vaš portfolio. Već ste član? <a "
+"href=\"%(login_url)s\">Prijavite se</a> i... pa, znate već\n"
+"                proceduru!\n"
+"            "
+
+msgid "jan"
+msgstr "jan"
+
+msgid "feb"
+msgstr "feb"
+
+msgid "mar"
+msgstr "mar"
+
+msgid "apr"
+msgstr "apr"
+
+msgid "may"
+msgstr "maj"
+
+msgid "jun"
+msgstr "jun"
+
+msgid "jul"
+msgstr "јul"
+
+msgid "aug"
+msgstr "avg"
+
+msgid "sep"
+msgstr "sep"
+
+msgid "oct"
+msgstr "okt"
+
+msgid "nov"
+msgstr "nov"
+
+msgid "dec"
+msgstr "dec"
+
+msgid "Serbian"
+msgstr "Srpski"
+
+msgid "English"
+msgstr "Engleski"
+
+msgid "Password"
+msgstr "Lozinka"
+
+msgid "Password confirmation"
+msgstr "Potvrda lozinke"
+
+msgid "Your password can’t be too similar to your other personal information."
+msgstr "Vaša lozinka ne može biti previše slična vašim ostalim ličnim informacijama."
+
+msgid "Your password must contain at least 8 characters."
+msgstr "Vaša lozinka mora sadržati najmanje 8 karaktera."
+
+msgid "Your password can’t be a commonly used password."
+msgstr "Vaša lozinka ne može biti često korišćena lozinka."
+
+msgid "Your password can’t be entirely numeric."
+msgstr "Vaša lozinka ne može biti potpuno numerička."
+
+msgid "This password is too common."
+msgstr "Ova lozinka je previše česta."
+
+msgid "This password is entirely numeric."
+msgstr "Ova lozinka je potpuno numerička."
+
+#, python-format
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] "Vaša lozinka mora sadržati najmanje %(min_length)d karakter."
+msgstr[1] "Vaša lozinka mora sadržati najmanje %(min_length)d karaktera."
+msgstr[2] "Vaša lozinka mora sadržati najmanje %(min_length)d karaktera."
+
+msgid "This password is too similar to your other personal information."
+msgstr "Ova lozinka je previše slična vašim ostalim ličnim informacijama."
+
+msgid "This password is forbidden."
+msgstr "Ova lozinka je zabranjena."
+
+msgid "Enter the same password as before, for verification."
+msgstr "Unesite istu lozinku kao pre, radi provere."
+
+msgid "This field is required."
+msgstr "Ovo polje je obavezno."
+
+#, python-format
+msgid ""
+"Please enter a correct %(username)s and password. Note that both fields may "
+"be case-sensitive."
+msgstr ""
+"Lozinka i/ili %(username)s nisu ispravne. Imajte na umu da oba polja mogu "
+"biti osetljiva na velika i mala slova."
+
+msgid "Enter a valid email address."
+msgstr "Unesite validnu email adresu."

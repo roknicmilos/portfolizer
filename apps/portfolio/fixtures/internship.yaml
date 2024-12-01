@@ -3,11 +3,14 @@
   fields:
     portfolio: 1
     title: Software Engineer
+    title_sr: Softverski inženjer
     company: Vega IT
     location: Novi Sad, Serbia
+    location_sr: Novi Sad, Srbija
     start: 2018-12-01
     end: 2019-01-01
     description: Worked on a PHP/Drupal pet project.
+    description_sr: Radio na PHP/Drupal pet projektu.
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -16,12 +19,17 @@
   fields:
     portfolio: 1
     title: Software Engineer
+    title_sr: Softverski inženjer
     company: Vivify
     location: Novi Sad, Serbia
+    location_sr: Novi Sad, Srbija
     start: 2018-07-01
     end: 2019-08-15
     description:
       Worked on a pet project where I was implementing a REST API
       in PHP/Laravel and web app in JavaScript/React.
+    description_sr:
+      Radio na pet projektu gde sam implementirao REST API u PHP/Laravel
+      i web aplikaciju u JavaScript/React.
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z

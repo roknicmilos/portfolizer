@@ -15,9 +15,9 @@ class TestContextProcessors(TestCase):
 
     def test_user_variables_with_anonymous_user(self):
         actual_context = user_variables(self.request)
-        login_button = ButtonLink(label=_("Login"), url=reverse("login"))
+        login_button = ButtonLink(label=_("LOGIN"), url=reverse("login"))
         register_button = ButtonLink(
-            label=_("Register"), url=reverse("register")
+            label=_("REGISTER"), url=reverse("register")
         )
         expected_context = {
             "user_menu": {
@@ -34,11 +34,11 @@ class TestContextProcessors(TestCase):
         actual_context = user_variables(self.request)
 
         edit_user_button = ButtonLink(
-            label=_("Account Settings"),
+            label=_("ACCOUNT SETTINGS"),
             url=get_model_admin_details_url(obj=user),
         )
         logout_button = ButtonLink(
-            label=_("Logout"), url=reverse("admin:logout")
+            label=_("LOGOUT"), url=reverse("admin:logout")
         )
         expected_context = {
             "user_menu": {"edit": edit_user_button, "logout": logout_button}

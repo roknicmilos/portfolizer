@@ -1,4 +1,4 @@
-{% load svg %}
+{% load svg i18n %}
 
 {% block nav %}
     <nav>
@@ -10,40 +10,65 @@
             </div>
             <div class="menu__right">
                 <!-- Burger Button -->
-                <div class="menu__burger" id="menuBurger" aria-label="Toggle Menu">
+                <div class="menu__burger js-main-menu-burger" id="menuBurger" aria-label="Toggle Menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
 
-                <!-- Dropdown Menu -->
-                <div class="menu__dropdown">
-                    {% if request.user.is_anonymous %}
-                        <a href="{{ user_menu.login.url }}" class="menu__dropdown-item">
-                            {{ user_menu.login.label }}
+                <div class="menu__main js-main-menu">
+                    <!-- Menu Modal-->
+                    <div class="menu__main-modal js-main-menu-modal">
+                        <div class="menu__main-header">
+                            <span class="menu__item-title-icon js-close-main-menu-button">
+                                {% svg "svg/x.svg" %}
+                            </span>
+                        </div>
+                        <a href="{% url 'index' %}" class="menu__item">
+                            <span>{% trans "HOME" %}</span>
+                            <div class="menu__item-icon">{% svg "svg/home.svg" %}</div>
                         </a>
-                        <a href="{{ user_menu.register.url }}" class="menu__dropdown-item">
-                            {{ user_menu.register.label }}
-                        </a>
-                    {% else %}
-                        {% if portfolio_menu.view %}
-                            <a href="{{ portfolio_menu.view.url }}" class="menu__dropdown-item">
-                                {{ portfolio_menu.view.label }}
+                        {% if request.user.is_anonymous %}
+                            <a href="{{ user_menu.login.url }}" class="menu__item">
+                                <span>{{ user_menu.login.label }}</span>
+                                <div class="menu__item-icon">{% svg "svg/login.svg" %}</div>
                             </a>
-                            <a href="{{ portfolio_menu.edit.url }}" class="menu__dropdown-item">
-                                {{ portfolio_menu.edit.label }}
+                            <a href="{{ user_menu.register.url }}" class="menu__item">
+                                <span>{{ user_menu.register.label }}</span>
+                                <div class="menu__item-icon">{% svg "svg/avatar.svg" %}</div>
                             </a>
                         {% else %}
-                            <a href="{{ portfolio_menu.create.url }}" class="menu__dropdown-item">
-                                {{ portfolio_menu.create.label }}
+                            {% if portfolio_menu.view %}
+                                <a href="{{ portfolio_menu.view.url }}" class="menu__item">
+                                    <span>{{ portfolio_menu.view.label }}</span>
+                                    <div class="menu__item-icon">{% svg "svg/document.svg" %}</div>
+                                </a>
+                                <a href="{{ portfolio_menu.edit.url }}" class="menu__item">
+                                    <span>{{ portfolio_menu.edit.label }}</span>
+                                    <div class="menu__item-icon">{% svg "svg/edit.svg" %}</div>
+                                </a>
+                            {% else %}
+                                <a href="{{ portfolio_menu.create.url }}" class="menu__item">
+                                    <span>{{ portfolio_menu.create.label }}</span>
+                                    <div class="menu__item-icon">{% svg "svg/add.svg" %}</div>
+                                </a>
+                            {% endif %}
+                            <a href="{{ user_menu.edit.url }}" class="menu__item">
+                                <span>{{ user_menu.edit.label }}</span>
+                                <div class="menu__item-icon">{% svg "svg/avatar.svg" %}</div>
                             </a>
+                            <form class="menu__logout-form"
+                                  method="POST"
+                                  action="{{ user_menu.logout.url }}">
+                                {% csrf_token %}
+                                <button type="submit">
+                                    <span>{{ user_menu.logout.label }}</span>
+                                    <span class="menu__item-icon">{% svg "svg/logout.svg" %}</span>
+                                </button>
+                            </form>
                         {% endif %}
-                        <a href="{{ user_menu.edit.url }}" class="menu__dropdown-item">{{ user_menu.edit.label }}</a>
-                        <form class="menu__dropdown-item" method="POST" action="{{ user_menu.logout.url }}">
-                            {% csrf_token %}
-                            <button type="submit">{{ user_menu.logout.label }}</button>
-                        </form>
-                    {% endif %}
+                        {% include "includes/language_dropdown.html" %}
+                    </div>
                 </div>
             </div>
         </div>

@@ -31,6 +31,8 @@ if HTTPS:
 INSTALLED_APPS = [
     "admin_interface",  # (third-party) must come before "django.contrib.admin"
     "colorfield",  # (third-party) must come before "django.contrib.admin"
+    "smart_fixtures",  # (third-party) must come before "modeltranslation"
+    "modeltranslation",  # (third-party) must come before "django.contrib.admin"
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -39,7 +41,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Third party apps:
     "django_pdf_view",
-    "smart_fixtures",
     "health_check",
     "health_check.db",
     "health_check.cache",
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -113,13 +115,29 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": cls} for cls in AUTH_PASSWORD_VALIDATOR_CLASSES
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.1/topics/i18n/
-
-LANGUAGE_CODE = "en-us"
-TIME_ZONE = "UTC"
+# Enable internationalization
 USE_I18N = True
+
+# Enable localization
+USE_L10N = True
+
+# Enable timezone handling
 USE_TZ = True
+TIME_ZONE = "UTC"
+
+# Set the default language
+LANGUAGE_CODE = "en"
+
+# Define the available languages
+LANGUAGES = [
+    ("en", "English"),
+    ("sr", "Serbian"),
+]
+
+# Set the path for translation files
+LOCALE_PATHS = [
+    BASE_DIR / "run" / "locale/",
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/

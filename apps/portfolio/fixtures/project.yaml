@@ -3,7 +3,9 @@
   fields:
     portfolio: 1
     name: Parking Payment App
+    name_sr: Aplikacija za plaćanje parkinga
     role: Full Stack Software Engineer
+    role_sr: Full Stack Softver Inženjer
     start: 2024-01-01
     technologies:
       Next.js, TypeScript, SCSS, Cypress, Jest, Docker, Docker Compose,
@@ -16,6 +18,15 @@
       payment transactions, communicating with a Parking GraphQL API to
       manage payment status. Integrated multiple payment service providers
       to offer clients flexible gateway options.
+    description_sr:
+      Arhitektovao i razvio Next.js aplikaciju za online plaćanje parkinga,
+      dizajniranu da pojednostavi proces parkiranja za korisnike. Iskoristio
+      monorepo na GitHub-u i integrisao Cypress za rigorozno testiranje,
+      osiguravajući robustnu performansu. Razvio Django REST API za up
+      ravljanje transakcijama plaćanja, komunicirajući sa Parking GraphQL
+      API-jem za upravljanje statusom plaćanja. Integrisao više pružalaca
+      usluga plaćanja kako bi klijentima ponudio fleksibilne opcije
+      gateway-a.
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -24,7 +35,9 @@
   fields:
     portfolio: 1
     name: Parking Portals
+    name_sr: Portali za parkiranje
     role: Full Stack Software Engineer
+    role_sr: Full Stack Softver Inženjer
     start: 2020-06-01
     technologies:
       Python, Django, PostgreSQL, Pytest, HTML, SCSS, JavaScript, jQuery,
@@ -38,6 +51,15 @@
       more than 1 million reservations. I was using Python/Django on the
       backend and HTML, CSS, SCSS, and JavaScript on the frontend.
       Additionally, I utilized Docker for containerization and deployment.
+    description_sr:
+      Pokrenuo sam i vodio razvoj platforme za belu etiketu koja korisnicima
+      omogućava kreiranje i upravljanje svojim rezervacijama za parkiranje.
+      Originalno planiran za nekoliko meseci, projekat je produžen zbog
+      značajnog uspeha, što je konačno generisalo značajne prihode sa
+      implementacijom preko 40 portala i olakšavanjem više od 1 milion
+      rezervacija. Koristio sam Python/Django na backend-u i HTML, CSS,
+      SCSS i JavaScript na frontend-u. Dodatno, koristio sam Docker za
+      kontejnerizaciju i implementaciju.
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -47,6 +69,7 @@
     portfolio: 1
     name: Django PDF View
     role: Full Stack Software Engineer
+    role_sr: Full Stack Softver Inženjer
     start: 2024-07-01
     end: 2024-08-01
     technologies:
@@ -58,6 +81,13 @@
       with flexible content and styling options. Automated the release
       process with a bash script, handling version updates, git tagging,
       GitHub release creation, and publishing to PyPI.
+    description_sr:
+      Razvio sam Django paket za pojednostavljenje kreiranja PDF dokumenata,
+      omogućavajući lako pregledanje i preuzimanje u pregledaču. Paket
+      uključuje unapred definisane HTML i CSS postavke za efikasnu generaciju
+      PDF-a, sa fleksibilnim opcijama sadržaja i stila. Automatizovao sam
+      proces izdavanja sa bash skriptom, rukovanjem ažuriranjem verzija,
+      git označavanjem, kreiranjem GitHub izdanja i objavljivanjem na PyPI.
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -67,7 +97,9 @@
   fields:
     portfolio: 2
     name: Chaos Engineering
+    name_sr: Inženjering Haosa
     role: Chief Mischief Officer
+    role_sr: Glavni Oficir Za Zabavu
     start: 1997-01-01
     end: 2000-01-01
     technologies:
@@ -84,5 +116,17 @@
       while maintaining plausible deniability. This project has been hailed as a
       landmark in mischief execution, earning Cartman the unofficial title of
       "Master of Malevolence."
+    description_sr:
+      Predvodio je čuvenu operaciju "Chili Con Carnival", visoko kompleksnu i
+      pažljivo planiranu šemu usmerenu na izvođenje krajnjeg čina osvete protiv
+      percipiranih neprijatelja. Vodio je inicijativu u više faza koja je uključivala
+      psihološku manipulaciju ključnih ciljeva, koristeći duboko usađene strahove i
+      nesigurnosti kako bi se osiguralo poštovanje. Orkestrirao je tajnu operaciju
+      sabotaže rivalne kulinarne događaje unošenjem "specijalnih sastojaka" u čili,
+      postižući maksimalnu vrednost šoka. Upravljao je strategijskim podmićivanjem i
+      kampanjama dezinformacija kako bi skrenuo pažnju i krivicu, osiguravajući uspeh
+      operacije uz održavanje verovatnoće negiranja. Ovaj projekat je proslavljen kao
+      prekretnica u izvršenju zločina, zarađujući Kartmanu nezvanični naziv "Majstor
+      Zla".
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z

@@ -1,4 +1,5 @@
 from django.http import Http404
+from django.middleware.csrf import get_token
 from django.urls import reverse
 from django.shortcuts import get_object_or_404
 from django_pdf_view.pdf import PDF
@@ -47,6 +48,7 @@ class PortfolioPDFView(PDFView):
         )
         context = {
             "portfolio_pdf_url": portfolio_pdf_url,
+            "csrf_token": get_token(self.request),
         }
         if self.portfolio.user == self.request.user:
             context["portfolio_edit_url"] = get_model_admin_details_url(

@@ -34,3 +34,12 @@
     color: red;
     margin-top: 2px;
 }
+
+.form-errors {
+    width: 80%;
+}
+
+.form-errors .error {
+    margin: 2px 0;
+    color: red;
+}
