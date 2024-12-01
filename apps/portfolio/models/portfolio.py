@@ -130,6 +130,14 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         verbose_name=_("Edit button SVG color"),
         default="#ffffff",  # white
     )
+    language_btn_bg_color = ColorField(
+        verbose_name=_("Language button background color"),
+        default="#333333",  # dark grey
+    )
+    language_btn_svg_color = ColorField(
+        verbose_name=_("Language button SVG color"),
+        default="#ffffff",  # white
+    )
 
     class Meta:
         verbose_name = _("Portfolio")

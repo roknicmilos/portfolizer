@@ -94,5 +94,7 @@
     pdf_btn_svg_color: "#9c0d0d"
     edit_btn_bg_color: "#ffffff"
     edit_btn_svg_color: "#0d209c"
+    language_btn_bg_color: "#ffffff"
+    language_btn_svg_color: "#333333"
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z

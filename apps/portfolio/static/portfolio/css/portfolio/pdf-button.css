@@ -5,15 +5,15 @@
     font-family: Roboto, sans-serif;
     font-size: 20px;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 0 20px;
     border-radius: 5px 0 0 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     transition: width 0.3s ease-in-out;
+    height: 60px;
     width: 30px; /* Initial width with only the SVG visible */
-    height: 40px;
 }
 
 .expendable-button--pdf {
@@ -28,12 +28,25 @@
 }
 
 .expendable-button--edit {
-    bottom: 75px;
+    bottom: 140px;
     background-color: #0d209c;
     color: white;
 
     @media only screen and (max-width: 1200px) {
         top: 105px;
+        bottom: unset;
+    }
+}
+
+.expendable-button--language {
+    bottom: 75px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    width: 70px;
+
+    @media only screen and (max-width: 1200px) {
+        top: 170px;
         bottom: unset;
     }
 }
@@ -53,12 +66,12 @@
 }
 
 /*!* Expand button on hover *!*/
-.expendable-button--pdf.expanded {
+.expendable-button.expanded {
     width: 130px;
 }
 
-.expendable-button--edit.expanded {
-    width: 80px;
+.expendable-button--language.expanded {
+    width: 170px;
 }
 
 /*!* Show the text on hover *!*/
