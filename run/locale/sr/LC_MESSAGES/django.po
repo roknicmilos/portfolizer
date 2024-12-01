@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 22:31+0000\n"
+"POT-Creation-Date: 2024-12-01 12:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian <LL@li.org>\n"
@@ -99,14 +99,17 @@ msgid "SKILLS (R)"
 msgstr "VEŠTINE (R)"
 
 #: apps/portfolio/context_processors.py:30
+#: apps/portfolio/tests/test_context_processors.py:36
 msgid "CREATE PORTFOLIO"
 msgstr "KREIRAJ PORTFOLIO"
 
 #: apps/portfolio/context_processors.py:38
+#: apps/portfolio/tests/test_context_processors.py:51
 msgid "VIEW PORTFOLIO"
 msgstr "POGLEDAJ PORTFOLIO"
 
 #: apps/portfolio/context_processors.py:46
+#: apps/portfolio/tests/test_context_processors.py:55
 msgid "EDIT PORTFOLIO"
 msgstr "UREDI PORTFOLIO"
 
@@ -610,18 +613,6 @@ msgstr "Sačuvaj"
 msgid "Edit"
 msgstr "Uredi"
 
-#: apps/portfolio/tests/test_context_processors.py:36
-msgid "Create Portfolio"
-msgstr "Kreiraj Portfolio"
-
-#: apps/portfolio/tests/test_context_processors.py:51
-msgid "View Portfolio"
-msgstr "Pogledaj Portfolio"
-
-#: apps/portfolio/tests/test_context_processors.py:55
-msgid "Edit Portfolio"
-msgstr "Uredi Portfolio"
-
 #: apps/user/admin/user_admin.py:35
 msgid "Personal info"
 msgstr "Lični podaci"
@@ -635,18 +626,22 @@ msgid "Important dates"
 msgstr "Važni datumi"
 
 #: apps/user/context_processors.py:26
+#: apps/user/tests/test_context_processors.py:18
 msgid "LOGIN"
 msgstr "PRIJAVA"
 
 #: apps/user/context_processors.py:30
+#: apps/user/tests/test_context_processors.py:20
 msgid "REGISTER"
 msgstr "REGISTRACIJA"
 
 #: apps/user/context_processors.py:35
+#: apps/user/tests/test_context_processors.py:37
 msgid "ACCOUNT SETTINGS"
 msgstr "PODEŠAVANJA NALOGA"
 
 #: apps/user/context_processors.py:39
+#: apps/user/tests/test_context_processors.py:41
 msgid "LOGOUT"
 msgstr "ODJAVA"
 
@@ -656,7 +651,6 @@ msgstr "email adresa"
 
 #: apps/user/templates/user/login.html:5 apps/user/templates/user/login.html:14
 #: apps/user/templates/user/login.html:20
-#: apps/user/tests/test_context_processors.py:18
 msgid "Login"
 msgstr "Prijava"
 
@@ -666,17 +660,8 @@ msgid "Registration"
 msgstr "Registracija"
 
 #: apps/user/templates/user/registration.html:23
-#: apps/user/tests/test_context_processors.py:20
 msgid "Register"
 msgstr "Registracija"
-
-#: apps/user/tests/test_context_processors.py:37
-msgid "Account Settings"
-msgstr "Podešavanja naloga"
-
-#: apps/user/tests/test_context_processors.py:41
-msgid "Logout"
-msgstr "Odjava"
 
 #: templates/404.html:5
 msgid "404"
@@ -704,11 +689,15 @@ msgstr ""
 msgid "Portfolizer"
 msgstr "Portfolizer"
 
-#: templates/includes/nav.html:24
+#: templates/includes/language_dropdown.html:12
+msgid "LANGUAGE"
+msgstr "JEZIK"
+
+#: templates/includes/nav.html:23
 msgid "main menu"
 msgstr "glavni meni"
 
-#: templates/includes/nav.html:27
+#: templates/includes/nav.html:29
 msgid "HOME"
 msgstr "POČETNA"
 
@@ -738,3 +727,39 @@ msgstr ""
 "href=\"%(login_url)s\">Prijavite se</a> i... pa, znate već\n"
 "                proceduru!\n"
 "            "
+
+msgid "jan"
+msgstr "jan"
+
+msgid "feb"
+msgstr "feb"
+
+msgid "mar"
+msgstr "mar"
+
+msgid "apr"
+msgstr "apr"
+
+msgid "may"
+msgstr "maj"
+
+msgid "jun"
+msgstr "jun"
+
+msgid "jul"
+msgstr "јul"
+
+msgid "aug"
+msgstr "avg"
+
+msgid "sep"
+msgstr "sep"
+
+msgid "oct"
+msgstr "okt"
+
+msgid "nov"
+msgstr "nov"
+
+msgid "dec"
+msgstr "dec"
