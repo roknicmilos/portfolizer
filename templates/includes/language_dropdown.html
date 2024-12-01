@@ -29,7 +29,9 @@
                     {% elif lang_code == "en" %}
                         <div class="menu__item-icon">{% svg "svg/usa-flag.svg" %}</div>
                     {% endif %}
-                    <span class="menu__language-dropdown-item-bullet"><</span>
+                    <span class="menu__language-dropdown-item-bullet">
+                    {% if lang_code == LANGUAGE_CODE %}<{% endif %}
+                    </span>
                 </button>
             </form>
         {% endfor %}

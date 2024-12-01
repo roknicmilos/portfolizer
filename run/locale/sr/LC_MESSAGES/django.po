@@ -763,3 +763,9 @@ msgstr "nov"
 
 msgid "dec"
 msgstr "dec"
+
+msgid "Serbian"
+msgstr "Srpski"
+
+msgid "English"
+msgstr "Engleski"

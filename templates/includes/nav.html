@@ -19,12 +19,11 @@
                 <div class="menu__main js-main-menu">
                     <!-- Menu Modal-->
                     <div class="menu__main-modal js-main-menu-modal">
-                        <h3 class="menu__main-title">
-                            <span>{% trans "main menu" %}</span>
+                        <div class="menu__main-header">
                             <span class="menu__item-title-icon js-close-main-menu-button">
                                 {% svg "svg/x.svg" %}
                             </span>
-                        </h3>
+                        </div>
                         <a href="{% url 'index' %}" class="menu__item">
                             <span>{% trans "HOME" %}</span>
                             <div class="menu__item-icon">{% svg "svg/home.svg" %}</div>
@@ -51,17 +50,21 @@
                             {% else %}
                                 <a href="{{ portfolio_menu.create.url }}" class="menu__item">
                                     <span>{{ portfolio_menu.create.label }}</span>
-                                    {# TODO: ADD SVG #}
+                                    <div class="menu__item-icon">{% svg "svg/add.svg" %}</div>
                                 </a>
                             {% endif %}
                             <a href="{{ user_menu.edit.url }}" class="menu__item">
                                 <span>{{ user_menu.edit.label }}</span>
                                 <div class="menu__item-icon">{% svg "svg/avatar.svg" %}</div>
                             </a>
-                            <form class="menu__item" method="POST" action="{{ user_menu.logout.url }}">
+                            <form class="menu__logout-form"
+                                  method="POST"
+                                  action="{{ user_menu.logout.url }}">
                                 {% csrf_token %}
-                                <button type="submit">{{ user_menu.logout.label }}</button>
-                                <div class="menu__item-icon">{% svg "svg/logout.svg" %}</div>
+                                <button type="submit">
+                                    <span>{{ user_menu.logout.label }}</span>
+                                    <span class="menu__item-icon">{% svg "svg/logout.svg" %}</span>
+                                </button>
                             </form>
                         {% endif %}
                         {% include "includes/language_dropdown.html" %}

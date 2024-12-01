@@ -145,14 +145,13 @@ nav {
     display: none;
 }
 
-.menu__main-title {
+.menu__main-header {
     margin: 0;
-    /*padding: 30px 0;*/
     padding-left: 20px;
     height: 80px;
     border-bottom: 1px solid lightgrey;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -189,25 +188,31 @@ nav {
     justify-content: flex-end;
 }
 
-form.menu__item {
+.menu__logout-form {
     font-size: 16px;
+    padding: 0;
 }
 
-.menu__item button[type="submit"] {
+.menu__logout-form button[type="submit"] {
     height: 60px;
+    width: 100%;
     line-height: 60px;
     background-color: white;
     border: none;
     font-size: 16px;
     text-align: right;
     cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-bottom: 1px solid lightgrey;
 }
 
 .menu__item:hover {
     background-color: #ececec;
 }
 
-.menu__item:hover button[type="submit"] {
+.menu__logout-form:hover button[type="submit"] {
     background-color: #ececec;
 }
 
@@ -263,13 +268,23 @@ form.menu__item {
 
 .menu__language-dropdown {
     display: block; /* Ensure it's part of the document flow for animations */
-    opacity: 0; /* Start as fully transparent */
-    transform: translateY(-10px); /* Slightly move it up */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth animation */
+    height: 0; /* Hidden initially */
+    transform: scaleY(0); /* Hidden initially */
+    transform-origin: top; /* Expand from the top */
+    transition: transform 0.4s ease; /* Smooth animation */
+    overflow: hidden; /* Hide content */
+    pointer-events: none; /* Disable interaction */
     position: absolute;
     top: 100%; /* Position below the current language */
     left: 0;
     width: 100%;
+}
+
+/* Show Dropdown on Hover */
+.menu__language:hover .menu__language-dropdown {
+    pointer-events: auto; /* Allow interaction */
+    transform: scaleY(1); /* Expand fully */
+    height: auto; /* Ensure the content is fully visible */
 }
 
 .menu__language-dropdown-item {
@@ -285,14 +300,8 @@ form.menu__item {
     background-color: #ececec;
 }
 
-/* Show Dropdown on Hover */
-.menu__language:hover .menu__language-dropdown {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Reset position */
-    pointer-events: auto; /* Allow interaction */
-}
-
 .menu__language-dropdown-item-bullet {
-    margin-left: 30px;
+    width: 35px;
+    text-align: right;
     font-weight: 900;
 }
