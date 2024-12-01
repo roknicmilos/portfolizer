@@ -60,7 +60,6 @@
     {% for lang_code, lang_name in LANGUAGES %}
         {% if lang_code != LANGUAGE_CODE %}
             <form method="POST" action="{% url 'set_language' %}">
-                {# TODO: FIX CSRF TOKEN NOT BEING RENDERED #}
                 {% csrf_token %}
                 <input type="hidden" name="language" value="{{ lang_code }}">
                 <button class="js-expendable-button expendable-button expendable-button--language"
