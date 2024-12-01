@@ -769,3 +769,57 @@ msgstr "Srpski"
 
 msgid "English"
 msgstr "Engleski"
+
+msgid "Password"
+msgstr "Lozinka"
+
+msgid "Password confirmation"
+msgstr "Potvrda lozinke"
+
+msgid "Your password can’t be too similar to your other personal information."
+msgstr "Vaša lozinka ne može biti previše slična vašim ostalim ličnim informacijama."
+
+msgid "Your password must contain at least 8 characters."
+msgstr "Vaša lozinka mora sadržati najmanje 8 karaktera."
+
+msgid "Your password can’t be a commonly used password."
+msgstr "Vaša lozinka ne može biti često korišćena lozinka."
+
+msgid "Your password can’t be entirely numeric."
+msgstr "Vaša lozinka ne može biti potpuno numerička."
+
+msgid "This password is too common."
+msgstr "Ova lozinka je previše česta."
+
+msgid "This password is entirely numeric."
+msgstr "Ova lozinka je potpuno numerička."
+
+#, python-format
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] "Vaša lozinka mora sadržati najmanje %(min_length)d karakter."
+msgstr[1] "Vaša lozinka mora sadržati najmanje %(min_length)d karaktera."
+msgstr[2] "Vaša lozinka mora sadržati najmanje %(min_length)d karaktera."
+
+msgid "This password is too similar to your other personal information."
+msgstr "Ova lozinka je previše slična vašim ostalim ličnim informacijama."
+
+msgid "This password is forbidden."
+msgstr "Ova lozinka je zabranjena."
+
+msgid "Enter the same password as before, for verification."
+msgstr "Unesite istu lozinku kao pre, radi provere."
+
+msgid "This field is required."
+msgstr "Ovo polje je obavezno."
+
+#, python-format
+msgid ""
+"Please enter a correct %(username)s and password. Note that both fields may "
+"be case-sensitive."
+msgstr ""
+"Lozinka i/ili %(username)s nisu ispravne. Imajte na umu da oba polja mogu "
+"biti osetljiva na velika i mala slova."
+
+msgid "Enter a valid email address."
+msgstr "Unesite validnu email adresu."
