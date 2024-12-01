@@ -1,7 +1,5 @@
 {% load svg i18n %}
 
-{% get_current_language as CURRENT_LANGUAGE_CODE %}
-
 {% block nav %}
     <nav>
         <div class="menu">
@@ -20,7 +18,9 @@
 
                 <!-- Menu Modal-->
                 <div class="menu__modal js-main-menu-modal">
+                    {# TODO: add close icon and functionality for it #}
                     <h3 class="menu__title">{% trans "main menu" %}</h3>
+                    {# TODO: add icons for each menu item #}
                     <a href="{% url 'index' %}" class="menu__item">
                         {% trans "HOME" %}
                     </a>
@@ -50,15 +50,7 @@
                             <button type="submit">{{ user_menu.logout.label }}</button>
                         </form>
                     {% endif %}
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% for lang_code, lang_name in LANGUAGES %}
-                        {% if lang_code == LANGUAGE_CODE %}
-                            <div class="menu__item">
-                                {{ lang_name|upper }}
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+                    {% include "includes/language_dropdown.html" %}
                 </div>
             </div>
         </div>

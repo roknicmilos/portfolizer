@@ -1,0 +1,27 @@
+{% load svg i18n %}
+
+<!-- Language Dropdown -->
+<div class="menu__language">
+
+    <!-- Current Language -->
+    <div class="menu__item menu__language-current">
+        {% svg "svg/dropdown.svg" %}
+        {% trans "LANGUAGE" %}
+    </div>
+
+    <!-- Dropdown Languages -->
+    <div class="menu__language-dropdown">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% for lang_code, lang_name in LANGUAGES %}
+            <form method="POST" action="{% url 'set_language' %}">
+                {% csrf_token %}
+                <input type="hidden" name="language" value="{{ lang_code }}">
+                <button class="menu__language-dropdown-item" type="submit">
+                    {{ lang_name|upper }}
+                    {# TODO: add national flag #}
+                </button>
+            </form>
+        {% endfor %}
+    </div>
+</div>

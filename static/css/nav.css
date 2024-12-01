@@ -126,7 +126,8 @@ nav {
     border-bottom: 1px solid lightgrey;
 }
 
-.menu__item {
+.menu__item,
+.menu__language-dropdown-item {
     height: 60px;
     line-height: 60px;
     width: calc(100% - 50px * 2);
@@ -160,4 +161,58 @@ form.menu__item {
 .menu__item:hover,
 .menu__item button[type="submit"]:hover {
     background-color: #ececec;
+}
+
+.menu__language {
+    position: relative;
+}
+
+.menu__language-current {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    width: calc(100% - 50px);
+}
+
+.menu__language-current svg {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth rotation effect */
+    height: 100%;
+    width: 35px;
+    padding: 0 20px;
+}
+
+.menu__language:hover .menu__language-current svg {
+    transform: rotate(180deg);
+}
+
+.menu__language-dropdown {
+    display: block; /* Ensure it's part of the document flow for animations */
+    opacity: 0; /* Start as fully transparent */
+    transform: translateY(-10px); /* Slightly move it up */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth animation */
+    position: absolute;
+    top: 100%; /* Position below the current language */
+    left: 0;
+    width: 100%;
+}
+
+.menu__language-dropdown-item {
+    white-space: nowrap;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    background-color: white;
+    width: 100%;
+    padding-right: 80px;
+}
+
+.menu__language-dropdown-item:hover {
+    background-color: #ececec;
+}
+
+/* Show Dropdown on Hover */
+.menu__language:hover .menu__language-dropdown {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+    pointer-events: auto; /* Allow interaction */
 }
