@@ -1,5 +1,5 @@
 from apps.common.models import BaseModel
-from apps.common.validators import MaxFileSizeValidator, SlugBlacklistValidator
+from apps.common.validators import MaxFileSizeValidator
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.translation import gettext_lazy as _
@@ -11,6 +11,7 @@ from apps.portfolio.models import (
     Contact,
     PersonalDetails,
 )
+from apps.portfolio.validators import SlugBlacklistValidator
 
 
 class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
@@ -30,7 +31,9 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         verbose_name=_("slug"),
         max_length=100,
         unique=True,
-        validators=[SlugBlacklistValidator()],
+        validators=[
+            SlugBlacklistValidator(),
+        ],
     )
     title = models.CharField(
         verbose_name=_("title"),
