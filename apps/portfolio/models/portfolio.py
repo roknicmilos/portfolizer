@@ -11,6 +11,7 @@ from apps.portfolio.models import (
     Contact,
     PersonalDetails,
 )
+from apps.portfolio.validators import SlugBlacklistValidator
 
 
 class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
@@ -30,6 +31,9 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         verbose_name=_("slug"),
         max_length=100,
         unique=True,
+        validators=[
+            SlugBlacklistValidator(),
+        ],
     )
     title = models.CharField(
         verbose_name=_("title"),

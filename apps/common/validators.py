@@ -1,11 +1,12 @@
 from django.utils.deconstruct import deconstructible
 from django.core.exceptions import ValidationError
 from django.core.validators import BaseValidator
+from django.utils.translation import gettext_lazy as _
 
 
 @deconstructible
 class MaxFileSizeValidator(BaseValidator):
-    message = "Ensure the file size is not greater than %(limit_value)s KB."
+    message = _("Ensure the file size is not greater than %(limit_value)s KB.")
     code = "file_size"
 
     def __init__(self, max_size_kb):

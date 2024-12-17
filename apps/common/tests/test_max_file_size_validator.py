@@ -7,6 +7,7 @@ from apps.common.validators import MaxFileSizeValidator
 
 class TestMaxFileSizeValidator(TestCase):
     def setUp(self):
+        super().setUp()
         self.max_size_kb = 100  # 100 KB
         self.validator = MaxFileSizeValidator(max_size_kb=self.max_size_kb)
 
