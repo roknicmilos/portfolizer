@@ -20,3 +20,19 @@ class MaxFileSizeValidator(BaseValidator):
                 "value": value,
             }
             raise ValidationError(self.message, code=self.code, params=params)
+
+
+@deconstructible
+class SlugBlacklistValidator:
+    message = "The slug '%(value)s' is reserved and cannot be used."
+    code = "invalid"
+
+    def __init__(self, blacklist=None):
+        if blacklist is None:
+            blacklist = ["admin", "login", "logout"]
+        self.blacklist = blacklist
+
+    def __call__(self, value):
+        if value in self.blacklist:
+            params = {"value": value}
+            raise ValidationError(self.message, code=self.code, params=params)

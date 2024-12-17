@@ -324,3 +324,16 @@ class TestPortfolio(TestCase):
 
         # When email and phone are set, Contact object should be created:
         portfolio.update(email="example@example.com")
+
+    def test_slug_blacklist_validation(self):
+        """
+        Test that the slug field is validated against a blacklist of reserved routes.
+        """
+        reserved_slugs = ["admin", "login", "logout"]
+        for slug in reserved_slugs:
+            with self.assertRaises(ValidationError) as context:
+                PortfolioFactory(slug=slug)
+            self.assertEqual(
+                context.exception.message_dict,
+                {"slug": [f"The slug '{slug}' is reserved and cannot be used."]},
+            )
