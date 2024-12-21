@@ -1,10 +1,11 @@
-from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+
+from modeltranslation.admin import TranslationTabularInline
 
 from apps.portfolio.models import Link
 
 
-class LinkInline(admin.TabularInline):
+class LinkInline(TranslationTabularInline):
     model = Link
     extra = 0
     classes = ["collapse"]
