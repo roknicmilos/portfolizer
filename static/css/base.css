@@ -7,7 +7,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    background-color: #0d1117;
+    background-color: #252525;
     color: white;
     min-height: calc(100vh - 75px);
     padding: 0 20%;
@@ -126,18 +126,26 @@ h1 {
 .go-to-button {
     cursor: pointer;
     margin: 40px auto;
-    padding: 30px 50px;
-    background-color: #ffffff;
+    padding: 20px 50px;
     border-radius: 5px;
+    border: none;
     font-size: 20px;
-    color: #000000;
+    color: #252525;
     text-align: center;
     text-decoration: none;
+    transition: box-shadow 0.2s ease-in-out, outline-width 0.2s ease-in-out;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.go-to-button:hover {
+    background: linear-gradient(to right, #ff4d4d, #7b86fe);
     box-shadow: rgba(240, 46, 46, 0.4) 5px 5px,
     rgba(240, 46, 46, 0.3) 10px 10px,
     rgba(240, 46, 46, 0.2) 15px 15px,
     rgba(240, 46, 46, 0.1) 20px 20px,
     rgba(240, 46, 170, 0.05) 25px 25px;
+    outline: 2px solid black;
+    color: white;
 }
 
 .button-row {

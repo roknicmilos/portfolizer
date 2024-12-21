@@ -4,13 +4,13 @@
     <nav>
         <div class="menu">
             <div class="menu__left">
-                <a href="{% url 'index' %}" class="menu__home-button">
+                <a href="{% url 'index' %}" class="menu__home-button" aria-label="Home button">
                     {% svg "svg/rocket.svg" %}
                 </a>
             </div>
             <div class="menu__right">
                 <!-- Burger Button -->
-                <div class="menu__burger js-main-menu-burger" id="menuBurger" aria-label="Toggle Menu">
+                <div class="menu__burger js-main-menu-burger">
                     <span></span>
                     <span></span>
                     <span></span>
