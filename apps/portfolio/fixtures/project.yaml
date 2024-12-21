@@ -7,9 +7,11 @@
     role: Full Stack Software Engineer
     role_sr: Full Stack Softver Inženjer
     start: 2024-01-01
-    technologies:
+    tools:
       Next.js, TypeScript, SCSS, Cypress, Jest, Docker, Docker Compose,
       Travis CI, Python, Django, Pytest, PostgreSQL, REST API
+    tools_title: Technologies
+    tools_title_sr: Tehnologije
     description:
       Architected and developed a Next.js app for online parking payments,
       designed to streamline the parking process for users. Leveraged a
@@ -39,9 +41,11 @@
     role: Full Stack Software Engineer
     role_sr: Full Stack Softver Inženjer
     start: 2020-06-01
-    technologies:
+    tools:
       Python, Django, PostgreSQL, Pytest, HTML, SCSS, JavaScript, jQuery,
       Docker, Docker Compose, Travis CI
+    tools_title: Technologies
+    tools_title_sr: Tehnologije
     description:
       I initiated and led the development of a white-label platform that
       allows users to create and manage their parking reservations.
@@ -72,8 +76,9 @@
     role_sr: Full Stack Softver Inženjer
     start: 2024-07-01
     end: 2024-08-01
-    technologies:
-      Python, Django, SQLite, HTML, CSS, Pytest, PyPI, GitHub Actions
+    tools: Python, Django, SQLite, HTML, CSS, Pytest, PyPI, GitHub Actions
+    tools_title: Technologies
+    tools_title_sr: Tehnologije
     description:
       Developed a Django package to streamline PDF document creation,
       allowing for easy viewing and downloading in the browser. The package
@@ -102,8 +107,9 @@
     role_sr: Glavni Oficir Za Zabavu
     start: 1997-01-01
     end: 2000-01-01
-    technologies:
-      Psychological Manipulation, Sabotage, Bribery, Disinformation
+    tools: Psychological Manipulation, Sabotage, Bribery, Disinformation
+    tools_title: Tools
+    tools_title_sr: Alati
     description:
       Spearheaded the infamous "Chili Con Carnival" operation, a highly complex
       and meticulously planned scheme aimed at executing the ultimate act of revenge

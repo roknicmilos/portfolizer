@@ -176,7 +176,7 @@ class PortfolioAdmin(TranslationAdmin):
             return _("Save the Portfolio first to generate the link.")
 
         href = reverse(viewname="portfolio:index", kwargs={"slug": obj.slug})
-        label = _("Display {portfolio}").format(portfolio=str(obj))
+        label = _("Show portfolio page")
         return mark_safe(f'<a href="{href}">{label}</a>')
 
     def get_queryset(self, request):

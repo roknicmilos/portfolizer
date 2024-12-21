@@ -98,7 +98,7 @@ class ProjectFactory(DjangoModelFactory):
     role = Faker("job")
     start = Faker("date_this_decade")
     end = Faker("date_this_decade", before_today=True, after_today=False)
-    technologies = Faker("words", nb=5, ext_word_list=None, unique=False)
+    tools = Faker("words", nb=5, ext_word_list=None, unique=False)
     description = Faker("paragraph")
 
 
