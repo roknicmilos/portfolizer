@@ -79,7 +79,8 @@ class ProjectTranslationOptions(TranslationOptions):
     fields = (
         "name",
         "role",
-        "technologies",
+        "tools",
+        "tools_title",
         "description",
     )
 

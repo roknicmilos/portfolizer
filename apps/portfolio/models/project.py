@@ -36,9 +36,14 @@ class Project(BaseModel):
             "don't know the exact end day."
         ),
     )
-    technologies = models.CharField(
-        verbose_name=_("technologies"),
+    tools = models.CharField(
+        verbose_name=_("tools"),
         max_length=255,
+    )
+    tools_title = models.CharField(
+        verbose_name=_("tools title"),
+        max_length=100,
+        default="Tools",
     )
     description = models.TextField(
         verbose_name=_("description"),

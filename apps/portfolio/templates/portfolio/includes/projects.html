@@ -8,7 +8,7 @@
             <p class="position-item-period">
                 {{ project.start|date:"M Y" }} - {{ project.end|date:"M Y"|default:_("Present") }}
             </p>
-            <p><span class="bold">{% trans "Technologies" %}</span>: {{ project.technologies }}</p>
+            <p><span class="bold">{{ project.tools_title }}</span>: {{ project.tools }}</p>
             <p class="position-item-description" style="color: {{ text_color }}">
                 <span class="bold">{% trans "Description" %}</span>: {{ project.description }}
             </p>

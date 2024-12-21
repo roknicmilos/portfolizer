@@ -31,9 +31,7 @@ class PortfolioAdminTestCase(TestCase):
         expected_href = reverse(
             viewname="portfolio:index", kwargs={"slug": portfolio.slug}
         )
-        expected_label = _("Display {portfolio}").format(
-            portfolio=str(portfolio)
-        )
+        expected_label = _("Show portfolio page")
         expected_html = mark_safe(
             f'<a href="{expected_href}">{expected_label}</a>'
         )
