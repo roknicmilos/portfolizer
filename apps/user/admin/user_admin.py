@@ -31,15 +31,6 @@ class UserAdmin(BaseUserAdmin):
         "last_login",
     )
     main_fieldset = (None, {"fields": ("email", "password")})
-    personal_info_fieldset = (
-        _("Personal info"),
-        {
-            "fields": (
-                "first_name",
-                "last_name",
-            )
-        },
-    )
     permissions_fieldset = (
         _("Permissions"),
         {
@@ -65,12 +56,10 @@ class UserAdmin(BaseUserAdmin):
     )
     fieldsets = (
         main_fieldset,
-        personal_info_fieldset,
         important_dates_fieldset,
     )
     superuser_fieldsets = (
         main_fieldset,
-        personal_info_fieldset,
         permissions_fieldset,
         important_dates_fieldset,
     )
@@ -83,7 +72,7 @@ class UserAdmin(BaseUserAdmin):
             },
         ),
     )
-    search_fields = ("first_name", "last_name", "email")
+    search_fields = ("email",)
     ordering = ("email",)
 
     def get_queryset(self, request):

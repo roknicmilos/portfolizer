@@ -1,6 +1,6 @@
 {% load i18n %}
 
-<div class="right-segment about-me">
+<div class="right-segment {% if is_last %}right-segment--last{% endif %} about-me">
     {% include "portfolio/includes/segment_title.html" %}
     <p class="about-me-text" style="color: {{ text_color }}">{{ about_me }}</p>
 </div>

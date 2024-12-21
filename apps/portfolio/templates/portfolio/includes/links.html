@@ -1,6 +1,6 @@
 {% load svg i18n %}
 
-<div class="left-segment links">
+<div class="left-segment {% if is_last %}left-segment--last{% endif %} links">
     {% include "portfolio/includes/segment_title.html" %}
     <div class="link-items">
         {% for link in links %}

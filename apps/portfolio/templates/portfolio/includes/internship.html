@@ -1,6 +1,6 @@
 {% load svg i18n %}
 
-<div class="left-segment">
+<div class="left-segment {% if is_last %}left-segment--last{% endif %}">
     {% include "portfolio/includes/segment_title.html" %}
     {% for internship in internships %}
         <div class="education-item" style="color: {{ text_color }}">
