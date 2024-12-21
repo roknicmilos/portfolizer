@@ -1,12 +1,13 @@
-from django.contrib import admin
 from django.db import models
 from django.forms import Textarea
 from django.utils.translation import gettext_lazy as _
 
+from modeltranslation.admin import TranslationStackedInline
+
 from apps.portfolio.models import Project
 
 
-class ProjectInline(admin.StackedInline):
+class ProjectInline(TranslationStackedInline):
     model = Project
     extra = 0
     classes = ["collapse"]

@@ -1,10 +1,10 @@
-from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from modeltranslation.admin import TranslationStackedInline
 
 from apps.portfolio.models import Education
 
 
-class EducationInline(admin.StackedInline):
+class EducationInline(TranslationStackedInline):
     model = Education
     extra = 0
     classes = ["collapse"]

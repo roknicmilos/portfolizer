@@ -1,10 +1,11 @@
-from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+
+from modeltranslation.admin import TranslationTabularInline
 
 from apps.portfolio.models import Language
 
 
-class LanguageInline(admin.TabularInline):
+class LanguageInline(TranslationTabularInline):
     model = Language
     extra = 0
     classes = ["collapse"]
