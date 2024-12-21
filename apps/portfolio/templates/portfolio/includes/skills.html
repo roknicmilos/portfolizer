@@ -1,6 +1,6 @@
 {% load svg static %}
 
-<div class="left-segment skills">
+<div class="left-segment {% if is_last %}left-segment--last{% endif %} skills">
     {% include "portfolio/includes/segment_title.html" %}
     <div class="skill-items">
         {% for skill in skills %}

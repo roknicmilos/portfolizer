@@ -14,8 +14,6 @@
     <h1>{% trans "Registration" %}</h1>
     <form class="auth-form" method="POST">
         {% csrf_token %}
-        {% include "includes/input_field.html" with field=form.first_name %}
-        {% include "includes/input_field.html" with field=form.last_name %}
         {% include "includes/input_field.html" with field=form.email %}
         {% include "includes/input_field.html" with field=form.password1 %}
         {% include "includes/input_field.html" with field=form.password2 %}

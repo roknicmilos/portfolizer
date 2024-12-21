@@ -215,7 +215,7 @@ class PortfolioAdmin(TranslationAdmin):
         fieldsets = list(super().get_fieldsets(request, obj))
 
         main_fields = fieldsets[0][1]["fields"]
-        if not request.user.is_superuser:
+        if not request.user.is_superuser and "user" in main_fields:
             main_fields.remove("user")
         fieldsets[0][1]["fields"] = tuple(main_fields)
 

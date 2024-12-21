@@ -9,7 +9,7 @@ from apps.user.models import User
 class RegistrationForm(BaseUserCreationForm):
     class Meta:
         model = User
-        fields = ("email", "first_name", "last_name")
+        fields = ("email",)
 
     def save(self, commit=True) -> User:
         self.instance.is_active = True

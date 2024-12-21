@@ -67,6 +67,7 @@ class TestService(TestCase):
                     "title": portfolio.links_segment_title,
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
+                    "is_last": False,
                 },
             ),
             render_to_string(
@@ -76,6 +77,7 @@ class TestService(TestCase):
                     "title": portfolio.skills_segment_title,
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
+                    "is_last": False,
                 },
             ),
             render_to_string(
@@ -85,6 +87,7 @@ class TestService(TestCase):
                     "title": portfolio.languages_segment_title,
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
+                    "is_last": False,
                 },
             ),
             render_to_string(
@@ -94,6 +97,7 @@ class TestService(TestCase):
                     "title": portfolio.internship_segment_title,
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
+                    "is_last": False,
                 },
             ),
             render_to_string(
@@ -103,18 +107,12 @@ class TestService(TestCase):
                     "title": portfolio.education_segment_title,
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
+                    "is_last": True,
                 },
             ),
         ]
-        self.assertEqual(len(actual_segments), len(expected_segments))
-        for index, (actual, expected) in enumerate(
-            zip(actual_segments, expected_segments)
-        ):
-            self.assertEqual(
-                first=actual,
-                second=expected,
-                msg=f"Segment at index {index} does not match",
-            )
+
+        self.assertEqual(actual_segments, expected_segments)
 
     def test_render_right_column_segments_with_required_data_only(self):
         """
@@ -140,9 +138,10 @@ class TestService(TestCase):
         EmploymentFactory(portfolio=portfolio)
         ProjectFactory(portfolio=portfolio)
 
-        segments = service.render_right_column_segments(portfolio)
+        actual_segments = service.render_right_column_segments(portfolio)
 
-        self.assertEqual(len(segments), 4)
+        # All four segments should be rendered
+        self.assertEqual(len(actual_segments), 4)
 
         expected_segments = [
             render_to_string(
@@ -153,6 +152,7 @@ class TestService(TestCase):
                     "role": portfolio.role,
                     "bg_color": portfolio.right_column_bg_color,
                     "text_color": portfolio.right_column_text_color,
+                    "is_last": False,
                 },
             ),
             render_to_string(
@@ -162,6 +162,7 @@ class TestService(TestCase):
                     "title": portfolio.about_me_segment_title,
                     "bg_color": portfolio.right_column_bg_color,
                     "text_color": portfolio.right_column_text_color,
+                    "is_last": False,
                 },
             ),
             render_to_string(
@@ -171,6 +172,7 @@ class TestService(TestCase):
                     "title": portfolio.employment_segment_title,
                     "bg_color": portfolio.right_column_bg_color,
                     "text_color": portfolio.right_column_text_color,
+                    "is_last": False,
                 },
             ),
             render_to_string(
@@ -180,10 +182,12 @@ class TestService(TestCase):
                     "title": portfolio.projects_segment_title,
                     "bg_color": portfolio.right_column_bg_color,
                     "text_color": portfolio.right_column_text_color,
+                    "is_last": True,
                 },
             ),
         ]
-        self.assertEqual(segments, expected_segments)
+
+        self.assertEqual(actual_segments, expected_segments)
 
     @staticmethod
     def get_expected_contact_html(portfolio: Portfolio) -> str:
@@ -194,6 +198,7 @@ class TestService(TestCase):
                 "title": portfolio.contact_segment_title,
                 "bg_color": portfolio.left_column_bg_color,
                 "text_color": portfolio.left_column_text_color,
+                "is_last": False,
             },
         )
 
@@ -206,5 +211,6 @@ class TestService(TestCase):
                 "title": portfolio.personal_details_segment_title,
                 "bg_color": portfolio.left_column_bg_color,
                 "text_color": portfolio.left_column_text_color,
+                "is_last": False,
             },
         )

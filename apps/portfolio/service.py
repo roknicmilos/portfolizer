@@ -1,7 +1,17 @@
 from django.contrib.auth.models import Permission
 from django.contrib.contenttypes.models import ContentType
+from django.db.models import Model
 
-from apps.portfolio.models import Portfolio
+from apps.portfolio.models import (
+    Portfolio,
+    Education,
+    Employment,
+    Internship,
+    Language,
+    Link,
+    Project,
+    Skill,
+)
 
 from apps.portfolio.models.segments import (
     ContactSegment,
@@ -72,19 +82,30 @@ def render_right_column_segments(portfolio: Portfolio) -> list[str]:
 
 
 def get_default_portfolio_permission() -> list[Permission]:
-    content_type = ContentType.objects.get_for_model(Portfolio)
+    allowed_models = [
+        Portfolio,
+        Education,
+        Employment,
+        Internship,
+        Language,
+        Link,
+        Project,
+        Skill,
+    ]
 
+    permissions = []
+    for model in allowed_models:
+        permissions.extend(_get_model_permissions(model))
+
+    return permissions
+
+
+def _get_model_permissions(model: type[Model]) -> list[Permission]:
+    content_type = ContentType.objects.get_for_model(model)
     return [
         Permission.objects.get(
-            codename="view_portfolio", content_type=content_type
-        ),
-        Permission.objects.get(
-            codename="add_portfolio", content_type=content_type
-        ),
-        Permission.objects.get(
-            codename="change_portfolio", content_type=content_type
-        ),
-        Permission.objects.get(
-            codename="delete_portfolio", content_type=content_type
-        ),
+            codename=f"{permission}_{model._meta.model_name}",
+            content_type=content_type,
+        )
+        for permission in ["view", "add", "change", "delete"]
     ]

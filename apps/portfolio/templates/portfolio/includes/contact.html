@@ -1,6 +1,6 @@
 {% load svg i18n color %}
 
-<div class="left-segment contact">
+<div class="left-segment {% if is_last %}left-segment--last{% endif %} contact">
     {% include "portfolio/includes/segment_title.html" %}
     {% if contact.phone %}
         <a class="link" href="tel:{{ contact.phone }}">

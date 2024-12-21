@@ -53,6 +53,10 @@
     page-break-inside: avoid;
 }
 
+.left-segment:last-of-type {
+    margin-bottom: 50px;
+}
+
 .page--html .left-segment {
     margin: 0 60px 0 auto;
 

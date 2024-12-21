@@ -1,6 +1,6 @@
 {% load i18n %}
 
-<div class="right-segment" style="color: {{ text_color }}">
+<div class="right-segment {% if is_last %}right-segment--last{% endif %}" style="color: {{ text_color }}">
     {% include "portfolio/includes/segment_title.html" %}
     {% for project in projects %}
         <div class="position-item">
