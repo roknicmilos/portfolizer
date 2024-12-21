@@ -78,7 +78,6 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "apps.common.context_processors.settings_variables",
                 "apps.portfolio.context_processors.portfolio_variables",
                 "apps.user.context_processors.user_variables",
             ],
@@ -176,7 +175,3 @@ FIXTURES = {
         }
     ],
 }
-
-GOOGLE_ANALYTICS_TRACKING_ID = config(
-    "GOOGLE_ANALYTICS_TRACKING_ID", default=None
-)

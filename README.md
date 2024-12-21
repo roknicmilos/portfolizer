@@ -11,7 +11,6 @@ to showcase their professional experience and skills.
     - [Prerequisites](#prerequisites)
     - [Project Setup](#project-setup)
 - [Enable Sentry](#enable-sentry)
-- [Enable Google Analytics](#enable-google-analytics)
 - [Test Data](#test-data)
     - [Create Superuser](#create-superuser)
 - [Run Tests](#run-tests)
@@ -82,17 +81,6 @@ Use one of the following values for the `SENTRY_ENV` variable: `local`, `dev` or
 
 To check the issues for this project on Sentry, click
 [here](https://portfolizer.sentry.io/issues/?project=4508003751821312&referrer=sidebar&statsPeriod=14d).
-
-## Enable Google Analytics
-
-To enable Google Analytics, set the `GOOGLE_ANALYTICS_TRACKING_ID` variable in
-the `.env` file.
-
-To get the tracking ID, visit:
-[Portfolizer DEV data stream](https://analytics.google.com/analytics/web/#/a152537310p460818596/admin/streams/table/9749560985)
-or
-[Portfolizer PROD data stream](https://analytics.google.com/analytics/web/#/a152537310p215621886/admin/streams/table/9749678510)
-at [Google Analytics](https://analytics.google.com/).
 
 ## Test Data
 
