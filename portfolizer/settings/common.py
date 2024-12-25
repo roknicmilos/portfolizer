@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Third party apps:
-    "django_pdf_view",
+    "pdf_view",
     "health_check",
     "health_check.db",
     "health_check.cache",

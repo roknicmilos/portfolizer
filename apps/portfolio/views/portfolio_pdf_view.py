@@ -1,9 +1,10 @@
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 from django.http import Http404
 from django.middleware.csrf import get_token
 from django.urls import reverse
 from django.shortcuts import get_object_or_404
-from django_pdf_view.pdf import PDF
-from django_pdf_view.views import PDFView
+from pdf_view.views import PDFView
 
 from apps.common.utils import get_model_admin_details_url
 from apps.portfolio.models import Portfolio
@@ -13,18 +14,29 @@ from apps.portfolio import service
 class PortfolioPDFView(PDFView):
     portfolio: Portfolio
     template_name = "portfolio/portfolio_content.html"
-    css_paths = ["portfolio/css/portfolio/"]
+    css_paths = [
+        "portfolio/css/portfolio/",
+        "css/flash_message.css",
+    ]
 
-    def create_pdf(self) -> PDF:
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
         self.portfolio = self._get_portfolio()
-        return PDF(
-            template_name=self.template_name,
-            base_template_name="portfolio/portfolio.html",
-            title=self.portfolio.title,
-            filename=self.portfolio.filename,
-            context=self.get_context(),
-            css_paths=self.css_paths.copy(),
-        )
+        if not self.portfolio.is_published:
+            messages.info(
+                request=self.request,
+                message=_(
+                    "This portfolio is not published and "
+                    "can only be viewed by you."
+                ),
+            )
+
+    def get_pdf_kwargs(self) -> dict:
+        kwargs = super().get_pdf_kwargs()
+        kwargs["title"] = self.portfolio.title
+        kwargs["filename"] = self.portfolio.filename
+        kwargs["base_template_name"] = "portfolio/portfolio.html"
+        return kwargs
 
     def get_context(self) -> dict:
         context = super().get_context()

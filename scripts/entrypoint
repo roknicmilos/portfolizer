@@ -36,7 +36,6 @@ elif [ "$1" = "ci" ]; then
   pytest || exit 1
 elif [ "$1" = "local" ]; then
   setup
-  python manage.py loaddata --all
   python manage.py runserver 0.0.0.0:8000
 else
   echo "Unknown command: '$1'"
