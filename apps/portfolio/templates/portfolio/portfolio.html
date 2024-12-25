@@ -24,8 +24,9 @@
 
 {% block content %}
     {{ block.super }}
-    {% include "includes/messages.html" %}
     {% if response_type == "html" %}
+        {% include "includes/messages.html" %}
+
         <script src="{% static 'portfolio/js/expandable-button.js' %}"></script>
         <script src="{% static 'js/flash-messages.js' %}"></script>
     {% endif %}

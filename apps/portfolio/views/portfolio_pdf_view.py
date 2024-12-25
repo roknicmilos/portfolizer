@@ -22,7 +22,7 @@ class PortfolioPDFView(PDFView):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.portfolio = self._get_portfolio()
-        if not self.portfolio.is_published:
+        if self.response_type == "html" and not self.portfolio.is_published:
             messages.info(
                 request=self.request,
                 message=_(
