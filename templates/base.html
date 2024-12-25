@@ -12,6 +12,7 @@
         {% include 'includes/icons.html' %}
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+        <link rel="stylesheet" href="{% static 'css/flash_message.css' %}">
     {% endblock head %}
 </head>
 <body>
@@ -24,16 +25,7 @@
     </div>
 </main>
 
-{% for message in messages %}
-    <div class="flash-message {% if message.tags %}flash-message--{{ message.tags }}{% endif %} js-flash-message">
-        <p class="flash-message__text">
-            {{ message }}
-        </p>
-        <div class="flash-message__close-button js-flash-message-close-button">
-            {% svg "svg/x.svg" %}
-        </div>
-    </div>
-{% endfor %}
+{% include "includes/messages.html" %}
 
 <script src="{% static 'js/flash-messages.js' %}"></script>
 <script src="{% static 'js/menu-modal.js' %}"></script>

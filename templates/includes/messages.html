@@ -1,0 +1,12 @@
+{% load svg %}
+
+{% for message in messages %}
+    <div class="flash-message {% if message.tags %}flash-message--{{ message.tags }}{% endif %} js-flash-message">
+        <p class="flash-message__text">
+            {{ message }}
+        </p>
+        <div class="flash-message__close-button js-flash-message-close-button">
+            {% svg "svg/x.svg" %}
+        </div>
+    </div>
+{% endfor %}

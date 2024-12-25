@@ -1,4 +1,4 @@
-{% extends "django_pdf_view/pdf.html" %}
+{% extends "pdf_view/pdf.html" %}
 
 {% load static %}
 
@@ -25,6 +25,9 @@
 {% block content %}
     {{ block.super }}
     {% if response_type == "html" %}
+        {% include "includes/messages.html" %}
+
         <script src="{% static 'portfolio/js/expandable-button.js' %}"></script>
+        <script src="{% static 'js/flash-messages.js' %}"></script>
     {% endif %}
 {% endblock content %}
