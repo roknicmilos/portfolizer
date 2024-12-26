@@ -20,7 +20,7 @@ django-smart-fixtures = "^2.0.2"
 psycopg2 = "^2.9.10"
 django-colorfield = "^0.11.0"
 django-admin-interface = "^0.29.2"
-django-modeltranslation = "^0.19.11"
+django-modeltranslation = "^0.19.12"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
