@@ -41,7 +41,11 @@
                 <p class="items-title">{% trans "Cookies:" %}</p>
                 <ul class="items-lvl-2">
                     <li>
-                        {% trans "Portfolizer uses default Django cookies: csrftoken, django_language and sessionid" %}
+                        {% blocktrans %}
+                            Portfolizer uses default Django cookies: csrftoken (used to protect against
+                            cross-site request forgery attacks), django_language (stores the user's language
+                            preference) and sessionid (used to maintain user session state after login).
+                        {% endblocktrans %}
                     </li>
                     <li>
                         {% trans "These cookies are essential for website functionality." %}
@@ -105,6 +109,13 @@
                 {% blocktrans %}
                     We do not share your data with third parties. However, our website is hosted on DigitalOcean
                     servers located in France.
+                {% endblocktrans %}
+            </li>
+            <li>
+                {% blocktrans %}
+                    Data collected by Sentry (our error tracking service) may include technical details such
+                    as error logs, IP addresses, and other metadata necessary for debugging. For more information,
+                    please refer to Sentry's Privacy Policy.
                 {% endblocktrans %}
             </li>
         </ul>
