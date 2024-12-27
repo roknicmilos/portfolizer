@@ -1,0 +1,31 @@
+.content {
+    align-items: flex-start;
+}
+
+h2 {
+    @media only screen and (max-width: 768px) {
+        margin: 10px 0 10px 20px;
+    }
+}
+
+.items-title {
+    font-weight: 900;
+    margin: 6px 0;
+}
+
+.privacy-policy-section {
+    @media only screen and (max-width: 768px) {
+        padding-right: 20px;
+    }
+}
+
+.items-lvl-2 {
+    @media only screen and (max-width: 768px) {
+        padding-left: 15px;
+    }
+}
+
+.items-lvl-1 li,
+.items-lvl-2 li {
+    margin: 5px 0;
+}

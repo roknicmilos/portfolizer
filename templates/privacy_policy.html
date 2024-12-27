@@ -1,0 +1,229 @@
+{% extends "base.html" %}
+
+{% load i18n static %}
+
+{% block title %}{% trans "Privacy Policy" %}{% endblock title %}
+
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/privacy_policy.css' %}">
+{% endblock head %}
+
+{% block content %}
+    <h1>{% trans "Privacy Policy" %}</h1>
+    <section class="privacy-policy-section">
+        <h2>{% trans "Data We Collect" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                <p class="items-title">{% trans "Account Data:" %}</p>
+                <ul class="items-lvl-2">
+                    <li>{% trans "Email address and password are required for registration." %}</li>
+                </ul>
+            </li>
+            <li>
+                <p class="items-title">{% trans "Portfolio Data:" %}</p>
+                <ul class="items-lvl-2">
+                    <li class="item">
+                        {% blocktrans %}
+                            Users can optionally provide personal information such as: first and last name, phone
+                            number, date of birth, location (address), social media links (e.g., LinkedIn, GitHub,
+                            website, etc.)
+                        {% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}
+                            Users must manually set an email address for display on their public portfolio pages.
+                        {% endblocktrans %}
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="items-title">{% trans "Cookies:" %}</p>
+                <ul class="items-lvl-2">
+                    <li>
+                        {% blocktrans %}
+                            Portfolizer uses default Django cookies: csrftoken (used to protect against
+                            cross-site request forgery attacks), django_language (stores the user's language
+                            preference) and sessionid (used to maintain user session state after login).
+                        {% endblocktrans %}
+                    </li>
+                    <li>
+                        {% trans "These cookies are essential for website functionality." %}
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="items-title">{% trans "Automatically Collected Data:" %}</p>
+                <ul class="items-lvl-2">
+                    <li>
+                        {% blocktrans %}
+                            We do not collect any data automatically, except data collected by Sentry (our error
+                            tracking service).
+                        {% endblocktrans %}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "How We Use Your Data" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                <p class="items-title">{% trans "Account Management:" %}</p>
+                <ul class="items-lvl-2">
+                    <li>{% trans "Email addresses are used for login, identifying users, and communication." %}</li>
+                </ul>
+            </li>
+            <li>
+                <p class="items-title">{% trans "Portfolio Pages:" %}</p>
+                <ul class="items-lvl-2">
+                    <li>
+                        {% blocktrans %}
+                            Optional personal information is used to generate user portfolios and PDFs.
+                        {% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}
+                            Users can choose to publish or unpublish their portfolio pages.
+                        {% endblocktrans %}
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="items-title">{% trans "Communication:" %}</p>
+                <ul class="items-lvl-2">
+                    <li>
+                        {% blocktrans %}
+                            We may use your email address to send important updates, notifications, or promotional
+                            content related to Portfolizer.
+                        {% endblocktrans %}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "Data Sharing" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    We do not share your data with third parties. However, our website is hosted on DigitalOcean
+                    servers located in France.
+                {% endblocktrans %}
+            </li>
+            <li>
+                {% blocktrans %}
+                    Data collected by Sentry (our error tracking service) may include technical details such
+                    as error logs, IP addresses, and other metadata necessary for debugging. For more information,
+                    please refer to Sentry's Privacy Policy.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "Data Security" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% trans "Passwords are encrypted (hashed) before storage." %}
+            </li>
+            <li>
+                {% trans "Personal data is stored securely in our database." %}
+            </li>
+            <li>
+                {% trans "HTTPS ensures data is encrypted during transmission." %}
+            </li>
+            <li>
+                {% trans "Only superusers can access all users and portfolios via Django Admin." %}
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "User Rights" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                <span class="items-title">{% trans "Access and Update:" %} </span>
+                {% trans "You can view and update your data via Django Admin." %}
+            </li>
+            <li>
+                <span class="items-title">{% trans "Delete:" %} </span>
+                {% trans "You can delete your account or unpublish/delete your portfolio." %}
+            </li>
+            <li>
+                <span class="items-title">{% trans "Contact:" %} </span>
+                {% trans "For additional requests, contact us at roknic.milos.994@gmail.com." %}
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "Cookies" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    The cookies we use are necessary for website functionality. You cannot reject these cookies,
+                    as they are essential for secure login and session management.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "Data Retention" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    Data is retained indefinitely. We may implement automatic deletion of inactive accounts in
+                    the future.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "International Users" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    Portfolizer is hosted on servers in France. By using our website, you acknowledge that your
+                    data may be processed outside your country of residence.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "Contact Information" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% trans "For privacy-related inquiries, please contact us at roknic.milos.994@gmail.com." %}
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "Updates to this Policy" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    We may update this Privacy Policy occasionally. Please review it periodically for changes.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="privacy-policy-section">
+        <h2>{% trans "Disclaimer" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    Portfolizer is a personal project operated by an individual, not a legal entity or
+                    organization. The service is provided on an "as-is" and "as-available" basis, with no
+                    guarantees of uninterrupted availability or error-free functionality. By using Portfolizer,
+                    you acknowledge that the website is managed by a single individual and may not have the same
+                    level of resources or guarantees as services operated by established companies.
+                {% endblocktrans %}
+            </li>
+            <li>
+                {% blocktrans %}
+                    While every effort is made to ensure data security and privacy, the operator cannot assume
+                    liability for unforeseen issues, including data breaches or service interruptions. Users are
+                    encouraged to use the service with this understanding.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+{% endblock content %}
