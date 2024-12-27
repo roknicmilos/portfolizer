@@ -11,3 +11,7 @@ class PageNotFoundView(TemplateView):
 
 class PrivacyPolicyView(TemplateView):
     template_name = "privacy_policy.html"
+
+
+class TermsAndConditionsView(TemplateView):
+    template_name = "terms_&_conditions.html"
