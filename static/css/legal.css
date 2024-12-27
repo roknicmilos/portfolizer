@@ -13,7 +13,7 @@ h2 {
     margin: 6px 0;
 }
 
-.privacy-policy-section {
+.legal-section {
     @media only screen and (max-width: 768px) {
         padding-right: 20px;
     }

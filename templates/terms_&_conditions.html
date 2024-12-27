@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% load i18n static %}
+
+{% block title %}{% trans "Terms & Conditions" %}{% endblock title %}
+
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/legal.css' %}">
+{% endblock head %}
+
+{% block content %}
+    <h1>{% trans "Terms & Conditions" %}</h1>
+    <section class="legal-section">
+        <h2>{% trans "Introduction" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    Welcome to Portfolizer! These Terms & Conditions ("Terms") govern your use of our
+                    website ("Service"). By accessing or using Portfolizer, you agree to comply with
+                    these Terms.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="legal-section">
+        <h2>{% trans "Eligibility" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    You must be at least 18 years old or have parental/guardian consent to use Portfolizer.
+                    By using the Service, you confirm that you meet these requirements.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="legal-section">
+        <h2>{% trans "User Responsibilities" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                <p class="items-title">{% trans "By using Portfolizer, you agree not to:" %}</p>
+                <ul class="items-lvl-2">
+                    <li>
+                        {% trans "Use the website for illegal activities." %}
+                    </li>
+                    <li>
+                        {% trans "Post or share harmful, abusive, or offensive content." %}
+                    </li>
+                    <li>
+                        {% trans "Attempt to hack or disrupt the website." %}
+                    </li>
+                    <li>
+                        {% trans "Misuse personal information obtained from other users." %}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="legal-section">
+        <h2>{% trans "Account Management" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    Users are responsible for safeguarding their login credentials. We reserve the right to
+                    suspend or terminate accounts that violate these Terms or compromise the Service.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="legal-section">
+        <h2>{% trans "Intellectual Property" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    All content on Portfolizer, including text, images, and code, is owned by us or licensed
+                    to us. Unauthorized use or reproduction of this content is prohibited.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="legal-section">
+        <h2>{% trans "Limitation of Liability" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    Portfolizer is provided "as is" without warranties of any kind. We are not liable for any
+                    loss or damage resulting from the use of our Service.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="legal-section">
+        <h2>{% trans "Changes to the Service" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    We may update, modify, or discontinue the Service at any time without prior notice.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="legal-section">
+        <h2>{% trans "Governing Law" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    These Terms are governed by the laws of Serbia. Any disputes will be resolved under
+                    Serbian jurisdiction.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+    <section class="legal-section">
+        <h2>{% trans "Contact Information" %}</h2>
+        <ul class="items-lvl-1">
+            <li>
+                {% blocktrans %}
+                    For questions or concerns about these Terms, please contact us at roknic.milos.994@gmail.com.
+                {% endblocktrans %}
+            </li>
+        </ul>
+    </section>
+{% endblock content %}
