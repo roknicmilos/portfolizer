@@ -7,3 +7,7 @@ class IndexView(TemplateView):
 
 class PageNotFoundView(TemplateView):
     template_name = "404.html"
+
+
+class PrivacyPolicyView(TemplateView):
+    template_name = "privacy_policy.html"

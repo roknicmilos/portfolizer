@@ -4,7 +4,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from portfolizer.views import IndexView, PageNotFoundView
+from portfolizer.views import (
+    IndexView,
+    PageNotFoundView,
+    PrivacyPolicyView,
+)
 from apps.user.views import RegistrationView, LoginView
 
 urlpatterns = [
@@ -17,6 +21,7 @@ urlpatterns += i18n_patterns(
     path("", IndexView.as_view(), name="index"),
     path("login/", LoginView.as_view(), name="login"),
     path("register/", RegistrationView.as_view(), name="register"),
+    path("privacy-policy/", PrivacyPolicyView.as_view(), name="privacy_policy"),
     path("404/", PageNotFoundView.as_view(), name="404"),
     path("<slug:slug>/", include("apps.portfolio.urls", namespace="portfolio")),
 )
