@@ -21,6 +21,7 @@
   fields:
     portfolio: 1
     label: Testing
+    label_sr: Testiranje
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -48,6 +49,7 @@
   fields:
     portfolio: 1
     label: Databases
+    label_sr: Baze podataka
     level: 4
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -66,6 +68,7 @@
   fields:
     portfolio: 1
     label: Mentoring
+    label_sr: Mentorstvo
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -75,6 +78,7 @@
   fields:
     portfolio: 1
     label: Team Work
+    label_sr: Timski rad
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -84,6 +88,7 @@
   fields:
     portfolio: 1
     label: Organization
+    label_sr: Organizacija
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -93,6 +98,7 @@
   fields:
     portfolio: 1
     label: Communication
+    label_sr: Komunikacija
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
