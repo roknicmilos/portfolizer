@@ -11,7 +11,6 @@ nav {
     justify-content: center;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
 
-
     @media only screen and (max-width: 1200px) {
         width: 80%;
         padding: 0 10%;
@@ -98,7 +97,7 @@ nav {
 
 /* Opened main menu */
 .menu__main--opened {
-    transform: translateX(0); /* Slide into view */
+    transform: translateX(0) translateY(0); /* Slide into view */
     opacity: 1; /* Fully visible */
 }
 

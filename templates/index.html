@@ -1,25 +1,67 @@
 {% extends "base.html" %}
 
-{% load i18n static %}
+{% load i18n static svg %}
 
 {% block head %}
     <meta name="description"
           content="Portfolizer is a web application built with Django that enables users to create, customize, and manage their portfolio pages. Users can easily generate and download their portfolios as CVs in PDF format, providing a convenient way to showcase their professional experience and skills.">
     {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock head %}
 
 {% block content %}
-    <h1>{% trans "Portfolizer" %}</h1>
-    {% if request.user.is_anonymous %}
+
+    <h1>
+        Portfolizer
+        <span class="title-tagline">{% trans "Your Online Portfolio & Resume Builder" %}</span>
+    </h1>
+
+    <section class="section">
+        <h2>{% trans "Showcase Your Skills with Portfolizer" %}</h2>
         <p class="paragraph">
-            {% blocktranslate with register_url=user_menu.register.url login_url=user_menu.login.url %}
-                Portfolizer allows you to easily showcase your professional experience and skills. You can create,
-                customize, and manage your portfolio, and even generate and download it as a PDF CV, making it super
-                convenient to show off your work. New here? Go ahead and <a href="{{ register_url }}">register</a> to
-                create your portfolio. Already a member? <a href="{{ login_url }}">Log in</a> and... well, you know the
-                drill!
-            {% endblocktranslate %}
+            {% blocktrans %}
+                Create a professional portfolio and downloadable CV in minutes. Build your online presence
+                and share your expertise with the world.
+            {% endblocktrans %}
         </p>
+    </section>
+
+    <section class="section">
+        <h2>{% trans "Why Choose Portfolizer?" %}</h2>
+        <ul>
+            <li>
+                🖋️ <strong>{% trans "Easy Portfolio Builder" %}</strong>:
+                {% trans "No design skills required." %}
+            </li>
+            <li>
+                🌐 <strong>{% trans "Share portfolio" %}</strong>:
+                {% trans "Share your portfolio page with anyone." %}
+            </li>
+            <li>
+                📄 <strong>{% trans "Instant PDF CVs" %}</strong>:
+                {% trans "Download your resume in one click." %}
+            </li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>{% trans "How It Works" %}</h2>
+        <ol>
+            <li><strong>{% trans "Register" %}</strong>: {% trans "Sign up and create your account." %}</li>
+            <li><strong>{% trans "Build" %}</strong>: {% trans "Add your details, links, and projects." %}</li>
+            <li>
+                <strong>{% trans "Share or Download" %}</strong>:
+                {% trans "Share your portfolio page with anyone or generate a PDF" %}
+            </li>
+        </ol>
+    </section>
+
+    <div class="cv-background js-cv-background">
+        {% svg "svg/cv.svg" %}
+    </div>
+
+    {% if request.user.is_anonymous %}
+        <a class="go-to-button" href="{{ user_menu.register.url }}">{% trans "Create Your Portfolio Now!" %}</a>
     {% else %}
         {% if portfolio_menu.view %}
             <a class="go-to-button" href="{{ portfolio_menu.view.url }}">{{ portfolio_menu.view.label }}</a>
@@ -27,4 +69,5 @@
             <a class="go-to-button" href="{{ portfolio_menu.create.url }}">{{ portfolio_menu.create.label }}</a>
         {% endif %}
     {% endif %}
+
 {% endblock content %}
