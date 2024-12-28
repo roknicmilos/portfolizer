@@ -2,7 +2,7 @@
   pk: 1
   fields:
     portfolio: 1
-    label: Python
+    label: Backend
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -11,7 +11,7 @@
   pk: 2
   fields:
     portfolio: 1
-    label: Django
+    label: Frontend
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -20,7 +20,7 @@
   pk: 3
   fields:
     portfolio: 1
-    label: JavaScript
+    label: Testing
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -29,7 +29,7 @@
   pk: 4
   fields:
     portfolio: 1
-    label: TypeScript
+    label: CI/CD
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -38,7 +38,7 @@
   pk: 5
   fields:
     portfolio: 1
-    label: Next.js
+    label: REST API
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -47,8 +47,8 @@
   pk: 6
   fields:
     portfolio: 1
-    label: React
-    level: 5
+    label: Databases
+    level: 4
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -56,8 +56,8 @@
   pk: 7
   fields:
     portfolio: 1
-    label: HTML
-    level: 5
+    label: DevOps
+    level: 4
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
@@ -65,7 +65,7 @@
   pk: 8
   fields:
     portfolio: 1
-    label: SCSS
+    label: Mentoring
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -74,7 +74,7 @@
   pk: 9
   fields:
     portfolio: 1
-    label: CSS
+    label: Team Work
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -83,7 +83,7 @@
   pk: 10
   fields:
     portfolio: 1
-    label: Git
+    label: Organization
     level: 5
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
@@ -92,71 +92,8 @@
   pk: 11
   fields:
     portfolio: 1
-    label: GitHub
+    label: Communication
     level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
-
-- model: portfolio.Skill
-  pk: 12
-  fields:
-    portfolio: 1
-    label: SQL
-    level: 4
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
-
-- model: portfolio.Skill
-  pk: 13
-  fields:
-    portfolio: 1
-    label: PostgreSQL
-    level: 4
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
-
-- model: portfolio.Skill
-  pk: 14
-  fields:
-    portfolio: 1
-    label: Docker
-    level: 4
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
-
-- model: portfolio.Skill
-  pk: 15
-  fields:
-    portfolio: 1
-    label: Cypress
-    level: 4
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
-
-- model: portfolio.Skill
-  pk: 16
-  fields:
-    portfolio: 1
-    label: Ubuntu
-    level: 4
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
-
-- model: portfolio.Skill
-  pk: 17
-  fields:
-    portfolio: 1
-    label: Bash
-    level: 3
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
-
-- model: portfolio.Skill
-  pk: 18
-  fields:
-    portfolio: 1
-    label: PHP
-    level: 3
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
 
