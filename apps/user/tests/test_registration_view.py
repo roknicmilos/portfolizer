@@ -21,6 +21,7 @@ class TestRegistrationView(TestCase):
             "email": "example@example.com",
             "password1": "pass4user",
             "password2": "pass4user",
+            "has_accepted_terms_and_policy": True,
         }
 
         response = self.client.post(path=self.url_path, data=data)
@@ -41,12 +42,18 @@ class TestRegistrationView(TestCase):
         self.assertEqual(actual_permissions, expected_permissions)
 
     def test_post_error_response(self):
+        """
+        When the user submits invalid data, the user should be
+        redirected back to the registration page and should be
+        shown the error message.
+        """
         existing_user = UserFactory()
         self.assertEqual(User.objects.count(), 1)
         data = {
             "email": existing_user.email,
             "password1": "pass4user",
             "password2": "pass4user",
+            "has_accepted_terms_and_policy": True,
         }
         self.client.post(path=self.url_path, data=data)
 

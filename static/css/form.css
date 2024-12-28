@@ -8,6 +8,12 @@
     margin-bottom: 6px;
 }
 
+.input-field--checkbox label {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
 .input-field .label-text {
     padding: 4px 0;
     font-size: 20px;
@@ -20,6 +26,12 @@
     font-size: 20px;
     border: 2px solid #606060;
     border-radius: 5px;
+}
+
+.input-field input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+    margin: 0 20px 0 0;
 }
 
 .input-field .help-text {
