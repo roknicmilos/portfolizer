@@ -17,6 +17,7 @@
         {% include "includes/input_field.html" with field=form.email %}
         {% include "includes/input_field.html" with field=form.password1 %}
         {% include "includes/input_field.html" with field=form.password2 %}
+        {% include "includes/input_field.html" with field=form.has_accepted_terms_and_policy %}
         <div class="button-row">
             <input class="go-to-button" type="submit" value="{% trans "Register" %}"/>
         </div>
