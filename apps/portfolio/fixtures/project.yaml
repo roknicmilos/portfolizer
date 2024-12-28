@@ -9,7 +9,7 @@
     start: 2024-01-01
     tools:
       Next.js, TypeScript, SCSS, Cypress, Jest, Docker, Docker Compose,
-      Travis CI, Python, Django, Pytest, PostgreSQL, REST API
+      Travis CI, Python, Django, Django REST Framework, Pytest, PostgreSQL
     tools_title: Technologies
     tools_title_sr: Tehnologije
     description:
@@ -136,3 +136,71 @@
       Zla".
     created: 2024-09-01T00:00:00Z
     modified: 2024-09-01T00:00:00Z
+
+- model: portfolio.Project
+  pk: 5
+  fields:
+    portfolio: 1
+    name: AI Chatbot
+    role: Backend/Python Consultant
+    role_sr: Konsultant za Backend/Python
+    start: 2024-07-01
+    end: 2024-11-01
+    tools:
+      Python, FastAPI, SQLAlchemy, Alembic, Amazon Bedrock, LLM Models, Pinecone,
+      S3, Postgres, Docker, GitLab CI/CD, Pytest, Ruff, Poetry
+    tools_title: Technologies
+    tools_title_sr: Tehnologije
+    description:
+      A SaaS platform that enables company owners to embed content-aware chatbots on
+      their websites, allowing visitors to interact with and explore the company's
+      annual reports. Built using FastAPI and powered by LLM models hosted on Amazon
+      Bedrock, I was responsible for defining the overall architecture (technology
+      stacks, frameworks, and tools), ensuring adherence to coding standards and best
+      practices, participating in feature and functionality decisions, and conducting
+      pull request reviews.
+    description_sr:
+      SaaS platforma koja omogućava vlasnicima kompanija da na svojim veb-sajtovima
+      integrišu chat botove koji razumeju sadržaj, omogućavajući posetiocima da
+      interaguju sa godišnjim izveštajima kompanije. Platforma je izgrađena korišćenjem
+      FastAPI-ja i pokreću je LLM modeli hostovani na Amazon Bedrock-u. Bio sam odgovoran
+      za definisanje ukupne arhitekture (tehnološki stackovi, okviri i alati), osiguravanje
+      pridržavanja kodnih standarda i najboljih praksi, učestvovanje u donošenju odluka o
+      funkcionalnostima i karakteristikama, kao i pregledanje pull request-ova.
+    created: 2024-12-28T00:00:00Z
+    modified: 2024-12-28T00:00:00Z
+
+- model: portfolio.Project
+  pk: 6
+  fields:
+    portfolio: 1
+    name: Portfolizer
+    role: Full Stack Software Engineer
+    role_sr: Full Stack Softver Inženjer
+    start: 2024-07-01
+    tools:
+      Python, Django, Pytest, Ruff, Poetry, Postgres, Docker, Docker Compose,
+      GitHub Actions, DigitalOcean, Nginx, Gunicorn, HTML, SCSS, JavaScript
+    tools_title: Technologies
+    tools_title_sr: Tehnologije
+    description:
+      A personal project where I took on the role of a one-man army.
+      Portfolizer is a Django-based platform for creating and managing
+      professional portfolios, enabling users to showcase their skills and
+      projects. I leveraged Django's built-in admin interface and user
+      authentication for streamlined content management. The platform is
+      containerized and deployed using Docker, integrated with GitHub Actions
+      for automated testing and deployment. It is hosted on DigitalOcean,
+      optimized for performance and scalability using Nginx and Gunicorn.
+    description_sr:
+      Lični projekat u kojem sam preuzeo ulogu tima od jednog čoveka.
+      Portfolizer je platforma zasnovana na Django-u za kreiranje i
+      upravljanje profesionalnim portfolijima, omogućavajući korisnicima
+      da prikažu svoje veštine i projekte. Iskoristio sam Django-ov ugrađeni
+      admin interfejs i funkcionalnost autentifikacije korisnika za
+      pojednostavljeno upravljanje sadržajem. Platforma je kontejnerizovana
+      i implementirana pomoću Dockera, sa integracijom u GitHub Actions za
+      automatizovano testiranje i deploy. Hostovana je na DigitalOcean-u i
+      optimizovana za performanse i skalabilnost koristeći Nginx i Gunicorn.
+    created: 2024-12-28T00:00:00Z
+    modified: 2024-12-28T00:00:00Z

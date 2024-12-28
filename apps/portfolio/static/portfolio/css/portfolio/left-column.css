@@ -50,7 +50,7 @@
     width: 80%;
     margin: 0 auto;
     max-width: 300px;
-    page-break-inside: avoid;
+    page-break-inside: avoid; /* This forces the element to break to the next page if doesn't fit on the current page */
 }
 
 .left-segment:last-of-type {

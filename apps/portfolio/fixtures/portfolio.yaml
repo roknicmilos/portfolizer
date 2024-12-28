@@ -6,7 +6,7 @@
     slug: roknic-milos
     title: Miloš Roknić
     filename: CV-Milos-Roknic-08-2024.pdf
-    page_count: 2
+    page_count: 3
     avatar: portfolio/images/roknic-milos.jpg
     first_name: Miloš
     last_name: Roknić
@@ -18,23 +18,36 @@
     address_label_sr: Kornelija Stankovića 39, Novi Sad, 21000, Srbija
     address_link: https://www.google.rs/maps/place/Kornelija+Stankovi%C4%87a+39,+Novi+Sad/@45.2600114,19.8085096,15.91z/data=!4m6!3m5!1s0x475b11b16298fc2d:0xa5444cbbc3bf8f26!8m2!3d45.2605492!4d19.8103612!16s%2Fg%2F11fx0qw3pz?hl=hr&entry=ttu
     birthday: 1994-02-13
+    fourth_left_segment: languages
+    fifth_left_segment: skills
     about_me:
-      After completing programming courses and internships at two companies,
-      I secured a permanent Software Engineer role in the second one, working
-      primarily with PHP technologies. I later transitioned to Python/Django
-      and led two internal hackathon projects in the past two years. I also
-      gained experience with Docker, CI tools, testing frameworks and mentored
-      colleagues and students in Python/Django and React. I also took on a
-      Development Lead role, managing six colleagues' career progression.
+      I grew up in Borovo, a village in Croatia, and moved to Novi Sad, Serbia,
+      in 2012 to study Business Psychology. During my studies, I discovered a
+      passion for programming, which led me to pursue a career in tech. After
+      completing programming courses and internships at two companies, I secured
+      a permanent Software Engineer role, initially working with PHP technologies.
+      A year later, I transitioned to Python/Django, where I expanded my knowledge of
+      Docker, CI tools, testing, and mentoring colleagues and students in
+      Python/Django and React technologies, and led two internal hackathon projects.
+      I also embraced a Development Lead role, guiding the career progression of my
+      colleagues. On the creative side, I’m known among my peers for writing and
+      filming humorous video sketches, earning myself the unofficial (but prestigious)
+      title of Chief Sketch Officer. Sure, I gave myself the title, and no one else
+      knows about it, but that hasn’t stopped me from proudly including it on my CV.
     about_me_sr:
-      Nakon završetka kurseva programiranja i praksi u dve kompanije, dobio
-      sam stalnu poziciju Softverskog inženjera u drugoj kompaniji, gde sam
-      prvenstveno radio sa PHP tehnologijama. Kasnije sam prešao na Python/Django
-      i vodio dva interna hackathon projekta u poslednje dve godine. Takođe sam
-      stekao iskustvo sa Docker-om, CI alatima, okvirima za testiranje i
-      mentorisanjem kolega i studenata u Python/Django i React tehnologijama.
-      Preuzeo sam i ulogu Development Lead-a, upravljajući razvojem karijere šest
-      kolega.
+      Odrastao sam u Borovu, selu u Hrvatskoj, a 2012. godine preselio sam se u Novi Sad,
+      Srbija, kako bih studirao Poslovnu Psihologiju. Tokom studija otkrio sam strast
+      prema programiranju, što me je navelo da započnem karijeru u IT industriji. Nakon
+      završetka kurseva programiranja i praksi u dve kompanije, dobio sam stalnu poziciju
+      kao Softverski Inženjer, gde sam u početku radio sa PHP tehnologijama.
+      Godinu dana kasnije prešao sam na Python/Django, gde sam proširio svoje znanje u
+      oblasti Dockera, CI alata, testiranja i mentorisanja kolega i studenata u
+      Python/Django i React tehnologijama, te sam vodio dva interna hackathon projekta.
+      Takođe sam preuzeo ulogu Development Lead-a, pomažući u razvoju karijera svojih kolega.
+      Sa kreativne strane, poznat sam među kolegama po pisanju i snimanju humorističnih
+      video skečeva, čime sam sebi dodelio (i vrlo prestižnu) titulu Chief Sketch Officer-a.
+      Da, sam sam se proglasio za to, i niko drugi ne zna da imam tu titulu, ali me to ne
+      sprečava da je ponosno stavim u svoj CV.
     about_me_segment_title_sr: O MENI
     contact_segment_title_sr: KONTAKT
     education_segment_title_sr: OBRAZOVANJE
