@@ -1,0 +1,57 @@
+.section {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.section li {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.section h2 {
+    @media only screen and (max-width: 768px) {
+        width: 85%;
+        margin: 10px auto 20px;
+    }
+}
+
+.section ol,
+.section ul {
+    @media only screen and (max-width: 768px) {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+.cv-background {
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    height: 500px;
+    width: 500px;
+    opacity: 0.08;
+    transform: rotate(25deg);
+    z-index: 1;
+
+    @media only screen and (max-width: 1900px) {
+        right: 5%;
+    }
+
+    @media only screen and (max-width: 1400px) {
+        right: 0;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        display: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+.cv-background svg {
+    height: 100%;
+    width: 100%;
+}

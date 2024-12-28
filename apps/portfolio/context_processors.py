@@ -35,7 +35,7 @@ def _init_view_portfolio_button(portfolio: Portfolio) -> ButtonLink | None:
         return None
 
     url = reverse(viewname="portfolio:index", kwargs={"slug": portfolio.slug})
-    return ButtonLink(label=_("VIEW PORTFOLIO"), url=url)
+    return ButtonLink(label=_("MY PORTFOLIO"), url=url)
 
 
 def _init_edit_portfolio_button(portfolio: Portfolio) -> ButtonLink | None:

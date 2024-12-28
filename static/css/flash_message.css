@@ -13,6 +13,7 @@
     align-items: center;
     background-color: #e7f0f7;
     color: black;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
     z-index: 1;
     animation: slideInFromTop 0.5s ease-out;
 

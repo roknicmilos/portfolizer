@@ -48,7 +48,7 @@ class TestContextProcessors(TestCase):
         # When user has a portfolio:
         portfolio = PortfolioFactory(user=user)
         view_portfolio_button = ButtonLink(
-            label=_("VIEW PORTFOLIO"),
+            label=_("MY PORTFOLIO"),
             url=reverse("portfolio:index", kwargs={"slug": portfolio.slug}),
         )
         edit_portfolio_button = ButtonLink(
