@@ -164,7 +164,7 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
 
     @property
     def ordered_skills(self) -> models.QuerySet:
-        return self.skills.order_by("-level")
+        return self.skills.order_by("-level", "created")
 
     @property
     def ordered_projects(self) -> models.QuerySet:

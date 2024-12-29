@@ -4,8 +4,8 @@
     portfolio: 1
     label: Backend
     level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    created: 2024-12-29T00:00:00Z
+    modified: 2024-12-29T00:00:00Z
 
 - model: portfolio.Skill
   pk: 2
@@ -13,17 +13,18 @@
     portfolio: 1
     label: Frontend
     level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    created: 2024-12-29T00:00:01Z
+    modified: 2024-12-29T00:00:01Z
 
 - model: portfolio.Skill
   pk: 3
   fields:
     portfolio: 1
     label: Testing
+    label_sr: Testiranje
     level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    created: 2024-12-29T00:00:02Z
+    modified: 2024-12-29T00:00:02Z
 
 - model: portfolio.Skill
   pk: 4
@@ -31,8 +32,8 @@
     portfolio: 1
     label: CI/CD
     level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    created: 2024-12-29T00:00:03Z
+    modified: 2024-12-29T00:00:03Z
 
 - model: portfolio.Skill
   pk: 5
@@ -40,65 +41,60 @@
     portfolio: 1
     label: REST API
     level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    created: 2024-12-29T00:00:04Z
+    modified: 2024-12-29T00:00:04Z
 
 - model: portfolio.Skill
   pk: 6
   fields:
     portfolio: 1
-    label: Databases
+    label: DevOps
     level: 4
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    created: 2024-12-29T00:00:06Z
+    modified: 2024-12-29T00:00:06Z
 
 - model: portfolio.Skill
   pk: 7
   fields:
     portfolio: 1
-    label: DevOps
-    level: 4
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    label: Mentoring
+    label_sr: Mentorstvo
+    level: 5
+    created: 2024-12-29T00:00:07Z
+    modified: 2024-12-29T00:00:07Z
 
 - model: portfolio.Skill
   pk: 8
   fields:
     portfolio: 1
-    label: Mentoring
+    label: Team Work
+    label_sr: Timski rad
     level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    created: 2024-12-29T00:00:08Z
+    modified: 2024-12-29T00:00:08Z
 
 - model: portfolio.Skill
   pk: 9
   fields:
     portfolio: 1
-    label: Team Work
+    label: Organization
+    label_sr: Organizacija
     level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    created: 2024-12-29T00:00:09Z
+    modified: 2024-12-29T00:00:09Z
 
 - model: portfolio.Skill
   pk: 10
   fields:
     portfolio: 1
-    label: Organization
+    label: Communication
+    label_sr: Komunikacija
     level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
+    created: 2024-12-29T00:00:10Z
+    modified: 2024-12-29T00:00:10Z
 
 - model: portfolio.Skill
   pk: 11
-  fields:
-    portfolio: 1
-    label: Communication
-    level: 5
-    created: 2024-09-01T00:00:00Z
-    modified: 2024-09-01T00:00:00Z
-
-- model: portfolio.Skill
-  pk: 19
   fields:
     portfolio: 2
     label: Advanced Manipulation Techniques
@@ -108,7 +104,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 20
+  pk: 12
   fields:
     portfolio: 2
     label: Prank Planning and Execution
@@ -118,7 +114,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 21
+  pk: 13
   fields:
     portfolio: 2
     label: Strategic Persuasion
@@ -128,7 +124,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 22
+  pk: 14
   fields:
     portfolio: 2
     label: Chaos Theory Application
@@ -138,7 +134,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 23
+  pk: 15
   fields:
     portfolio: 2
     label: Ethical Ambiguity
@@ -148,7 +144,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 24
+  pk: 16
   fields:
     portfolio: 2
     label: Good Friend

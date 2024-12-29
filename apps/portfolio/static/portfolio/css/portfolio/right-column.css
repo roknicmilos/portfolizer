@@ -17,7 +17,6 @@
 .right-segment {
     width: 90%;
     margin: 0 auto 10px auto;
-    page-break-inside: avoid; /* This forces the element to break to the next page if doesn't fit on the current page */
 }
 
 .page--html .right-segment {

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 12:51+0000\n"
+"POT-Creation-Date: 2024-12-29 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian <LL@li.org>\n"
@@ -19,23 +19,28 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
+#: apps/common/validators.py:9
+#, python-format
+msgid "Ensure the file size is not greater than %(limit_value)s KB."
+msgstr "Veličina fajla ne sme biti veća od %(limit_value)s KB."
+
 #: apps/portfolio/admin/education_inline.py:11
 msgid "EDUCATION (L)"
 msgstr "OBRAZOVANJE (L)"
 
-#: apps/portfolio/admin/employment_inline.py:11
+#: apps/portfolio/admin/employment_inline.py:12
 msgid "EMPLOYMENT (R)"
 msgstr "ZAPOSLENJE (R)"
 
-#: apps/portfolio/admin/internship_inline.py:11
+#: apps/portfolio/admin/internship_inline.py:12
 msgid "INTERNSHIP (L)"
 msgstr "PRAKSA (L)"
 
-#: apps/portfolio/admin/language_inline.py:11
+#: apps/portfolio/admin/language_inline.py:12
 msgid "LANGUAGES (L)"
 msgstr "JEZICI (L)"
 
-#: apps/portfolio/admin/link_inline.py:11
+#: apps/portfolio/admin/link_inline.py:12
 msgid "LINKS (L)"
 msgstr "LINKOVI (L)"
 
@@ -86,15 +91,14 @@ msgstr "Sačuvajte Portfolio da biste generisali link."
 
 #: apps/portfolio/admin/portfolio_admin.py:179
 #: apps/portfolio/tests/test_portfolio_admin.py:34
-#, python-brace-format
-msgid "Display {portfolio}"
-msgstr "Prikaži {portfolio}"
+msgid "Show portfolio page"
+msgstr "Prikaži stranicu portfolija"
 
-#: apps/portfolio/admin/project_inline.py:13
+#: apps/portfolio/admin/project_inline.py:14
 msgid "PROJECTS (R)"
 msgstr "PROJEKTI (R)"
 
-#: apps/portfolio/admin/skill_inline.py:11
+#: apps/portfolio/admin/skill_inline.py:12
 msgid "SKILLS (R)"
 msgstr "VEŠTINE (R)"
 
@@ -105,8 +109,8 @@ msgstr "KREIRAJ PORTFOLIO"
 
 #: apps/portfolio/context_processors.py:38
 #: apps/portfolio/tests/test_context_processors.py:51
-msgid "VIEW PORTFOLIO"
-msgstr "POGLEDAJ PORTFOLIO"
+msgid "MY PORTFOLIO"
+msgstr "MOJ PORTFOLIO"
 
 #: apps/portfolio/context_processors.py:46
 #: apps/portfolio/tests/test_context_processors.py:55
@@ -114,7 +118,7 @@ msgid "EDIT PORTFOLIO"
 msgstr "UREDI PORTFOLIO"
 
 #: apps/portfolio/models/education.py:10 apps/portfolio/models/language.py:11
-#: apps/portfolio/models/link.py:15 apps/portfolio/models/portfolio.py:135
+#: apps/portfolio/models/link.py:15 apps/portfolio/models/portfolio.py:147
 #: apps/portfolio/models/position.py:10 apps/portfolio/models/project.py:10
 #: apps/portfolio/models/skill.py:11
 msgid "Portfolio"
@@ -156,7 +160,7 @@ msgid "location"
 msgstr "lokacija"
 
 #: apps/portfolio/models/education.py:44 apps/portfolio/models/position.py:43
-#: apps/portfolio/models/project.py:44
+#: apps/portfolio/models/project.py:49
 msgid "description"
 msgstr "opis"
 
@@ -320,31 +324,31 @@ msgstr "URL"
 msgid "Link"
 msgstr "Link"
 
-#: apps/portfolio/models/portfolio.py:19
+#: apps/portfolio/models/portfolio.py:20
 msgid "user"
 msgstr "korisnik"
 
-#: apps/portfolio/models/portfolio.py:26
+#: apps/portfolio/models/portfolio.py:27
 msgid "is published"
 msgstr "je objavljeno"
 
-#: apps/portfolio/models/portfolio.py:30
+#: apps/portfolio/models/portfolio.py:31
 msgid "slug"
 msgstr "slug"
 
-#: apps/portfolio/models/portfolio.py:35 apps/portfolio/models/position.py:14
+#: apps/portfolio/models/portfolio.py:39 apps/portfolio/models/position.py:14
 msgid "title"
 msgstr "naslov"
 
-#: apps/portfolio/models/portfolio.py:39
+#: apps/portfolio/models/portfolio.py:43
 msgid "filename"
 msgstr "naziv fajla"
 
-#: apps/portfolio/models/portfolio.py:43
+#: apps/portfolio/models/portfolio.py:47
 msgid "page count"
 msgstr "broj stranica"
 
-#: apps/portfolio/models/portfolio.py:46
+#: apps/portfolio/models/portfolio.py:50
 msgid ""
 "If the content of your Portfolio does not fit on one page, the content will "
 "be automatically split into multiple pages. Set the expected number of pages "
@@ -354,73 +358,81 @@ msgstr ""
 "automatski podeliti na više stranica. Postavite očekivani broj stranica ovde "
 "da biste primenili stil prve stranice na sve stranice."
 
-#: apps/portfolio/models/portfolio.py:57
+#: apps/portfolio/models/portfolio.py:61
 msgid "avatar"
 msgstr "avatar"
 
-#: apps/portfolio/models/portfolio.py:66
+#: apps/portfolio/models/portfolio.py:70
 msgid "first name"
 msgstr "ime"
 
-#: apps/portfolio/models/portfolio.py:72
+#: apps/portfolio/models/portfolio.py:76
 msgid "last name"
 msgstr "prezime"
 
-#: apps/portfolio/models/portfolio.py:78 apps/portfolio/models/project.py:19
+#: apps/portfolio/models/portfolio.py:82 apps/portfolio/models/project.py:19
 msgid "role"
 msgstr "uloga"
 
-#: apps/portfolio/models/portfolio.py:84
+#: apps/portfolio/models/portfolio.py:88
 msgid "email"
 msgstr "email"
 
-#: apps/portfolio/models/portfolio.py:90
+#: apps/portfolio/models/portfolio.py:94
 msgid "phone"
 msgstr "telefon"
 
-#: apps/portfolio/models/portfolio.py:96
+#: apps/portfolio/models/portfolio.py:100
 msgid "address label"
 msgstr "labela adrese"
 
-#: apps/portfolio/models/portfolio.py:102
+#: apps/portfolio/models/portfolio.py:106
 msgid "address link"
 msgstr "link adrese"
 
-#: apps/portfolio/models/portfolio.py:108
+#: apps/portfolio/models/portfolio.py:112
 msgid "birthday"
 msgstr "datum rođenja"
 
-#: apps/portfolio/models/portfolio.py:113
+#: apps/portfolio/models/portfolio.py:117
 msgid "about me"
 msgstr "o meni"
 
-#: apps/portfolio/models/portfolio.py:118
+#: apps/portfolio/models/portfolio.py:122
 msgid "PDF button background color"
 msgstr "Boja pozadine PDF dugmeta"
 
-#: apps/portfolio/models/portfolio.py:122
+#: apps/portfolio/models/portfolio.py:126
 msgid "PDF button SVG color"
 msgstr "Boja SVG PDF dugmeta"
 
-#: apps/portfolio/models/portfolio.py:126
+#: apps/portfolio/models/portfolio.py:130
 msgid "Edit button background color"
 msgstr "Boja pozadine dugmeta za uređivanje"
 
-#: apps/portfolio/models/portfolio.py:130
+#: apps/portfolio/models/portfolio.py:134
 msgid "Edit button SVG color"
 msgstr "Boja SVG dugmeta za uređivanje"
 
-#: apps/portfolio/models/portfolio.py:136
+#: apps/portfolio/models/portfolio.py:138
+msgid "Language button background color"
+msgstr "Boja pozadine dugmeta jezika"
+
+#: apps/portfolio/models/portfolio.py:142
+msgid "Language button SVG color"
+msgstr "Boja SVG dugmeta jezika"
+
+#: apps/portfolio/models/portfolio.py:148
 msgid "Portfolios"
 msgstr "Portfoliji"
 
-#: apps/portfolio/models/portfolio.py:186
+#: apps/portfolio/models/portfolio.py:198
 #: apps/portfolio/tests/test_portfolio.py:216
 #: apps/portfolio/tests/test_portfolio.py:228
 msgid "Portfolio can't be created for this user."
 msgstr "Portfolijo ne može biti kreiran za ovog korisnika."
 
-#: apps/portfolio/models/portfolio.py:188
+#: apps/portfolio/models/portfolio.py:200
 #: apps/portfolio/tests/test_portfolio.py:246
 msgid "Only one Portfolio can be created for this user."
 msgstr "Samo jedan Portfolijo može biti kreiran za ovog korisnika."
@@ -450,14 +462,18 @@ msgstr ""
 "Izaberite 1. ako ne znate tačan datum završetka."
 
 #: apps/portfolio/models/project.py:40
-msgid "technologies"
-msgstr "tehnologije"
+msgid "tools"
+msgstr ""
 
-#: apps/portfolio/models/project.py:49
+#: apps/portfolio/models/project.py:44
+msgid "tools title"
+msgstr "naslov alata"
+
+#: apps/portfolio/models/project.py:54
 msgid "Project"
 msgstr "Projekat"
 
-#: apps/portfolio/models/project.py:50
+#: apps/portfolio/models/project.py:55
 #: apps/portfolio/models/right_portfolio_column_mixin.py:12
 msgid "Projects"
 msgstr "Projekti"
@@ -590,38 +606,39 @@ msgstr ""
 "segment će biti premešten na sledeću stranicu.\n"
 "                    "
 
-#: apps/portfolio/templates/portfolio/includes/education.html:10
-#: apps/portfolio/templates/portfolio/includes/employment.html:10
+#: apps/portfolio/templates/portfolio/includes/education.html:14
+#: apps/portfolio/templates/portfolio/includes/employment.html:14
 #: apps/portfolio/templates/portfolio/includes/internship.html:10
-#: apps/portfolio/templates/portfolio/includes/projects.html:9
+#: apps/portfolio/templates/portfolio/includes/projects.html:13
 msgid "Present"
 msgstr "Trenutno"
 
-#: apps/portfolio/templates/portfolio/includes/projects.html:11
-msgid "Technologies"
-msgstr "Tehnologije"
-
-#: apps/portfolio/templates/portfolio/includes/projects.html:13
+#: apps/portfolio/templates/portfolio/includes/projects.html:17
 msgid "Description"
 msgstr "Opis"
 
-#: apps/portfolio/templates/portfolio/portfolio_content.html:47
-msgid "Download"
-msgstr "Sačuvaj"
-
-#: apps/portfolio/templates/portfolio/portfolio_content.html:54
+#: apps/portfolio/templates/portfolio/portfolio_content.html:48
 msgid "Edit"
 msgstr "Uredi"
 
-#: apps/user/admin/user_admin.py:35
-msgid "Personal info"
-msgstr "Lični podaci"
+#: apps/portfolio/templates/portfolio/portfolio_content.html:55
+msgid "Download"
+msgstr "Sačuvaj"
 
-#: apps/user/admin/user_admin.py:44
+#: apps/portfolio/validators.py:9
+#, python-format
+msgid "The slug '%(value)s' is reserved and cannot be used."
+msgstr "Slug '%(value)s' je rezervisan i ne može biti korišćen."
+
+#: apps/portfolio/views/portfolio_pdf_view.py:29
+msgid "This portfolio is not published and can only be viewed by you."
+msgstr "Ovaj portfolijo nije objavljen i možete ga videti samo vi."
+
+#: apps/user/admin/user_admin.py:35
 msgid "Permissions"
 msgstr "Dozvole"
 
-#: apps/user/admin/user_admin.py:56
+#: apps/user/admin/user_admin.py:47
 msgid "Important dates"
 msgstr "Važni datumi"
 
@@ -645,12 +662,25 @@ msgstr "PODEŠAVANJA NALOGA"
 msgid "LOGOUT"
 msgstr "ODJAVA"
 
+#: apps/user/forms/registration_form.py:19
+msgid "I agree to the Terms & Conditions and acknowledge the Privacy Policy."
+msgstr "Slažem se sa Uslovima Korišćenja i priznajem Politiku Privatnosti."
+
+#: apps/user/forms/registration_form.py:23
+msgid ""
+"Please read and accept the Terms & Conditions and Privacy Policy before "
+"proceeding. You can find them by clicking the links in the footer."
+msgstr ""
+"Molimo vas da pročitate i prihvatite uslove korišćenja i politiku "
+"privatnosti pre nego što nastavite. Možete ih pronaći klikom na linkove u "
+"podnožju."
+
 #: apps/user/models/user.py:44
 msgid "email address"
 msgstr "email adresa"
 
 #: apps/user/templates/user/login.html:5 apps/user/templates/user/login.html:14
-#: apps/user/templates/user/login.html:20
+#: apps/user/templates/user/login.html:27
 msgid "Login"
 msgstr "Prijava"
 
@@ -659,7 +689,7 @@ msgstr "Prijava"
 msgid "Registration"
 msgstr "Registracija"
 
-#: apps/user/templates/user/registration.html:23
+#: apps/user/templates/user/registration.html:22 templates/index.html:51
 msgid "Register"
 msgstr "Registracija"
 
@@ -685,49 +715,668 @@ msgstr ""
 "                na početnu stranicu. 😮‍💨\n"
 "            "
 
-#: templates/base.html:8 templates/index.html:5 templates/index.html:16
+#: templates/base.html:8
 msgid "Portfolizer"
 msgstr "Portfolizer"
+
+#: templates/base.html:33
+msgid "LEGAL"
+msgstr "PRAVNO"
+
+#: templates/base.html:35 templates/privacy_policy.html:5
+#: templates/privacy_policy.html:13
+msgid "Privacy Policy"
+msgstr "Politika Privatnosti"
+
+#: templates/base.html:38 templates/terms_&_conditions.html:5
+#: templates/terms_&_conditions.html:13
+msgid "Terms & Conditions"
+msgstr "Uslovi Korišćenja"
+
+#: templates/base.html:42
+msgid "CONTACT"
+msgstr "KONTAKT"
+
+#: templates/base.html:55
+msgid "All rights reserved."
+msgstr "Sva prava zadržana."
+
+#: templates/base.html:58
+msgid "Powered by"
+msgstr "Pokreće"
 
 #: templates/includes/language_dropdown.html:12
 msgid "LANGUAGE"
 msgstr "JEZIK"
 
-#: templates/includes/nav.html:23
-msgid "main menu"
-msgstr "glavni meni"
-
-#: templates/includes/nav.html:29
+#: templates/includes/nav.html:28
 msgid "HOME"
 msgstr "POČETNA"
 
-#: templates/index.html:19
-#, python-format
+#: templates/index.html:16
+msgid "Your Online Portfolio & Resume Builder"
+msgstr "Vaš Online Portfolijo & CV Kreator"
+
+#: templates/index.html:20
+msgid "Showcase Your Skills with Portfolizer"
+msgstr "Pokažite Vaše Veštine sa Portfolizerom"
+
+#: templates/index.html:22
 msgid ""
 "\n"
-"                Portfolizer allows you to easily showcase your professional "
-"experience and skills. You can create,\n"
-"                customize, and manage your portfolio, and even generate and "
-"download it as a PDF CV, making it super\n"
-"                convenient to show off your work. New here? Go ahead and <a "
-"href=\"%(register_url)s\">register</a> to\n"
-"                create your portfolio. Already a member? <a "
-"href=\"%(login_url)s\">Log in</a> and... well, you know the\n"
-"                drill!\n"
+"                Create a professional portfolio and downloadable CV in "
+"minutes. Build your online presence\n"
+"                and share your expertise with the world.\n"
 "            "
 msgstr ""
 "\n"
-"                Portfolizer vam omogućava da lako prikažete vaše "
-"profesionalno iskustvo i veštine. Možete kreirati,\n"
-"                prilagoditi i upravljati vašim portfolijem, pa čak i "
-"generisati i preuzeti ga kao PDF CV, čineći ga super\n"
-"                praktičnim za prikazivanje vašeg rada. Novi ovde? Idite i <a "
-"href=\"%(register_url)s\">registrujte se</a> da\n"
-"                kreirate vaš portfolio. Već ste član? <a "
-"href=\"%(login_url)s\">Prijavite se</a> i... pa, znate već\n"
-"                proceduru!\n"
+"                Kreirajte profesionalni portfolijo i preuzmite CV za "
+"nekoliko minuta. Izgradite svoje online prisustvo\n"
+"                i podelite svoje ekspertize sa svetom.\n"
 "            "
 
+#: templates/index.html:30
+msgid "Why Choose Portfolizer?"
+msgstr "Zašto Izabrati Portfolizer?"
+
+#: templates/index.html:33
+msgid "Easy Portfolio Builder"
+msgstr "Jednostavno Kreiranje Portfolija"
+
+#: templates/index.html:34
+msgid "No design skills required."
+msgstr "Veštine dizajna nisu potrebne."
+
+#: templates/index.html:37
+msgid "Share portfolio"
+msgstr "Podeli portfolijo"
+
+#: templates/index.html:38
+msgid "Share your portfolio page with anyone."
+msgstr "Podelite stranicu portfolija sa bilo kim."
+
+#: templates/index.html:41
+msgid "Instant PDF CVs"
+msgstr "Instant PDF CV-jevi"
+
+#: templates/index.html:42
+msgid "Download your resume in one click."
+msgstr "Preuzmite svoj CV u jednom kliku."
+
+#: templates/index.html:48
+msgid "How It Works"
+msgstr "Kako Radi"
+
+#: templates/index.html:52
+msgid "Sign up and create your account."
+msgstr "Registruj se i kreiraj svoj nalog."
+
+#: templates/index.html:55
+msgid "Build Portfolio"
+msgstr "Kreiraj Portfolijo"
+
+#: templates/index.html:56
+msgid "Add your details, links, and projects."
+msgstr "Dodajte svoje detalje, linkove i projekte."
+
+#: templates/index.html:59
+msgid "Share or Download"
+msgstr "Podeli ili Preuzmi"
+
+#: templates/index.html:60
+msgid "Share your portfolio page with anyone or generate a PDF"
+msgstr "Podelite stranicu portfolija sa bilo kim ili generišite PDF"
+
+#: templates/index.html:70
+msgid "Create Your Portfolio Now!"
+msgstr "Kreirajte Vaš Portfolijo!"
+
+#: templates/privacy_policy.html:15
+msgid "Data We Collect"
+msgstr "Podaci Koje Prikupljamo"
+
+#: templates/privacy_policy.html:18
+msgid "Account Data:"
+msgstr "Podaci o Nalogu:"
+
+#: templates/privacy_policy.html:20
+msgid "Email address and password are required for registration."
+msgstr "Email adresa i lozinka su obavezni za registraciju."
+
+#: templates/privacy_policy.html:24
+msgid "Portfolio Data:"
+msgstr "Portfolijo Podaci:"
+
+#: templates/privacy_policy.html:27
+msgid ""
+"\n"
+"                            Users can optionally provide personal "
+"information such as: first and last name, phone\n"
+"                            number, date of birth, location (address), "
+"social media links (e.g., LinkedIn, GitHub,\n"
+"                            website, etc.)\n"
+"                        "
+msgstr ""
+"\n"
+"                            Korisnici mogu opciono pružiti lične informacije "
+"kao što su: ime i prezime, broj telefona,\n"
+"                            datum rođenja, lokacija (adresa), linkovi "
+"profila na socijalnim mrežama (npr. LinkedIn, GitHub,\n"
+"                            veb stranica, itd.)\n"
+"                        "
+
+#: templates/privacy_policy.html:34
+msgid ""
+"\n"
+"                            Users must manually set an email address for "
+"display on their public portfolio pages.\n"
+"                        "
+msgstr ""
+"\n"
+"                            Korisnici moraju ručno postaviti email adresu za "
+"prikaz na njihovim javnim stranicama portfolija.\n"
+"                        "
+
+#: templates/privacy_policy.html:41
+msgid "Cookies:"
+msgstr "Kolačići:"
+
+#: templates/privacy_policy.html:44
+msgid ""
+"\n"
+"                            Portfolizer uses default Django cookies: "
+"csrftoken (used to protect against\n"
+"                            cross-site request forgery attacks), "
+"django_language (stores the user's language\n"
+"                            preference) and sessionid (used to maintain user "
+"session state after login).\n"
+"                        "
+msgstr ""
+"\n"
+"                            Portfolizer koristi podrazumevane Django "
+"kolačiće: csrftoken (koristi se za zaštitu od\n"
+"                            napada na zahtev preko različitih sajtova), "
+"django_language (čuva korisnikove preferencije\n"
+"                            jezika) i sessionid (koristi se za održavanje "
+"stanja korisničke sesije nakon prijave).\n"
+"                        "
+
+#: templates/privacy_policy.html:51
+msgid "These cookies are essential for website functionality."
+msgstr "Ovi kolačići su neophodni za funkcionalnost veb stranice."
+
+#: templates/privacy_policy.html:56
+msgid "Automatically Collected Data:"
+msgstr "Automatski Prikupljeni Podaci:"
+
+#: templates/privacy_policy.html:59
+msgid ""
+"\n"
+"                            We do not collect any data automatically, except "
+"data collected by Sentry (our error\n"
+"                            tracking service).\n"
+"                        "
+msgstr ""
+"\n"
+"                            Ne prikupljamo nikakve podatke automatski, osim "
+"podataka prikupljenih od strane Sentry-ja (našeg\n"
+"                            servisa za praćenje grešaka).\n"
+"                        "
+
+#: templates/privacy_policy.html:69
+msgid "How We Use Your Data"
+msgstr "Kako Koristimo Vaše Podatke"
+
+#: templates/privacy_policy.html:72
+msgid "Account Management:"
+msgstr "Upravljanje Nalogom:"
+
+#: templates/privacy_policy.html:74
+msgid ""
+"Email addresses are used for login, identifying users, and communication."
+msgstr ""
+"Email adrese se koriste za prijavu, identifikaciju korisnika i komunikaciju."
+
+#: templates/privacy_policy.html:78
+msgid "Portfolio Pages:"
+msgstr "Portfolijo Stranice:"
+
+#: templates/privacy_policy.html:81
+msgid ""
+"\n"
+"                            Optional personal information is used to "
+"generate user portfolios and PDFs.\n"
+"                        "
+msgstr ""
+"\n"
+"                            Opcioni lični podaci se koriste za generisanje "
+"korisničkih portfolija i PDF-ova.\n"
+"                        "
+
+#: templates/privacy_policy.html:86
+msgid ""
+"\n"
+"                            Users can choose to publish or unpublish their "
+"portfolio pages.\n"
+"                        "
+msgstr ""
+"\n"
+"                            Korisnici mogu izabrati da objave ili ne objave "
+"svoje stranice portfolija.\n"
+"                        "
+
+#: templates/privacy_policy.html:93
+msgid "Communication:"
+msgstr "Komunikacija:"
+
+#: templates/privacy_policy.html:96
+msgid ""
+"\n"
+"                            We may use your email address to send important "
+"updates, notifications, or promotional\n"
+"                            content related to Portfolizer.\n"
+"                        "
+msgstr ""
+"\n"
+"                            Možemo koristiti vašu email adresu da bismo vam "
+"poslali važne informacije u vezi ažuriranja Portfolizer-a, obaveštenja ili "
+"promotivni\n"
+"                            sadržaj vezan za Portfolizer.\n"
+"                        "
+
+#: templates/privacy_policy.html:106
+msgid "Data Sharing"
+msgstr "Deljenje Podataka"
+
+#: templates/privacy_policy.html:109
+msgid ""
+"\n"
+"                    We do not share your data with third parties. However, "
+"our website is hosted on DigitalOcean\n"
+"                    servers located in France.\n"
+"                "
+msgstr ""
+"\n"
+"                    Ne delimo vaše podatke sa trećim licima. Međutim, naša "
+"veb stranica je smeštena na DigitalOcean\n"
+"                    serverima smeštenim u Francuskoj.\n"
+"                "
+
+#: templates/privacy_policy.html:115
+msgid ""
+"\n"
+"                    Data collected by Sentry (our error tracking service) "
+"may include technical details such\n"
+"                    as error logs, IP addresses, and other metadata "
+"necessary for debugging. For more information,\n"
+"                    please refer to Sentry's Privacy Policy.\n"
+"                "
+msgstr ""
+"\n"
+"                    Podaci prikupljeni od strane Sentry-ja (našeg servisa za "
+"praćenje grešaka) mogu uključivati tehničke detalje\n"
+"                    kao što su logovi grešaka, IP adrese i drugi metapodaci "
+"neophodni za debagovanje. Za više informacija,\n"
+"                    molimo vas da se obratite Politici Privatnosti Sentry-"
+"ja.\n"
+"                "
+
+#: templates/privacy_policy.html:124
+msgid "Data Security"
+msgstr "Bezbednost Podataka"
+
+#: templates/privacy_policy.html:127
+msgid "Passwords are encrypted (hashed) before storage."
+msgstr "Lozinke su enkriptovane (hash-ovane) pre skladištenja."
+
+#: templates/privacy_policy.html:130
+msgid "Personal data is stored securely in our database."
+msgstr "Lični podaci su bezbedno smešteni u našoj bazi podataka."
+
+#: templates/privacy_policy.html:133
+msgid "HTTPS ensures data is encrypted during transmission."
+msgstr "HTTPS osigurava da su podaci enkriptovani tokom prenosa."
+
+#: templates/privacy_policy.html:136
+msgid "Only superusers can access all users and portfolios via Django Admin."
+msgstr ""
+"Samo superkorisnici mogu pristupiti svim korisnicima i portfolijima putem "
+"Django Admin."
+
+#: templates/privacy_policy.html:141
+msgid "User Rights"
+msgstr "Prava Korisnika"
+
+#: templates/privacy_policy.html:144
+msgid "Access and Update:"
+msgstr "Pristup i Ažuriranje:"
+
+#: templates/privacy_policy.html:145
+msgid "You can view and update your data via Django Admin."
+msgstr "Možete pregledati i ažurirati svoje podatke putem Django Admin."
+
+#: templates/privacy_policy.html:148
+msgid "Delete:"
+msgstr "Obriši:"
+
+#: templates/privacy_policy.html:149
+msgid "You can delete your account or unpublish/delete your portfolio."
+msgstr "Možete obrisati svoj nalog ili ne objaviti/obrisati svoj portfolijo."
+
+#: templates/privacy_policy.html:152
+msgid "Contact:"
+msgstr "Kontakt:"
+
+#: templates/privacy_policy.html:153
+msgid "For additional requests, contact us at roknic.milos.994@gmail.com."
+msgstr "Za dodatne zahteve, kontaktirajte nas na roknic.milos.994@gmail.com."
+
+#: templates/privacy_policy.html:158
+msgid "Cookies"
+msgstr "Kolačići"
+
+#: templates/privacy_policy.html:161
+msgid ""
+"\n"
+"                    The cookies we use are necessary for website "
+"functionality. You cannot reject these cookies,\n"
+"                    as they are essential for secure login and session "
+"management.\n"
+"                "
+msgstr ""
+"\n"
+"                    Kolačiće koje koristimo su neophodni za funkcionalnost "
+"veb stranice. Ne možete odbiti ove kolačiće,\n"
+"                    jer su neophodni za sigurnu prijavu i upravljanje "
+"sesijama.\n"
+"                "
+
+#: templates/privacy_policy.html:169
+msgid "Data Retention"
+msgstr "Zadržavanje Podataka"
+
+#: templates/privacy_policy.html:172
+msgid ""
+"\n"
+"                    Data is retained indefinitely. We may implement "
+"automatic deletion of inactive accounts in\n"
+"                    the future.\n"
+"                "
+msgstr ""
+"\n"
+"                    Podaci se zadržavaju neograničeno. Možemo implementirati "
+"automatsko brisanje neaktivnih naloga u\n"
+"                    budućnosti.\n"
+"                "
+
+#: templates/privacy_policy.html:180
+msgid "International Users"
+msgstr "Međunarodni Korisnici"
+
+#: templates/privacy_policy.html:183
+msgid ""
+"\n"
+"                    Portfolizer is hosted on servers in France. By using our "
+"website, you acknowledge that your\n"
+"                    data may be processed outside your country of "
+"residence.\n"
+"                "
+msgstr ""
+"\n"
+"                    Portfolizer je smešten na serverima u Francuskoj. "
+"Korišćenjem naše veb stranice, priznajete da vaši\n"
+"                    podaci mogu biti obrađeni van vaše zemlje prebivališta.\n"
+"                "
+
+#: templates/privacy_policy.html:191 templates/terms_&_conditions.html:114
+msgid "Contact Information"
+msgstr "Kontakt Informacije"
+
+#: templates/privacy_policy.html:194
+msgid ""
+"For privacy-related inquiries, please contact us at roknic.milos.994@gmail."
+"com."
+msgstr ""
+"Za upite vezane za privatnost, kontaktirajte nas na roknic.milos.994@gmail."
+"com."
+
+#: templates/privacy_policy.html:199
+msgid "Updates to this Policy"
+msgstr "Ažuriranja ove Politike"
+
+#: templates/privacy_policy.html:202
+msgid ""
+"\n"
+"                    We may update this Privacy Policy occasionally. Please "
+"review it periodically for changes.\n"
+"                "
+msgstr ""
+"\n"
+"                    Možemo povremeno ažurirati ovu Politiku Privatnosti. "
+"Molimo vas da je povremeno pregledate za promene.\n"
+"                "
+
+#: templates/privacy_policy.html:209
+msgid "Disclaimer"
+msgstr "Ograničenje Odgovornosti"
+
+#: templates/privacy_policy.html:212
+msgid ""
+"\n"
+"                    Portfolizer is a personal project operated by an "
+"individual, not a legal entity or\n"
+"                    organization. The service is provided on an \"as-is\" "
+"and \"as-available\" basis, with no\n"
+"                    guarantees of uninterrupted availability or error-free "
+"functionality. By using Portfolizer,\n"
+"                    you acknowledge that the website is managed by a single "
+"individual and may not have the same\n"
+"                    level of resources or guarantees as services operated by "
+"established companies.\n"
+"                "
+msgstr ""
+"\n"
+"                    Portfolizer je lični projekat koji operiše pojedinac, a "
+"ne pravno lice ili\n"
+"                    organizacija. Usluga je pružena na osnovu \"kakva je\" i "
+"\"kakva je dostupna\" osnova, bez\n"
+"                    garancija neprekidne dostupnosti ili funkcionalnosti bez "
+"grešaka. Korišćenjem Portfolizera,\n"
+"                    priznajete da veb stranicom upravlja jedan pojedinac i "
+"da možda nema isti\n"
+"                    nivo resursa ili garancija kao usluge kojima upravljaju "
+"kompanije.\n"
+"                "
+
+#: templates/privacy_policy.html:221
+msgid ""
+"\n"
+"                    While every effort is made to ensure data security and "
+"privacy, the operator cannot assume\n"
+"                    liability for unforeseen issues, including data breaches "
+"or service interruptions. Users are\n"
+"                    encouraged to use the service with this understanding.\n"
+"                "
+msgstr ""
+"\n"
+"                    Iako se ulaže svaki napor da se osigura bezbednost i "
+"privatnost podataka, operater ne može pretpostaviti\n"
+"                    odgovornost za nepredviđene probleme, uključujući "
+"provaljivanje podataka ili prekide usluge. Korisnici su\n"
+"                    ohrabreni da koriste uslugu sa ovim razumevanjem.\n"
+"                "
+
+#: templates/terms_&_conditions.html:15
+msgid "Introduction"
+msgstr "Uvod"
+
+#: templates/terms_&_conditions.html:18
+msgid ""
+"\n"
+"                    Welcome to Portfolizer! These Terms & Conditions "
+"(\"Terms\") govern your use of our\n"
+"                    website (\"Service\"). By accessing or using "
+"Portfolizer, you agree to comply with\n"
+"                    these Terms.\n"
+"                "
+msgstr ""
+"\n"
+"                    Dobrodošli na Portfolizer! Ovi Uslovi Korišćenja "
+"(\"Uslovi\") regulišu vaše korišćenje naše\n"
+"                    veb stranice (\"Usluga\"). Pristupanjem ili korišćenjem "
+"Portfolizera, slažete se da se pridržavate\n"
+"                    ovih Uslova.\n"
+"                "
+
+#: templates/terms_&_conditions.html:27
+msgid "Eligibility"
+msgstr "Eligibilnost"
+
+#: templates/terms_&_conditions.html:30
+msgid ""
+"\n"
+"                    You must be at least 18 years old or have parental/"
+"guardian consent to use Portfolizer.\n"
+"                    By using the Service, you confirm that you meet these "
+"requirements.\n"
+"                "
+msgstr ""
+"\n"
+"                    Morate imati najmanje 18 godina ili pristanak roditelja/"
+"staratelja da koristite Portfolizer.\n"
+"                    Korišćenjem Usluge, potvrđujete da ispunjavate ove "
+"uslove.\n"
+"                "
+
+#: templates/terms_&_conditions.html:38
+msgid "User Responsibilities"
+msgstr "Odgovornosti Korisnika"
+
+#: templates/terms_&_conditions.html:41
+msgid "By using Portfolizer, you agree not to:"
+msgstr "Korišćenjem Portfolizera, slažete se da nećete:"
+
+#: templates/terms_&_conditions.html:44
+msgid "Use the website for illegal activities."
+msgstr "Koristiti veb stranicu za ilegalne aktivnosti."
+
+#: templates/terms_&_conditions.html:47
+msgid "Post or share harmful, abusive, or offensive content."
+msgstr "Objavljivati ili deliti štetni, zlostavljački ili uvredljiv sadržaj."
+
+#: templates/terms_&_conditions.html:50
+msgid "Attempt to hack or disrupt the website."
+msgstr "Pokušavati hakovati ili ometati rad veb stranice."
+
+#: templates/terms_&_conditions.html:53
+msgid "Misuse personal information obtained from other users."
+msgstr "Zloupotrebljavati lične informacije drugih korisnika."
+
+#: templates/terms_&_conditions.html:60
+msgid "Account Management"
+msgstr "Upravljanje Nalogom"
+
+#: templates/terms_&_conditions.html:63
+msgid ""
+"\n"
+"                    Users are responsible for safeguarding their login "
+"credentials. We reserve the right to\n"
+"                    suspend or terminate accounts that violate these Terms "
+"or compromise the Service.\n"
+"                "
+msgstr ""
+"\n"
+"                    Korisnici su odgovorni za čuvanje svojih podataka za "
+"prijavu. Zadržavamo pravo da\n"
+"                    suspendujemo ili obustavimo naloge koji krše ove Uslove "
+"ili ugrožavaju Uslugu.\n"
+"                "
+
+#: templates/terms_&_conditions.html:71
+msgid "Intellectual Property"
+msgstr "Intelektualna Svojina"
+
+#: templates/terms_&_conditions.html:74
+msgid ""
+"\n"
+"                    All content on Portfolizer, including text, images, and "
+"code, is owned by us or licensed\n"
+"                    to us. Unauthorized use or reproduction of this content "
+"is prohibited.\n"
+"                "
+msgstr ""
+"\n"
+"                    Svi sadržaji na Portfolizeru, uključujući tekst, slike i "
+"kod, su u našem vlasništvu ili licencirani\n"
+"                    nama. Neovlašćeno korišćenje ili reprodukcija ovog "
+"sadržaja je zabranjena.\n"
+"                "
+
+#: templates/terms_&_conditions.html:82
+msgid "Limitation of Liability"
+msgstr "Ogranučenje Odgovornosti"
+
+#: templates/terms_&_conditions.html:85
+msgid ""
+"\n"
+"                    Portfolizer is provided \"as is\" without warranties of "
+"any kind. We are not liable for any\n"
+"                    loss or damage resulting from the use of our Service.\n"
+"                "
+msgstr ""
+"\n"
+"                    Portfolizer je pružen \"kakav jeste\" bez garancija bilo "
+"koje vrste. Nismo odgovorni za bilo kakav\n"
+"                    gubitak ili štetu nastalu korišćenjem naše Usluge.\n"
+"                "
+
+#: templates/terms_&_conditions.html:93
+msgid "Changes to the Service"
+msgstr "Izmene Usluge"
+
+#: templates/terms_&_conditions.html:96
+msgid ""
+"\n"
+"                    We may update, modify, or discontinue the Service at any "
+"time without prior notice.\n"
+"                "
+msgstr ""
+"\n"
+"                    Možemo ažurirati, modifikovati ili obustaviti Uslugu u "
+"bilo koje vreme bez prethodne najave.\n"
+"                "
+
+#: templates/terms_&_conditions.html:103
+msgid "Governing Law"
+msgstr "Merodavno Pravo"
+
+#: templates/terms_&_conditions.html:106
+msgid ""
+"\n"
+"                    These Terms are governed by the laws of Serbia. Any "
+"disputes will be resolved under\n"
+"                    Serbian jurisdiction.\n"
+"                "
+msgstr ""
+"\n"
+"                    Ovi Uslovi su regulisani zakonima Srbije. Svaki spor će "
+"biti rešen pod\n"
+"                    srpskom nadležnošću.\n"
+"                "
+
+#: templates/terms_&_conditions.html:117
+msgid ""
+"\n"
+"                    For questions or concerns about these Terms, please "
+"contact us at roknic.milos.994@gmail.com.\n"
+"                "
+msgstr ""
+"\n"
+"                    Za pitanja ili zabrinutosti u vezi sa ovim Uslovima, "
+"kontaktirajte nas na roknic.milos.994@gmail.com.\n"
+"                "
+
+# Additional translations (not found in the original source, but in third party packages):
 msgid "jan"
 msgstr "jan"
 
@@ -793,6 +1442,9 @@ msgstr "Ova lozinka je previše česta."
 
 msgid "This password is entirely numeric."
 msgstr "Ova lozinka je potpuno numerička."
+
+msgid "The two password fields didn’t match."
+msgstr "Dva polja lozinke se ne podudaraju."
 
 #, python-format
 msgid "Your password must contain at least %(min_length)d character."

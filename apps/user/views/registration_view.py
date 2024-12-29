@@ -3,9 +3,11 @@ from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import FormView
 
+from apps.user.decorators import special_registration_view
 from apps.user.forms import RegistrationForm
 
 
+@special_registration_view
 class RegistrationView(FormView):
     form_class = RegistrationForm
     success_url = reverse_lazy("admin:index")

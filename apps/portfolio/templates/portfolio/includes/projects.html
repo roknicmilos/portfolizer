@@ -1,9 +1,13 @@
 {% load i18n %}
 
 <div class="right-segment {% if is_last %}right-segment--last{% endif %}" style="color: {{ text_color }}">
-    {% include "portfolio/includes/segment_title.html" %}
     {% for project in projects %}
         <div class="position-item">
+            {% if forloop.first %}
+                {# Adding segment title under the first position item makes sure the title will #}
+                {# end up on the same PDF page if that item break to the next page #}
+                {% include "portfolio/includes/segment_title.html" %}
+            {% endif %}
             <h3 class="position-item-title">{{ project.name }} | {{ project.role }}</h3>
             <p class="position-item-period">
                 {{ project.start|date:"M Y" }} - {{ project.end|date:"M Y"|default:_("Present") }}

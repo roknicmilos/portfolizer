@@ -1,9 +1,13 @@
 {% load svg i18n %}
 
-<div class="left-segment {% if is_last %}left-segment--last{% endif %}">
-    {% include "portfolio/includes/segment_title.html" %}
+<div class="left-segment {% if is_last %}left-segment--last{% endif %} education">
     {% for item in educations %}
         <div class="education-item" style="color: {{ text_color }}">
+            {% if forloop.first %}
+                {# Adding segment title under the first education item makes sure the title will #}
+                {# end up on the same PDF page if that item break to the next page #}
+                {% include "portfolio/includes/segment_title.html" %}
+            {% endif %}
             <h3 class="education-item-title">{{ item.title }}</h3>
             <div class="education-item-subtitle">
                 <p class="education-item-period">
