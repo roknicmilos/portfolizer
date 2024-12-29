@@ -1,15 +1,10 @@
 .position-item {
-    margin: 15px 0 35px;
-
+    padding: 15px 0;
     /*
-    Combining `page-break-inside: avoid;` with border forces
-    the element to break to the next page if it doesn't fit
-    on the current page. This is necessary when parent element
-    is bigger than the entire page and it can't break to the
-    next page even with `page-break-inside: avoid;`
-     */
+    Force the element to break to the next page if doesn't
+    fit on the current page:
+    */
     page-break-inside: avoid;
-    border: 1px solid transparent;
 }
 
 .position-item-subtitle {

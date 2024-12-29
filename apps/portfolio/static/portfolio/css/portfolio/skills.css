@@ -11,7 +11,7 @@
 .skill {
     width: 45%;
     max-width: 150px;
-    margin: 10px 0;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

@@ -67,6 +67,10 @@
     }
 }
 
+.left-segment .segment-title {
+    margin-bottom: 10px;
+}
+
 .link-items {
     display: flex;
     justify-content: space-between;

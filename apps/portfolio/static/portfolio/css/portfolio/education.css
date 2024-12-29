@@ -1,11 +1,29 @@
+.education.education {
+    /*
+    Avoid breaking the entire education section to the next
+    page so that the child elements can be broken to the next
+    page if they don't fit on the current page.
+     */
+    page-break-inside: unset;
+}
+
 .education-item {
-    margin: 15px 0 35px;
+    padding: 20px 0;
     color: white;
+
+    /*
+    Combining `page-break-inside: avoid;` with border forces
+    the element to break to the next page if it doesn't fit
+    on the current page.
+     */
+    page-break-inside: avoid;
+    border: 1px solid transparent;
 }
 
 .education-item-title {
     font-size: 16px;
     line-height: 1.5;
+    margin: 0 0 10px 0;
 }
 
 .education-item-subtitle {
@@ -39,4 +57,5 @@
 
 .education-item-description {
     line-height: 1.5;
+    margin: 10px 0 0 0;
 }

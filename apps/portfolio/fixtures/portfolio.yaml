@@ -21,33 +21,54 @@
     fourth_left_segment: languages
     fifth_left_segment: skills
     about_me:
-      I grew up in Borovo, a village in Croatia, and moved to Novi Sad, Serbia,
-      in 2012 to study Business Psychology. During my studies, I discovered a
-      passion for programming, which led me to pursue a career in tech. After
-      completing programming courses and internships at two companies, I secured
-      a permanent Software Engineer role, initially working with PHP technologies.
-      A year later, I transitioned to Python/Django, where I expanded my knowledge of
-      Docker, CI tools, testing, and mentoring colleagues and students in
-      Python/Django and React technologies, and led two internal hackathon projects.
-      I also embraced a Development Lead role, guiding the career progression of my
-      colleagues. On the creative side, I’m known among my peers for writing and
-      filming humorous video sketches, earning myself the unofficial (but prestigious)
-      title of Chief Sketch Officer. Sure, I gave myself the title, and no one else
-      knows about it, but that hasn’t stopped me from proudly including it on my CV.
+      I grew up in Borovo, a village in Croatia, and moved to Novi Sad, Serbia, in
+      2012 to study Business Psychology. During my studies, I discovered a passion
+      for programming, which led me to pursue a career in tech. After completing
+      programming courses and internships at two companies, I secured a permanent
+      Software Engineer role, initially working with PHP technologies.
+      A year later, I transitioned to Python, which has been my primary focus for
+      the past five years. During this time, I gained extensive experience in backend
+      and frontend development, REST APIs, relational databases, CI/CD, testing,
+      agile workflows, and more. My technical expertise spans a wide range of tools
+      and technologies, including Python, Django, FastAPI, Flask, Pytest, PostgreSQL,
+      SQLite, SQLAlchemy, Alembic, HTML, CSS, SCSS, JavaScript, Jest, TypeScript,
+      React, Next.js, Docker, Nginx, Git, Cypress, AWS, and more. I also led two
+      internal hackathon projects (out of four that I participated in), mentored
+      colleagues and students in Python and React, and conducted technical interviews.
+      In addition to my technical work, I embraced a Development Lead role, guiding
+      the career progression of my colleagues and acting as the primary link between
+      them and the business. This role brought me back to my roots in Business
+      Psychology and pushed me to elevate my soft skills as I supported my colleagues'
+      growth both professionally and personally.
+      On the lighter side, I’m known among my peers for writing and filming humorous
+      video sketches, which earned me the unofficial (but prestigious) title of Chief
+      Sketch Officer. Admittedly, I gave myself the title, and no one else knows about
+      it, but that hasn’t stopped me from proudly including it on my CV.
     about_me_sr:
-      Odrastao sam u Borovu, selu u Hrvatskoj, a 2012. godine preselio sam se u Novi Sad,
-      Srbija, kako bih studirao Poslovnu Psihologiju. Tokom studija otkrio sam strast
-      prema programiranju, što me je navelo da započnem karijeru u IT industriji. Nakon
-      završetka kurseva programiranja i praksi u dve kompanije, dobio sam stalnu poziciju
-      kao Softverski Inženjer, gde sam u početku radio sa PHP tehnologijama.
-      Godinu dana kasnije prešao sam na Python/Django, gde sam proširio svoje znanje u
-      oblasti Dockera, CI alata, testiranja i mentorisanja kolega i studenata u
-      Python/Django i React tehnologijama, te sam vodio dva interna hackathon projekta.
-      Takođe sam preuzeo ulogu Development Lead-a, pomažući u razvoju karijera svojih kolega.
-      Sa kreativne strane, poznat sam među kolegama po pisanju i snimanju humorističnih
-      video skečeva, čime sam sebi dodelio (i vrlo prestižnu) titulu Chief Sketch Officer-a.
-      Da, sam sam se proglasio za to, i niko drugi ne zna da imam tu titulu, ali me to ne
-      sprečava da je ponosno stavim u svoj CV.
+      Odrastao sam u Borovu, selu u Hrvatskoj, a 2012. godine preselio sam se u Novi
+      Sad, Srbija, kako bih studirao Poslovnu Psihologiju. Tokom studija otkrio sam
+      strast prema programiranju, što me je navelo da započnem karijeru u IT industriji.
+      Nakon završetka kurseva programiranja i praksi u dve kompanije, dobio sam stalnu
+      poziciju Softverskog Inženjera, gde sam u početku radio sa PHP tehnologijama.
+      Godinu dana kasnije, prešao sam na Python, koji je bio moj primarni fokus tokom
+      proteklih pet godina. U tom periodu stekao sam bogato iskustvo u razvoju backend
+      i frontend sistema, REST API-jeva, rada sa relacionim bazama podataka, CI/CD
+      procesima, testiranju, agilnim metodologijama i još mnogo toga. Moja tehnička
+      ekspertiza obuhvata širok spektar alata i tehnologija, uključujući Python, Django,
+      FastAPI, Flask, Pytest, PostgreSQL, SQLite, SQLAlchemy, Alembic, HTML, CSS, SCSS,
+      JavaScript, TypeScript, Jest, React, Next.js, Docker, Nginx, Git, Cypress, AWS i
+      druge. Takođe, vodio sam dva interna hackathon projekta (od četiri u kojima sam
+      učestvovao), mentorisao kolege i studente u Python-u i React-u i sprovodio tehničke
+      intervjue.
+      Pored tehničkog rada, preuzeo sam ulogu Development Lead-a, gde sam bio odgovoran
+      za razvoj karijera svojih kolega i služio kao glavna veza između njih i biznisa.
+      Ova uloga me je vratila mojim korenima u Poslovnoj Psihologiji i omogućila mi da
+      dodatno unapredim svoje veštine rada sa ljudima, pomažući kolegama da rastu kako
+      profesionalno, tako i lično.
+      Sa zabavnije strane, poznat sam među kolegama po pisanju i snimanju humorističnih
+      video skečeva, što mi je donelo nezvaničnu (ali prestižnu) titulu Chief Sketch
+      Officer-a. Priznajem, sam sam sebi dodelio tu titulu, i niko drugi ne zna za nju,
+      ali to me nije sprečilo da je ponosno uvrstim u svoj CV.
     about_me_segment_title_sr: O MENI
     contact_segment_title_sr: KONTAKT
     education_segment_title_sr: OBRAZOVANJE
