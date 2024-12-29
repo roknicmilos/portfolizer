@@ -8,3 +8,4 @@ class Employment(Position):
         verbose_name = _("Employment")
         verbose_name_plural = _("Employments")
         default_related_name = "employments"
+        ordering = ["-start"]

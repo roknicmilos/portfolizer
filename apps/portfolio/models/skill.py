@@ -27,6 +27,7 @@ class Skill(BaseModel):
     class Meta:
         verbose_name = _("Skill")
         verbose_name_plural = _("Skills")
+        ordering = ["-level", "created"]
 
     def __str__(self):
         return f"{self.label} ({self.level}/5)"

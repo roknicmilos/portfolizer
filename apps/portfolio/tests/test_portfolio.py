@@ -5,10 +5,6 @@ from django.utils.translation import gettext_lazy as _
 from apps.portfolio.models import Portfolio
 from apps.portfolio.tests.factories import (
     PortfolioFactory,
-    EmploymentFactory,
-    InternshipFactory,
-    EducationFactory,
-    SkillFactory,
     ProjectFactory,
 )
 from apps.user.tests.factories import UserFactory
@@ -22,62 +18,6 @@ class TestPortfolio(TestCase):
 
     def test_str(self):
         self.assertEqual(str(self.portfolio), self.portfolio.title)
-
-    def test_ordered_employments_property(self):
-        fist_employment = EmploymentFactory(
-            portfolio=self.portfolio,
-            start="2019-01-01",
-        )
-        second_employment = EmploymentFactory(
-            portfolio=self.portfolio,
-            start="2020-01-01",
-        )
-        employments = self.portfolio.ordered_employments
-        self.assertEqual(len(employments), 2)
-        self.assertEqual(employments[0], second_employment)
-        self.assertEqual(employments[1], fist_employment)
-
-    def test_ordered_internships_property(self):
-        fist_internship = InternshipFactory(
-            portfolio=self.portfolio,
-            start="2019-01-01",
-        )
-        second_internship = InternshipFactory(
-            portfolio=self.portfolio,
-            start="2020-01-01",
-        )
-        internships = self.portfolio.ordered_internships
-        self.assertEqual(len(internships), 2)
-        self.assertEqual(internships[0], second_internship)
-        self.assertEqual(internships[1], fist_internship)
-
-    def test_ordered_educations_property(self):
-        fist_education = EducationFactory(
-            portfolio=self.portfolio,
-            start="2019-01-01",
-        )
-        second_education = EducationFactory(
-            portfolio=self.portfolio,
-            start="2020-01-01",
-        )
-        educations = self.portfolio.ordered_educations
-        self.assertEqual(len(educations), 2)
-        self.assertEqual(educations[0], second_education)
-        self.assertEqual(educations[1], fist_education)
-
-    def test_ordered_skills_property(self):
-        fist_skill = SkillFactory(
-            portfolio=self.portfolio,
-            level=5,
-        )
-        second_skill = SkillFactory(
-            portfolio=self.portfolio,
-            level=1,
-        )
-        skills = self.portfolio.ordered_skills
-        self.assertEqual(len(skills), 2)
-        self.assertEqual(skills[0], fist_skill)
-        self.assertEqual(skills[1], second_skill)
 
     def test_ordered_projects_property(self):
         fist_project = ProjectFactory(
