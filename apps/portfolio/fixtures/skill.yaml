@@ -48,23 +48,13 @@
   pk: 6
   fields:
     portfolio: 1
-    label: Databases
-    label_sr: Baze podataka
-    level: 4
-    created: 2024-12-29T00:00:05Z
-    modified: 2024-12-29T00:00:05Z
-
-- model: portfolio.Skill
-  pk: 7
-  fields:
-    portfolio: 1
     label: DevOps
     level: 4
     created: 2024-12-29T00:00:06Z
     modified: 2024-12-29T00:00:06Z
 
 - model: portfolio.Skill
-  pk: 8
+  pk: 7
   fields:
     portfolio: 1
     label: Mentoring
@@ -74,7 +64,7 @@
     modified: 2024-12-29T00:00:07Z
 
 - model: portfolio.Skill
-  pk: 9
+  pk: 8
   fields:
     portfolio: 1
     label: Team Work
@@ -84,7 +74,7 @@
     modified: 2024-12-29T00:00:08Z
 
 - model: portfolio.Skill
-  pk: 10
+  pk: 9
   fields:
     portfolio: 1
     label: Organization
@@ -94,7 +84,7 @@
     modified: 2024-12-29T00:00:09Z
 
 - model: portfolio.Skill
-  pk: 11
+  pk: 10
   fields:
     portfolio: 1
     label: Communication
@@ -104,7 +94,7 @@
     modified: 2024-12-29T00:00:10Z
 
 - model: portfolio.Skill
-  pk: 19
+  pk: 11
   fields:
     portfolio: 2
     label: Advanced Manipulation Techniques
@@ -114,7 +104,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 20
+  pk: 12
   fields:
     portfolio: 2
     label: Prank Planning and Execution
@@ -124,7 +114,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 21
+  pk: 13
   fields:
     portfolio: 2
     label: Strategic Persuasion
@@ -134,7 +124,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 22
+  pk: 14
   fields:
     portfolio: 2
     label: Chaos Theory Application
@@ -144,7 +134,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 23
+  pk: 15
   fields:
     portfolio: 2
     label: Ethical Ambiguity
@@ -154,7 +144,7 @@
     modified: 2024-09-01T00:00:00Z
 
 - model: portfolio.Skill
-  pk: 24
+  pk: 16
   fields:
     portfolio: 2
     label: Good Friend
