@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-28 15:00+0000\n"
+"POT-Creation-Date: 2024-12-29 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian <LL@li.org>\n"
@@ -606,14 +606,14 @@ msgstr ""
 "segment će biti premešten na sledeću stranicu.\n"
 "                    "
 
-#: apps/portfolio/templates/portfolio/includes/education.html:10
-#: apps/portfolio/templates/portfolio/includes/employment.html:10
+#: apps/portfolio/templates/portfolio/includes/education.html:14
+#: apps/portfolio/templates/portfolio/includes/employment.html:14
 #: apps/portfolio/templates/portfolio/includes/internship.html:10
-#: apps/portfolio/templates/portfolio/includes/projects.html:9
+#: apps/portfolio/templates/portfolio/includes/projects.html:13
 msgid "Present"
 msgstr "Trenutno"
 
-#: apps/portfolio/templates/portfolio/includes/projects.html:13
+#: apps/portfolio/templates/portfolio/includes/projects.html:17
 msgid "Description"
 msgstr "Opis"
 
@@ -671,8 +671,9 @@ msgid ""
 "Please read and accept the Terms & Conditions and Privacy Policy before "
 "proceeding. You can find them by clicking the links in the footer."
 msgstr ""
-"Molimo vas da pročitate i prihvatite uslove korišćenja i politiku privatnosti "
-"pre nego što nastavite. Možete ih pronaći klikom na linkove u podnožju."
+"Molimo vas da pročitate i prihvatite uslove korišćenja i politiku "
+"privatnosti pre nego što nastavite. Možete ih pronaći klikom na linkove u "
+"podnožju."
 
 #: apps/user/models/user.py:44
 msgid "email address"
@@ -688,7 +689,7 @@ msgstr "Prijava"
 msgid "Registration"
 msgstr "Registracija"
 
-#: apps/user/templates/user/registration.html:22 templates/index.html:50
+#: apps/user/templates/user/registration.html:22 templates/index.html:51
 msgid "Register"
 msgstr "Registracija"
 
@@ -806,29 +807,29 @@ msgstr "Preuzmite svoj CV u jednom kliku."
 msgid "How It Works"
 msgstr "Kako Radi"
 
-#: templates/index.html:50
+#: templates/index.html:52
 msgid "Sign up and create your account."
 msgstr "Registruj se i kreiraj svoj nalog."
 
-#: templates/index.html:51
-msgid "Build"
-msgstr "Izgradi"
+#: templates/index.html:55
+msgid "Build Portfolio"
+msgstr "Kreiraj Portfolijo"
 
-#: templates/index.html:51
+#: templates/index.html:56
 msgid "Add your details, links, and projects."
 msgstr "Dodajte svoje detalje, linkove i projekte."
 
-#: templates/index.html:53
+#: templates/index.html:59
 msgid "Share or Download"
 msgstr "Podeli ili Preuzmi"
 
-#: templates/index.html:54
+#: templates/index.html:60
 msgid "Share your portfolio page with anyone or generate a PDF"
 msgstr "Podelite stranicu portfolija sa bilo kim ili generišite PDF"
 
-#: templates/index.html:64
+#: templates/index.html:70
 msgid "Create Your Portfolio Now!"
-msgstr "Kreirajte Vaš Portfolijo Sada!"
+msgstr "Kreirajte Vaš Portfolijo!"
 
 #: templates/privacy_policy.html:15
 msgid "Data We Collect"
@@ -859,8 +860,8 @@ msgstr ""
 "\n"
 "                            Korisnici mogu opciono pružiti lične informacije "
 "kao što su: ime i prezime, broj telefona,\n"
-"                            datum rođenja, lokacija (adresa), linkovi profila na "
-"socijalnim mrežama (npr. LinkedIn, GitHub,\n"
+"                            datum rođenja, lokacija (adresa), linkovi "
+"profila na socijalnim mrežama (npr. LinkedIn, GitHub,\n"
 "                            veb stranica, itd.)\n"
 "                        "
 
@@ -978,7 +979,8 @@ msgid ""
 msgstr ""
 "\n"
 "                            Možemo koristiti vašu email adresu da bismo vam "
-"poslali važne informacije u vezi ažuriranja Portfolizer-a, obaveštenja ili promotivni\n"
+"poslali važne informacije u vezi ažuriranja Portfolizer-a, obaveštenja ili "
+"promotivni\n"
 "                            sadržaj vezan za Portfolizer.\n"
 "                        "
 
@@ -1011,11 +1013,12 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                    Podaci prikupljeni od strane Sentry-ja (našeg servisa "
-"za praćenje grešaka) mogu uključivati tehničke detalje\n"
+"                    Podaci prikupljeni od strane Sentry-ja (našeg servisa za "
+"praćenje grešaka) mogu uključivati tehničke detalje\n"
 "                    kao što su logovi grešaka, IP adrese i drugi metapodaci "
 "neophodni za debagovanje. Za više informacija,\n"
-"                    molimo vas da se obratite Politici Privatnosti Sentry-ja.\n"
+"                    molimo vas da se obratite Politici Privatnosti Sentry-"
+"ja.\n"
 "                "
 
 #: templates/privacy_policy.html:124
@@ -1036,7 +1039,9 @@ msgstr "HTTPS osigurava da su podaci enkriptovani tokom prenosa."
 
 #: templates/privacy_policy.html:136
 msgid "Only superusers can access all users and portfolios via Django Admin."
-msgstr "Samo superkorisnici mogu pristupiti svim korisnicima i portfolijima putem Django Admin."
+msgstr ""
+"Samo superkorisnici mogu pristupiti svim korisnicima i portfolijima putem "
+"Django Admin."
 
 #: templates/privacy_policy.html:141
 msgid "User Rights"
@@ -1177,8 +1182,8 @@ msgstr ""
 "\"kakva je dostupna\" osnova, bez\n"
 "                    garancija neprekidne dostupnosti ili funkcionalnosti bez "
 "grešaka. Korišćenjem Portfolizera,\n"
-"                    priznajete da veb stranicom upravlja jedan pojedinac i da "
-"možda nema isti\n"
+"                    priznajete da veb stranicom upravlja jedan pojedinac i "
+"da možda nema isti\n"
 "                    nivo resursa ili garancija kao usluge kojima upravljaju "
 "kompanije.\n"
 "                "
@@ -1354,8 +1359,8 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                    Ovi Uslovi su regulisani zakonima Srbije. Svaki spor "
-"će biti rešen pod\n"
+"                    Ovi Uslovi su regulisani zakonima Srbije. Svaki spor će "
+"biti rešen pod\n"
 "                    srpskom nadležnošću.\n"
 "                "
 
