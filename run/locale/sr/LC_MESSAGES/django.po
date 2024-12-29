@@ -832,11 +832,11 @@ msgstr "Kreirajte Vaš Portfolijo Sada!"
 
 #: templates/privacy_policy.html:15
 msgid "Data We Collect"
-msgstr ""
+msgstr "Podaci Koje Prikupljamo"
 
 #: templates/privacy_policy.html:18
 msgid "Account Data:"
-msgstr ""
+msgstr "Podaci o Nalogu:"
 
 #: templates/privacy_policy.html:20
 msgid "Email address and password are required for registration."
@@ -856,6 +856,13 @@ msgid ""
 "                            website, etc.)\n"
 "                        "
 msgstr ""
+"\n"
+"                            Korisnici mogu opciono pružiti lične informacije "
+"kao što su: ime i prezime, broj telefona,\n"
+"                            datum rođenja, lokacija (adresa), linkovi profila na "
+"socijalnim mrežama (npr. LinkedIn, GitHub,\n"
+"                            veb stranica, itd.)\n"
+"                        "
 
 #: templates/privacy_policy.html:34
 msgid ""
@@ -864,10 +871,14 @@ msgid ""
 "display on their public portfolio pages.\n"
 "                        "
 msgstr ""
+"\n"
+"                            Korisnici moraju ručno postaviti email adresu za "
+"prikaz na njihovim javnim stranicama portfolija.\n"
+"                        "
 
 #: templates/privacy_policy.html:41
 msgid "Cookies:"
-msgstr ""
+msgstr "Kolačići:"
 
 #: templates/privacy_policy.html:44
 msgid ""
@@ -880,14 +891,22 @@ msgid ""
 "session state after login).\n"
 "                        "
 msgstr ""
+"\n"
+"                            Portfolizer koristi podrazumevane Django "
+"kolačiće: csrftoken (koristi se za zaštitu od\n"
+"                            napada na zahtev preko različitih sajtova), "
+"django_language (čuva korisnikove preferencije\n"
+"                            jezika) i sessionid (koristi se za održavanje "
+"stanja korisničke sesije nakon prijave).\n"
+"                        "
 
 #: templates/privacy_policy.html:51
 msgid "These cookies are essential for website functionality."
-msgstr ""
+msgstr "Ovi kolačići su neophodni za funkcionalnost veb stranice."
 
 #: templates/privacy_policy.html:56
 msgid "Automatically Collected Data:"
-msgstr ""
+msgstr "Automatski Prikupljeni Podaci:"
 
 #: templates/privacy_policy.html:59
 msgid ""
@@ -897,19 +916,25 @@ msgid ""
 "                            tracking service).\n"
 "                        "
 msgstr ""
+"\n"
+"                            Ne prikupljamo nikakve podatke automatski, osim "
+"podataka prikupljenih od strane Sentry-ja (našeg\n"
+"                            servisa za praćenje grešaka).\n"
+"                        "
 
 #: templates/privacy_policy.html:69
 msgid "How We Use Your Data"
-msgstr ""
+msgstr "Kako Koristimo Vaše Podatke"
 
 #: templates/privacy_policy.html:72
 msgid "Account Management:"
-msgstr ""
+msgstr "Upravljanje Nalogom:"
 
 #: templates/privacy_policy.html:74
 msgid ""
 "Email addresses are used for login, identifying users, and communication."
 msgstr ""
+"Email adrese se koriste za prijavu, identifikaciju korisnika i komunikaciju."
 
 #: templates/privacy_policy.html:78
 msgid "Portfolio Pages:"
@@ -922,6 +947,10 @@ msgid ""
 "generate user portfolios and PDFs.\n"
 "                        "
 msgstr ""
+"\n"
+"                            Opcioni lični podaci se koriste za generisanje "
+"korisničkih portfolija i PDF-ova.\n"
+"                        "
 
 #: templates/privacy_policy.html:86
 msgid ""
@@ -930,6 +959,10 @@ msgid ""
 "portfolio pages.\n"
 "                        "
 msgstr ""
+"\n"
+"                            Korisnici mogu izabrati da objave ili ne objave "
+"svoje stranice portfolija.\n"
+"                        "
 
 #: templates/privacy_policy.html:93
 msgid "Communication:"
@@ -943,10 +976,15 @@ msgid ""
 "                            content related to Portfolizer.\n"
 "                        "
 msgstr ""
+"\n"
+"                            Možemo koristiti vašu email adresu da bismo vam "
+"poslali važne informacije u vezi ažuriranja Portfolizer-a, obaveštenja ili promotivni\n"
+"                            sadržaj vezan za Portfolizer.\n"
+"                        "
 
 #: templates/privacy_policy.html:106
 msgid "Data Sharing"
-msgstr ""
+msgstr "Deljenje Podataka"
 
 #: templates/privacy_policy.html:109
 msgid ""
@@ -956,6 +994,11 @@ msgid ""
 "                    servers located in France.\n"
 "                "
 msgstr ""
+"\n"
+"                    Ne delimo vaše podatke sa trećim licima. Međutim, naša "
+"veb stranica je smeštena na DigitalOcean\n"
+"                    serverima smeštenim u Francuskoj.\n"
+"                "
 
 #: templates/privacy_policy.html:115
 msgid ""
@@ -967,46 +1010,53 @@ msgid ""
 "                    please refer to Sentry's Privacy Policy.\n"
 "                "
 msgstr ""
+"\n"
+"                    Podaci prikupljeni od strane Sentry-ja (našeg servisa "
+"za praćenje grešaka) mogu uključivati tehničke detalje\n"
+"                    kao što su logovi grešaka, IP adrese i drugi metapodaci "
+"neophodni za debagovanje. Za više informacija,\n"
+"                    molimo vas da se obratite Politici Privatnosti Sentry-ja.\n"
+"                "
 
 #: templates/privacy_policy.html:124
 msgid "Data Security"
-msgstr ""
+msgstr "Bezbednost Podataka"
 
 #: templates/privacy_policy.html:127
 msgid "Passwords are encrypted (hashed) before storage."
-msgstr ""
+msgstr "Lozinke su enkriptovane (hash-ovane) pre skladištenja."
 
 #: templates/privacy_policy.html:130
 msgid "Personal data is stored securely in our database."
-msgstr ""
+msgstr "Lični podaci su bezbedno smešteni u našoj bazi podataka."
 
 #: templates/privacy_policy.html:133
 msgid "HTTPS ensures data is encrypted during transmission."
-msgstr ""
+msgstr "HTTPS osigurava da su podaci enkriptovani tokom prenosa."
 
 #: templates/privacy_policy.html:136
 msgid "Only superusers can access all users and portfolios via Django Admin."
-msgstr ""
+msgstr "Samo superkorisnici mogu pristupiti svim korisnicima i portfolijima putem Django Admin."
 
 #: templates/privacy_policy.html:141
 msgid "User Rights"
-msgstr ""
+msgstr "Prava Korisnika"
 
 #: templates/privacy_policy.html:144
 msgid "Access and Update:"
-msgstr ""
+msgstr "Pristup i Ažuriranje:"
 
 #: templates/privacy_policy.html:145
 msgid "You can view and update your data via Django Admin."
-msgstr ""
+msgstr "Možete pregledati i ažurirati svoje podatke putem Django Admin."
 
 #: templates/privacy_policy.html:148
 msgid "Delete:"
-msgstr ""
+msgstr "Obriši:"
 
 #: templates/privacy_policy.html:149
 msgid "You can delete your account or unpublish/delete your portfolio."
-msgstr ""
+msgstr "Možete obrisati svoj nalog ili ne objaviti/obrisati svoj portfolijo."
 
 #: templates/privacy_policy.html:152
 msgid "Contact:"
@@ -1014,11 +1064,11 @@ msgstr "Kontakt:"
 
 #: templates/privacy_policy.html:153
 msgid "For additional requests, contact us at roknic.milos.994@gmail.com."
-msgstr ""
+msgstr "Za dodatne zahteve, kontaktirajte nas na roknic.milos.994@gmail.com."
 
 #: templates/privacy_policy.html:158
 msgid "Cookies"
-msgstr ""
+msgstr "Kolačići"
 
 #: templates/privacy_policy.html:161
 msgid ""
@@ -1029,10 +1079,16 @@ msgid ""
 "management.\n"
 "                "
 msgstr ""
+"\n"
+"                    Kolačiće koje koristimo su neophodni za funkcionalnost "
+"veb stranice. Ne možete odbiti ove kolačiće,\n"
+"                    jer su neophodni za sigurnu prijavu i upravljanje "
+"sesijama.\n"
+"                "
 
 #: templates/privacy_policy.html:169
 msgid "Data Retention"
-msgstr ""
+msgstr "Zadržavanje Podataka"
 
 #: templates/privacy_policy.html:172
 msgid ""
@@ -1042,10 +1098,15 @@ msgid ""
 "                    the future.\n"
 "                "
 msgstr ""
+"\n"
+"                    Podaci se zadržavaju neograničeno. Možemo implementirati "
+"automatsko brisanje neaktivnih naloga u\n"
+"                    budućnosti.\n"
+"                "
 
 #: templates/privacy_policy.html:180
 msgid "International Users"
-msgstr ""
+msgstr "Međunarodni Korisnici"
 
 #: templates/privacy_policy.html:183
 msgid ""
@@ -1056,6 +1117,11 @@ msgid ""
 "residence.\n"
 "                "
 msgstr ""
+"\n"
+"                    Portfolizer je smešten na serverima u Francuskoj. "
+"Korišćenjem naše veb stranice, priznajete da vaši\n"
+"                    podaci mogu biti obrađeni van vaše zemlje prebivališta.\n"
+"                "
 
 #: templates/privacy_policy.html:191 templates/terms_&_conditions.html:114
 msgid "Contact Information"
@@ -1066,10 +1132,12 @@ msgid ""
 "For privacy-related inquiries, please contact us at roknic.milos.994@gmail."
 "com."
 msgstr ""
+"Za upite vezane za privatnost, kontaktirajte nas na roknic.milos.994@gmail."
+"com."
 
 #: templates/privacy_policy.html:199
 msgid "Updates to this Policy"
-msgstr ""
+msgstr "Ažuriranja ove Politike"
 
 #: templates/privacy_policy.html:202
 msgid ""
@@ -1078,10 +1146,14 @@ msgid ""
 "review it periodically for changes.\n"
 "                "
 msgstr ""
+"\n"
+"                    Možemo povremeno ažurirati ovu Politiku Privatnosti. "
+"Molimo vas da je povremeno pregledate za promene.\n"
+"                "
 
 #: templates/privacy_policy.html:209
 msgid "Disclaimer"
-msgstr ""
+msgstr "Ograničenje Odgovornosti"
 
 #: templates/privacy_policy.html:212
 msgid ""
@@ -1098,6 +1170,18 @@ msgid ""
 "established companies.\n"
 "                "
 msgstr ""
+"\n"
+"                    Portfolizer je lični projekat koji operiše pojedinac, a "
+"ne pravno lice ili\n"
+"                    organizacija. Usluga je pružena na osnovu \"kakva je\" i "
+"\"kakva je dostupna\" osnova, bez\n"
+"                    garancija neprekidne dostupnosti ili funkcionalnosti bez "
+"grešaka. Korišćenjem Portfolizera,\n"
+"                    priznajete da veb stranicom upravlja jedan pojedinac i da "
+"možda nema isti\n"
+"                    nivo resursa ili garancija kao usluge kojima upravljaju "
+"kompanije.\n"
+"                "
 
 #: templates/privacy_policy.html:221
 msgid ""
@@ -1109,6 +1193,13 @@ msgid ""
 "                    encouraged to use the service with this understanding.\n"
 "                "
 msgstr ""
+"\n"
+"                    Iako se ulaže svaki napor da se osigura bezbednost i "
+"privatnost podataka, operater ne može pretpostaviti\n"
+"                    odgovornost za nepredviđene probleme, uključujući "
+"provaljivanje podataka ili prekide usluge. Korisnici su\n"
+"                    ohrabreni da koriste uslugu sa ovim razumevanjem.\n"
+"                "
 
 #: templates/terms_&_conditions.html:15
 msgid "Introduction"
@@ -1346,6 +1437,9 @@ msgstr "Ova lozinka je previše česta."
 
 msgid "This password is entirely numeric."
 msgstr "Ova lozinka je potpuno numerička."
+
+msgid "The two password fields didn’t match."
+msgstr "Dva polja lozinke se ne podudaraju."
 
 #, python-format
 msgid "Your password must contain at least %(min_length)d character."
