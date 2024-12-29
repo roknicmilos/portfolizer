@@ -415,10 +415,8 @@ msgid "Edit button SVG color"
 msgstr "Boja SVG dugmeta za uređivanje"
 
 #: apps/portfolio/models/portfolio.py:138
-#, fuzzy
-#| msgid "PDF button background color"
 msgid "Language button background color"
-msgstr "Boja pozadine PDF dugmeta"
+msgstr "Boja pozadine dugmeta jezika"
 
 #: apps/portfolio/models/portfolio.py:142
 msgid "Language button SVG color"
@@ -914,10 +912,8 @@ msgid ""
 msgstr ""
 
 #: templates/privacy_policy.html:78
-#, fuzzy
-#| msgid "Portfolios"
 msgid "Portfolio Pages:"
-msgstr "Portfoliji"
+msgstr "Portfolijo Stranice:"
 
 #: templates/privacy_policy.html:81
 msgid ""
@@ -936,10 +932,8 @@ msgid ""
 msgstr ""
 
 #: templates/privacy_policy.html:93
-#, fuzzy
-#| msgid "location"
 msgid "Communication:"
-msgstr "lokacija"
+msgstr "Komunikacija:"
 
 #: templates/privacy_policy.html:96
 msgid ""
@@ -1015,10 +1009,8 @@ msgid "You can delete your account or unpublish/delete your portfolio."
 msgstr ""
 
 #: templates/privacy_policy.html:152
-#, fuzzy
-#| msgid "Contact"
 msgid "Contact:"
-msgstr "Kontakt"
+msgstr "Kontakt:"
 
 #: templates/privacy_policy.html:153
 msgid "For additional requests, contact us at roknic.milos.994@gmail.com."
@@ -1067,7 +1059,7 @@ msgstr ""
 
 #: templates/privacy_policy.html:191 templates/terms_&_conditions.html:114
 msgid "Contact Information"
-msgstr ""
+msgstr "Kontakt Informacije"
 
 #: templates/privacy_policy.html:194
 msgid ""
@@ -1119,10 +1111,8 @@ msgid ""
 msgstr ""
 
 #: templates/terms_&_conditions.html:15
-#, fuzzy
-#| msgid "Education"
 msgid "Introduction"
-msgstr "Obrazovanje"
+msgstr "Uvod"
 
 #: templates/terms_&_conditions.html:18
 msgid ""
@@ -1134,10 +1124,17 @@ msgid ""
 "                    these Terms.\n"
 "                "
 msgstr ""
+"\n"
+"                    Dobrodošli na Portfolizer! Ovi Uslovi Korišćenja "
+"(\"Uslovi\") regulišu vaše korišćenje naše\n"
+"                    veb stranice (\"Usluga\"). Pristupanjem ili korišćenjem "
+"Portfolizera, slažete se da se pridržavate\n"
+"                    ovih Uslova.\n"
+"                "
 
 #: templates/terms_&_conditions.html:27
 msgid "Eligibility"
-msgstr ""
+msgstr "Eligibilnost"
 
 #: templates/terms_&_conditions.html:30
 msgid ""
@@ -1148,34 +1145,40 @@ msgid ""
 "requirements.\n"
 "                "
 msgstr ""
+"\n"
+"                    Morate imati najmanje 18 godina ili pristanak roditelja/"
+"staratelja da koristite Portfolizer.\n"
+"                    Korišćenjem Usluge, potvrđujete da ispunjavate ove "
+"uslove.\n"
+"                "
 
 #: templates/terms_&_conditions.html:38
 msgid "User Responsibilities"
-msgstr ""
+msgstr "Odgovornosti Korisnika"
 
 #: templates/terms_&_conditions.html:41
 msgid "By using Portfolizer, you agree not to:"
-msgstr ""
+msgstr "Korišćenjem Portfolizera, slažete se da nećete:"
 
 #: templates/terms_&_conditions.html:44
 msgid "Use the website for illegal activities."
-msgstr ""
+msgstr "Koristiti veb stranicu za ilegalne aktivnosti."
 
 #: templates/terms_&_conditions.html:47
 msgid "Post or share harmful, abusive, or offensive content."
-msgstr ""
+msgstr "Objavljivati ili deliti štetni, zlostavljački ili uvredljiv sadržaj."
 
 #: templates/terms_&_conditions.html:50
 msgid "Attempt to hack or disrupt the website."
-msgstr ""
+msgstr "Pokušavati hakovati ili ometati rad veb stranice."
 
 #: templates/terms_&_conditions.html:53
 msgid "Misuse personal information obtained from other users."
-msgstr ""
+msgstr "Zloupotrebljavati lične informacije drugih korisnika."
 
 #: templates/terms_&_conditions.html:60
 msgid "Account Management"
-msgstr ""
+msgstr "Upravljanje Nalogom"
 
 #: templates/terms_&_conditions.html:63
 msgid ""
@@ -1186,10 +1189,16 @@ msgid ""
 "or compromise the Service.\n"
 "                "
 msgstr ""
+"\n"
+"                    Korisnici su odgovorni za čuvanje svojih podataka za "
+"prijavu. Zadržavamo pravo da\n"
+"                    suspendujemo ili obustavimo naloge koji krše ove Uslove "
+"ili ugrožavaju Uslugu.\n"
+"                "
 
 #: templates/terms_&_conditions.html:71
 msgid "Intellectual Property"
-msgstr ""
+msgstr "Intelektualna Svojina"
 
 #: templates/terms_&_conditions.html:74
 msgid ""
@@ -1200,10 +1209,16 @@ msgid ""
 "is prohibited.\n"
 "                "
 msgstr ""
+"\n"
+"                    Svi sadržaji na Portfolizeru, uključujući tekst, slike i "
+"kod, su u našem vlasništvu ili licencirani\n"
+"                    nama. Neovlašćeno korišćenje ili reprodukcija ovog "
+"sadržaja je zabranjena.\n"
+"                "
 
 #: templates/terms_&_conditions.html:82
 msgid "Limitation of Liability"
-msgstr ""
+msgstr "Ogranučenje Odgovornosti"
 
 #: templates/terms_&_conditions.html:85
 msgid ""
@@ -1213,10 +1228,15 @@ msgid ""
 "                    loss or damage resulting from the use of our Service.\n"
 "                "
 msgstr ""
+"\n"
+"                    Portfolizer je pružen \"kakav jeste\" bez garancija bilo "
+"koje vrste. Nismo odgovorni za bilo kakav\n"
+"                    gubitak ili štetu nastalu korišćenjem naše Usluge.\n"
+"                "
 
 #: templates/terms_&_conditions.html:93
 msgid "Changes to the Service"
-msgstr ""
+msgstr "Izmene Usluge"
 
 #: templates/terms_&_conditions.html:96
 msgid ""
@@ -1225,10 +1245,14 @@ msgid ""
 "time without prior notice.\n"
 "                "
 msgstr ""
+"\n"
+"                    Možemo ažurirati, modifikovati ili obustaviti Uslugu u "
+"bilo koje vreme bez prethodne najave.\n"
+"                "
 
 #: templates/terms_&_conditions.html:103
 msgid "Governing Law"
-msgstr ""
+msgstr "Merodavno Pravo"
 
 #: templates/terms_&_conditions.html:106
 msgid ""
@@ -1238,6 +1262,11 @@ msgid ""
 "                    Serbian jurisdiction.\n"
 "                "
 msgstr ""
+"\n"
+"                    Ovi Uslovi su regulisani zakonima Srbije. Svaki spor "
+"će biti rešen pod\n"
+"                    srpskom nadležnošću.\n"
+"                "
 
 #: templates/terms_&_conditions.html:117
 msgid ""
@@ -1246,6 +1275,10 @@ msgid ""
 "contact us at roknic.milos.994@gmail.com.\n"
 "                "
 msgstr ""
+"\n"
+"                    Za pitanja ili zabrinutosti u vezi sa ovim Uslovima, "
+"kontaktirajte nas na roknic.milos.994@gmail.com.\n"
+"                "
 
 # Additional translations (not found in the original source, but in third party packages):
 msgid "jan"
