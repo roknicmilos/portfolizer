@@ -10,12 +10,14 @@ class SlugBlacklistValidator(BaseValidator):
     code = "invalid"
     root_url_paths = [
         "admin",
+        "health",
+        "i18n",
         "login",
         "logout",
         "register",
+        "privacy-policy",
+        "terms-and-conditions",
         "404",
-        "health",
-        "i18n",
     ]
 
     def __init__(self):
