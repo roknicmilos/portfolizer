@@ -15,3 +15,9 @@ class ProjectInline(TranslationStackedInline):
     formfield_overrides = {
         models.CharField: {"widget": Textarea(attrs={"rows": 5, "cols": 74})},
     }
+
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        return queryset.order_by(
+            models.F("end").asc(nulls_first=True), "-start"
+        )

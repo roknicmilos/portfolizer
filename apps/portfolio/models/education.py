@@ -47,6 +47,7 @@ class Education(BaseModel):
     class Meta:
         verbose_name = _("Education")
         verbose_name_plural = _("Educations")
+        ordering = ["-start"]
 
     def __str__(self):
         return f"{self.school} - {self.degree}"

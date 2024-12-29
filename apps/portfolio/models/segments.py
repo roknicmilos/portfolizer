@@ -123,7 +123,7 @@ class SkillsSegment(LeftColumnSegment):
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.SKILLS
         )
-        self._skills = portfolio.ordered_skills
+        self._skills = portfolio.skills.all()
         self._title = portfolio.skills_segment_title
 
     def create_context(self) -> dict:
@@ -161,7 +161,7 @@ class InternshipSegment(LeftColumnSegment):
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.INTERNSHIP
         )
-        self._skills = portfolio.ordered_internships
+        self._skills = portfolio.internships.all()
         self._title = portfolio.internship_segment_title
 
     def create_context(self) -> dict:
@@ -180,7 +180,7 @@ class EducationSegment(LeftColumnSegment):
         self.order = portfolio.get_left_segment_order(
             Portfolio.LeftSegment.EDUCATION
         )
-        self._skills = portfolio.ordered_educations
+        self._skills = portfolio.educations.all()
         self._title = portfolio.education_segment_title
 
     def create_context(self) -> dict:
@@ -237,7 +237,7 @@ class EmploymentSegment(RightColumnSegment):
         self.order = portfolio.get_right_segment_order(
             Portfolio.RightSegment.EMPLOYMENT
         )
-        self._employments = portfolio.ordered_employments
+        self._employments = portfolio.employments.all()
         self._title = portfolio.employment_segment_title
 
     def create_context(self) -> dict:

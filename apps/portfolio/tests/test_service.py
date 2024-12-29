@@ -73,7 +73,7 @@ class TestService(TestCase):
             render_to_string(
                 template_name="portfolio/includes/skills.html",
                 context={
-                    "skills": portfolio.ordered_skills,
+                    "skills": portfolio.skills.all(),
                     "title": portfolio.skills_segment_title,
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
@@ -93,7 +93,7 @@ class TestService(TestCase):
             render_to_string(
                 template_name="portfolio/includes/internship.html",
                 context={
-                    "internships": portfolio.ordered_internships,
+                    "internships": portfolio.internships.all(),
                     "title": portfolio.internship_segment_title,
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
@@ -103,7 +103,7 @@ class TestService(TestCase):
             render_to_string(
                 template_name="portfolio/includes/education.html",
                 context={
-                    "educations": portfolio.ordered_educations,
+                    "educations": portfolio.educations.all(),
                     "title": portfolio.education_segment_title,
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
@@ -168,7 +168,7 @@ class TestService(TestCase):
             render_to_string(
                 template_name="portfolio/includes/employment.html",
                 context={
-                    "employments": portfolio.ordered_employments,
+                    "employments": portfolio.employments.all(),
                     "title": portfolio.employment_segment_title,
                     "bg_color": portfolio.right_column_bg_color,
                     "text_color": portfolio.right_column_text_color,

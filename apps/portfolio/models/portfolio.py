@@ -151,22 +151,6 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         return self.title
 
     @property
-    def ordered_employments(self) -> models.QuerySet:
-        return self.employments.order_by("-start")
-
-    @property
-    def ordered_internships(self) -> models.QuerySet:
-        return self.internships.order_by("-start")
-
-    @property
-    def ordered_educations(self) -> models.QuerySet:
-        return self.educations.order_by("-start")
-
-    @property
-    def ordered_skills(self) -> models.QuerySet:
-        return self.skills.order_by("-level", "created")
-
-    @property
     def ordered_projects(self) -> models.QuerySet:
         return self.projects.order_by(
             models.F("end").asc(nulls_first=True), "-start"

@@ -8,3 +8,4 @@ class Internship(Position):
         verbose_name = _("Internship")
         verbose_name_plural = _("Internships")
         default_related_name = "internships"
+        ordering = ["-start"]
