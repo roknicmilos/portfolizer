@@ -27,10 +27,12 @@
     }
 }
 
-.expendable-button--edit {
-    bottom: 140px;
-    background-color: #0d209c;
+.expendable-button--language {
+    bottom: 75px;
+    background-color: #333333;
     color: white;
+    border: none;
+    width: 70px;
 
     @media only screen and (max-width: 1200px) {
         top: 105px;
@@ -38,12 +40,10 @@
     }
 }
 
-.expendable-button--language {
-    bottom: 75px;
-    background-color: #333333;
+.expendable-button--edit {
+    bottom: 140px;
+    background-color: #0d209c;
     color: white;
-    border: none;
-    width: 70px;
 
     @media only screen and (max-width: 1200px) {
         top: 170px;
