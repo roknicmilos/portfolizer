@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-29 13:09+0000\n"
+"POT-Creation-Date: 2025-01-07 11:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian <LL@li.org>\n"
@@ -293,10 +293,10 @@ msgstr "boja teksta leve kolone"
 
 #: apps/portfolio/models/left_portfolio_column_mixin.py:139
 #: apps/portfolio/models/right_portfolio_column_mixin.py:80
-#: apps/portfolio/tests/test_portfolio.py:110
+#: apps/portfolio/tests/test_portfolio.py:50
+#: apps/portfolio/tests/test_portfolio.py:51
 #: apps/portfolio/tests/test_portfolio.py:111
-#: apps/portfolio/tests/test_portfolio.py:171
-#: apps/portfolio/tests/test_portfolio.py:172
+#: apps/portfolio/tests/test_portfolio.py:112
 msgid "The segment value must be unique."
 msgstr "Vrednost segmenta mora biti jedinstvena."
 
@@ -426,14 +426,14 @@ msgstr "Boja SVG dugmeta jezika"
 msgid "Portfolios"
 msgstr "Portfoliji"
 
-#: apps/portfolio/models/portfolio.py:198
-#: apps/portfolio/tests/test_portfolio.py:216
-#: apps/portfolio/tests/test_portfolio.py:228
+#: apps/portfolio/models/portfolio.py:182
+#: apps/portfolio/tests/test_portfolio.py:156
+#: apps/portfolio/tests/test_portfolio.py:168
 msgid "Portfolio can't be created for this user."
 msgstr "Portfolijo ne može biti kreiran za ovog korisnika."
 
-#: apps/portfolio/models/portfolio.py:200
-#: apps/portfolio/tests/test_portfolio.py:246
+#: apps/portfolio/models/portfolio.py:184
+#: apps/portfolio/tests/test_portfolio.py:186
 msgid "Only one Portfolio can be created for this user."
 msgstr "Samo jedan Portfolijo može biti kreiran za ovog korisnika."
 
@@ -736,6 +736,12 @@ msgstr "Uslovi Korišćenja"
 #: templates/base.html:42
 msgid "CONTACT"
 msgstr "KONTAKT"
+
+#: templates/base.html:47
+#, fuzzy
+#| msgid "Portfolio"
+msgid "Roki's Portfolio"
+msgstr "Portfolio"
 
 #: templates/base.html:55
 msgid "All rights reserved."
@@ -1377,101 +1383,105 @@ msgstr ""
 "                "
 
 # Additional translations (not found in the original source, but in third party packages):
-msgid "jan"
-msgstr "jan"
+#~ msgid "jan"
+#~ msgstr "jan"
 
-msgid "feb"
-msgstr "feb"
+#~ msgid "feb"
+#~ msgstr "feb"
 
-msgid "mar"
-msgstr "mar"
+#~ msgid "mar"
+#~ msgstr "mar"
 
-msgid "apr"
-msgstr "apr"
+#~ msgid "apr"
+#~ msgstr "apr"
 
-msgid "may"
-msgstr "maj"
+#~ msgid "may"
+#~ msgstr "maj"
 
-msgid "jun"
-msgstr "jun"
+#~ msgid "jun"
+#~ msgstr "jun"
 
-msgid "jul"
-msgstr "јul"
+#~ msgid "jul"
+#~ msgstr "јul"
 
-msgid "aug"
-msgstr "avg"
+#~ msgid "aug"
+#~ msgstr "avg"
 
-msgid "sep"
-msgstr "sep"
+#~ msgid "sep"
+#~ msgstr "sep"
 
-msgid "oct"
-msgstr "okt"
+#~ msgid "oct"
+#~ msgstr "okt"
 
-msgid "nov"
-msgstr "nov"
+#~ msgid "nov"
+#~ msgstr "nov"
 
-msgid "dec"
-msgstr "dec"
+#~ msgid "dec"
+#~ msgstr "dec"
 
-msgid "Serbian"
-msgstr "Srpski"
+#~ msgid "Serbian"
+#~ msgstr "Srpski"
 
-msgid "English"
-msgstr "Engleski"
+#~ msgid "English"
+#~ msgstr "Engleski"
 
-msgid "Password"
-msgstr "Lozinka"
+#~ msgid "Password"
+#~ msgstr "Lozinka"
 
-msgid "Password confirmation"
-msgstr "Potvrda lozinke"
+#~ msgid "Password confirmation"
+#~ msgstr "Potvrda lozinke"
 
-msgid "Your password can’t be too similar to your other personal information."
-msgstr "Vaša lozinka ne može biti previše slična vašim ostalim ličnim informacijama."
+#~ msgid ""
+#~ "Your password can’t be too similar to your other personal information."
+#~ msgstr ""
+#~ "Vaša lozinka ne može biti previše slična vašim ostalim ličnim "
+#~ "informacijama."
 
-msgid "Your password must contain at least 8 characters."
-msgstr "Vaša lozinka mora sadržati najmanje 8 karaktera."
+#~ msgid "Your password must contain at least 8 characters."
+#~ msgstr "Vaša lozinka mora sadržati najmanje 8 karaktera."
 
-msgid "Your password can’t be a commonly used password."
-msgstr "Vaša lozinka ne može biti često korišćena lozinka."
+#~ msgid "Your password can’t be a commonly used password."
+#~ msgstr "Vaša lozinka ne može biti često korišćena lozinka."
 
-msgid "Your password can’t be entirely numeric."
-msgstr "Vaša lozinka ne može biti potpuno numerička."
+#~ msgid "Your password can’t be entirely numeric."
+#~ msgstr "Vaša lozinka ne može biti potpuno numerička."
 
-msgid "This password is too common."
-msgstr "Ova lozinka je previše česta."
+#~ msgid "This password is too common."
+#~ msgstr "Ova lozinka je previše česta."
 
-msgid "This password is entirely numeric."
-msgstr "Ova lozinka je potpuno numerička."
+#~ msgid "This password is entirely numeric."
+#~ msgstr "Ova lozinka je potpuno numerička."
 
-msgid "The two password fields didn’t match."
-msgstr "Dva polja lozinke se ne podudaraju."
-
-#, python-format
-msgid "Your password must contain at least %(min_length)d character."
-msgid_plural "Your password must contain at least %(min_length)d characters."
-msgstr[0] "Vaša lozinka mora sadržati najmanje %(min_length)d karakter."
-msgstr[1] "Vaša lozinka mora sadržati najmanje %(min_length)d karaktera."
-msgstr[2] "Vaša lozinka mora sadržati najmanje %(min_length)d karaktera."
-
-msgid "This password is too similar to your other personal information."
-msgstr "Ova lozinka je previše slična vašim ostalim ličnim informacijama."
-
-msgid "This password is forbidden."
-msgstr "Ova lozinka je zabranjena."
-
-msgid "Enter the same password as before, for verification."
-msgstr "Unesite istu lozinku kao pre, radi provere."
-
-msgid "This field is required."
-msgstr "Ovo polje je obavezno."
+#~ msgid "The two password fields didn’t match."
+#~ msgstr "Dva polja lozinke se ne podudaraju."
 
 #, python-format
-msgid ""
-"Please enter a correct %(username)s and password. Note that both fields may "
-"be case-sensitive."
-msgstr ""
-"Lozinka i/ili %(username)s nisu ispravne. Imajte na umu da oba polja mogu "
-"biti osetljiva na velika i mala slova."
+#~ msgid "Your password must contain at least %(min_length)d character."
+#~ msgid_plural ""
+#~ "Your password must contain at least %(min_length)d characters."
+#~ msgstr[0] "Vaša lozinka mora sadržati najmanje %(min_length)d karakter."
+#~ msgstr[1] "Vaša lozinka mora sadržati najmanje %(min_length)d karaktera."
+#~ msgstr[2] "Vaša lozinka mora sadržati najmanje %(min_length)d karaktera."
 
-msgid "Enter a valid email address."
-msgstr "Unesite validnu email adresu."
+#~ msgid "This password is too similar to your other personal information."
+#~ msgstr "Ova lozinka je previše slična vašim ostalim ličnim informacijama."
+
+#~ msgid "This password is forbidden."
+#~ msgstr "Ova lozinka je zabranjena."
+
+#~ msgid "Enter the same password as before, for verification."
+#~ msgstr "Unesite istu lozinku kao pre, radi provere."
+
+#~ msgid "This field is required."
+#~ msgstr "Ovo polje je obavezno."
+
+#, python-format
+#~ msgid ""
+#~ "Please enter a correct %(username)s and password. Note that both fields "
+#~ "may be case-sensitive."
+#~ msgstr ""
+#~ "Lozinka i/ili %(username)s nisu ispravne. Imajte na umu da oba polja mogu "
+#~ "biti osetljiva na velika i mala slova."
+
+#~ msgid "Enter a valid email address."
+#~ msgstr "Unesite validnu email adresu."
