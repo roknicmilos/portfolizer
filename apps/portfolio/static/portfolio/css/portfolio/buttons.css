@@ -17,38 +17,23 @@
 }
 
 .expendable-button--pdf {
-    bottom: 10px;
+    top: 40px;
     background-color: #9c0d0d;
     color: white;
-
-    @media only screen and (max-width: 1200px) {
-        top: 40px;
-        bottom: unset;
-    }
 }
 
 .expendable-button--language {
-    bottom: 75px;
+    top: 105px;
     background-color: #333333;
     color: white;
     border: none;
     width: 70px;
-
-    @media only screen and (max-width: 1200px) {
-        top: 105px;
-        bottom: unset;
-    }
 }
 
 .expendable-button--edit {
-    bottom: 140px;
+    top: 170px;
     background-color: #0d209c;
     color: white;
-
-    @media only screen and (max-width: 1200px) {
-        top: 170px;
-        bottom: unset;
-    }
 }
 
 .expendable-button svg {
