@@ -739,7 +739,7 @@ msgstr "KONTAKT"
 
 #: templates/base.html:47
 msgid "Roki's Portfolio"
-msgstr "Portfolio"
+msgstr "Rokijev Portfolijo"
 
 #: templates/base.html:55
 msgid "All rights reserved."
