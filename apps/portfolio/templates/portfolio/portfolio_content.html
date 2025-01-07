@@ -15,8 +15,8 @@
         {% endfor %}
         {% if response_type == "html" %}
             <div class="powered-by-section">
-                <a href="https://rokimania.com" style="color: {{ portfolio.left_column_text_color|color:1.5 }}">
-                    powered by rokimania.com
+                <a href="https://portfolizer.rokimania.com" style="color: {{ portfolio.left_column_text_color|color:1.5 }}">
+                    powered by portfolizer.rokimania.com
                 </a>
             </div>
         {% endif %}
@@ -77,4 +77,8 @@
             </form>
         {% endif %}
     {% endfor %}
+    <a class="brand-link" href="/">
+        portfolizer
+    {% svg "svg/rocket.svg" %}
+    </a>
 {% endif %}
