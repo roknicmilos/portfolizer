@@ -31,7 +31,7 @@ pytest-xdist = "^3.6.1"
 
 [tool.poetry.group.local.dependencies]
 ruff = "^0.8.6"
-pre-commit = "^4.0.1"
+pre-commit = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
