@@ -23,11 +23,15 @@ class Skill(BaseModel):
             MaxValueValidator(5),
         ],
     )
+    order = models.PositiveSmallIntegerField(
+        verbose_name=_("order"),
+        default=0,
+    )
 
     class Meta:
         verbose_name = _("Skill")
         verbose_name_plural = _("Skills")
-        ordering = ["-level", "created"]
+        ordering = ["order", "-level", "created"]
 
     def __str__(self):
         return f"{self.label} ({self.level}/5)"
