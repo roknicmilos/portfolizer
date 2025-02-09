@@ -57,6 +57,22 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
             MaxValueValidator(3),
         ],
     )
+    shows_language_level = models.BooleanField(
+        verbose_name=_("shows language level"),
+        default=True,
+        help_text=_(
+            "If enabled, the language level will be displayed as a "
+            "progress bar under the language label."
+        ),
+    )
+    shows_skill_level = models.BooleanField(
+        verbose_name=_("shows skill level"),
+        default=True,
+        help_text=_(
+            "If enabled, the skill level will be displayed as a "
+            "progress bar under the skill label."
+        ),
+    )
     avatar = models.ImageField(
         verbose_name=_("avatar"),
         upload_to="portfolio/images/",

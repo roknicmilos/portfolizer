@@ -6,9 +6,12 @@
         {% for skill in skills %}
             <div class="skill">
                 <p class="skill-label" style="color: {{ text_color }}">{{ skill.label }}</p>
-                <div class="skill-bar" style="border-bottom-color: {{ text_color }}">
-                    <div class="skill-bar-filler skill-bar-filler-{{ skill.level }}"
-                         style="background-color: {{ text_color }}"></div>
+                <div class="skill-bar {% if not shows_level %}skill-bar--without-filler"{% endif %}
+                     style="border-bottom-color: {{ text_color }}">
+                    {% if shows_level %}
+                        <div class="skill-bar-filler skill-bar-filler-{{ skill.level }}"
+                             style="background-color: {{ text_color }}"></div>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

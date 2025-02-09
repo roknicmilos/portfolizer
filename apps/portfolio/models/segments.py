@@ -125,11 +125,13 @@ class SkillsSegment(LeftColumnSegment):
         )
         self._skills = portfolio.skills.all()
         self._title = portfolio.skills_segment_title
+        self._shows_level = portfolio.shows_skill_level
 
     def create_context(self) -> dict:
         context = super().create_context(
             skills=self._skills,
             title=self._title,
+            shows_level=self._shows_level,
         )
         return context
 
@@ -144,11 +146,13 @@ class LanguagesSegment(LeftColumnSegment):
         )
         self._skills = portfolio.languages.all()
         self._title = portfolio.languages_segment_title
+        self._shows_la_level = portfolio.shows_language_level
 
     def create_context(self) -> dict:
         context = super().create_context(
             skills=self._skills,
             title=self._title,
+            shows_level=self._shows_la_level,
         )
         return context
 

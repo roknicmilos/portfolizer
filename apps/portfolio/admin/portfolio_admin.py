@@ -40,6 +40,8 @@ class PortfolioAdmin(TranslationAdmin):
         "title",
         "filename",
         "page_count",
+        "shows_language_level",
+        "shows_skill_level",
     )
     fieldsets = (
         (
