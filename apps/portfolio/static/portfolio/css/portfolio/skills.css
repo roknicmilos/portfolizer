@@ -37,6 +37,10 @@
     border-bottom: 1px solid white;
 }
 
+.skill-bar--without-filler {
+    height: 2px;
+}
+
 .skill-bar-filler {
     background: white;
     height: 100%;
