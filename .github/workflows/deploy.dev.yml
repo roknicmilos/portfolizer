@@ -1,9 +1,7 @@
 name: Deploy DEV
 
 on:
-  push:
-    branches:
-      - develop
+  workflow_dispatch: # Manual trigger
 
 jobs:
   deploy:
