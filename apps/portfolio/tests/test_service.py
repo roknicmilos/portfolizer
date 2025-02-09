@@ -78,6 +78,7 @@ class TestService(TestCase):
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
                     "is_last": False,
+                    "shows_level": portfolio.shows_skill_level,
                 },
             ),
             render_to_string(
@@ -88,6 +89,7 @@ class TestService(TestCase):
                     "bg_color": portfolio.left_column_bg_color,
                     "text_color": portfolio.left_column_text_color,
                     "is_last": False,
+                    "shows_level": portfolio.shows_language_level,
                 },
             ),
             render_to_string(
