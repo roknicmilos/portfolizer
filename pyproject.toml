@@ -23,7 +23,7 @@ django-admin-interface = "^0.29.4"
 django-modeltranslation = "^0.19.12"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.3.4"
+pytest = "^8.3.5"
 pytest-django = "^4.10.0"
 pytest-cov = "^6.0.0"
 factory-boy = "^3.3.3"
