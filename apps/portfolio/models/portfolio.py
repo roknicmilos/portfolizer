@@ -169,7 +169,7 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
     @property
     def ordered_projects(self) -> models.QuerySet:
         return self.projects.order_by(
-            models.F("end").asc(nulls_first=True), "-start"
+            models.F("end").desc(nulls_first=True), "-start"
         )
 
     @property
