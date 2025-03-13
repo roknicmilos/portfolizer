@@ -54,7 +54,7 @@ class Portfolio(LeftPortfolioColumnMixin, RightPortfolioColumnMixin, BaseModel):
         ),
         validators=[
             MinValueValidator(1),
-            MaxValueValidator(3),
+            MaxValueValidator(5),
         ],
     )
     shows_language_level = models.BooleanField(
