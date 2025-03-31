@@ -254,14 +254,14 @@ Django = ">=4.2"
 
 [[package]]
 name = "django-pdf-view"
-version = "3.1.1"
+version = "3.1.2"
 description = "Django app for seamlessly displaying and downloading PDF documents in browser"
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "django_pdf_view-3.1.1-py3-none-any.whl", hash = "sha256:56be00e8e7aef0289a84a25c5f2b422bf9a710f07331b391c40d8d247dfc435e"},
-    {file = "django_pdf_view-3.1.1.tar.gz", hash = "sha256:30ef510bd044d0e8a35fae9d3406c00f5b98b86ce7934dbe5d16d0dfe6ecbfe1"},
+    {file = "django_pdf_view-3.1.2-py3-none-any.whl", hash = "sha256:98569df744291c7aa62f1b0866e68675195998dd4b55cfc0fa1fd4ebdf6f5b4c"},
+    {file = "django_pdf_view-3.1.2.tar.gz", hash = "sha256:3fce5c489d5b22382d89418b9cf2a714ee4f9d3c67a1cf3cfa0b68ddb8667da6"},
 ]
 
 [package.dependencies]
@@ -989,4 +989,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "a8e14b298a48e161d1e111e87390679af5542fbdda423ac8329600a7189b18fe"
+content-hash = "c3b67dfe1550895e44609196af98806c6db477a6839e0fbc4b4966011503bc5e"
