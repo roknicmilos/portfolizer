@@ -47,11 +47,6 @@ to showcase their professional experience and skills.
     ```bash
     docker compose up -d
     ```
-   To start the project in a **dev environment**, run the following
-   command:
-    ```bash
-    docker compose -f docker-compose.dev.yaml up -d
-    ```
    To start the project in a **production environment**, run the following
    command:
     ```bash
@@ -64,7 +59,6 @@ available at http://localhost:8000/admin/.
 Check `docker-compose`files for more information about the Docker configuration:
 
 - [docker-compose.yaml](docker-compose.yaml)
-- [docker-compose.dev.yaml](docker-compose.dev.yaml)
 - [docker-compose.prod.yaml](docker-compose.prod.yaml)
 
 ## Enable Sentry
@@ -179,20 +173,13 @@ docker compose run --rm db sh -c "tail -f /var/lib/postgresql/data/log/postgresq
 
 ## Deployment
 
-Both the development and production environments are set up on the same droplet
-(server) on [Digital Ocean](https://www.digitalocean.com/). The project is
-deployed using Docker and Docker Compose.
-
-### Development Environment
-
-Project is deployed automatically to the development environment on every push
-to the `develop` branch. Check the
-[.github/workflows/develop.dev.yml](.github/workflows/deploy.dev.yml) file for
-more information about the deployment configuration.
+Only production environment is set up on a (server)
+on [Digital Ocean](https://www.digitalocean.com/). The project is deployed using
+Docker and Docker Compose.
 
 ### Production Environment
 
-Project can be deployed manually to the production environment by running the
-`Deploy PROD` workflow in the GitHub Actions tab. Check the
-[.github/workflows/deploy.prod.yml](.github/workflows/deploy.prod.yml) file for
-more information about the deployment configuration.
+The project is deployed automatically when a new tag is pushed to the
+repository. Check the
+[.github/workflows/deploy.prod.yml](.github/workflows/deploy.prod.yml)
+file for more information about the deployment configuration.
