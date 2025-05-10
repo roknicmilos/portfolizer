@@ -239,14 +239,14 @@ test = ["boto3", "celery", "django-storages", "pytest", "pytest-cov", "pytest-dj
 
 [[package]]
 name = "django-modeltranslation"
-version = "0.19.12"
+version = "0.19.14"
 description = "Translates Django models using a registration approach."
 optional = false
-python-versions = "*"
+python-versions = "<4,>=3.9"
 groups = ["main"]
 files = [
-    {file = "django_modeltranslation-0.19.12-py3-none-any.whl", hash = "sha256:6f42811876cb36370a2a727f4669bf9fa086d3c2efad573aedf49f339ba48cd1"},
-    {file = "django_modeltranslation-0.19.12.tar.gz", hash = "sha256:d3a48c4b0e2a8033fc53a4e4d4d8c27c52e81bfbf00ae65fc76bd4ef64177d5b"},
+    {file = "django_modeltranslation-0.19.14-py3-none-any.whl", hash = "sha256:2b7d6fe0b26b5050f1fd38960162df84ea6a9eaf7b690f428b55eb0e87720c57"},
+    {file = "django_modeltranslation-0.19.14.tar.gz", hash = "sha256:1ba875b51296f41105587e6c1c6b161c32c7c81b7cbab23111ffdb8310471db8"},
 ]
 
 [package.dependencies]
@@ -989,4 +989,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "b6cdd20b246868feda04d922cd00c70bd822130a7440b120e65d0b30f81fb365"
+content-hash = "bd19fc6ecc478869450ad08ac75ce6bb05f7152fd54b02acaf0200e0d7a2b0dc"
