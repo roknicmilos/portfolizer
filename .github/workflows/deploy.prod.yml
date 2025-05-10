@@ -1,7 +1,9 @@
 name: Deploy PROD
 
 on:
-  workflow_dispatch: # Manual trigger
+  push:
+    tags:
+      - '*'
 
 jobs:
   deploy:
