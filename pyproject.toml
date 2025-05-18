@@ -25,7 +25,7 @@ django-modeltranslation = "^0.19.14"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
 pytest-django = "^4.10.0"
-pytest-cov = "^6.0.0"
+pytest-cov = "^6.1.1"
 factory-boy = "^3.3.3"
 pytest-xdist = "^3.6.1"
 
