@@ -190,14 +190,14 @@ files = [
 
 [[package]]
 name = "django-colorfield"
-version = "0.12.0"
+version = "0.14.0"
 description = "color field for django models with a nice color-picker in the admin."
 optional = false
 python-versions = "*"
 groups = ["main"]
 files = [
-    {file = "django_colorfield-0.12.0-py3-none-any.whl", hash = "sha256:ceb9a312e01773a0d609847eb308e3b81ac18c33874d17b2c7135a8d1b2ec86d"},
-    {file = "django_colorfield-0.12.0.tar.gz", hash = "sha256:9fbace0e3bf7126acab33daa52a5ae2fe0b339aeee30233f52bf911b685c0c71"},
+    {file = "django_colorfield-0.14.0-py3-none-any.whl", hash = "sha256:f169c4e7ad8f336e51d4ea81f866346e7d4f336f3766e54e144cd16ea7d84a0e"},
+    {file = "django_colorfield-0.14.0.tar.gz", hash = "sha256:478dbd3975a88f2ea2a9afc325faaca05c54ebf04ec985ce130f6dea39dfb899"},
 ]
 
 [package.dependencies]
@@ -989,4 +989,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "a3557c70fdbb6b20ffd5750cf4019e370fde6a2a420bf7165f55747ad1ba26bf"
+content-hash = "388c6f8251406c7bb30be1665b1476bc8ceaae2a70d3208d4bca7cc2b774a83e"
