@@ -220,21 +220,22 @@ django = ">=4.2"
 
 [[package]]
 name = "django-health-check"
-version = "3.18.3"
-description = "Run checks on services like databases, queue servers, celery processes, etc."
+version = "3.19.0"
+description = "Monitor the health of your Django app and its connected services."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "django_health_check-3.18.3-py2.py3-none-any.whl", hash = "sha256:f5f58762b80bdf7b12fad724761993d6e83540f97e2c95c42978f187e452fa07"},
-    {file = "django_health_check-3.18.3.tar.gz", hash = "sha256:18b75daca4551c69a43f804f9e41e23f5f5fb9efd06cf6a313b3d5031bb87bd0"},
+    {file = "django_health_check-3.19.0-py3-none-any.whl", hash = "sha256:30b58d761f40fef47971b8dc145df15bdb71339108034860bbf1d505387aa1ec"},
+    {file = "django_health_check-3.19.0.tar.gz", hash = "sha256:1a995ed4fa08a776beedff65f8f1ec0c22fb6764493f33fb1307fe4c6f23b8c3"},
 ]
 
 [package.dependencies]
-django = ">=2.2"
+Django = ">=4.2"
 
 [package.extras]
 docs = ["sphinx"]
+lint = ["ruff (==0.11.12)"]
 test = ["boto3", "celery", "django-storages", "pytest", "pytest-cov", "pytest-django", "redis"]
 
 [[package]]
@@ -989,4 +990,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "bc56f675e7bce75b9f07f4e0ed1207ca03b70df58179c14517d5dfe1dcd4ec68"
+content-hash = "56d509117245ad4864626bea6cf2c62d5286b2dd009e86d65ddf2ce68299712c"
