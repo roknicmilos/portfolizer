@@ -14,7 +14,7 @@ gunicorn = "^23.0.0"
 pillow = "^10.4.0"
 python-decouple = "^3.8"
 sentry-sdk = { extras = ["django"], version = "^2.29.1" }
-django-health-check = "^3.18.3"
+django-health-check = "^3.20.0"
 django-analytical = "^3.1.0"
 django-smart-fixtures = "^2.0.2"
 psycopg2 = "^2.9.10"
