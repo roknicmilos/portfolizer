@@ -162,14 +162,14 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-admin-interface"
-version = "0.30.0"
+version = "0.30.1"
 description = "django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features."
 optional = false
 python-versions = "*"
 groups = ["main"]
 files = [
-    {file = "django_admin_interface-0.30.0-py3-none-any.whl", hash = "sha256:be448fee0db45267d525d45646e716c68e55ce58b610bc6937604e989f0c63ed"},
-    {file = "django_admin_interface-0.30.0.tar.gz", hash = "sha256:bf6a634f1211a852887a0f07847817b6b7e84ba7f39ba33c5f98909050338628"},
+    {file = "django_admin_interface-0.30.1-py3-none-any.whl", hash = "sha256:d79c188a06ede968e40ffbc5142bdf4a94ee8707248868173bdac39a34008924"},
+    {file = "django_admin_interface-0.30.1.tar.gz", hash = "sha256:55d9c80f6749e8854ba136828c06983bee6ff7b9c10b8887b84c53d301ecb215"},
 ]
 
 [package.dependencies]
@@ -1006,4 +1006,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "57d6ddf89ac3fd3a03e18491047637bc0cd50822513e87450f2bdc84646bfc46"
+content-hash = "825be9743d4ae3cccc02fba33adf973fbb9536ed3ed6befb7391598a2f6d72c9"
