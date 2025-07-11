@@ -178,15 +178,18 @@ python-slugify = ">=7.0.0,<9.0.0"
 
 [[package]]
 name = "django-analytical"
-version = "3.1.0"
+version = "3.2.0"
 description = "Analytics service integration for Django projects"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "django-analytical-3.1.0.tar.gz", hash = "sha256:6127c9196c8de3bcb4626f420d2ae670a7703152b1841b1b3e852b31a9a9d44b"},
-    {file = "django_analytical-3.1.0-py3-none-any.whl", hash = "sha256:43de3d8ef7734732f58eba4e5e7df0dea37512dbd89727efdfb30c27a96d4ea9"},
+    {file = "django_analytical-3.2.0-py3-none-any.whl", hash = "sha256:c08e58806a65c8afa155ebc36aa2085b9f100619f41cc40286adb12bd8fd0c23"},
+    {file = "django_analytical-3.2.0.tar.gz", hash = "sha256:48de51819b8ae6743838aeddacf7f72a8e85a9bdc8d33d2b89178d154ade7109"},
 ]
+
+[package.dependencies]
+django = ">=4.2"
 
 [[package]]
 name = "django-colorfield"
@@ -1007,4 +1010,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "8cc7af2bd727587f28a20c55262c49a37ba70641bf13273da11169b178c5a8a8"
+content-hash = "620201c52b6f4e013e21593baab4ded106bc399a7af3f069f1bffa0dc451092d"
