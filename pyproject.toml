@@ -30,7 +30,7 @@ factory-boy = "^3.3.3"
 pytest-xdist = "^3.8.0"
 
 [tool.poetry.group.local.dependencies]
-ruff = "^0.12.1"
+ruff = "^0.13.1"
 pre-commit = "^4.2.0"
 
 [build-system]
